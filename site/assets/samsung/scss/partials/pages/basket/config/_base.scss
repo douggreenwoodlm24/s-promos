@@ -1,0 +1,264 @@
+
+
+ 
+
+.bconfig {
+	margin:1em auto;
+	max-width:1500px;
+	@extend %sharp-sans;  //use new font
+	@include media-query($mq-large) {
+		padding:0 .5em;
+	}
+}
+
+
+.bconfig__title {
+	padding:0 .25em .25em;
+	border-bottom:1px solid #e7e7e7;
+	font-size:1.25em;
+	strong {
+		font-weight: bold;
+		color:$skyblue;
+	}
+	@include media-query($mq-large) {
+		font-size: 2.5em;
+	}
+}
+
+///////////////////////////////////////////////////
+
+.bconfig__device {
+		
+		border-right:1px solid #e7e7e7;
+		font-size:1em;
+		font-weight:bold;
+	@include media-query($mq-medium) {
+		display:block;
+		text-align:center;
+		padding:1em 1em 0 0;
+		@include media-query($mq-large) {
+			font-size:1.25em;
+		}
+		&:after {
+			top: 50%;
+			right: -11px;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-left-color: #e7e7e7;
+			border-width: 10px;
+			margin-top: -10px;
+		}
+	}
+	@include media-query($mq-medium) {
+		min-height:700px;
+	}
+	@include media-query($mq-large) {
+		min-height:500px;
+	}
+	&-title {
+		color:$skyblue;
+	}
+	&-img {
+		display:none;
+		@include media-query($mq-medium) {
+			display:block;
+			margin: .5em 0;
+		}
+
+	}
+	&-price {
+		color:$skyblue;
+		@include media-query($mq-medium) {
+			margin: .5em 0;
+		}
+	}
+	&-stock {
+		&--small {
+			font-size:.75em;
+			@include media-query($mq-medium) {
+				padding:0 1em;
+			}
+		}
+	}
+	&-promo {
+		color:$skyblue;
+		font-size:.75em;
+		@include media-query($mq-medium) {
+			border-top:1px dotted #ccc;
+			margin-top:.75em;
+			padding:1em 0;
+
+		}
+		.promo-note {
+			font-weight:500;
+			margin-top:.75em;
+			border-top:1px dotted #ccc;
+			border-bottom:1px dotted #ccc;
+			text-align: left;
+			font-size:.75em;
+			line-height: 1.5;
+			color:#555;
+			strong {
+				color:#222;
+			}
+			@include media-query($mq-medium) {
+				border-bottom:none;
+			}
+		}
+	}
+}
+
+
+.bconfig__stage-title {
+	position:relative;
+	transition:.25s ease-in-out;
+	overflow:hidden;
+	padding:.66em .5em .5em;
+	margin:1em 0;
+	font-size:1em;
+	border-left:5px solid $skyblue;
+	background:linear-gradient(to right, rgba(#f6f6f6,1) 0%,rgba(#e7e7e7,0) 100%);
+	strong {
+		font-weight: bold;
+		color:$skyblue;
+	}
+	/*&:before {
+		position:absolute;
+		left:-3em;
+		width:1em;
+		text-align: center;
+		//left:0;
+		//top:0;
+		//margin-left:-75px;
+		content:"✓";
+		//border:1px solid #f00;
+		transition:left .35s ease-in-out;
+	}*/
+	@include media-query($mq-medium) {
+		font-size:1.25em;
+	}
+	@include media-query($mq-large) {
+		font-size:1.5em;
+	}
+	&-note {
+		display:block;
+		color:#999;
+		font-size:.75em;
+		padding:.25em 0 0;
+		font-weight: normal;
+		@include media-query($mq-medium) {
+			float:right;
+		}
+	}
+}
+
+.bconfig__stage {
+	width:100%;
+	padding:0 10px;
+	border:1px solid transparent;
+	//border-bottom:1px solid #ccc;
+	@include media-query($mq-medium) {
+		padding:0 10px;
+	}
+	&--todo {
+		//border:1px solid #f00;
+		display:none;
+		.bconfig__stage-content {
+ 			display:none;
+		}
+		.bconfig__stage-title {
+			color:#aaa;
+		}
+	}
+	&--current {
+		//border:1px solid #fc0;
+		.bconfig__stage-content {
+			display:block;
+		}
+		.bconfig__stage-title {
+			color:#000;
+		}
+	}
+	&--complete {
+		//border:1px solid #3c3;
+			display:none;
+		.bconfig__stage-content {
+			//display:none;
+		}
+		/*.bconfig__stage-title {
+			color:$accent;
+			padding-left:32px; 
+			&:before {
+				
+				left:0;
+			}
+		}*/
+	}
+	&--soldout {
+		opacity:.3;
+		pointer-events:none;
+	}
+}
+
+.bconfig__stage1-proceed {
+	padding:.5em 0 0;
+	@include media-query($mq-large) {
+		padding:2em 1em 1em;
+	}
+}
+
+.bconfig__button {
+	@extend .button;
+	transition:.25s ease-in-out;
+	background-color:$skyblue;
+	padding: 1.25em 2.75em 1.0625em;
+	font-size:.875em;
+	@include media-query($mq-small + 10) {
+		font-size:1em;	
+	}
+	&--inactive {
+		opacity:.3;
+		cursor: default;
+		pointer-events:none;
+	}
+}
+
+.bconfig__stage-button {
+	margin:.5% 0 0;
+	text-align:center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "_progress"; 
+@import "_payment-and-products"; 
+@import "_contracts"; 
+@import "_confirm"; 
+@import "_help"; 
+
+
+//display all stages at once (dev only)
+
+.bconfig__stage--todo {
+	//display:block;
+	.bconfig__stage-content {
+	//display:block; 
+	}
+}

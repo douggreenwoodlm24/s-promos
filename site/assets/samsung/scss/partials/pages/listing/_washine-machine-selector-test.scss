@@ -1,0 +1,76 @@
+/*TEST PAGE STYLES*/
+
+.wms--test { 
+	.wms__filter-block {
+			margin:.5%;
+			text-align: left;
+			padding-bottom:.25em;
+			margin-bottom:.5em;
+			border:1px solid #ccc;
+			font-size:.875em;
+			@include media-query($mq-medium) {
+				display:inline-block;
+				vertical-align: top;
+				width:48%;
+			}
+			@include media-query($mq-large) {
+				display:inline-block;
+				vertical-align: top;
+				width:32%;
+				margin-bottom:.125em;
+			}
+			&--inactive {
+				opacity:.33;
+				pointer-events:none;
+			}
+		h4 {
+			margin:0;
+			padding:.25em .66em .33em;
+			background:$skyblue;
+			color:#fff;
+			small {
+				font-size:.875em;
+				display:inline-block;
+				margin-left:3px;
+				font-weight: normal;
+			}
+		}
+
+		ul {
+			margin:.25em 0;;
+			list-style: none;
+			padding:.25em .5em 0;
+			//margin:0;
+			@extend .clearfix;
+		}
+		
+	}
+	
+	.wms__filter-item {
+		float:left;
+		//clear:both;
+		margin:.125em 0;
+		&.inactive {
+			opacity:.2;
+			pointer-events:none;
+		}
+	}
+	//temp
+	.js-wms-filter {
+		cursor:pointer;
+		padding:.25em .5em;
+		&:hover {
+			text-decoration: underline;
+		}
+		&.active {
+			background:$skyblue;
+			color:#fff;
+			font-weight:normal;
+			padding:.25em .5em;
+			&:hover { 
+				text-decoration: none;
+			}
+		}
+	}
+
+}

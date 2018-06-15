@@ -1,0 +1,74 @@
+// ==|== pages > region
+
+.static {
+	p {
+		line-height:1.66;
+	}
+}
+ 
+.pdf-embed {
+	object {
+		height:400px;
+		@include vmedia-query(660px) {
+			height:500px;
+		}
+		@include vmedia-query(760px) {
+			height:600px;
+		}
+		@include vmedia-query(920px) {
+			height:800px;
+		}
+	} 
+}
+
+.pdf-download {
+	text-align:center;
+	&-link {
+		display:inline-block;
+		margin:.5em 0 0;
+		padding:.75em 1em .75em 75px;
+		background:#f9f9f9 url(/assets/samsung/img/core/pdf-icon.png) no-repeat 1.125em 50%;
+		border:1px solid #c0c0c0;
+		text-align:left;
+		box-shadow:3px 3px 0 rgba(0,0,0,.05);
+		text-decoration: none;
+		background-size:43px 45px;
+		@include media-query($mq-medium) {
+			background-size:86px 91px;
+			margin:.5em 0;
+			padding:2em 2em 2em 120px;
+		}
+		&:hover {
+			border-color:$accent;
+			background-color:#fcfcfc;
+			box-shadow:3px 3px 0 rgba(0,0,0,.1);
+			.pdf-download-title {
+				text-decoration: underline;
+			}
+		}
+	}
+	&-label {
+		color:#999;
+		font-size:1em;
+		margin-bottom: 5px;
+		@include media-query($mq-medium) {
+			font-size:1.25em;
+		}
+	}
+	&-title {
+		font-weight:bold;
+		font-size:1.125em;
+		color:#000;
+		@include media-query($mq-medium) {
+			font-size:1.5em;
+		}
+	}
+}
+
+.pdf-get-reader {
+	display:none;
+	@include media-query($mq-large) {
+		display:block;
+		margin-top:1em;
+	}
+}

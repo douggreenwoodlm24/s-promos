@@ -1,0 +1,77 @@
+
+.promotions--visionaire {
+	&-product {
+		margin:16px 0 30px;
+			a {
+			text-decoration: none;
+			color:#000;
+			&:hover {
+				opacity:.8;
+			}
+		}
+
+	}
+	.p-intro {
+		font-size:.8125em;
+		border-bottom:1px dotted #ccc;
+		line-height: 1.4;
+		@include media-query($mq-small + 10) { 
+			font-size:.875em;
+			line-height: 1.5;
+		}
+		@include media-query($mq-medium) {  
+			font-size:1em;
+			line-height: 1.875;
+		}
+		a {
+			font-weight:bold;
+			color:$accent;
+			&:hover {
+				text-decoration: none;
+			}
+		} 
+	}
+	.p-intro-cover {
+		text-align: center;
+		margin:10px 0 0;
+		@include media-query($mq-small + 10) { 
+			float:right;
+			margin:10px 10px 15px 20px;
+		}
+		@include media-query($mq-medium) { 
+			margin-top:0;
+		}
+		img {
+			width:100px;
+			@include media-query($mq-small + 10) { 
+				width:150px;
+			}
+			@include media-query($mq-medium) { 
+				width:200px;
+
+			}
+		}
+	}
+	.p-title {	
+		font-weight:bold;
+		@include media-query($mq-medium) { 
+			font-size:1.25em;
+		}
+	}
+	.p-price {
+		font-size:1.5em;
+		color:#999;
+		margin:.25em; 
+		@include media-query($mq-medium) { 
+			font-size:2em;
+		}
+	}
+	.p-image {
+		margin:10px auto;
+		max-width:200px;
+		@include media-query($mq-medium) { 
+			max-width:350px;
+		}
+	}
+}
+ 

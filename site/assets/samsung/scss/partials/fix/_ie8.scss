@@ -1,0 +1,75 @@
+// IE8 fixes
+
+body {
+	width:$IEfixed;
+	margin:0 auto;
+}
+
+//homepage
+
+.home__spotlight {
+	margin:10px 140px;
+	.gutter-sizer {
+		width:10px;
+	}
+	&-item {
+		width: 495px;
+		height: 495px;
+		&--double {
+			width:1000px;
+			height:1000px;
+		}
+	}
+	&-label {
+		filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ccffffff', endColorstr='#ccffffff'); /* IE */
+	}
+}
+
+
+
+//listing/category pahe
+
+.listing__product {
+	&-img {
+		width:240px;
+		img {
+			width:200px;
+			height:200px;
+		}
+	}
+	&-title,&-version {
+		background-color:#eee;
+
+	}
+	&-title-wrap {
+		a {
+			&:hover {
+				.listing__product-title,.listing__product-version {
+					background:$primary;
+					color:#fff;
+				}
+			}
+		}
+	}
+	&-a2b-button {
+		position:static;
+		padding:.3em .7em .6em;
+	}
+	&-stock {
+		position:static;
+		top:auto;
+		left:auto;
+		width:auto;
+		height:auto;
+		background:transparent;
+		text-align:right;
+		&-inner {
+			padding:0 10px 0 0;
+			display:block;
+			width:auto;
+			height:auto;
+			color:#999;
+		}
+		
+	}
+}

@@ -1,0 +1,101 @@
+body {
+	min-width:320px;
+	margin:0;
+	background-color: #fff;
+	@extend %core-font;
+}
+a {color:#666;}
+.container {
+	//background-color:#fff;
+    padding:0 10px;
+    @include media-query($mq-large) { padding:0;}
+	&:after {
+		display:none;
+		content:"default";
+		@include media-query($mq-small) {content:"small"}
+		@include media-query($mq-medium) {content:"medium"}
+		@include media-query($mq-fullheader) {content:"fullheader"}
+		@include media-query($mq-large) {content:"large"}
+	}
+} 
+.content {
+	min-height:300px;
+	a {color:$primary; }
+}
+.constrain-max {
+	max-width:$mq-contrained-max;
+	margin-left:auto;
+	margin-right:auto;
+	@include media-query($mq-large) { padding:0 20px; }
+	@include media-query($mq-xlarge) { padding:0; }
+}
+.error-page {
+	margin-top:2em;
+	margin-bottom:3em;
+	@include media-query($mq-fullheader) {	padding-left:2em;	padding-right:2em;	}
+	p {	font-size:1em;
+		@include media-query($mq-large) {   font-size:1.25em;	}
+		font {   font-size:1em;	}
+	}
+}
+//modal
+.white-popup {
+	position: relative;
+	background: #FFF;
+	padding: 15px;
+	width: auto;
+	max-width: 800px;
+	margin: 20px auto;
+	.title-h4 {
+		background:$primary;
+		color:#fff;
+		padding:.5em .75em;
+		margin:0;
+	}
+	ul {list-style: square;	font-size:.875em;}
+	li {margin:4px 0;}
+	p {	font-size:.625em;color:#999;}
+}
+.white-popup-small {
+	position: relative;
+	background: #FFF;
+	padding: 15px 15px 5px;
+	width: auto;
+	max-width: 550px;
+	margin: 20px auto;
+	.title-h4 {
+		background:#eee;
+		color:#222;
+		padding:.5em .75em;
+		margin:0 0 10px;
+	}
+	ul {font-size:.875em;}
+	li {margin:4px 0;}
+}
+.mfp-modal {
+	.mfp-content {
+		background: #fff none repeat scroll 0 0;
+		margin: 40px auto;
+		max-width: 960px;
+		padding: 20px 30px;
+		position: relative;
+		text-align: left;
+		font-size:.875rem;
+	}
+}
+.mfp-rugby-comp-form {
+	.mfp-iframe-scaler iframe {   background:#fff;   }
+	.mfp-content {	max-width: 600px !important;height:80% !important;}
+}
+//misc
+//add any additional classes were using
+@include media-query($mq-xlarge) {
+	.xlarge-push-9 {left: 75%; right: auto;}
+	.xlarge-pull-3 {right: 25%; left: auto;}
+}
+@include media-query($mq-large) {
+	.medium-push-6 {left: 50%; right: auto;}
+	.medium-pull-6 {right: 50%; left: auto;}
+	.large-push-6 {left: 50%; right: auto;}
+	.large-pull-6 {right: 50%; left: auto;}
+}

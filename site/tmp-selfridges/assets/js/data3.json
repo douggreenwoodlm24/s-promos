@@ -1,0 +1,56 @@
+[
+  {
+    "name":"A1",
+    "os": "a",
+    "manufacturer": "1",
+    "description": "white 64GB camera display video"
+  },
+  {
+    "name":"A2",
+    "os": "a",
+    "manufacturer": "2",
+    "description": "white black 64GB 32GB camera bluetooth"
+  },
+  {
+    "name":"A3",
+    "os": "a",
+    "manufacturer": "3",
+    "description": "black silver 64GB 32GB"
+  },
+  {
+    "name":"B1",
+    "os": "b",
+    "manufacturer": "1",
+    "description": "white black gold grey 128GB 32GB"
+  },
+  {
+    "name":"B2",
+    "os": "b",
+    "manufacturer": "2",
+    "description": "white black silver 64GB 32GB"
+  },
+    {
+    "name":"B3",
+    "os": "b",
+    "manufacturer": "3",
+    "description": "blue silver"
+  },
+  {
+    "name":"C1",
+    "os": "c",
+    "manufacturer": "1",
+    "description": "red black silver white 64GB 128GB"
+  },
+  {
+    "name":"C2",
+    "os": "c",
+    "manufacturer": "2",
+    "description": "abc white black silver 64GB 32GB"
+  },
+    {
+    "name":"C3",
+    "os": "c",
+    "manufacturer": "3",
+    "description": "aaawhite blue green silver 64GB 32GB"
+  }
+]

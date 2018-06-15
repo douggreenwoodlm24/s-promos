@@ -1,0 +1,769 @@
+/* 
+ * fit - Landing Page Style 
+ */
+
+
+
+/////////////////////////
+/////////////////////////
+
+/************************************
+  
+  SAMSUNG NFC Sub Landing
+  NINEFIVE
+
+/************************************/
+
+
+
+@font-face {
+    font-family: 'fit-SamsungOne-400';
+    src: url('../fonts/SamsungOne-400.eot');
+    src: url('../fonts/SamsungOne-400.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/SamsungOne-400.woff') format('woff'),
+         url('../fonts/SamsungOne-400.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'fit-SamsungOne-400C';
+    src: url('../fonts/SamsungOne-400C.eot');
+    src: url('../fonts/SamsungOne-400C.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/SamsungOne-400C.woff') format('woff'),
+         url('../fonts/SamsungOne-400C.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+
+//////////////////
+//////////////////
+
+
+.fit {
+  // default styles /START
+  @extend %sharp-sans;
+  position:relative;
+  font-weight: 500;
+  color:$black;
+  a {  
+    color:$black;
+    transition:all .5s ease-in;
+    &:hover{color:$skyblue}
+  }
+     .fit-cta-default {
+    border: 1px solid #000;
+    border-radius: 14px;
+    padding: 1em 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 1em;
+      &:hover {
+        text-decoration: underline;
+      }  
+   }
+  p {  
+    font-size:$base-font-size - .125;
+    position:relative; 
+    font-family: 'fit-SamsungOne-400', sans-serif;
+    @include media-query($mq-large - .0625) {
+      font-size:$base-font-size;
+    } 
+    @include media-query($mq-xlarge - .063) {
+      font-size:$base-font-size + .25;
+    }
+    &.fit-p-small {
+      text-transform:none!important;
+      font-size:$base-font-size - .25;
+      line-height:$base-line-height;
+    }
+  }
+  h1, h2, h3, h4, h5, h6 { 
+    font-weight:bold; 
+  }
+  h1, h2 {
+    font-size:1.75em; 
+    @include media-query($mq-large - .0625) {
+      font-size:2.25em;
+    }
+    @include media-query($mq-contrained-max) { 
+      font-size:2.875em;
+    } 
+    @include media-query($mq-xlarge - .063) {
+      font-size:3.75em;
+    }
+  }
+  h3 {
+    font-size:1.25em; 
+    @include media-query($mq-large - .0625) {
+      font-size:1.65em;
+    }
+    @include media-query($mq-xlarge - .063) {
+      font-size:2em;
+    }
+  }
+  .clear-both {
+    clear: both;
+  }
+
+  .no-padding {
+    padding:0;
+    &-top { 
+      padding-top:0;
+    }
+    &-bottom {
+      padding-bottom:0;
+    }
+  }
+  &_left, &_center, &_right {
+    text-align:center;
+  }
+  // default styles /END
+  
+
+  
+  // 1: Hero 
+  &-hero {
+    background-color: #080d13;
+    background-image: url('../img/promotions/fitness/left-earphone-hero.png'), url('../img/promotions/fitness/right-earphone-hero.png'), url('../img/promotions/fitness/fitness-hero-banner.jpg');
+    background-position: left bottom 25%, right bottom 25%, center top;
+    background-size: 0%, 0%, cover;
+    padding-bottom: 2em;
+    //height: 400px;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    color: #FFF;
+    text-align: center;
+    
+    
+    
+    &-text {
+      margin: 5em auto 3em;
+    }
+    h2 {
+      font-size: 5em;
+    }
+    p {
+            width: 80%;
+            margin: 0 auto;
+          }
+    
+    // pulsing arrow
+    .fit-pulse-arrow-down {
+      position: absolute;
+     
+      height: 100px;
+      width: 100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .fit-pulse-arrow-container {
+      margin: 0 auto;
+      padding-bottom: 2em;
+      float: none;
+      display: block;
+      width: 100px;
+    }
+    
+    .fit-pulse-arrow-down div {
+      $btn-size: 30px;
+      position: relative;
+      width: $btn-size;
+      height: $btn-size;
+      color: white;
+      text-align: center;
+      border-radius: 100%;
+      span {
+        line-height: $btn-size;
+        font-size: 20px;
+      }
+    }
+    
+    .poi {
+      &:after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 100%;
+        background-color: transparent; 
+      -webkit-animation: pulse 1s infinite; /* Safari 4+ */
+  -moz-animation:    pulse 1s infinite; /* Fx 5+ */
+  -o-animation:      pulse 1s infinite; /* Opera 12+ */
+  animation:         pulse 1s infinite; /* IE 10+, Fx 29+ */
+    
+
+
+@-moz-keyframes pulse {
+     0% {
+        transform: scale(1);
+        box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.8);
+      }
+    
+      50% {
+        box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.8);
+      }
+    
+      100% {
+        transform: scale(1.6);
+        box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0);
+      }
+}
+@-o-keyframes pulse {
+     0% {
+        -webkit-transform: scale(1);
+        box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.8);
+      }
+    
+      50% {
+        box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.8);
+      }
+    
+      100% {
+        -webkit-transform: scale(1.6);
+        box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0);
+      }
+}
+@keyframes pulse {
+     0% {
+        transform: scale(1);
+        box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.8);
+      }
+    
+      50% {
+        box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.8);
+      }
+    
+      100% {
+        transform: scale(1.6);
+        box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0);
+      }
+}
+      }
+    }
+    
+    
+
+    // end pulse arrow
+    
+    @include media-query($mq-medium) {
+        background-size: 20%, 20%, cover;
+        &-text {
+          //margin: 5em 7em 3em;
+          p {
+            width: 50%;
+
+          }
+        }
+    }
+    @include media-query($mq-fullheader) {
+        &-text {
+          margin: 8em auto 6em;
+          h2 {
+            margin-bottom: 0.75em;
+          }
+        }
+    }
+    @include media-query($mq-large) {
+        //background-size: 20%, 20%, 100%;
+    }
+    @include media-query($mq-contrained-max) {
+        height: 600px;
+        &-text {
+          margin: 12em auto 6em;
+        }
+    }
+    @include media-query($mq-xlarge) {
+        height: 700px;
+        &-text {
+          margin: 14em auto 4em;
+        }
+    }
+    @include media-query($mq-max) {
+       
+    }
+  }
+  
+  // 2: Fitness fits section
+  &-fitness-fits {
+    text-align: center;
+    h2 {
+      font-size: 3em;
+    }
+    p {
+      font-size: 1.5em;
+    }
+    .fit-inline-links {
+      margin-bottom: 35px;
+    }
+    ul {
+      border-bottom: 1px solid #535353;
+      padding-bottom: 4px;
+      width: 75%;
+      margin: 2em auto 1em;
+      padding-left: 0;
+      li {
+        display: inline-block;
+        margin: 1em 1em 0;
+        font-size: 1.1em;
+        a {
+          border-bottom: 4px solid white;
+          text-decoration: none;
+          text-transform: uppercase;
+          color: #535353;
+            &:hover {
+              border-bottom: 4px solid #1428a0;
+              cursor: pointer;
+              color: #535353;
+            }
+        } 
+      }
+    }
+  }
+  
+  // 3: Wire-free section
+  &-section {
+    &#fit-section-geariconx {
+      background-image: url('../img/promotions/fitness/wirefree-iconx-hero.jpg');
+    background-position: left top;
+    }
+    &#fit-section-gearfit2 {
+      background-image: url('../img/promotions/fitness/gearfit-hero.jpg');
+      background-position: right top;
+    }
+    
+    background-repeat: no-repeat;
+    background-size: 100%;
+    .fit-text-tile {
+      margin-top: 20em;
+
+      background-color: #f5f1f0; // #909090 in dev brief?
+      text-align: center;
+      padding: 0.5em;
+      width: 100%;
+      height: 100%;
+      
+      h3 {
+        font-size: 3em;
+        margin: 0.25em 0;
+      }
+      h4 {
+        color: #535353;
+        font-size: 2em;
+        margin: 0.5em 0;
+      }
+    }
+    .fit-cta-default {
+      border: 1px solid #000;
+      padding: 1em 2em;
+      border-radius: 4px;
+      &:hover {
+        color: #75787b;
+        background-color: #000;
+        text-decoration: none;
+      }
+    }
+    @include media-query($mq-medium) {
+        .fit-text-tile {
+          padding: 2em 4em 4em;
+        }
+        &#fit-section-gearfit2 {
+      background-position: right -90px;
+    }
+         
+    }
+    @include media-query($mq-fullheader) {
+         height: 700px;
+         .fit-text-tile {
+          position: relative;
+        }
+         &#fit-section-geariconx {
+            background-size: 90%;
+            background-position: -110px top;
+            .fit-text-tile {
+              width: 50%;
+            float: right;
+            margin-top: 0;
+            
+            }
+         }
+         &#fit-section-gearfit2 {
+           background-size: 90%;
+           background-position: right top;
+           .fit-text-tile {
+              width: 50%;
+            float: left;
+            margin-top: 0;
+            }
+          }
+         
+
+    }
+    @include media-query($mq-large) {
+        height: 730px;
+        &#fit-section-geariconx {
+            background-size: 81%;
+            background-position: -40px top;
+         }
+         &#fit-section-gearfit2 {
+           background-size: 81%;
+           background-position: right bottom;
+          }
+    }
+    @include media-query($mq-contrained-max) {
+          &#fit-section-geariconx {
+            background-size: 81%;
+            background-position: -80px top;
+         }
+          &#fit-section-gearfit2 {
+           //background-size: 65%;
+          }
+    }
+    @include media-query($mq-xlarge) {
+        &#fit-section-geariconx {
+            background-size: 60%;
+            background-position: -40px top;
+         }
+    }
+    @include media-query($mq-max) {
+        &#fit-section-gearfit2 {
+            background-size: 55%;
+            background-position: right -70px;
+         }
+    }
+  }
+  
+  // 4 and 6: Product row (feature product)
+  &-productrow-feature {
+    margin-top: 1em;
+    margin-bottom: 3em;
+    h4 {
+      font-size: 3em;
+      margin: 0 0 0.5em 0;
+    }
+    h6 {
+      margin: 0;
+    }
+    .fit-productrow-feature-info {
+      padding: 1em 2em;
+    }
+    .fit-cta-default {
+      background-color: #000;
+      color: #FFF;
+      text-transform: uppercase;
+      border-radius: 0px;
+      padding-left: 5em;
+      padding-right: 5em;
+      margin-left: 0;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+      // Colour chooser
+   .fit-colors-container {
+    //text-align: center;
+    margin: 0.5em 0 1.5em;
+    height: 30px;
+    .fit-color {
+      width: 26px;
+      height: 26px;
+      border: 2px solid #c6c6c6;
+      margin: 2px;
+      display: inline-block;
+      float: none;
+      &.current {
+        border: 2px solid #170da2;
+      }
+      &.black {
+        background-color: #000;
+      }
+      &.blue {
+        background-color: #7a9bba;
+      }
+      &.pink {
+        background-color: #d939b3;
+      }
+      &.white {
+        background-color: #fff;
+      }
+    }    
+  }
+  
+  @include media-query($mq-medium) {
+        .fit-cta-default {
+      padding-left: 1em;
+      padding-right: 1em;
+        }
+    }
+    @include media-query($mq-fullheader) {
+        .fit-cta-default {
+      padding-left: 5em;
+      padding-right: 5em;
+    }
+  }
+  
+  
+  }
+  
+  
+  
+  
+  // 6: S Health section (black bg)
+  &-shealth {
+    background: #000; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#000, #0b0b0d); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#000, #0b0b0d); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#000, #0b0b0d); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#000, #0b0b0d); /* Standard syntax */
+   color: #FFF;
+   text-align: center;
+   padding: 2em 2em 4em;
+
+   p {
+     margin: 2em 0 4em;
+     @include media-query($mq-fullheader) {
+       width: 60%;
+       margin: 0 auto 4em;
+       display: block;
+      }
+   }
+  .fit-cta-default {
+    border: 1px solid #fff;
+    color: #fff; 
+    border-radius: 30px;
+    text-transform: uppercase;
+    padding-left: 3em;
+    padding-right: 3em;
+   }
+   
+      h2 {
+     font-size: 50px;
+     margin: 20px 0 0;
+     text-align: center;
+   }
+   .img-before-text {
+     margin-top: -32px;
+   }
+
+   
+   @include media-query($mq-medium) {
+      h2 {
+           font-size: 110px;
+
+         }
+         .img-before-text {
+            margin-top: -65px;
+         }
+    }
+    @include media-query($mq-fullheader) {
+      h2 {
+           font-size: 140px;
+
+         }
+         .img-before-text {
+            margin-top: -90px;
+         }
+    }
+    @include media-query($mq-large) {
+          h2 {
+           font-size: 195px;
+
+         }
+         .img-before-text {
+            margin-top: -110px;
+         }
+    }
+
+
+  }
+  
+  // 7: product row (3 items)
+  .fit-productrow-default {
+    text-align: center;
+    background-color: #fff;
+    
+      h4{
+        font-size: 36px;
+      }
+      @include media-query($mq-medium) {
+         h4{
+          font-size: 30px;
+        }
+      }
+          @include media-query($mq-fullheader) {
+        h4{
+          font-size: 36px;
+        }
+    }
+    .fit-cta-default {
+    border-radius: 30px;
+    text-transform: uppercase;
+    padding-left: 3em;
+    padding-right: 3em;
+    &:hover {
+        color: #75787b;
+        background-color: #000;
+        text-decoration: none;
+      }
+      @include media-query($mq-medium) {
+      font-size: 12px;
+    }
+    @include media-query($mq-fullheader) {
+      font-size: 1em;
+    }
+   }
+    .medium-4 {
+      margin-bottom: 4em;
+    }
+    &-img {
+      height: 200px;
+      
+    }
+    @include media-query($mq-large) {
+      
+    }
+  }
+  
+  // SWIPERS
+  
+  // large swiper (e.g. Gear IconX section title)
+  .fit-swiper-section {
+    
+
+    .fit-slide-content {
+      padding: 0 1em 3em;
+      //width: 100%;
+      p {
+        margin-bottom: 3em;
+      }
+    }
+    .swiper-container {
+      padding-bottom: 2em;
+    }
+    
+    .swiper-button-prev {
+      top: 95%;
+      background-image: url('../img/promotions/fitness/swiper-section-prev.png');
+      background-size: 25px 13px;
+      padding-left: 40px;
+      padding-top: 12px;
+    }
+    .swiper-button-next {
+      top: 95%;
+      background-image: url('../img/promotions/fitness/swiper-section-next.png');
+      background-size: 25px 13px;
+       padding-right: 120px;
+      padding-top: 12px;
+    }
+      .swiper-pagination-bullet {
+      background-color: #a5a5a5;
+      opacity: 1;
+    }
+      .swiper-pagination-bullet-active {
+        background-color: #000;
+      }
+      
+      @include media-query($mq-medium) {
+              
+          }
+      
+  
+      
+      
+      @include media-query($mq-fullheader) {
+             position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80%;
+            .swiper-pagination-bullet {
+              visibility: hidden;
+            }
+          }
+          
+          @include media-query($mq-large) {
+            .swiper-pagination-bullet {
+              visibility: visible;
+            }
+          }
+  }
+  
+  // small swiper (e.g. product thumbnail)
+  #fit-swiper-product1, #fit-swiper-product2 {
+    margin: 2em;
+          position: relative;
+          height: 300px;
+          .swiper-container {
+          width: 100%;
+          height: 300px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .swiper-slide {
+          background-size: 80%;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        .gallery-top {
+          height: 80%;
+          width: 100%;
+        }
+        .gallery-thumbs {
+          height: 20%;
+          box-sizing: border-box;
+          padding: 10px 0;
+          
+        }
+        .gallery-thumbs .swiper-slide {
+          width: 15%;
+          height: 100%;
+          opacity: 0.4;
+          border: 1px solid #9f9b9a;
+          @include media-query($mq-fullheader) {
+            width: 75px;
+          }
+        }
+        .gallery-thumbs .swiper-slide-active {
+          opacity: 1;
+        }
+        
+        .swiper-button-prev {
+          background-image: url('../img/promotions/fitness/swiper-product-prev.png');
+          background-size: 21px 38px;
+        }
+        .swiper-button-next {
+          background-image: url('../img/promotions/fitness/swiper-product-next.png');
+          background-size: 21px 38px;
+        }
+        
+         @include media-query($mq-medium) {
+            margin: 1em;
+            
+          }
+          @include media-query($mq-large) {
+            height: 380px;
+            .swiper-slide {
+              background-size: 60%;
+            }
+          }
+          
+           @include media-query($mq-max) {
+               margin-bottom: 6em;
+               .gallery-top {
+                  height: 100%;
+                  width: 100%;
+                }
+          }
+         
+      }
+  
+
+ 
+}

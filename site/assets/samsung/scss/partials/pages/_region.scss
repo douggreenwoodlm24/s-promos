@@ -1,0 +1,42 @@
+// ==|== pages > region
+
+.region{
+	&__items {
+		padding: 1em 0;
+		margin-bottom:2em;
+		border-bottom:1px dotted #c6c6c6;
+		li {
+			float:left;
+			width:100%;
+			@include media-query($mq-medium - 10) {width:50%}
+			@include media-query($mq-medium + 10) {width:33.3333%}
+			@include media-query($mq-large) {width:25%}
+		}
+		a {
+			position: relative;
+			display:inline-block;
+			vertical-align:top;
+			padding:6px 6px 6px 0;
+			font-size:$base-font-size ;
+			text-decoration:none;
+			&:hover{text-decoration:underline;}
+			@include media-query($mq-medium) { font-size:$base-font-size + .125; }
+		}
+
+		.flag {
+			display:inline-block;
+			height:28px;
+			width:28px;
+			margin:0 8px 2px 0;
+			border:2px solid #fff;
+			border-radius: 20px;
+			//box-sizing:padding-box;
+			vertical-align: middle;
+			box-shadow:0 0 4px rgba(0,0,0,.2);
+			//background:#eee;
+			transition:border-color .25s ease-out;
+		}
+	}
+}
+
+

@@ -1,0 +1,726 @@
+//icons
+.iconBase, [class*="icon-"] {
+    direction: ltr;
+    font-family: "samsungIcon";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-transform: none;
+}
+.icon-samsung, .icon-home, .icon-arrow-left, .icon-arrow-right, .icon-plus, .icon-minus, .icon-signin, .icon-locator, .icon-menu, .icon-arrow-right-2, .icon-arrow-left-2, .icon-up-arrow, .icon-down-arrow, .icon-fb, .icon-twitter, .icon-close-x, .icon-link-play, .icon-accessories, .icon-awards, .icon-comment, .icon-compare, .icon-evolution-kit, .icon-flag, .icon-gesture-control, .icon-glance, .icon-review, .icon-voice-control, .icon-video, .icon-tv-side, .icon-tv-camera, .icon-tv-base, .icon-thumbsup, .icon-thumbsdown, .icon-threesixty, .icon-tech-specs, .icon-similar-items, .icon-share, .icon-save, .icon-jump-up, .icon-star, .icon-android, .icon-battery-high, .icon-battery-low, .icon-battery-mid, .icon-coloroptions-no, .icon-screensize-high, .icon-screensize-low, .icon-storage-high, .icon-screensize-mid, .icon-storage-low, .icon-storage-mid, .icon-windows, .icon-breadcrumb-back, .icon-camera-high, .icon-camera-mid, .icon-camera-low, .icon-pdp-pause, .icon-pdp-play, .icon-delete-product, .icon-localization-store, .icon-tv, .icon-phone, .icon-samsung-store, .icon-samsung-experience-store, .icon-road, .icon-other-store, .icon-others, .icon-notebook, .icon-mobile, .icon-memory, .icon-list, .icon-laundry, .icon-find-a-store, .icon-camera, .icon-accessory, .icon-gallery, .icon-slideHandle, .icon-social-fb, .icon-social-pinterest, .icon-social-twitter, .icon-map, .icon-google-plus, .icon-alert, .icon-promotion, .icon-print, .icon-support, .icon-thumb-up2, .icon-clock, .icon-marker-offer, .icon-checkmark, .ss_samsung form:not(#foo) > fieldset input[type="checkbox"]:checked + label::before, .ss_samsung form:not(#bhd) > fieldset .input .placeholder[type="checkbox"]:checked + label::before, .ss_samsung .input form:not(#bhd) > fieldset .placeholder[type="checkbox"]:checked + label::before, .icon-checkmark-2, .icon-camera-2, .icon-instagram, .icon-man, .icon-wrench, .icon-jump-down, .icon-calendar, .icon-download, .icon-manuals, .icon-warranty, .icon-trophy, .icon-live-chat, .icon-search-close, .icon-search, .icon-text-new, .icon-text-exclusive, .icon-cart, .icon-social-email, .icon-mail-icon, .icon-port, .icon-acloserlook, .icon-video-pause, .icon-video-play, .icon-text-pre-ordered, .icon-estore, .icon-close-video, .icon-glasses, .icon-size, .icon-oled, .icon-a-plus, .icon-ports, .icon-resolution, .icon-Offer_Store, .icon-Offer_Sstore, .icon-Offer_SStore, .icon-arrow-off, .icon-arrow-on, .icon-smaple_image, .icon-features, .icon-specifications, .icon-Tutorials, .icon-SampleImages, .icon-RecyclingPolicy, .icon-RecommendedForYou, .icon-Features, .icon-CompatibleProducts, .icon-SamsungStore_Experience_Store_bw, .icon-PartnersStore_bw, .icon-Offer_In_Store_bw, .icon-Offer_In_SamsungStore_bw, .icon-Offer_bw, .icon-balloon, .icon-zoom, .icon-smart-tv, .icon-threesixty2, .icon-yes, .icon-weight, .icon-tv_display_pla, .icon-tv_display_led, .icon-tv_display_lcd, .icon-right-arrow, .icon-emory-card, .icon-left-arrow, .icon-interface, .icon-app-store, .icon-down-arrow2, .icon-product-qna, .icon-signout, .icon-LnK, .icon-CS_Plaza, .icon-kv_thumb, .icon-zoomIn-rtl, .icon-zoom-rtl, .icon-arrow-off-rtl, .icon-play-carousel-rtl, .icon-video-play-rtl, .icon-glasses-rtl, .icon-estore-rtl, .icon-port-rtl, .icon-ports-rtl, .icon-search-rtl, .icon-wrench-rtl, .icon-cart-rtl, .icon-checkmark-2-rtl, .icon-checkmark-rtl, .icon-thumb-up2-rtl, .icon-phone-rtl, .icon-promotion-rtl, .icon-list-rtl, .icon-video-rtl, .icon-share-rtl, .icon-video-rtl-2, .icon-flag-rtl, .icon-pdp-play, .icon-ask, .icon-vk2 {
+    font-family: "samsungIcon";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-transform: none;
+}
+.icon-samsung::before {
+    content: "!";
+}
+.icon-home::before {
+    content: "$";
+}
+.icon-arrow-left::before {
+    content: "%";
+}
+.rtl .icon-arrow-right::before {
+    content: "&";
+}
+.icon-arrow-right::before {
+    content: "&";
+}
+.rtl .icon-arrow-left::before {
+    content: "%";
+}
+.icon-plus::before {
+    content: "\'";
+}
+.icon-minus::before {
+    content: "(";
+}
+.icon-signin::before {
+    content: "";
+}
+.icon-locator::before {
+    content: "*";
+}
+.icon-menu::before {
+    content: "+";
+}
+.icon-arrow-right-2::before {
+    content: ",";
+}
+.rtl .icon-arrow-right-2::before {
+    content: "-";
+}
+.icon-arrow-left-2::before {
+    content: "-";
+}
+.rtl .icon-arrow-left-2::before {
+    content: ",";
+}
+.icon-up-arrow::before {
+    content: "/";
+}
+.icon-down-arrow::before {
+    content: "0";
+}
+.icon-fb::before {
+    content: "1";
+}
+.icon-twitter::before {
+    content: "2";
+}
+.icon-close-x::before {
+    content: "3";
+}
+.icon-link-play::before {
+    content: "4";
+}
+.rtl .icon-link-play::before {
+    content: "_";
+}
+.icon-accessories::before {
+    content: "5";
+}
+.icon-awards::before {
+    content: "6";
+}
+.icon-comment::before {
+    content: "7";
+}
+.icon-compare::before {
+    content: "8";
+}
+.icon-evolution-kit::before {
+    content: "9";
+}
+.icon-flag::before {
+    content: ":";
+}
+.rtl .icon-flag::before {
+    content: "";
+}
+.icon-gesture-control::before {
+    content: ";";
+}
+.icon-glance::before {
+    content: "<";
+}
+.icon-review::before {
+    content: "=";
+}
+.icon-voice-control::before {
+    content: ">";
+}
+.icon-video::before {
+    content: "?";
+}
+.rtl .icon-video::before {
+    content: "";
+}
+.icon-tv-side::before {
+    content: "@";
+}
+.icon-tv-camera::before {
+    content: "A";
+}
+.icon-tv-base::before {
+    content: "B";
+}
+.icon-thumbsup::before {
+    content: "C";
+}
+.icon-thumbsdown::before {
+    content: "D";
+}
+.icon-threesixty::before {
+    content: "E";
+}
+.icon-tech-specs::before {
+    content: "F";
+}
+.icon-similar-items::before {
+    content: "G";
+}
+.icon-share::before {
+    content: "H";
+}
+.rtl .icon-share::before {
+    content: "";
+}
+.icon-save::before {
+    content: "I";
+}
+.icon-jump-up::before {
+    content: "N";
+}
+.icon-star::before {
+    content: "O";
+}
+.icon-battery-high::before {
+    content: "Q";
+}
+.icon-battery-low::before {
+    content: "R";
+}
+.icon-battery-mid::before {
+    content: "S";
+}
+.icon-coloroptions-no::before {
+    content: "W";
+}
+.icon-screensize-low::before {
+    content: "Y";
+}
+.icon-screensize-mid::before {
+    content: "[";
+}
+.icon-storage-low::before {
+    content: "\\";
+}
+.icon-storage-mid::before {
+    content: "]";
+}
+.icon-windows::before {
+    content: "^";
+}
+.icon-breadcrumb-back::before {
+    content: "_";
+}
+.rtl .icon-breadcrumb-back::before {
+    content: "4";
+}
+.icon-camera-mid::before {
+    content: "U";
+}
+.icon-camera-low::before {
+    content: "V";
+}
+.icon-pdp-pause::before {
+    content: "`";
+}
+.icon-pdp-play::before {
+    content: "a";
+}
+.rtl .icon-pdp-play::before {
+    content: "icon-pdp-play-rtl";
+}
+.icon-delete-product::before {
+    content: "b";
+}
+.icon-localization-store::before {
+    content: "c";
+}
+.icon-tv::before {
+    content: "d";
+}
+.icon-phone::before {
+    content: "e";
+}
+.rtl .icon-phone::before {
+    content: "";
+}
+.icon-samsung-store::before {
+    content: "f";
+}
+.icon-samsung-experience-store::before {
+    content: "g";
+}
+.icon-road::before {
+    content: "h";
+}
+.icon-other-store::before {
+    content: "j";
+}
+.icon-others::before {
+    content: "k";
+}
+.icon-notebook::before {
+    content: "l";
+}
+.icon-mobile::before {
+    content: "m";
+}
+.icon-memory::before {
+    content: "n";
+}
+.icon-list::before {
+    content: "o";
+}
+.rtl .icon-list::before {
+    content: "";
+}
+.icon-laundry::before {
+    content: "p";
+}
+.icon-find-a-store::before {
+    content: "q";
+}
+.icon-camera::before {
+    content: "r";
+}
+.icon-accessory::before {
+    content: "s";
+}
+.icon-gallery::before {
+    content: "t";
+}
+.icon-slideHandle::before {
+    content: "u";
+}
+.icon-social-fb::before {
+    content: "w";
+}
+.icon-social-pinterest::before {
+    content: "x";
+}
+.icon-social-twitter::before {
+    content: "y";
+}
+.icon-map::before {
+    content: "z";
+}
+.icon-google-plus::before {
+    content: "i";
+}
+.icon-alert::before {
+    content: "{";
+}
+.rtl .icon-alert::before {
+    content: "}";
+}
+.icon-promotion::before {
+    content: "}";
+}
+.rtl .icon-promotion::before {
+    content: "";
+}
+.icon-print::before {
+    content: "|";
+}
+.icon-support::before {
+    content: "~";
+}
+.icon-thumb-up2::before {
+    content: "";
+}
+.rtl .icon-thumb-up2::before {
+    content: "";
+}
+.icon-clock::before {
+    content: "";
+}
+.icon-marker-offer::before {
+    content: "";
+}
+.icon-checkmark::before, .ss_samsung form:not(#bhd) > fieldset input[type="checkbox"]:checked + label::before, .ss_samsung form:not(#bhd) > fieldset .input .placeholder[type="checkbox"]:checked + label::before, .ss_samsung .input form:not(#bhd) > fieldset .placeholder[type="checkbox"]:checked + label::before {
+    content: "";
+}
+.rtl .icon-checkmark::before {
+    content: "";
+}
+.icon-checkmark-2::before {
+    content: "";
+}
+.rtl .icon-checkmark-2::before {
+    content: "";
+}
+.icon-camera-2::before {
+    content: "";
+}
+.icon-instagram::before {
+    content: "";
+}
+.icon-man::before {
+    content: "";
+}
+.icon-wrench::before {
+    content: "";
+}
+.rtl .icon-wrench::before {
+    content: "";
+}
+.icon-jump-down::before {
+    content: "";
+}
+.icon-calendar::before {
+    content: "ç";
+}
+.icon-download::before {
+    content: "";
+}
+.icon-manuals::before {
+    content: "";
+}
+.icon-warranty::before {
+    content: "";
+}
+.icon-trophy::before {
+    content: "";
+}
+.icon-live-chat::before {
+    content: "";
+}
+.icon-search-close::before {
+    content: "";
+}
+.icon-search::before {
+    content: "";
+}
+.rtl .icon-search::before {
+    content: "";
+}
+.icon-text-new::before {
+    content: "";
+}
+.icon-text-exclusive::before {
+    content: "";
+}
+.icon-cart::before {
+    content: "";
+}
+.rtl .icon-cart::before {
+    content: "";
+}
+.icon-social-email::before {
+    content: "v";
+}
+.icon-mail-icon::before {
+    content: "\"";
+}
+.icon-port::before {
+    content: "#";
+}
+.icon-port::before {
+    content: "";
+}
+.icon-acloserlook::before {
+    content: ".";
+}
+.icon-video-pause::before {
+    content: "";
+}
+.icon-video-play::before {
+    content: "";
+}
+.rtl .icon-video-play::before {
+    content: "";
+}
+.icon-text-pre-ordered::before {
+    content: "";
+}
+.icon-estore::before {
+    content: "";
+}
+.rtl .icon-estore::before {
+    content: "";
+}
+.icon-close-video::before {
+    content: "";
+}
+.icon-glasses::before {
+    content: "";
+}
+.rtl .icon-glasses::before {
+    content: "";
+}
+.icon-size::before {
+    content: "";
+}
+.icon-oled::before {
+    content: "";
+}
+.icon-a-plus::before {
+    content: "";
+}
+.icon-ports::before {
+    content: "";
+}
+.rtl .icon-ports::before {
+    content: "";
+}
+.icon-resolution::before {
+    content: "";
+}
+.icon-play-carousel::before {
+    content: "";
+}
+.rtl .icon-play-carousel::before {
+    content: "";
+}
+.icon-pause-carousel::before {
+    content: "";
+}
+.icon-screensize-high::before {
+    content: "";
+}
+.icon-storage-high::before {
+    content: "";
+}
+.icon-camera-high::before {
+    content: "";
+}
+.icon-washer_dimension::before {
+    content: "";
+}
+.icon-washer_capacity::before {
+    content: "";
+}
+.icon-washer_config::before {
+    content: "";
+}
+.icon-Offer_Store::before {
+    content: "";
+}
+.icon-Offer_Sstore::before {
+    content: "";
+}
+.icon-Offer_SStore::before {
+    content: "J";
+}
+.icon-arrow-off::before {
+    content: "L";
+}
+.rtl .icon-arrow-off::before {
+    content: "";
+}
+.icon-arrow-on::before {
+    content: "M";
+}
+.icon-left-arrow::before {
+    content: "-";
+}
+.icon-right-arrow::before {
+    content: ",";
+}
+.icon-smaple_image::before {
+    content: "P";
+}
+.icon-features::before {
+    content: "T";
+}
+.icon-specifications::before {
+    content: "X";
+}
+.icon-Tutorials::before {
+    content: "Z";
+}
+.icon-SampleImages::before {
+    content: "󰀀";
+}
+.icon-RecyclingPolicy::before {
+    content: "";
+}
+.icon-RecommendedForYou::before {
+    content: "";
+}
+.rtl .icon-RecommendedForYou::before {
+    content: "";
+}
+.icon-Features::before {
+    content: "";
+}
+.icon-CompatibleProducts::before {
+    content: "";
+}
+.icon-SamsungStore_Experience_Store_bw::before {
+    content: "";
+}
+.icon-PartnersStore_bw::before {
+    content: "";
+}
+.icon-Offer_In_Store_bw::before {
+    content: "";
+}
+.icon-Offer_In_SamsungStore_bw::before {
+    content: "";
+}
+.icon-Offer_bw::before {
+    content: "";
+}
+.icon-balloon::before {
+    content: "";
+}
+.icon-android::before {
+    content: "";
+}
+.icon-zoom::before {
+    content: "";
+}
+.rtl .icon-zoom::before {
+    content: "";
+}
+.icon-smart-tv::before {
+    content: "";
+}
+.icon-threesixty2::before {
+    content: "";
+}
+.icon-yes::before {
+    content: "";
+}
+.rtl .icon-yes::before {
+    content: "";
+}
+.icon-weight::before {
+    content: "";
+}
+.icon-tv_display_pla::before {
+    content: "";
+}
+.icon-tv_display_led::before {
+    content: "";
+}
+.icon-tv_display_lcd::before {
+    content: "";
+}
+.icon-right-arrow::before {
+    content: "";
+}
+.rtl .icon-right-arrow::before {
+    content: "";
+}
+.icon-memory-card::before {
+    content: "";
+}
+.icon-left-arrow::before {
+    content: "";
+}
+.rtl .icon-left-arrow::before {
+    content: "";
+}
+.icon-interface::before {
+    content: "";
+}
+.icon-app-store::before {
+    content: "";
+}
+.icon-down-arrow2::before {
+    content: "";
+}
+.icon-product-qna::before {
+    content: "";
+}
+.icon-signout::before {
+    content: "";
+}
+.icon-LnK::before {
+    content: "";
+}
+.icon-CS_Plaza::before {
+    content: "";
+}
+.icon-kv_thumb::before {
+    content: "";
+}
+.icon-ask::before {
+    content: "";
+}
+.icon-vk2::before {
+    content: "";
+}
+
+/*
+@font-face {
+    font-family: "samsungIcon2";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/common/next/font/samsungIcon2.woff") format("woff"), url("/common/next/font/samsungIcon2.ttf") format("truetype"), url("/common/next/font/samsungIcon2.svg#samsungIcon2") format("svg");
+}
+.icon-microsite, .icon.icons-smartphone_android {
+    font-family: "samsungIcon2";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-transform: none;
+}
+.icon-microsite::before {
+    content: "";
+}
+.icons-smartphone_android::before {
+    content: "";
+}
+@font-face {
+    font-family: "samsungIcon_contactus";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/common/next/font/samsungIcon_contactus.eot?#iefixbmltcm") format("embedded-opentype"), url("/common/next/font/samsungIcon_contactus.woff") format("woff"), url("/common/next/font/samsungIcon_contactus.ttf?bmltcm") format("truetype"), url("/common/next/font/samsungIcon_contactus.svg?bmltcm") format("svg");
+}
+.icon-contactus {
+    font-family: "samsungIcon_contactus";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-transform: none;
+}
+.icon-contactus::before {
+    content: "";
+}
+@font-face {
+    font-family: "icon-samsung-store2";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/common/next/font/icon-samsung-store2.eot?#iefixoqcvo6") format("embedded-opentype"), url("/common/next/font/icon-samsung-store2.ttf?oqcvo6") format("truetype"), url("/common/next/font/icon-samsung-store2.woff?oqcvo6") format("woff"), url("/common/next/font/icon-samsung-store2.svg?oqcvo6#icon-samsung-store2") format("svg");
+}
+.icon-tv-experience, .icon-info-circle {
+    font-family: "icon-samsung-store2" !important;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-transform: none;
+}
+.icon-tv-experience::before {
+    content: "";
+}
+.icon-info-circle::before {
+    content: "";
+}
+@font-face {
+    font-family: "WhatsApp";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/common/next/font/WhatsApp.eot?#iefixq5h6a9") format("embedded-opentype"), url("/common/next/font/WhatsApp.ttf?q5h6a9") format("truetype"), url("/common/next/font/WhatsApp.woff?q5h6a9") format("woff"), url("/common/next/font/WhatsApp.svg?q5h6a9#WhatsApp") format("svg");
+}
+.ico-WhatsApp {
+    font-family: "WhatsApp";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-transform: none;
+}
+.ico-WhatsApp::before {
+    content: "";
+}
+@font-face {
+    font-family: "icon-liveChat";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/common/next/font/icon-liveChat.eot?#iefix-jc34l0") format("embedded-opentype"), url("/common/next/font/icon-liveChat.ttf?-jc34l0") format("truetype"), url("/common/next/font/icon-liveChat.woff?-jc34l0") format("woff"), url("/common/next/font/icon-liveChat.svg?-jc34l0#icon-liveChat") format("svg");
+}
+.icon-liveChat {
+    font-family: "icon-liveChat";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-transform: none;
+}
+.icon-liveChat::before {
+    content: "";
+}
+.sub-hero-wrap .icon-liveChat {
+    font-size: 42px !important;
+}
+@media (min-width: 48em) {
+.sub-hero-wrap .icon-liveChat {
+    font-size: 50px !important;
+}
+}
+*/

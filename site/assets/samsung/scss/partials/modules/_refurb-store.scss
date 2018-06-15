@@ -1,0 +1,319 @@
+// ==|== modules > refurb store
+
+//nav hacks 
+
+.header__globalnav--refurb {
+	.header__globalnav-link {
+		color:#000;
+		text-transform: uppercase;
+		padding:16px 10px;
+		margin-right:10px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.header--refurb {
+	background-color:#e0e0e0;
+	.header__basket-icon{
+		color:$primary;
+	}
+
+}
+
+
+.nav__inner--outlet {
+	.nav__item--hasmenu {
+		.nav__link::after {
+			@include media-query($mq-fullheader) {
+				display:inline-block;
+				vertical-align: middle;
+				content:"0";
+			    font-family: "samsungIcon";
+			    font-size: 8px;
+			    padding: 0 0 0 0;
+			    margin:0 0 3px 8px;
+			  	font-weight:normal;
+			    z-index: 0;
+			}
+		} 
+	}
+}
+
+.refurb__header {
+	position:relative;
+	text-align:center;
+	
+	width:97.75%;
+	margin: 0 1.125% 25px;
+	@include media-query($mq-medium) {
+		display:table;
+		margin: 10px 1.125% 25px;
+	}
+	&::after {
+		position:absolute;
+		left:0;
+		bottom:-13px;
+		content:"";
+		display:block;
+		height:3px;
+		width:100%;
+		background:$primary;
+	}	
+	&-item {
+		border-bottom:1px solid #ddd;
+		padding:10px 0;
+		@include media-query($mq-medium) {
+			display:table-cell;
+			vertical-align: middle;
+			width:33.33%; 
+			padding:10px 20px;
+			//border:1px solid #f00;
+			margin-top:10px;
+			border:none;
+			border-right:1px solid #ccc;
+		}
+		&:first-child {
+			padding-left:0;
+		}
+		&:last-child {
+			border:none;
+			padding-right:0;
+		}
+		&--intro {
+			text-align: left;
+			font-size:.875em;
+		}
+		&--title {	
+			margin:0;
+			font-size:1.125em;
+			font-weight: bold;
+			
+			@include media-query($mq-medium) {
+				font-size:1.125em;
+				
+			}
+			@include media-query($mq-large) {
+				font-size:1.625em;
+				font-weight:normal;
+			}
+		}
+		&--certified {
+			img {
+				height:20px;
+				margin:0 0 4px;
+				@include media-query($mq-medium) {
+					margin:10px 0 6px;
+					height:26px;
+				}
+			}
+
+			&-copy {
+				margin:0;
+				font-size:.875em;
+			}
+		}
+	}
+	&-tick-icon {
+		float:left;
+		width:33px;
+		height:33px;
+		margin-right:5px;
+		background:url(/assets/samsung/img/refurb/home/tick-icon.png);
+		background-size:cover;
+		@include media-query($mq-medium) {
+			width:50px;
+			height:50px;
+			margin-right:8px;
+		}
+	}
+}
+
+//home
+.refurb__spotlight {
+	text-align:center;
+	margin:20px 0 10px;
+	&-item {
+		position:relative;
+		display:inline-block;
+		width:100%;
+		margin:0 0 10px;
+		padding-top:100%;
+		border:1px solid #ccc;
+		background:#fff;
+		color:#000;
+     	background-size:cover;
+		//background-position:100% 0%;
+		background-repeat: no-repeat;
+
+		@include media-query($mq-small + 5) {
+			width:48.5%;
+			margin:0 .5% 10px;
+			padding-top:60%;
+		}
+		@include media-query($mq-medium + 5) {
+			width:31.75%;
+			padding-top:50%;
+		}
+		@include media-query($mq-large) {
+			padding-top:40%;
+			//background-size:contain;
+			//background-position:100% 0%;
+			background-position:20% -20%;
+		}
+		@include media-query($mq-large + 15) {
+			width:15.75%;
+			margin:0 .25% 10px;
+			padding-top:30%;
+		}
+		&:hover {
+			border-color:$accent;
+			.refurb__spotlight-cta {
+				border-color: #fff; 
+			}
+			.refurb__spotlight-header {
+				background-color:rgba($accent,.95);
+				color:#fff;
+				//background-image: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,.2) 100%);
+			}
+		}
+	}
+	&-header {
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		background-color:rgba(250,250,250,.9);
+		background-image: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%,rgba(0,0,0,0) 100%);
+		padding:10px 6px;
+		font-weight:bold;
+		border-bottom:1px solid #eee;
+		transition:background-color .25s ease-out;
+	}
+	&-title {	
+		font-size:1.5em;
+		@include media-query($mq-large) {
+			font-size:1.5em;
+		}
+		@include media-query($mq-large + 15) {
+			font-size:1.5em;
+		}
+		@include media-query($mq-xlarge) {
+			font-size:1.75em;
+		}
+		@include media-query($mq-xlarge + 10) {
+			font-size:2em;
+		}
+	}
+	&-cta {
+		display:inline-block;
+		margin-top:.5em;
+		padding-bottom:.125em;
+		text-transform:uppercase;
+		border-bottom:3px solid #9fcde7;
+	}
+}
+
+.refurb__spotlight-view-all {
+
+	a {
+		display:block;
+		padding:.66em;
+		margin:0 1% 20px;
+		background:$primary;
+		text-align:center;
+		color:#fff;
+		text-decoration: none;
+		font-size:.875em;
+		font-weight: bold;
+		transition:background .25s ease-out;
+		@include media-query($mq-medium) {
+			font-size:1em;
+		}
+		@include media-query($mq-large) {
+			font-size:1.25em;
+		}
+
+
+		&:hover {
+			background:$accent;
+		}
+	}
+}
+
+.refurb__splainbox {
+	margin:0 1% 20px;
+	&-title {
+		margin:0;
+		padding:.66em;
+		text-align:center;
+		background:#eee;
+		font-size:.875em;
+		@include media-query($mq-medium) {
+			font-size:1em;
+		}
+		@include media-query($mq-large) {
+			font-size:1.25em;
+		}
+	}
+	&-list {
+		display:flex;
+		flex-wrap: wrap;
+		//align-items:center;
+
+		border-left:1px solid #eee;
+		border-right:1px solid #eee;
+
+		@include media-query($mq-small + 10) {
+			
+			border-left:1px solid #eee;
+		}
+	}
+	&-item {
+		flex:2;
+		position:relative;
+		flex-basis:100%;	
+		border-bottom:1px solid #eee;
+		padding:1em 1em 1em 3em;
+		text-align:left;
+		font-size:.875em;
+		@include media-query($mq-large) {
+			padding-left:3.5em;
+			font-size:.875em;
+		}
+		@include media-query($mq-xlarge + 10) {
+			font-size:1em;
+		}
+		&::before {
+			position:absolute;
+			left:14px;
+			top:50%;
+			margin-top:-16px;
+			margin-right:5px;
+			content:"✓";
+			color:$primary;
+			font-weight: bold;
+			font-size:24px;
+			text-shadow: 2px 2px 4px rgba(0,0,0,.2);
+			@include media-query($mq-large) {
+				left:17px;
+				margin-top:-20px;
+				font-size:30px;
+			}
+		}
+		@include media-query($mq-small + 10) {
+			flex-basis:50%;	
+			border-left:1px solid #eee;
+			border-bottom:1px solid #eee;
+		}
+		@include media-query($mq-medium) {
+			flex-basis:33.33%;	
+		}
+		@include media-query($mq-xlarge) {
+			flex-basis:16.66%;
+		}
+		
+		
+	}
+}

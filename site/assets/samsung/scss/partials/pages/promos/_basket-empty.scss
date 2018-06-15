@@ -1,0 +1,192 @@
+$basketEmpty-screen-x-large: 1600px;
+$basketEmpty-screen-large: 1440px;
+$basketEmpty-screen-medium-large: 1280px;  // where Samsung FRONT-END left-hand filters become full-screen
+$basketEmpty-screen-medium: 1024px;
+$basketEmpty-screen-800: 800px;
+$basketEmpty-screen-small: 640px;
+$basketEmpty-screen-x-small: 480px;
+$basketEmpty-lightBlue: #20a2ff;
+$basketEmpty-darkBlue: #0077c8;
+$basketEmpty-vLightGrey: #f5f5f5;
+$basketEmpty-medGrey: #c7c7c7;
+$basketEmpty-darkGrey: #272727;
+$basketEmpty-spacing-sm: 8px;
+$basketEmpty-spacing-md: 16px;
+$basketEmpty-spacing-lg: 32px;
+$basketEmpty-fontsize-paragraph: 18px;
+
+
+
+.basketEmpty {
+  
+  
+  text-align: center;
+  
+  .clear-both {
+    clear: both;
+  }
+  
+  a {
+    color: $basketEmpty-darkBlue;
+    text-decoration: none;
+    &:hover {
+      //text-decoration: underline;
+    }
+  }
+  
+  p {
+    font-size: $basketEmpty-fontsize-paragraph;
+  }
+  
+  
+  .basketEmpty-small-text {
+    font-size: ($basketEmpty-fontsize-paragraph)-2;
+    margin-top: 0;
+  }
+  
+  .text-align-left {
+    text-align:left !important;
+  }
+  
+  .basketEmpty-title {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size:  2.75rem;
+  }
+  
+  .basketEmpty-hr {
+    display: block;
+    margin: $basketEmpty-spacing-md auto;
+    border-style: inset;
+    border: 1px solid $basketEmpty-medGrey;
+    width: 75%;
+    height: 0px;
+  }
+  
+  .basketEmpty-cta {
+    background: $basketEmpty-darkBlue;
+    color: #FFF;
+    border-radius: 6px;
+    display: inline-block;
+    padding: $basketEmpty-spacing-md ($basketEmpty-spacing-lg)*3;
+    margin: $basketEmpty-spacing-lg 0 $basketEmpty-spacing-md;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .basketEmpty-shop-categories {
+      width: 75%;
+      margin: 0 auto;
+      @media screen and (max-width:$basketEmpty-screen-medium-large) {
+        width: 100%;
+       }
+      h5 {
+        text-transform: uppercase;
+        //font-size: $basketEmpty-fontsize-paragraph;
+        font-weight: normal;
+      }
+      img {
+        position: relative;
+        top: 5px;
+        transition: top 0.3s ease-out 0s;
+        &:hover {
+          top: -6px;
+        }
+      }
+      a {
+        color: $basketEmpty-darkGrey;
+        &:hover {
+          color: $basketEmpty-lightBlue;
+        }
+      }
+      .swiper-container {
+       margin-top: $basketEmpty-spacing-lg;
+      }
+  }
+
+  
+    /* set-up in order to then override */
+    .display-x-large, .display-large, .display-medium-large, .display-800, .display-medium, .display-small, .display-x-small {
+      display: none;
+    }
+  
+  @media screen and (max-width:$basketEmpty-screen-x-large) {
+    .display-x-large {
+      display: block;
+    }
+    .hide-x-large {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width:$basketEmpty-screen-large) {
+    .display-large {
+      display: block;
+    }
+    .hide-large {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width:$basketEmpty-screen-medium-large) {
+    .display-medium-large {
+      display: block;
+    }
+    .hide-medium-large {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width:$basketEmpty-screen-800) {
+    .display-800 {
+      display: block;
+    }
+    .hide-800 {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width:$basketEmpty-screen-medium) {
+    .display-medium {
+      display: block;
+    }
+    .hide-medium {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width:$basketEmpty-screen-small) {
+    .display-small {
+      display: block;
+    }
+    .hide-small {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width:$basketEmpty-screen-x-small) {
+    .display-x-small {
+      display: block;
+    }
+    .hide-x-small {
+      display: none;
+    }
+  }
+  
+
+  // hide swiper navigation on wide screens
+  @media screen and (min-width:768px) {
+    .swiper-pagination {
+      display: none;
+    }
+  }
+  
+
+
+
+
+} // basketEmpty
+
+
+

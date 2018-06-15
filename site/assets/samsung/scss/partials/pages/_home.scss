@@ -1,0 +1,378 @@
+// pages -- home
+.home__ticker {
+	display:none;
+	padding:3px 3px 6px;
+	margin:0 0 2px;
+	font-size:.8125em;
+	@include media-query($mq-small + 10) { font-size:.875em;}
+	@include media-query($mq-medium) { padding:6px 10px 10px;}
+	@include media-query($mq-large) { font-size:1em;}
+	@include media-query($mq-fullheader) { padding:8px 10px;}
+	@include media-query($mq-large) { padding:8px 19px;}
+	//&--ready {display:block;}
+	ul {display:none;}
+	strong {
+		@include media-query($mq-medium) { 
+			float:left;
+			margin-right: 8px;
+		}
+	}
+	div {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		min-height:1.3em;
+	}
+	a {
+		color:#000;
+		text-decoration: none;
+		&:hover {
+			color:$primary;
+			text-decoration: underline;
+		}
+	}
+}
+.home__spotlight {
+	display:none; //hide if no JS
+	margin:2% 0;
+	&-textstrip{
+		position:absolute;
+		left:4%;
+		bottom:4%;
+		text-decoration:none;
+		font-size:$base-font-size * 1.125;
+		color:#fff;
+	}
+	&--ready { //append class added when document ready
+		display:block;
+	}
+	.no-js & {
+		display:block;
+		.home__spotlight-item {
+			display:inline-block;
+			vertical-align: top;
+			margin:0 10px 10px 0;
+		}
+	}
+	@include media-query($mq-large) { 
+		margin:1% 5%;
+	}
+	@include media-query($mq-xlarge) { 
+		margin:1% 9.5%;
+	}
+	.gutter-sizer {
+		width:10px;
+		@include media-query($mq-large) { 
+			width:1%;
+		}
+	}
+	&-item {
+		position:relative;
+		width:100%;
+		padding-bottom:66%;
+		background:#fcfcfc;
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-position:100% 50%;
+		border:1px solid #f3f3f3;
+		background-position: 50% 50%;
+		@include media-query($mq-small + 10) {
+			width:49%;
+			padding-bottom:50.5%;
+		}
+		@include media-query($mq-medium) {
+			width:49%;
+			padding-bottom:24.5%;
+		}
+		@include media-query($mq-medium + 10) {
+			padding-bottom:24.66%;
+		}
+		@include media-query($mq-large) {
+			padding-bottom:24.75%;
+		}
+		@include media-query($mq-xlarge) {
+			width:24%;
+			padding-bottom:24%;
+		}
+		&--double {
+			width:100%;
+			padding-bottom:85%;
+			background-color:#eee;
+			@include media-query($mq-medium) {
+				width:49%;
+				padding-bottom:50.5%;
+			}
+		}
+		&--force-square {
+			width:100%;
+			padding-bottom:100%;
+			background-color:#eee;
+			@include media-query($mq-medium) {
+				width:49%;
+				padding-bottom:50.5%;
+			}
+			@include media-query($mq-xlarge) {
+				width:24%;
+				padding-bottom:24%;
+			}
+		}
+		transition: opacity .25s ease-out;
+		&:hover {
+			opacity:.8;
+		}
+	}
+	&-label{
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		padding:.5em .66em;
+		color:#000;
+		background:rgba(255,255,255,.8);
+		box-shadow:0 2px 3px -3px rgba(0,0,0,.2);
+		@include media-query($mq-small + 10) { padding:.8em .5em .8em .75em; }
+		&-title {
+			font-weight: bold;
+			font-size: 1em;   	
+			margin:0;
+			@include media-query($mq-large) { font-size:1.25em; }
+			@include media-query($mq-xlarge) { font-weight: normal; font-size:1.4375em; }	
+		}
+		&-subtitle {
+			font-weight: normal;
+			font-size: .8125em;
+			margin:.5em 0 0;
+			@include media-query($mq-small + 10) { font-size: .875em; }
+			@include media-query($mq-medium) { font-size:1em; }
+		}
+		&-cta {
+			font-size:.875em;
+			margin:.5em 0 0;
+			color:$primary;
+			@include media-query($mq-medium) { font-size:1em; }
+			&:hover { text-decoration: underline; }
+		}
+		&--footer {
+			top:auto;
+			bottom:0;
+			p {
+				font-size:.625em;
+				color:#333;
+				margin:0;
+				line-height: 1.4;
+				@include media-query($mq-small + 10) { 
+					font-size:.8125em;
+					color:#555;
+					line-height: 1.3;
+				}
+			}
+			.link {
+				text-decoration: underline;
+				&:hover { color:$accent; }
+			}
+		}
+		&-textoverlay{
+			background:transparent;
+			top:3%;left:4%;	width:92%;right:4%;
+			.home__spotlight-label{
+				&-title {
+					font-weight:bold;
+					font-size: 1.35em;  
+					@include media-query($mq-medium) { font-size:1.5em; }
+					@include media-query($mq-large) { font-size:2.5em; }	
+				}
+				&-subtitle {
+					margin:0;
+					font-size: .8125em;
+					@include media-query($mq-medium) { font-size:$base-font-size; }
+					@include media-query($mq-large) { font-size:1.75em; }
+				}
+			}
+			&.darkbg{ color:$white; p{color:$white;}}
+			&.onbottom { top:auto; bottom:0; left:4%;width:92%;right:4%; font-size:$base-font-size - .25;line-height:$base-line-height - .125;}
+			&-button{
+				display:inline-block;
+				position:relative;
+				background-color:#292929;
+				color:$white;
+				text-transform:uppercase;
+				text-align:center;
+				text-decoration:none;
+				padding:.65em 1em .55em;
+				font-size:$base-font-size - .275;
+				border-radius:3px;
+				margin:1em 0 0;
+				line-height:1;
+				font-weight: 600;
+				@include media-query($mq-medium) { 
+					padding:.65em 2.5em .55em;
+					font-size:$base-font-size - .075;
+				}
+				&.blue{ background-color:$skyblue; }
+				&.white{ background-color:$white; color:$black; }
+			}
+		}
+	}
+}
+.home__contact {
+	position:relative;
+	margin:1em 0;
+	width:100%;
+	padding:1em 0;
+	border-top:1px solid #ddd;
+	@include media-query($mq-large) {
+		margin:1em 6% 1em 5%;
+		width:89%;
+	}
+	@include media-query($mq-xlarge) {
+		margin:1em 11% 1em 10%;
+		width:79%;
+	}
+	&-panel {
+		padding:1em 10px 2em 60px;
+		margin-bottom:1em;
+		border-bottom:1px solid #ddd;
+		font-size:.875em;
+		@include media-query($mq-large) {
+			//
+			border:none;
+			padding-right:20px;
+			font-size:1em;
+			padding-left:90px;
+			padding-right:30px;
+			margin:0;
+		}
+		background:url(/assets/samsung/img/home/contact-icons.jpg) no-repeat 0 20px;
+		background-size:45px 450px;
+		&--help {background-position:0 -178px}
+		&--visit {background-position:0 -383px}
+		@include media-query($mq-large) {
+			background-size:61px 600px;
+			&--help {background-position:0 -246px}
+			&--visit {background-position:0 -519px}
+		}	
+		&:last-child {
+			border-right:none;
+		}
+		h2,&-tel {
+			font-size:1.5em;
+			font-weight:normal;
+			@include media-query($mq-small + 10) {
+				font-size:1.625em;
+			}
+			@include media-query($mq-medium) {
+				font-size:1.25em;
+				font-weight:bold;
+			}
+			@include media-query($mq-medium + 10) {
+				font-weight:normal;
+				font-size:1.5em;
+			}
+		}
+		h2 {
+			margin:0;	
+		}	
+		li,p {
+			margin:.5em 0;
+		}
+		&-tel {
+			margin-top:0;
+			.note {
+				display:block;
+				font-size:.625em;
+				color:#666;
+			}
+		}
+		.goUrl {
+			padding-right:14px;
+			background:url(https://www.samsung.com/common/next/img/estore_static/main_contact_arrow.gif) no-repeat 100% 50%;
+		}
+		a {
+			text-decoration: none;
+			&:hover {
+				color:$primary;
+				text-decoration: underline;
+			}
+		}
+		&--advisors:after,&--help:after {
+			@include media-query($mq-large) {
+			position:absolute;
+			content:"";
+			width:1px;
+			right:10px;
+			top:0;
+			bottom:0;
+			background-color:#ddd;
+			z-index:1;
+			}
+			@include media-query($mq-large) {
+				right:20px;
+			}
+		}
+		.visit-intro {
+			max-width:320px;
+			color:#666;
+		}
+	}
+}
+.unpacked-countdown {
+	margin:.66em 0;
+	background:#000;
+	color:#fff;
+	text-align:center;
+	font-size:.875em;
+	@include media-query($mq-small + 2) {
+		font-size:1.125em;
+	}
+	@include media-query($mq-medium) {
+		font-size:1.25em;
+	}
+	@include media-query($mq-large) {
+		height:70px;
+		line-height:68px;
+		font-size:1.5em;
+	}
+	img {
+		height:31px;
+		margin: 12px 0 0;
+		@include media-query($mq-small + 10) {
+			height:46px
+		}
+		@include media-query($mq-large) {
+			height:54px;
+			margin:0;
+		}
+		@include media-query($mq-large + 10) {
+			height:62px;
+			margin:0;
+		}
+	}
+	a {
+		color:#fff;
+		text-decoration: none;
+	}
+	&__clock {
+		margin:15px 0;
+		height:40px;
+		@include media-query($mq-large) {
+			display:inline-block;
+			vertical-align: top;
+			margin:0 10px;
+			height:auto;  
+		}
+		.citem {
+			display:inline-block;
+			vertical-align: top;
+			margin:0 .5em;
+		}
+		.t {
+			color:$skyblue;
+			border:1px solid #fff;
+			border-radius:3px;
+			padding:3px 6px;
+		}
+		.u {
+			padding:4px 0 4px 8px;
+		}
+	}
+}

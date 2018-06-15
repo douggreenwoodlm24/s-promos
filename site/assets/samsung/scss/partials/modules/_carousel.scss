@@ -1,0 +1,947 @@
+// ==|== modules > carousel
+.carousel {
+    background:#eee;
+    .swiper-slide {
+        text-decoration: none;
+        color:#fff;
+    }
+    &--wsale {
+        @extend %sharp-sans;  //use new font
+        a .wsale__header-panel {
+            color:#000 !important;
+        } 
+    }
+    &__item {
+        position:relative;
+        padding-top:72%;
+        color:#fff;
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-position:100% 50%;
+        &:hover {
+            .carousel__label--dark-on-light {
+                  color:#0071bf;
+            }
+            .carousel__label--light-on-dark {
+                color:#b8d8ee;
+            }
+            .carousel__label--dark-on-light.carousel__label--xmas {
+                  color:$xmasgreen;
+            }
+        }
+        @include media-query($mq-small + 2) {
+            padding-top: 62%;
+        }
+        @include media-query($mq-small + 6) {
+            padding-top: 50%;
+        }
+        @include media-query($mq-small + 10) {
+            padding-top:33%;
+        }
+        @include media-query($mq-large) {
+            padding-top:25%;
+        }
+        @include media-query($mq-xlarge) {
+            padding-top:320px;
+        }
+    }
+    &__label { 
+        position:absolute;
+        top:0;
+        left:0;
+        padding:10px;
+        margin:10px;
+        line-height: 1.2;
+        @include media-query($mq-small + 10) { 
+            max-width: 75%;
+            left:10px;
+            top:10px;
+        }
+        @include media-query($mq-medium) { 
+            padding:20px 0 0 0;
+            left:30px;
+        }
+        @include media-query($mq-large) { 
+            padding:50px 0 0 0;   
+            left:80px;
+        }
+        @include media-query($mq-xlarge) { 
+        }
+        &--dark-on-light {
+            color:#000;
+            background:rgba(255,255,255,.5);
+            text-shadow:0 0 2px rgba(255,255,255,1),0 0 4px rgba(255,255,255,1),0 0 6px rgba(255,255,255,1),0 0 8px rgba(255,255,255,1); 
+            transition: color .125s ease-out;
+            @include media-query($mq-medium) { 
+                background:none;
+            }
+        }
+        &--light-on-dark {
+            color:#fff;
+            text-shadow:2px 2px 3px rgba(0,0,0,.66);
+            background:rgba(0,0,0,.5);
+            transition: color .125s ease-out;
+            @include media-query($mq-medium) { 
+                background:none;
+            }
+        }
+        &-title {
+            font-weight: bold;
+            font-size: 1em;     
+            margin:0;
+            line-height: 1.1;
+            max-width:280px;
+            @include media-query($mq-small + 5) { 
+                font-size:1.125em;
+            }
+            @include media-query($mq-small + 10) { 
+                font-size:1.25em;
+            }
+            @include media-query($mq-medium) { 
+                font-size:1.625em;
+                font-weight: normal;
+                 max-width:440px;
+                 .carousel--epp & {
+                    max-width: 800px;
+                 }
+            }
+            @include media-query($mq-medium + 10) { 
+                font-size:1.875em;
+            }
+            @include media-query($mq-large) { 
+                font-size:2.125em;
+            }
+            @include media-query($mq-xlarge) { 
+                font-size: 2.5em;
+            }
+        }
+        &-subtitle {
+            font-weight: normal;
+            font-size: .875em;
+            margin:.5em 0 .25em;
+            @include media-query($mq-small + 5) { 
+                font-size:1em;
+            }
+            @include media-query($mq-small + 10) { 
+                font-weight: normal;
+            }
+            @include media-query($mq-medium) { 
+                font-size:1.125em;
+                .carousel--epp & {
+                    font-size:1.5em;
+                }
+            }
+            @include media-query($mq-large) { 
+                font-size:1.25em;
+                .carousel--epp & {
+                    font-size:1.75em;
+                }
+            }
+            @include media-query($mq-xlarge) { 
+                font-size: 1.3125em;
+                .carousel--epp & {
+                    font-size:2em;
+                }
+            }
+        }
+        &-cta {
+            font-size:.875em;
+            margin:.5em 0 0;
+            text-decoration:underline;
+            &::after {
+                display:inline-block;
+                vertical-align: -.1125em;
+                line-height: 1;
+                margin:0 .1em;
+                font-size:2em;
+                content:"\203A"; //single right-pointing angle quotation mark
+                transition:margin .125s ease-in-out;
+                font-weight:normal;
+                text-decoration: none;
+            }
+            @include media-query($mq-large) { font-size:1.125em; } 
+        }
+    }
+    &-epp{
+        &__item{
+            @extend .carousel__item;
+        }
+        &__content{
+            @extend %core-font;
+            position:absolute;
+            top:5%;left:7%; width:80%; 
+            @include media-query($mq-small + 10) {  top:9%; } 
+            @include media-query($mq-medium) {  top:13%; } 
+            @include media-query($mq-large - .07) { top:25%; } 
+            &-title{
+                .header__logo-link{
+                        background-size:111px 17px;
+                        width:111px;height:17px;
+                    @include media-query($mq-medium) { 
+                        background-size:169px 26px;
+                        width:169px;height:26px; 
+                    } 
+                    @include media-query($mq-large - .07) { 
+                        background-size:272px 42px;
+                        width:272px;height:42px;
+                    } 
+                }
+            }
+            &-subtitle{ 
+                font-weight:600;
+                font-size:$base-font-size - .125;
+                margin:0;
+                @include media-query($mq-medium) { font-size:$base-font-size;}
+                @include media-query($mq-large - .07) { font-size:$base-font-size + .125;}
+            }
+        }
+    }
+} 
+.carousel2 {
+    background:#eee;
+    .swiper-slide {
+        text-decoration: none;
+        color:#fff;
+    }
+    .slide-wsale {
+        @extend %sharp-sans;  //use new font
+        .wsale__header-panel {
+            color:#000 !important;
+        } 
+    }
+    &__item {
+        position:relative;
+        padding-bottom:50%;
+        color:#fff;
+        background-size:cover;
+        background-repeat:no-repeat;
+        background-position:100% 50%;
+    }
+}
+// slide setup 
+/*
+.tab-s2__cslide {
+    position:relative;
+    padding-top:72%;  
+    @include media-query($mq-small + 2) {
+        padding-top: 62%;
+    }
+    @include media-query($mq-small + 6) {
+        padding-top: 50%;
+    }
+    @include media-query($mq-small + 10) {
+        padding-top:33%;
+    }
+    @include media-query($mq-large) {
+        padding-top:25%;
+    }
+    @include media-query($mq-xlarge) {
+        padding-top:320px;
+    }
+    background:#fff url(/assets/samsung/img/home/carousel/tab-s2-cashback_m_17032016.jpg) no-repeat 100% 100% / cover;
+    @include media-query($mq-large) {
+        background:#fff url(/assets/samsung/img/home/carousel/tab-s2-cashback_17032016.jpg) no-repeat 100% 100% / cover;
+    }
+     &-panel {
+        position:absolute;
+        top:5%;
+        left:.75em;
+        //width:50%;
+        margin-right:1em;
+        font-size:.75em;
+        line-height: 1.4;
+        color: #fff;
+        width: 90%;
+        //text-transform: uppercase;
+        //text-align: center;
+        padding:.5em 1em;
+        //@extend %sharp-sans;  //use new font
+        //border:1px solid #f00;
+        background:rgba(0,0,0,.3);
+        text-shadow: 0 0 3px rgba(64,47,34,.5), 0 0 8px rgba(64,47,34,.66), 0 0 14px rgba(64,47,34,.66);
+        @include media-query($mq-small + 5) {
+           // top:8%;
+            max-width: 70%;
+            //font-size:1.125em;
+        }
+        @include media-query($mq-medium) {
+            max-width: 60%;
+            font-size:.875em; 
+        }
+        @include media-query($mq-medium + 10) {
+           //max-width: 40%;
+            font-size:1em;
+        }
+        @include media-query($mq-large) {    
+            left:1em;
+            top:1em;
+            max-width: 45%;
+            background:none;
+            font-size:1.125em;
+        }
+        @include media-query($mq-xlarge) {    
+            max-width: 33%;
+            font-size:1.25em;
+        }
+        @include media-query($mq-xlarge + 10) {    
+           // max-width: 30%;
+        }
+        &-title {
+            margin:0; 
+            font-size:1.5em;
+             @include media-query($mq-xlarge) {   
+                font-size:1.625em;
+             }
+        }
+        &-sub {
+             font-size:1.5em;
+             font-weight: normal;
+             margin:0;
+             @include media-query($mq-xlarge) {   
+                font-size:1.625em;
+             }
+        }
+        &-terms {
+            margin-top:.2em;
+            font-size:.875em;
+            .link {
+                text-decoration:underline;
+                &:hover {
+                    text-decoration:none;
+                }
+            }
+        }
+    }
+} 
+.easter__cslide {
+    position:relative;
+    padding-top:72%;  
+    @include media-query($mq-small + 2) {
+        padding-top: 62%;
+    }
+    @include media-query($mq-small + 6) {
+        padding-top: 50%;
+    }
+    @include media-query($mq-small + 10) {
+        padding-top:33%;
+    }
+    @include media-query($mq-large) {
+        padding-top:25%;
+    }
+    @include media-query($mq-xlarge) {
+        padding-top:320px;
+    }
+    background:#fff url(/assets/samsung/img/home/carousel/easter_m_24032016.jpg) no-repeat 50% 100% / cover;
+    @include media-query($mq-medium) {
+        background:#fff url(/assets/samsung/img/home/carousel/easter_24032016.jpg) no-repeat 75% 100% / cover;
+    }
+     &-panel {
+        position:absolute;
+        top:5%;
+        left:.75em;
+        //width:50%;
+        margin-right:1em;
+        font-size:.75em;
+        line-height: 1.4;
+        color: #fff;
+        width: 90%;
+        //text-transform: uppercase;
+        //text-align: center;
+        padding:.5em 1em;
+        //@extend %sharp-sans;  //use new font
+        //border:1px solid #f00;
+        background:rgba(151,214,83,.9);
+        //text-shadow: 0 0 3px rgba(64,47,34,.5), 0 0 8px rgba(64,47,34,.66), 0 0 14px rgba(64,47,34,.66);
+        border-top:5px solid #fff;
+        border-bottom:5px solid #fff;
+        border-image:url("/assets/samsung/img/promotions/easter/hr-bg.png") 30 0 repeat;
+        @include media-query($mq-small + 5) {
+           // top:8%;
+            max-width: 80%;
+             font-size:.875em; 
+        }
+        @include media-query($mq-medium) {
+            max-width: 60%;
+            font-size:1em; 
+        }
+        @include media-query($mq-medium + 10) {
+           //max-width: 40%;
+            font-size:1.25em;
+        }
+        @include media-query($mq-large) {    
+            left:1em;
+            top:1em;
+            max-width: 45%;
+            //background:none;
+            font-size:1.125em;
+        }
+        @include media-query($mq-xlarge) {    
+            max-width: 38%;
+            font-size:1.25em;
+        }
+        @include media-query($mq-xlarge + 10) {    
+           // max-width: 30%;
+        }
+        &-title {
+            margin:0; 
+            font-size:1.625em;
+            text-transform:uppercase;
+            font-weight: normal;
+             @include media-query($mq-large) {   
+                font-size:2.625em;
+             }
+        }
+        &-sub {
+             font-size:1.125em;
+             font-weight: normal;
+             margin:0;
+             color:#000;
+             @include media-query($mq-large) {   
+                font-size:1.25em;
+             }
+             @include media-query($mq-xlarge) {   
+                font-size:1.3125em;
+             }
+        }
+        &-terms {
+            margin-top:.2em;
+            font-size:.75em;
+            color:#000;
+            clear:left;
+            .link {
+                text-decoration:underline;
+                &:hover {
+                    text-decoration:none;
+                }
+            }
+        }
+        &-ppc-logo {
+           float:left;
+           margin:0 8px 4px 0;
+           img {
+                width:80px;
+                @include media-query($mq-xlarge) {   
+                    width:100px; 
+                    margin-top:-5px;
+                }
+           }
+        }
+    }
+} 
+*/
+////////////////////// home banner
+.home-sup__header {
+    background:#eee;
+    @extend %sharp-sans;  //use new font
+    a {
+		position:relative;
+		padding-top:72%;
+		background:url("/assets/samsung/img/home/carousel/samsung-upgrade_03062016.jpg") no-repeat 75% 0 / cover;
+		display:block;
+		@include media-query($mq-small + 2) { padding-top: 62%; }
+		@include media-query($mq-small + 6) { padding-top: 50%; }
+		@include media-query($mq-small + 10) { padding-top:33%; }
+		//@include media-query($mq-large) { padding-top:31%; }
+		@include media-query($mq-large) { padding-top:320px; }
+		&:hover {
+			.home-sup__header-promo { text-decoration: none; }
+		}
+    }
+    &-content {
+        position:absolute;
+        top:2.75%;
+        left:2%;
+        margin-right:2%;
+        padding:.66em .5em;
+        max-width:70%;
+        color:#000; 
+         font-weight:500;
+         ///text-shadow:1px 1px 0 rgba(0,0,0,.5),0 0 8px rgba(0,0,0,.5);
+        background-color:rgba(255,255,255,.7);
+        @include media-query($mq-small + 2) {
+            top:4%;
+        }
+         @include media-query($mq-small + 6) {
+            max-width:62%;
+        }
+        @include media-query($mq-medium) {
+            top:10px;
+            left:10px;
+            max-width:52%;
+            padding:.66em .875em;
+            background:none;
+        }
+        @include media-query($mq-large) {
+            max-width:50%;
+        }
+        @include media-query($mq-xlarge) {
+            top:8%;
+            max-width:60%;
+        }
+    }
+    &-title {
+        color:$skyblue;
+        font-size:.875em;
+        font-weight:bold;
+        @include media-query($mq-small + 10) {
+            font-size:1em;
+        }
+        @include media-query($mq-medium) {
+            font-size:1.25em;
+        }
+        @include media-query($mq-medium + 10) {
+            font-size:1.5em;
+        }
+        @include media-query($mq-large) {
+            font-size:2em;
+        }
+         @include media-query($mq-xlarge) {
+            font-size:2.5em;
+        }
+    }
+    &-sub, &-promo {
+        font-size:.6875em;
+        margin-top:2%;
+        @include media-query($mq-medium) {
+            font-size:.875em;
+        }
+        @include media-query($mq-large) {
+            font-size:1.125em;
+        }
+        @include media-query($mq-xlarge) {
+            font-size:1.3125em;
+        }
+    }
+    &-promo {
+        font-weight: bold;
+        margin-top:3%;
+        color:$skyblue;
+        text-decoration: underline;
+    }
+    &-button {
+        display:inline-block;
+        font-size:.6875em;
+        margin-top:3%;
+        background:#000;
+        color:#fff;
+        font-weight:300;
+        padding:.5em 2.5em .375em;
+        border-radius:50px;
+        text-decoration: uppercase;
+        transition: background .25s ease-in-out;
+        &:hover {
+            background-color:$skyblue;
+        }
+        @include media-query($mq-medium) {
+            font-size:.875em;
+        }
+        @include media-query($mq-large) {
+            font-size:1.125em;
+        }
+        @include media-query($mq-xlarge) {
+            font-size:1.3125em;
+        } 
+    }
+    &-cta {
+        font-size:.75em;
+        margin-top:5%;
+        @include media-query($mq-medium) {
+            font-size:.875em;
+        }
+        @include media-query($mq-large) {
+            font-size:1.25em;
+        }
+    }
+    &-tandc {
+        font-size:.575em;
+        margin-top:3%;
+        @include media-query($mq-medium) {
+            //margin-top:10%;
+            font-size:.8125em;
+        }
+        @include media-query($mq-large) {
+            margin-top:8%;
+            font-size:.875em;
+        }
+        @include media-query($mq-xlarge) {
+            margin-top:10%;
+        }
+    }
+} 
+
+/////////////////////////// home banner
+////// SOS banner
+.home-sos__header {
+    background:#eee;
+    @extend %sharp-sans;  //use new font
+    a {
+		position:relative;
+		padding-top:72%;
+		background:url("/assets/samsung/img/home/carousel/summer_of_sport_fd_wide.jpg") no-repeat 86% 0 / cover;
+		display:block;
+		@include media-query($mq-small + 2) { padding-top: 62%; }
+		@include media-query($mq-small + 6) { padding-top: 50%; }
+		@include media-query($mq-small + 10) { padding-top:33%; }
+		@include media-query($mq-medium) { background-position:75% 0; }
+		@include media-query($mq-large) { padding-top:320px; }
+		//@include media-query($mq-xlarge) { padding-top:320px; }
+		&:hover {
+			.home-sos__header-promo { text-decoration: none; }
+		}
+    }
+    &-content {
+        position:absolute;
+        top:2.75%;
+        left:2%;
+        margin-right:2%;
+        padding:.66em .5em;
+        max-width:70%;
+        color:#000; 
+         font-weight:500;
+        background-color:rgba(0,0,0,.7);
+        @include media-query($mq-small + 2) { top:4%; }
+        @include media-query($mq-small + 6) { max-width:62%; }
+        @include media-query($mq-medium) {
+            top:30%;
+            left:5%;
+            max-width:52%;
+            padding:.66em .875em;
+            background:none;
+        }
+        @include media-query($mq-large) { max-width:50%; }
+        @include media-query($mq-xlarge) { max-width:60%; }
+    }
+    &-title {
+        color:#fff;
+        font-size:.875em;
+        font-weight:bold;
+        @include media-query($mq-small + 10) { font-size:1em;}
+        @include media-query($mq-medium) {font-size:1.25em;}
+        @include media-query($mq-medium + 10) { font-size:1.5em; }
+        @include media-query($mq-large) {font-size:2em;}
+        @include media-query($mq-xlarge) {font-size:2.5em;}
+    }
+    &-sub,&-promo {
+        font-size:.6875em;
+        margin-top:2%;
+        @include media-query($mq-medium) {font-size:.875em;}
+        @include media-query($mq-large) {font-size:1.125em;}
+        @include media-query($mq-xlarge) {font-size:1.3125em;}
+    }
+    &-promo {
+        font-weight: bold;
+        margin-top:3%;
+        color:$skyblue;
+        text-decoration: underline;
+    }
+    &-button {
+        display:inline-block;
+        font-size:.6875em;
+        margin-top:3%;
+        background:$skyblue;
+        color:#fff;
+        font-weight:300;
+        padding:.5em 2.5em .375em;
+        border-radius:50px;
+        text-decoration: uppercase;
+        transition: background .25s ease-in-out;
+        &:hover {background-color:#006ec5;}
+        @include media-query($mq-medium) { font-size:.875em;}
+        @include media-query($mq-large) {font-size:1.125em;}
+        @include media-query($mq-xlarge) {font-size:1.3125em;} 
+    }
+    &-cta {
+        font-size:.75em;
+        margin-top:5%;
+        @include media-query($mq-medium) {font-size:.875em;}
+        @include media-query($mq-large) { font-size:1.25em;}
+    }
+} 
+
+/////////////////////////// home banner
+////// Finance banner
+.home-finance__header {
+    background:#eee;
+    @extend %sharp-sans;  //use new font
+    a {
+        position:relative;
+        padding-top:72%;
+        background:url("/assets/samsung/img/home/carousel/samsung-finance_03062016.jpg") no-repeat 10% 0 / cover;
+        display:block;
+        @include media-query($mq-small + 2) { padding-top: 62%; }
+        @include media-query($mq-small + 6) { padding-top: 50%; }
+        @include media-query($mq-small + 10) { padding-top:33%; }
+        @include media-query($mq-medium) { background-position:42% 0;}
+        @include media-query($mq-large - 8.07) { background-position:36% 0;}
+        @include media-query($mq-large) {padding-top:320px; background-position:30% 0;}
+        //@include media-query($mq-xlarge) { padding-top:320px;}
+    }
+
+    &-content {
+        position:absolute;
+        top:2.75%;
+        right:2%;
+        padding:.66em .5em;
+        width:96%;
+        color:#000; 
+        background-color:rgba(255,255,255,.7);
+        text-align:center;
+        @include media-query($mq-small + 2) { top:4%; }
+        @include media-query($mq-medium) {
+            top:50%;
+            margin-top:-54px;
+            width:74%;
+            padding:.66em .875em;
+            background:none;
+            text-align:center;
+        }
+        @include media-query($mq-large) {  
+            margin-top:-64px;
+            width:65%; 
+        }
+         @include media-query($mq-xlarge) {  
+            margin-top:-70px; 
+        }
+    }
+    &-title {
+        color:#000;
+        font-weight:bold;
+        font-size:.875em;
+        @include media-query($mq-small + 10) { font-size:1em; }
+        @include media-query($mq-medium + 10) { font-size:1.125em; }
+        @include media-query($mq-large - .07) { font-size:1.5em; }
+        @include media-query($mq-xlarge) { font-size:2em; }
+    }
+    &-promo {
+        display:block;
+        font-size:.725em;
+        font-weight:400;
+        margin:.5em 0;
+        img{max-height:18px}
+        @include media-query($mq-medium) {  display:block; img{max-height:24px}}
+        @include media-query($mq-large - .07) { font-size:.875em; margin:.875em 0;}
+    }
+    &-sub{
+        display:none;
+        font-weight:400;
+        font-size:.725em;
+        @include media-query($mq-medium) { display:block;}
+    }
+    &-button {
+        display:inline-block;
+        font-size:.6875em;
+        margin:1% 0;
+        background:#000;
+        color:#fff;
+        font-weight:300;
+        padding:.65em 2.5em .375em;
+        border-radius:50px;
+        text-decoration: uppercase;
+        transition: background .25s ease-in-out;
+        line-height:1;
+        &:hover { background-color:$skyblue; }
+        @include media-query($mq-medium) { font-size:.825em; }
+        @include media-query($mq-large - .07) { font-size:1em;}
+        @include media-query($mq-xlarge) { font-size:1.125em;  margin:.5% 0; } 
+    }
+    &-tandc {
+        font-size:.6em;
+        margin-top:.25em;
+        color:#999;
+        display:none;
+        @include media-query($mq-medium) { display:block;}
+        @include media-query($mq-medium + 8) { margin-top:.75em; }
+    }
+} 
+
+////// Wearables banner
+.home-wearables__header {
+    background:#eee;
+    @extend %sharp-sans;  //use new font
+    a {
+        position:relative;
+        padding-top:72%;
+        background:url("/assets/samsung/img/home/carousel/wearables_30062016.jpg") no-repeat 86% 0 / cover;
+        display:block;
+        @include media-query($mq-small + 2) { padding-top: 62%; }
+        @include media-query($mq-small + 6) { padding-top: 50%; }
+        @include media-query($mq-small + 10) { padding-top:33%; }
+        @include media-query($mq-medium) { background-position:75% 0; }
+        @include media-query($mq-large) { padding-top:320px; }
+        //@include media-query($mq-xlarge) { padding-top:320px; }
+        &:hover {
+            .home-sos__header-promo { text-decoration: none; }
+        }
+    }
+    &-content {
+        position:absolute;
+        top:2.75%;
+        left:2%;
+        margin-right:2%;
+        padding:.66em .5em;
+        max-width:70%;
+        color:#000; 
+         font-weight:500;
+        background-color:rgba(255,255,255,.7);
+        @include media-query($mq-small + 2) { top:4%; }
+        @include media-query($mq-small + 6) { max-width:62%; }
+        @include media-query($mq-medium) {
+            top:5%;
+            left:1.5%;
+            max-width:60%;
+            padding:1em .875em;
+            
+        }
+        @include media-query($mq-large + 10) {
+            top:22.5%;
+             max-width:50%; 
+             background:none;
+         }
+        @include media-query($mq-xlarge) { 
+            top:20%; 
+            max-width:60%; 
+        }
+    }
+    &-title {
+        font-size:.875em;
+        font-weight:bold;
+        @include media-query($mq-small + 10) { font-size:1em;}
+        @include media-query($mq-medium) {font-size:1.25em;}
+        @include media-query($mq-medium + 10) { font-size:1.5em; }
+        @include media-query($mq-large) {font-size:2em;}
+        @include media-query($mq-xlarge) {font-size:2.5em;}
+    }
+    &-sub,&-promo {
+        font-size:.6875em;
+        margin-top:2%;
+        @include media-query($mq-medium) {font-size:.875em;}
+        @include media-query($mq-large) {font-size:1.125em;}
+        @include media-query($mq-xlarge) {font-size:1.3125em;}
+    }
+    &-promo {
+        font-weight: bold;
+        margin-top:3%;
+        color:$skyblue;
+        text-decoration: underline;
+    }
+    &-button {
+        display:inline-block;
+        font-size:.6875em;
+        margin-top:3%;
+        background:#000;
+        color:#fff;
+        font-weight:300;
+        padding:.5em 2.5em .375em;
+        border-radius:50px;
+        text-decoration: uppercase;
+        transition: background .25s ease-in-out;
+        &:hover {background-color:#006ec5;}
+        @include media-query($mq-medium) { font-size:.875em;}
+        @include media-query($mq-large) {font-size:1.125em;}
+        @include media-query($mq-xlarge) {font-size:1.3125em;} 
+    }
+    &-cta {
+        font-size:.75em;
+        margin-top:5%;
+        @include media-query($mq-medium) {font-size:.875em;}
+        @include media-query($mq-large) { font-size:1.25em;}
+    }
+} 
+
+
+/////////////////////////// home banner
+////// Martian banner
+.home-martian__header {
+    background:#eee;
+    @extend %sharp-sans;  //use new font
+    a {
+        position:relative;
+        padding-top:72%;
+        background:url("/assets/samsung/img/home/carousel/martian-23062016.jpg") no-repeat 60% 0 / cover;
+        display:block;
+        @include media-query($mq-small + 2) { padding-top: 62%; }
+        @include media-query($mq-small + 6) { padding-top: 50%; }
+        @include media-query($mq-small + 10) { padding-top:33%; }
+        @include media-query($mq-medium) { background-position:65% 0; }
+        @include media-query($mq-large) { padding-top:320px; } 
+        //@include media-query($mq-xlarge) { padding-top:320px; }
+        &:hover {
+            .home-sos__header-promo { text-decoration: none; }
+        }
+    }
+    &-content {
+        position:absolute;
+        top:2.75%;
+        left:2%;
+        margin-right:2%;
+        padding:.75em .75em;
+        max-width:60%;
+        color:#fff; 
+         font-weight:500;
+        background-color:rgba(0,0,0,.33);
+        text-shadow:0 0 4px rgba(0,0,0,.25),0 0 8px rgba(0,0,0,.1);
+        @include media-query($mq-small + 2) { top:4%; }
+        @include media-query($mq-medium) {
+            //top:10%;
+            //left:5%;
+            //max-width:52%;
+            //padding:.66em .875em;
+            //background:none;
+        }
+        @include media-query($mq-large) { 
+            background:none;
+             top:10%;
+         }
+        @include media-query($mq-xlarge) { 
+           
+            //max-width:60%; 
+        }
+
+    }
+    &-title {
+        font-size:1.125em;
+        font-weight:bold;
+        @include media-query($mq-medium) {font-size:1.5em;}
+        @include media-query($mq-medium + 10) { font-size:2em; }
+        @include media-query($mq-large) {font-size:2.5em;}
+        @include media-query($mq-xlarge) {font-size:3.5em;}
+    }
+    &-sub {
+        font-size:.6875em;
+        margin-top:2%;
+        @include media-query($mq-medium) {font-size:.875em;}
+        @include media-query($mq-large) {font-size:1.5em;}
+        @include media-query($mq-xlarge) {font-size:2em;}
+    }
+    &-button {
+        display:inline-block;
+        font-size:.6875em;
+        margin-top:3%;
+        background:#fe7f3f;
+        color:#fff;
+        font-weight:300;
+        padding:.5em 2.5em .375em;
+        border-radius:10px;
+        text-decoration: uppercase;
+        transition: background .25s ease-in-out;
+        &:hover {background-color:darken(#fe7f3f,10%);}
+        @include media-query($mq-medium) { font-size:.875em;}
+        @include media-query($mq-large) {font-size:1.125em;}
+        @include media-query($mq-xlarge) {font-size:1.3125em;} 
+    }
+    &-tandc {
+        font-size:.625em;
+        margin:4% 0 0;
+        @include media-query($mq-medium) {font-size:.75em;}
+        @include media-query($mq-large) { font-size:1em;}
+    }
+    &-copyright {
+        position:absolute;
+        bottom:5px;
+        right:10px;
+        color:#fff;
+        font-size:.625em;
+        font-weight:500;
+        text-shadow:1px 1px 0 rgba(0,0,0,.5);
+    }
+} 

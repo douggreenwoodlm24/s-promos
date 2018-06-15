@@ -1,0 +1,686 @@
+$f-screen-x-large: 1600px;
+$f-screen-large: 1440px;
+$f-screen-medium-large: 1280px;  // where Samsung FRONT-END left-hand filters become full-screen
+$f-screen-medium: 1024px;
+$f-screen-800: 800px;
+$f-screen-small: 640px;
+$f-screen-x-small: 480px;
+$f-lightBlue: #2cb3ed;
+$f-darkBlue: #1528a0;
+$f-vLightGrey: #f5f5f5;
+$f-medGrey: #bfbfbf;
+$f-darkGrey: #272727;
+$f-greyGreen: #7ea7ab;
+$f-spacing-sm: 8px;
+$f-spacing-md: 16px;
+$f-spacing-lg: 32px;
+$f-fontsize-paragraph: 16px;
+
+// .display-x-large, .display-large, .display-800, .display-medium, .display-small, .display-x-small {
+    // display: none;
+// }
+// 
+// .hide-x-large, .hide-large, .hide-800, .hide-medium, .hide-small, .hide-x-small {
+// 
+// }
+
+.fridgef {
+  
+  .clear-both {
+    clear: both;
+  }
+  
+  .f-small-text {
+    font-size: 12px;
+    margin-top: 0;
+  }
+  
+  .text-align-left {
+    text-align:left !important;
+  }
+  
+  /* set-up in order to then override */
+    .display-x-large, .display-large, .display-medium-large, .display-800, .display-medium, .display-small, .display-x-small {
+      display: none;
+    }
+  
+  @media screen and (max-width:$f-screen-x-large) {
+    .display-x-large {
+      display: block;
+    }
+    .hide-x-large {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width:$f-screen-large) {
+    .display-large {
+      display: block;
+    }
+    .hide-large {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width:$f-screen-medium-large) {
+    .display-medium-large {
+      display: block;
+    }
+    .hide-medium-large {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width:$f-screen-800) {
+    .display-800 {
+      display: block;
+    }
+    .hide-800 {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width:$f-screen-medium) {
+    .display-medium {
+      display: block;
+    }
+    .hide-medium {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width:$f-screen-small) {
+    .display-small {
+      display: block;
+    }
+    .hide-small {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width:$f-screen-x-small) {
+    .display-x-small {
+      display: block;
+    }
+    .hide-x-small {
+      display: none;
+    }
+  }
+  
+  .fridgef-container {
+    
+  }
+  
+  // ctas, buttons, highlight
+  .fridgef-highlight {
+    background: $f-lightBlue;
+    color: #FFF;
+    display: block;
+    padding: $f-spacing-sm;
+    clear: both;
+    width: 70%;
+  }
+  
+  .fridgef-cta {
+    background: $f-darkBlue;
+    color: #FFF;
+    display: inline-block;
+    padding: $f-spacing-md;
+    margin: $f-spacing-lg 0 $f-spacing-md;
+    h3 {
+      margin: 0;
+    }
+  }
+  
+  // hero
+  .fridgef-hero {
+    //background: $f-darkGrey url('../img/promotions/fridges/hero-lg.jpg') no-repeat right top;
+    position: relative;
+    height: 219px;
+    width: 100%;
+    margin-bottom: $f-spacing-lg;
+    .fridgef-hero-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      img {
+        height: 219px;
+      }
+    }
+    .fridgef-hero-text-area {
+       position: absolute;
+       top: 0;
+      left: 0;
+       color: #FFF;
+       padding: $f-spacing-lg;
+       h2 {
+            text-transform: uppercase;
+          }
+       .fridgef-hero-icons {
+         padding-left: 0;
+         li {
+           display: inline;
+           
+           margin-right: $f-spacing-lg;
+           height: 32px;
+           padding-top: 5px;
+           padding-bottom: 15px;
+         }
+         .fridgef-hero-delivery {
+           background: transparent url('../img/promotions/fridges/delivery-icon.png') no-repeat left top;
+           padding-left: 50px;
+         }
+         .fridgef-hero-energy {
+           background: transparent url('../img/promotions/fridges/energy-icon.png') no-repeat left top;
+           padding-left: 50px;
+         }
+       }  
+       
+         @media screen and (max-width:$f-screen-medium-large) {
+            padding-top: $f-spacing-sm;
+            width: 40%;
+
+           .fridgef-hero-icons {
+             li {
+               display: block;
+             }
+           }
+      }
+      @media screen and (max-width:$f-screen-medium) {
+            //padding-top: $f-spacing-sm;
+            width: 55%;
+      }
+    }
+     @media screen and (max-width:$f-screen-medium-large) {
+            .fridgef-hero-img {
+              // position: absolute;
+              // top: 0;
+              // left: 0;
+              width: 100% !important;
+              img {
+                height: 219px;
+                width: 100%;
+              }
+            }
+      }
+      
+      @media screen and (max-width:$f-screen-small) {
+            background-color: $f-darkGrey;
+            height: 430px;
+            .fridgef-hero-text-area {
+              margin-top: 220px;
+              width: 100%;
+              
+            }
+            .fridgef-hero-img {
+
+              img {
+
+              }
+            }
+      }
+  }
+  
+  // box defaults (items with grey background and dark heading)
+  .fridgef-box {
+    background-color: $f-vLightGrey;
+    .fridgef-box-title {
+      background-color: #52565a;
+      padding: $f-spacing-md;
+      color: #FFF;
+      position: relative;
+      h3 {
+        margin: 0 $f-spacing-md 0 0;
+        text-transform: uppercase;
+        text-align: center;
+        //display: inline;
+        font-weight: normal;
+        @media screen and (max-width:$f-screen-x-large) {
+         
+          margin: 0;
+        }
+      }
+      button {
+        //display: inline;
+        position: absolute;
+        right: $f-spacing-md;
+        top: 30%;
+        color: #FFF;
+        background-color: $f-greyGreen;
+        border: 0;
+        @media screen and (max-width:$f-screen-x-large) {
+          position: relative;
+          display: block;
+          margin: $f-spacing-sm auto 0;
+          right: auto;
+          top: auto;
+        }
+      }
+    }
+    .fridgef-box-content {
+      background-color: $f-vLightGrey;
+    }
+    
+    form.refine fieldset.on .toggle 
+    h4 {
+      
+    }
+  }
+  
+  // white box
+  .f-box-white {
+    background: #FFF;
+    border: 1px solid $f-medGrey;
+    padding: $f-spacing-sm;
+  }
+  
+  // top page selectors
+  .fridgef-select {
+    .fridgef-select-type li {
+      list-style: none;
+      display: inline;
+      float: left;
+      margin: $f-spacing-md 1%;
+      width: 23%;
+      img {
+        margin: 0 auto;
+        display: block;
+      }
+      h4 {
+        text-align: center;
+      }   
+        &.on {
+          opacity: 1;
+        }
+        &.off {
+          opacity: 0.4;
+        }
+    }
+  }
+  
+  // left-hand filters
+  
+  
+  
+  // dropdowns
+  .fridgef-dropdown-area {
+    width: 100%;
+    display: inline-block;
+    padding: $f-spacing-md 0;
+  }
+  
+  .fridgef-dropdown {
+    float: right;
+    width: 300px;
+    display: inline;
+    margin-right: $f-spacing-md;
+    span {
+      float: left;
+      display: block;
+      width: 100px;
+      text-align: right;
+      margin-right: 10px;
+    }
+    select {
+      @extend .f-small-text;
+      float: left;
+      display: block;
+      width: 180px;
+    }
+  }
+  
+  // Your selection
+  .fridgef-selection-bar {
+    border-top: 1px solid $f-medGrey;
+    border-bottom: 1px solid $f-medGrey;
+    .fridgef-selection-boxes {
+      padding-left: 0;
+      li {
+        @extend .f-small-text;
+        display: inline;
+        list-style: none;
+         padding: 4px 4px 6px 6px;
+        &.box {
+          border: 1px solid $f-medGrey;
+          border-radius: 4px;
+          background: $f-vLightGrey;
+          margin-right: $f-spacing-sm;
+          .box-close {
+            
+          }
+        } 
+        &.title {
+          
+        }
+        
+      }
+    }
+  }
+  
+  
+  // product list item(s)
+  .fridgef-product  {
+    float: left;
+    width: 50%; //48%;
+    padding: $f-spacing-md;
+    .fridgef-product-img {
+       width: 30%;
+       float: left;
+       min-height: 340px;
+       img {
+         display: inline;
+         text-align: center;
+       }
+       p {
+      margin-left: $f-spacing-md;
+      @media screen and (max-width:$f-screen-large) {
+        margin-left: 0;
+     }
+    }
+      
+    }
+    .fridgef-product-details {
+      width: 70%;
+    }
+    
+    
+    &.left {
+      border-left: 1px solid #FFF;
+      border-right: 1px solid $f-medGrey;
+      border-top: 1px solid $f-medGrey;
+      border-bottom: 1px solid $f-medGrey;
+      &.top {
+        border-top: 1px solid #FFF;
+      }
+      &.bottom {
+        border-bottom: 1px solid #FFF;
+      }
+    }
+    &.right {
+      border-left: 1px solid $f-medGrey;
+      border-right: 1px solid #FFF;
+      border-top: 1px solid $f-medGrey;
+      border-bottom: 1px solid $f-medGrey;
+      &.top {
+        border-top: 1px solid #FFF;
+      }
+      &.bottom {
+        border-bottom: 1px solid #FFF;
+      }
+    }
+    
+    .fridgef-energy-icon {
+      // width: 84px;
+      // height: 34px;
+      // background: #FFF url('../img/promotions/fridges/sprite-energy.png') no-repeat 0 0;
+      margin: $f-spacing-md;
+      // &.a-plus {
+        // background-position: 0 0;
+      // }
+      @media screen and (max-width:$f-screen-large) {
+        margin-left: 0;
+      }
+       @media screen and (max-width:$f-screen-800) {
+        margin-left: 0;
+      }
+    }
+    @media screen and (max-width:$f-screen-small) {
+      width: 100% !important;
+      border-left: 1px solid #FFF !important;
+      border-right: 1px solid #FFF !important;
+      border-top: 1px solid #FFF !important;
+      border-bottom: 1px solid $f-medGrey !important;
+    }
+  }
+  
+  
+  
+  
+ /* RANGE SLIDER (nb: OTHER CSS IN...)  */
+
+.fridgef-slider {
+  margin: $f-spacing-lg;
+  .fridgef-slider-container {
+    margin-left: $f-spacing-md;
+    margin-right: $f-spacing-md;
+  }
+  p {
+    margin-top: $f-spacing-lg;
+  }
+  .noUi-handle {
+    background: $f-lightBlue none repeat scroll 0 0;
+    border: 1px solid #d9d9d9;
+    border-radius: 0;
+    box-shadow: none;
+    cursor: default;
+  }
+  .noUi-handle::after, .noUi-handle::before {
+    background: $f-lightBlue none repeat scroll 0 0;
+    content: "";
+    display: block;
+    height: 14px;
+    left: 14px;
+    position: absolute;
+    top: 6px;
+    width: 1px;
+}
+.noUi-horizontal .noUi-handle {
+    height: 40px;
+    left: -10px;
+    top: -10px;
+    width: 20px;
+}
+  .noUi-background {
+      background: $f-medGrey none repeat scroll 0 0;
+      box-shadow: 0 1px 1px #f0f0f0 inset;
+  }
+  .noUi-target {
+    border: 0px solid #d3d3d3;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px #f0f0f0 inset, 0 3px 6px -5px #bbb;
+}
+} 
+  
+/* CHECKBOXES & RADIO BUTTONS /start */
+.f-checkboxes {
+  padding-left: $f-spacing-md;
+  li {
+    list-style: none;
+    @extend .f-small-text;
+  }
+  input[type="checkbox"] {
+      display:none;
+  }
+  input[type="checkbox"] + label {
+    cursor:pointer;
+  }
+  input[type="checkbox"] + label span {
+      display:inline-block;
+      width:20px;
+      height:20px;
+      margin:-1px 9px 3px 0;
+      vertical-align:middle;
+      background:url('../img/promotions/fridges/checkbox.gif') no-repeat 0 0;
+      cursor:pointer;
+  }
+  input[type="checkbox"]:checked + label span {
+      
+      background:url('../img/promotions/fridges/checkbox.gif') no-repeat 0 -20px;
+  }
+}
+/* CHECKBOXES & RADIO BUTTONS /end */
+
+/* ACCORDIONS /start */
+ /* Style the buttons that are used to open and close the accordion panel */
+button.f-accordion {
+    background-color: $f-vLightGrey;
+    color: $f-darkGrey;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    border-top: 1px solid white;
+    outline: none;
+    transition: 0.4s;
+    padding-left: ($f-spacing-lg)+20;
+    font-weight: bold;
+    @media screen and (max-width:$f-screen-medium) {
+      //background-position: 50px top;
+      text-align: left;
+      padding-left: ($f-spacing-lg)+40;
+    }
+}
+
+.f-accordion-capacity {
+  background: transparent url('../img/promotions/fridges/capacity-icon.jpg') no-repeat left 20px top 10px;
+}
+
+.f-accordion-frost {
+  background: transparent url('../img/promotions/fridges/frost-icon.jpg') no-repeat left 20px top 10px;
+}
+
+.f-accordion-fresh {
+  background: transparent url('../img/promotions/fridges/freshness-icon.jpg') no-repeat left 20px top 10px;
+}
+
+.f-accordion-convenience {
+  background: transparent url('../img/promotions/fridges/conve-icon.jpg') no-repeat left 20px top 10px;
+}
+
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+button.f-accordion.active, button.f-accordion:hover {
+    //background-color: #ddd;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.f-panel {
+    padding: 0 18px;
+    //background-color: white;
+    display: none;
+}
+
+/* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
+div.f-panel.show {
+    display: block !important;
+}
+
+button.f-accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: $f-medGrey;
+    float: right;
+    margin-left: 5px;
+}
+
+button.f-accordion.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+/* ACCORDIONS /end */
+
+/* TOOLTIP /start */
+.f-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    //border-bottom: 1px dotted black;
+}
+
+.f-tooltip .f-tooltiptext {
+    @extend .f-small-text;
+    visibility: hidden;
+    width: 120px;
+    background-color: $f-darkGrey;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.f-tooltip:hover .f-tooltiptext {
+    visibility: visible;
+}
+/* TOOLTIP /end */
+
+
+/* MODAL / LIGHTBOX OVERRIDES (overrides defaults in style.min.css) /end */
+
+/* noui /start */
+.well {
+  width: 350px;
+  height: 200px;
+  margin: auto;
+}
+
+.fridgef-slider-scale-4 li {
+  width:33%;
+}
+
+.fridgef-slider-scale-2 li {
+  width:100%;
+}
+
+
+/* Functional styling;
+ * These styles are required for noUiSlider to function.
+ * You don't need to change these rules to apply your design.
+ */
+.no-ui-slider {
+  width: 100%;
+  
+}
+
+.no-ui-slider .slider-labels {
+  list-style: none;
+  padding:0;
+   margin-top: 5px;
+  margin-left: -16px;
+  width: 100%;
+  text-align: left;
+  
+}
+
+.no-ui-slider .slider-labels li {
+  //color: #d3d3d3;
+  display: inline;
+  float:left;
+  cursor: pointer;
+  margin-top: ($f-spacing-lg)+10;
+  margin-bottom: ($f-spacing-lg)+10;
+  font-size: ($f-fontsize-paragraph)-4;
+}
+
+.no-ui-slider .slider-labels li:nth-last-child(1) {
+  position: absolute;
+  margin-left: -3px;
+  width:25px;
+}
+
+.no-ui-slider .slider-labels li:hover {
+   color: #333333;
+}
+
+.no-ui-slider .slider-labels li.active {
+   color: #333333;
+}
+
+
+
+/* noui /end */
+
+} // fridgef
+
+/* MODAL / LIGHTBOX OVERRIDES (overrides defaults in style.min.css) NB: has to be outside .fridgef. Also need to add .fridge-modal to <body> /start */
+.fridgef-modal.mfp-zoom-out-cur  {
+  cursor: default !important;
+}
+.fridgef-modal.mfp-zoom-out-cur .mfp-close {
+  cursor: pointer !important;
+}
+

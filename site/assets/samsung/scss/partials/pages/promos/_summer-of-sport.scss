@@ -1,0 +1,255 @@
+/* Summer of Sport */
+.sos {
+	background-color:#0e0e0d;
+	color:#fff;
+	.no_margin{
+		margin:0;
+		&_top{margin-top:0;}
+		&_bottom{margin-bottom:0;}
+		&_left{margin-left:0;}
+		&_right{margin-right:0;}
+	}
+	&__hero{
+		//&-row{}
+		&-col{ padding:0;border-bottom:2px solid #ffb34c;}
+		&-logo{	position:absolute;	top:25%; left:40%; height:50%; }
+	}
+	&__nav{
+		&-row{ background:url('/assets/samsung/img/promotions/summer_of_sport/mesh_tex.jpg') 0 0; }
+		&-col{text-align:center;}
+		&-list{
+			display:block;
+			position:relative;
+			max-width:$mq-xlarge;
+			margin:0 auto;
+		}
+		&-item{
+			display:inline-block;
+			position:relative;
+			vertical-align:top;
+			width:19%;
+		}
+		&-link{
+			position:relative;
+			display:block;
+			text-align:center;
+			text-decoration:none;
+			padding:.75em 0;
+			color:#ffb34c;
+			font-weight:300;
+			font-size:$base-font-size - .25;
+			text-transform:uppercase;
+			transition:all .5s ease-out;
+			&-active, &:hover{font-weight:600;}
+			@include media-query($mq-medium) { font-size:$base-font-size - .125; }
+			@include media-query($mq-large - .07) { font-size:$base-font-size; }
+		}
+	}
+	&__promo{
+		&-row{
+			&.pattern{background:url('/assets/samsung/img/promotions/summer_of_sport/mesh_tex.jpg') 0 0;}
+		}
+		&-col{
+			height:300px;
+			background-position:50% 0;
+			background-repeat:no-repeat;
+			background-size:cover;
+			@include media-query($mq-large - .07) {height:500px;} 
+			@include media-query($mq-xlarge - .07) {height:640px;} 
+			@include media-query($mq-max - 2) {height:765px;} 
+			&.small{
+				height:220px;
+				background-position:0 0;
+				@include media-query($mq-medium) { height:200px; } 
+				@include media-query($mq-large - .07) { height:350px; } 
+			}
+			&.height_auto{height:auto;}
+		}
+		&-container{
+			position:relative;
+			display:block;
+			left:auto;
+			top:10%;
+			width:100%;
+			max-width:$mq-xlarge;
+			margin:0 auto;
+			padding:0 .5em;
+			text-align:center;
+			@include media-query($mq-medium) {
+				text-align:left;
+				&.left, &.center, &.right{ 
+					position:absolute; 
+					max-width:100%; 
+					width:60%; 
+					top:7%;
+				}
+				&.left{ left:5%; width:50%; }
+				&.right{ left:40%; }
+				&.center{ 
+					left:0; 
+					width:100%; 
+					top:12%; 
+					text-align:center;
+				}
+			} 
+			@include media-query($mq-medium + 8) {
+				&.left{ top:9%; width:47%; }
+				&.right{ width:54%; left:43%}
+			} 
+			@include media-query($mq-xlarge - 10.07) {
+				&.left, &.right{ width:45%; }
+				&.left{ top:9%; }
+				&.right{ left:46%;}
+			} 
+			@include media-query($mq-xlarge - .07) {
+				&.left{ top:25%;}
+				&.right{top:13%;}
+			} 
+		}
+		&-title{
+			color:#ffb34c;
+			font-size:$base-font-size + .75;
+			position:relative;
+			img{ 
+				max-height:46px; 
+				position:relative;
+				margin:-.5em 0 0 .5em;
+			}
+			&.caps{text-transform:uppercase;}
+			@include media-query($mq-large - .07) {
+				font-size:$base-font-size * 3.25;
+				img{ max-height:64px; margin:-.75em 0 0 .25em; }
+			}
+		}
+		&-subtitle{
+			position:relative;
+			font-size:$base-font-size * 1.25;
+			font-weight:100;
+			@include media-query($mq-medium) {font-size:$base-font-size * 1.5;} 
+			@include media-query($mq-large - .07) {font-size:$base-font-size * 2.25;} 
+			@include media-query($mq-xlarge - .07) {font-size:$base-font-size * 3;} 
+		}
+		&-info, &-disclm{
+			position:relative;
+			line-height:$base-line-height - .125;
+			font-size:$base-font-size;
+			@include media-query($mq-large - .07) {
+				line-height:$base-line-height + .25;
+				font-size:$base-font-size * 1.125;
+			}
+		}
+		&-disclm{
+			margin-top:3em;
+			img{ 
+				max-height:32px; 
+				margin:-1em 0 0 1em; 
+				@include media-query($mq-large - .07) {
+					max-height:64px; 
+					margin:-2em 0 0 2em; 
+				}
+			}
+		}
+	}
+	&__listing{
+		//&-row{}
+		&-col{
+			margin:1em 0;
+			&-title, &-info{ position:relative;text-align:center; }
+			&-title{
+				color:#ffb34c;
+				font-size:$base-font-size * 1.5;
+				@include media-query($mq-large - .07) { 
+					font-size:$base-font-size * 3; 
+					padding:0 10%;
+				} 
+				@include media-query($mq-xlarge - .07) {padding:0 20%; }
+			}
+		}
+		&-list{
+			display:block;
+			position:relative;
+			max-width:$mq-xlarge;
+			margin:0 auto;
+		}
+		&-item{
+			display:inline-block;
+			position:relative;
+			vertical-align:top;
+			width:100%;
+			margin-bottom:1em;
+			border:1px solid #ffb34c;
+			padding:1em;
+			@include media-query($mq-medium) {
+				width:49%;
+				margin-right:1%;
+				&:nth-child(2n+2){ margin-right:0; }
+			}
+			@include media-query($mq-large - .07) {
+				width:24%;
+				&:nth-child(2n+2){ margin-right:1%; }
+				&:nth-child(4n+4){ margin-right:0; }
+			} 
+		}
+		&-img, &-title, &-price, &-info, &-monthly{
+			display:block;
+			position:relative;
+			margin-bottom:.75em;
+			text-transform:uppercase;
+			line-height:$base-line-height;
+		}
+		&-img{ 
+			text-align:center; 
+			img{max-height:280px;} 
+		}
+		&-title{
+			color:#ffb34c;
+			font-size:$base-font-size * 1.5;
+			height:90px;
+			overflow:hidden;
+		}
+		&-price{
+			font-weight:bold;
+			margin-bottom:0;
+		}
+		&-monthly{
+			text-transform:none;
+			color:#01b3e3;
+		}
+		&-info{
+			text-transform:none;
+			a{	color:#2ad2ff;
+				transition:all .5s ease-out;
+				text-decoration: underline;
+				&:hover{
+					color:#01b3e3;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	&__button{
+		position:relative;
+		display:block;
+		background-color:#01b3e3;
+		padding:.625em;
+		text-align:center;
+		color:#fff;
+		margin:.5em auto 0;
+		text-decoration:none;
+		text-transform:uppercase;
+		font-size:$base-font-size - .125;
+		transition:all .5s ease-out;
+		&:hover{background-color:#2ad2ff;}
+		&.grey{
+			background-color:#383838;
+			&:hover{background-color:#636363;}
+		}
+		&.orange{
+			font-size:$base-font-size + .25;
+			background-color:#ffb647;
+			margin:.75em auto;
+			color:#000;
+			&:hover{background-color:#ffcf87;}
+		}
+	}
+}

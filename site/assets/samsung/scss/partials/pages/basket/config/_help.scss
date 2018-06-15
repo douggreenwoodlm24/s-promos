@@ -1,0 +1,20 @@
+// basket help (lightbox)
+
+.basket__help {
+	@extend %sharp-sans;  //use new font
+
+	&-title {
+		border-bottom: 1px solid #eee;
+	}
+	&-content {
+		line-height: 1.66;
+	}
+	a {
+		font-weight:bold;
+		color:$skyblue;
+		&:hover {
+			color:#000;
+			text-decoration: none;
+		}
+	}
+}

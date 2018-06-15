@@ -1,0 +1,1054 @@
+/* Bespoke Chef (.kitchen) */
+/* text (grey): #c1c1c1 */
+/* medium grey (buttons): #545559 */
+/* dark grey: #55565a */
+/* blue: #0077c9 */
+/* light green: #adcf9c */
+/* width: 1280px */
+.kitchen{
+	max-width: 1280px;
+	margin: 0 auto 3em;
+	.visible-1280 {	display: none; }
+	.row.transparent { background-color: transparent;}
+	.centered { text-align: center; }
+	&-clear-both { clear: both; }
+	&-background { background: #000 url('/assets/samsung/img/bespoke/chef/photo-kitchen-main-lg.png') no-repeat left top; }
+	&-light-gray { 	padding: 2em; background-color: #55565a; }
+	&-divider {
+		border: 0; 
+		height: 1px; 
+		display: block;
+		background: transparent url('/assets/samsung/img/bespoke/chef/horizontal-line-white-short.gif') no-repeat center bottom !important;
+	}
+	&-title { 
+		margin: 6em 0 5em; 
+		h1 {
+			color: #fff;
+			text-transform: uppercase;
+			text-align: center;
+			font-weight: normal;
+			font-size: 2.75em;
+			margin: 1em 0;
+			span { 	font-weight: bold; }
+		}
+		h2 {
+			color: #fff;
+			text-transform: uppercase;
+			text-align: center;
+			font-weight: normal;
+			font-size: 2em;
+		}
+	}
+	&-chef-collection {
+		background-color: #000;
+		&-top p {
+			margin: 0;
+			padding: 0.5em;
+			text-align: center;
+		}
+		&-thumbs {
+			height: 152px;
+			float: left;
+			background: #55565a;
+			width: 100%;
+			display: table;
+			&-logo{
+				height: 152px;
+				text-align:center;
+				background-color:#55565a;
+				background-image:url('/assets/samsung/img/bespoke/chef/bg-metallic.jpg');
+				background-repeat:no-repeat;
+				background-position: 0 0;
+				padding: 30px 20px;
+				@include media-query($mq-large) { float: left;}
+			}
+			&-items{
+				text-align:center;
+				li {
+					display: inline-block;
+					position: relative;
+					vertical-align:top;
+					margin: 20px 10px;
+					text-align:center;
+					height: 116px;
+					width: 125px;
+					border: 2px solid #000;
+					img { opacity: 0.6; }
+					&:hover{ 
+						img { opacity: 1; }
+						.hover-text { visibility: visible; opacity: 1; }
+					}
+					.hover-text {
+						position: absolute;
+						top: 40px;
+						left: 0;
+						right: 0;
+						text-align: center;
+						color: #fff;
+						visibility: hidden;
+						opacity: 0;
+						margin: 0;
+						font-size: 1em;
+						white-space: normal;
+					}
+				}
+			}
+			&-textlink {
+				padding-top: 35px;
+				a {	position:relative;
+					color: #fff;
+					text-transform: uppercase;
+					text-decoration: none;
+					white-space: initial;
+					&:hover { text-decoration: underline; }
+				}
+			}
+		}
+		&-display{ 
+			.large-6 { 
+				padding: 0; 
+				@include media-query($mq-medium) { width:50%;}
+			}
+		}
+	}
+	&-section-intro { 
+		margin-bottom: 4em; 
+		h3 {
+			color: #fff;
+			text-transform: uppercase;
+			text-align: center;
+		}
+		p {
+			color: #c1c1c1;
+			line-height: 2em;
+			padding: 2em;
+		}
+	}
+	&-horizontal-gray-line {
+		background: #000 url('/assets/samsung/img/bespoke/chef/horizontal-line-gray-short.gif') no-repeat center bottom;
+		padding: 2em;
+	}
+	&-the-chefs{
+		&-title {
+			background: #FFF url('/assets/samsung/img/bespoke/chef/white-chef-bg3.jpg') no-repeat 20px 20px;
+			height: 256px;
+			padding: 16px 36px 16px 260px;
+			h6 {
+				color: #000;
+				text-align: center;
+				font-size: 1.5em;
+			}
+		}
+		&-photo {
+			padding: 0;
+			background: #FFF url('/assets/samsung/img/bespoke/chef/chefs.jpg') no-repeat right top;
+			height: 256px;
+		}
+		&-swiper {
+			background: #55565a url('/assets/samsung/img/bespoke/chef/bg-metallic.jpg') no-repeat center center !important;
+			padding: 1em;
+			h5 {
+				color: #FFF;
+				text-align: center;
+				text-transform: uppercase;
+				font-size: 2em;
+				padding: 1.5em;
+				margin: 0;
+			}
+			.swiper-slide{
+				.kitchen-the-chefs-img {
+					display: block;
+					margin: 0 auto;
+					height: 225px;
+					width: 225px;
+				}
+				.kitchen-the-chefs-name {
+					color: #000;
+					text-align: center;
+					font-size: 1.25em;
+					clear: both;
+					text-transform: uppercase;
+					padding-bottom: 0.5em;
+					margin: 0.5em;
+					background: transparent url('/assets/samsung/img/bespoke/chef/horizontal-line-black-short.gif') no-repeat center bottom !important;
+				}
+				p {
+					color: #55565a;
+					font-size: 1em;
+					font-weight: 700;
+				}
+			}
+		}
+		&-slide-content { padding-bottom: 0.5em; }
+	}
+	&-button-white {
+		display: block;
+		position: relative;
+		background-color: #fff;
+		color: #1f1f1f;
+		text-transform: uppercase;
+		text-align: center;
+		text-decoration: none;
+		padding: .65em 1em .5em;
+		font-size: 1em;
+		border-radius: 5px;
+		width: 30%;
+		margin: 0 auto;
+		font-weight: bold;
+		&:hover { background-color: #fff; color: #1f1f1f; }
+	}
+	&-feature-panel {
+		background-color: #545559;
+		padding: 0;
+		&-title h4 {
+			font-size: 1.25em;
+			font-weight: 1.25em;
+			margin: 0 0 1em;
+			text-transform: uppercase;
+		}
+	}
+	&-bundle{
+		&-content{
+			&-img {
+				background: #000 url('/assets/samsung/img/bespoke/chef/bg-dark-oval-gradient.jpg') no-repeat center bottom;
+				padding-bottom: 62px;
+				img {
+					vertical-align: bottom;
+					display: block;
+				}
+			}
+			&-info { min-height: 5em; }
+		}
+		&-list{
+			&-float  {
+				display: block;
+				position:relative;
+				margin: 0 auto;
+				width:100%;
+				padding:0 1em;
+			}
+		}
+		&-item{
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			width: 100%;
+			margin: 0 1em 3em 0; 
+			@include media-query($mq-medium + 10) { 
+				width:48%;
+				&:nth-child(2n+2) { margin-right: 0; }
+			}
+			@include media-query($mq-large) { 
+				width: 23.6666%;
+				&:nth-child(2n+2) { margin-right: 1em; }
+				&:nth-child(4n+4) { margin-right: 0; } 
+			}
+			&-desktop { display: block; padding: 0 1em 1em;}
+			&-mobile { display: none; }
+		}
+	}
+	&-quickview{
+		&-tab{
+			&-content, &-mb-content{ 
+				background-color: #55565a; 
+				.kitchen-icon {
+					width: 10%;
+					float: left;
+					padding: 0 1em 0 0;
+					img { margin: 0.5em auto;display: block; }
+				}
+				.kitchen-text {
+					width: 90%;
+					float: left;
+					margin-bottom: 1em;
+					h5 {
+						font-size: 1em;
+						text-transform: uppercase;
+						font-weight: 1.25em;
+						margin: 0;
+						padding-top: 0;
+					}
+					h6 {
+						font-size: .875em;
+						font-weight: 400;
+						margin: 0;
+						color: #000;
+					}
+				}
+				.kitchen-photo {
+					overflow:hidden;
+					padding:0;
+					background-repeat:no-repeat;
+					background-position:0 0;
+					background-size:cover;
+					height:360px;
+					@include media-query($mq-large) { height:550px; }
+				}
+			}
+			&-content{ 
+				display: none;
+				&#kitchen-quickview-tab{ &-1-1, &-2-1, &-3-1, &-4-1 { display: inline-block; } }
+			}
+			&-mb-close { display: none; }
+		}
+	}
+	&-hover{
+		&-expand {
+			position: absolute;
+			right: -150px;
+			bottom: 1em;
+			width: 200px;
+			background: #0077c9;
+			color: #FFF;
+			-webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
+			transition: right 1s;
+			padding:10px 20px;
+			overflow: hidden;
+			&-link, &-plus{
+				display:inline-block;
+				position:relative;
+				vertical-align:middle;
+			}
+			&:hover { right:0; }
+		}
+		&-link {
+			color:#FFF!important;
+			font-size: 0.875em;
+			font-weight: normal;
+		}
+		&-plus {
+			margin-right: 20px;
+			height: 16px;
+			width: 16px;
+		}
+	} 
+	 .open-popup-link {
+		text-decoration: none;
+		color: #000;
+		&:hover {	text-decoration: underline;}
+	}
+	.mfp-close-btn-in .mfp-close { color: #FFF; }
+}
+/* swiper /start */
+.swiper{
+	&-container {
+		width: 100%;
+		height: 100%;
+	}
+	&-slide {
+		text-align: center;
+		font-size: 18px;
+		background: #fff;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		-webkit-justify-content: center;
+		justify-content: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		-webkit-align-items: center;
+		align-items: center;
+	}
+	&-button-prev, &-button-next { 
+		top: 50%; 
+		padding: 2em 1em;
+	}
+	&-button-prev{
+		background: #55565a url('/assets/samsung/img/bespoke/chef/swiper-left.png') no-repeat center center !important;
+		left: 10px;
+	}
+	&-button-next {
+		background: #55565a url('/assets/samsung/img/bespoke/chef/swiper-right.png') no-repeat center center !important;
+		right: 10px;
+	}
+}
+.chef-popup {
+	position: relative;
+	background: transparent url('/assets/samsung/img/bespoke/chef/chef-description-bg1.jpg') no-repeat left bottom !important;
+	padding: 20px 20px 30px;
+	width: auto;
+	max-width: 1280px;
+	margin: 0 auto;
+	&-image-container{
+		width: 40%;
+		float: left;
+		img {
+			border: 10px solid white;
+			margin: 0 auto;
+			display: block;
+		}
+	}
+	&-text-container {
+		width: 60%;
+		float: left;
+		padding: 0 3em 0 3em;
+	}
+	&-no-scroll{ 
+		h5 {
+			color: #FFF;
+			font-weight: 700;
+			font-size: 1.25em;
+			text-transform: uppercase;
+		}
+		h6 {
+			 color: #fff;
+			 font-weight: normal;
+			 font-size: 0.75em;
+		}
+	}
+	&-scroll{ 
+		h6 {
+			color: #fff;
+			font-weight: 700;
+			font-size: 1em;
+		}
+		p {
+			color: #fff;
+			font-weight: normal;
+			font-size: 1em;
+		}
+	}
+}
+.scrollbar {
+	height:280px;
+	overflow-y:scroll;
+	padding-right: 1em;
+	&::-webkit-scrollbar{
+		width:8px;
+		background-color:#cccccc;
+		&:horizontal{ height:8px; }
+		&-track{
+			border:0px #008de7 solid;
+			border-radius:0px;
+			-webkit-box-shadow:0 0 6px #C8C8C8 inset;
+		}
+		&-thumb{
+			background-color:#008de7;
+			border:0px solid #000000;
+			border-radius:0px;
+			&:hover, &:active{ background-color:#008de7; border:none; }
+		}
+	}
+}
+/* MEDIA QUERY  */
+@media screen and (max-width: 1280px) {
+    .kitchen .visible-1280 {
+		display: block;
+	}
+    .kitchen .kitchen-chef-collection .kitchen-chef-collection-thumbs .kitchen-chef-collection-logo-container {
+		width: 100%;
+	}
+	.kitchen .kitchen-chef-collection .kitchen-chef-collection-thumbs .kitchen-chef-collection-logo-container .kitchen-chef-collection-logo {
+		margin: 0 auto;
+		display: block;
+	}
+	.kitchen .kitchen-chef-collection .kitchen-chef-collection-thumbs .kitchen-chef-collection-thumbs-float  {
+		display: table;
+		margin: 0 auto;
+	}
+    .kitchen .kitchen-chef-collection .kitchen-chef-collection-thumbs ul.kitchen-chef-collection-thumbs-items {
+		clear: both;
+	}
+	.kitchen .kitchen-the-chefs-top .kitchen-the-chefs-title {
+		h6{margin-top:1.25em;}
+	}
+	.kitchen .kitchen-bundle-content-img img {
+		margin: 0 auto;
+		display: block;
+	}
+	.kitchen .kitchen-bundle-content-info, .kitchen .kitchen-bundle-content-price {
+		text-align: center;
+	}
+	.kitchen .kitchen-bundle-list-float ul.kitchen-bundle-list.kitchen-bundle-list-items-4 li.kitchen-bundle-item .kitchen-bundle-content-info {
+		min-height: 100px;
+	}
+	.kitchen .kitchen-bundle-list-float ul.kitchen-bundle-list.kitchen-bundle-list-items-4 li.kitchen-bundle-item .kitchen-bundle-content-price {
+		min-height: 60px;
+	}
+	.kitchen .kitchen-bundle-list-float ul.kitchen-bundle-list.kitchen-bundle-list-items-4 li.kitchen-bundle-item .kitchen-bundle-content-save {
+		clear: both;
+		display: block;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.kitchen .kitchen-the-chefs-top .kitchen-the-chefs-photo {
+		background: #FFF url('/assets/samsung/img/bespoke/chef/chefs.jpg') no-repeat center center;
+		background-size:cover;
+	}
+	.kitchen .kitchen-section-intro p {
+		padding-top: 0.5em;
+		padding-bottom: 0;
+	}
+}
+@media screen and (max-width: 980px) {
+     .kitchen .kitchen-chef-collection .kitchen-chef-collection-thumbs .kitchen-chef-collection-thumbs-float {
+		clear: both;
+		margin: 0 auto;
+	}
+ 	.kitchen .kitchen-chef-collection .kitchen-chef-collection-thumbs ul.kitchen-chef-collection-thumbs-items li:nth-child(4) {
+		clear: both;
+	}	
+	.kitchen .kitchen-bundle-list-float ul.kitchen-bundle-list.kitchen-bundle-list-items-3 li.kitchen-bundle-item {
+		display: inline-block;
+		width: 31%;
+		&:nth-child(2n+2){margin-right:1em;}
+		&:nth-child(3n+3){margin-right:0;}
+	}
+	.kitchen .kitchen-the-chefs-top .kitchen-the-chefs-title {
+		width: 100%;
+		background: #FFF url('/assets/samsung/img/bespoke/chef/white-chef-bg3.jpg') no-repeat 10px 10px;
+		padding: 40px 10px 16px 210px;
+	}
+	.kitchen .kitchen-the-chefs-top .kitchen-the-chefs-title h6 {
+		margin: 0.75em;
+	}
+	.chef-popup .chef-popup-image-container {
+	 	width: 100%;
+	 	float: left;
+	}
+	.chef-popup .chef-popup-text-container {
+	 	width: 100%;
+	 	float: left;
+	 	padding: 0 5em;
+	}
+}
+/* Accordion responsive breakpoint */
+@media only screen and (max-width: 768px) {
+    .r-tabs .r-tabs-nav {
+        display: none;
+    }
+    .r-tabs .r-tabs-accordion-title {
+        display: block;
+    }
+	.kitchen .kitchen-bundle-item .kitchen-bundle-item-desktop {
+		display: none;	
+	}
+	.kitchen .kitchen-bundle-item .kitchen-bundle-item-mobile {
+		display: block;
+	}
+	.kitchen .kitchen-quickview-tab-mb-content {
+		display: none;
+	}
+	.kitchen .kitchen-quickview-tab-content {
+		display: none !important;
+	}
+	.kitchen-hover-expand {
+		width: 200px;
+	    -webkit-transition: width 1s; /* For Safari 3.1 to 6.0 */
+	    transition: width 1s;
+	    overflow: hidden;
+	}
+	.kitchen-hover-expand:hover {
+		width: 200px;
+	}
+	.kitchen-quickview-tab-mb-close {
+		font-size: 1.5em;
+		cursor: pointer;
+		position: absolute;
+		right: 20px;
+		top: 15px;
+		display: block;
+	}
+	.kitchen .kitchen-bundle-list-float ul.kitchen-bundle-list li.kitchen-bundle-item .kitchen-bundle-content {	padding: 0;	}
+	.kitchen .kitchen-bundle-list-float ul.kitchen-bundle-list.kitchen-bundle-list-items-3 li.kitchen-bundle-item { display: block; width: 100%; }
+}
+@media screen and (max-width: 640px) {
+	.kitchen .kitchen-chef-collection .kitchen-chef-collection-thumbs .kitchen-chef-collection-thumbs-float {
+		clear: both;
+		margin: 0 auto;
+		width: auto;
+	}
+    .kitchen .kitchen-chef-collection .kitchen-chef-collection-thumbs ul.kitchen-chef-collection-thumbs-items li:nth-child(4) {	clear: none; }	
+	.kitchen .kitchen-the-chefs-top .kitchen-the-chefs-title {
+		background: #FFF url('/assets/samsung/img/bespoke/chef/white-chef-bg3.jpg') no-repeat 10px 10px;
+		width: 100%;
+		padding: 2em 2em 2em 15em;
+	}
+	.kitchen .kitchen-the-chefs-top .kitchen-the-chefs-photo {
+		width: 100%;
+		background: #FFF url('/assets/samsung/img/bespoke/chef/chefs.jpg') no-repeat center top;
+	}
+}
+/* bespoke @media for chefs collection thumbnails */
+@media screen and (max-width: 565px) {
+	.kitchen .kitchen-chef-collection .kitchen-chef-collection-thumbs ul.kitchen-chef-collection-thumbs-items {
+		padding-left: 0;
+	}
+	.kitchen .kitchen-chef-collection .kitchen-chef-collection-thumbs ul.kitchen-chef-collection-thumbs-items li img {
+		opacity: 1;
+	}
+	.kitchen .kitchen-chef-collection .kitchen-chef-collection-thumbs ul.kitchen-chef-collection-thumbs-items li .hover-text {
+	  visibility: visible;
+	  opacity: 1;
+	}
+}
+@media screen and (max-width: 480px) {
+	.kitchen .kitchen-title {
+		margin: 3em 0 3em;
+	}
+	.kitchen .kitchen-title h1 {
+		margin: 0.5em;
+	}
+	.kitchen .kitchen-the-chefs-top .kitchen-the-chefs-title {
+		background: #FFF url('/assets/samsung/img/bespoke/chef/white-chef-bg3.jpg') no-repeat center 10px;
+		height: auto;
+		padding: 210px 36px 16px 36px;
+	}
+	.kitchen .kitchen-quickview-tab-content .kitchen-icon, 
+	.kitchen .kitchen-quickview-tab-mb-content .kitchen-icon {
+		width: 30%;
+		float: left;
+		padding: 0 0.25em 0 0;
+	}
+	.kitchen .kitchen-quickview-tab-content .kitchen-icon, 
+	.kitchen .kitchen-quickview-tab-mb-content .kitchen-text {
+		width: 70%;
+	}
+		.kitchen .kitchen-quickview-tab-content .kitchen-icon, 
+		.kitchen .kitchen-quickview-tab-mb-content .kitchen-icon img {
+		margin: 0;
+	}
+	.kitchen .kitchen-quickview-tab-mb-content .kitchen-light-gray {
+		padding: 2em 1em 1em;
+	}
+	.kitchen .kitchen-bundle-content {
+		padding: 0;
+	}
+	.kitchen .kitchen-feature-panel-title {
+		padding-right: 2em;
+	}
+	.kitchen .kitchen-button-white {
+		width: 60%;
+	}
+	.chef-popup .chef-popup-image-container {
+		padding-top: 1em;
+	}
+	.chef-popup .chef-popup-text-container {
+	 	width: 100%;
+	 	float: left;
+	 	padding: 0 0.25em 0 1em;
+	}
+}
+.kitchen-the-chefs-title {
+	@include media-query($mq-small) { 
+		background: #FFF url('/assets/samsung/img/bespoke/chef/white-chef-bg3.jpg') no-repeat;
+		background-position: center 10px;
+		padding: 210px 2em 1em 2em;
+	}
+	@include media-query($mq-large - .7) {
+		background-position:20px center;
+		padding: 2em 2em 2em 15em;
+	}
+}
+/*
+ *
+ *
+ *
+ *******************************************/
+.kitchen {
+position: relative;
+font-weight: 500;
+color: #fff; }
+.kitchen p {
+font-size: 0.875em;
+position: relative; }
+@media screen and (min-width: 63.9925em) {
+.kitchen p {
+font-size: 1em; } }
+@media screen and (min-width: 90.063em) {
+.kitchen p {
+font-size: 1.25em; } }
+.kitchen h1, .kitchen h2, .kitchen h3, .kitchen .myaccount__panel-intro-personal-name, .kitchen h4, .kitchen .myaccount__panel-recent-order_items .ordered__item, .myaccount__panel-recent-order_items .kitchen .ordered__item, .kitchen h5, .kitchen h6 {
+font-weight: bold; }
+.kitchen h1, .kitchen h2 {
+font-size: 1.75em; }
+@media screen and (min-width: 63.9925em) {
+.kitchen h1, .kitchen h2 {
+font-size: 2.25em; } }
+@media screen and (min-width: 80em) {
+.kitchen h1, .kitchen h2 {
+font-size: 2.875em; } }
+@media screen and (min-width: 90.063em) {
+.kitchen h1, .kitchen h2 {
+font-size: 3.75em; } }
+.kitchen h3, .kitchen .myaccount__panel-intro-personal-name {
+font-size: 1.25em; }
+@media screen and (min-width: 63.9925em) {
+.kitchen h3, .kitchen .myaccount__panel-intro-personal-name {
+font-size: 1.65em; } }
+@media screen and (min-width: 90.063em) {
+.kitchen h3, .kitchen .myaccount__panel-intro-personal-name {
+font-size: 2em; } }
+.kitchen .kitchen_left, .kitchen .kitchen_center, .kitchen .kitchen_right {
+text-align: center; }
+@media screen and (min-width: 63.9925em) {
+.kitchen .kitchen_left {
+text-align: left; }
+.kitchen .kitchen_right {
+text-align: right; }
+.kitchen .large-4, .kitchen .large-6, .kitchen .large-8 {
+width: 50%; } }
+@media screen and (min-width: 90.063em) {
+.kitchen .large-4 {
+width: 33.3333%; }
+.kitchen .large-6 {
+width: 50%; }
+.kitchen .large-8 {
+width: 66.6667%; } }
+.kitchen .listing__header-wrap {
+color: #000; }
+.kitchen .listing__header-title {
+font-weight: bold; }
+.kitchen .listing__header-title span {
+color: #0275c8; }
+.kitchen .listing__header-cta {
+font-weight: normal; }
+.kitchen-intro {
+padding: 1em 1em 1.5em 1em;
+line-height: 1.481; }
+@media screen and (min-width: 63.9925em) {
+.kitchen-intro {
+padding: 0.75em 10%; } }
+.kitchen-hero-image {
+margin: 1em auto; }
+@media screen and (min-width: 63.9925em) {
+.kitchen-hero-image {
+margin: 3em auto; } }
+@media screen and (min-width: 90.063em) {
+.kitchen-hero-image {
+margin: 0; } }
+.kitchen-hero-info p {
+line-height: 1.481;
+color: #4c4c4c;
+font-size: 1em; }
+@media screen and (min-width: 63.9925em) {
+.kitchen-hero-info p {
+line-height: 1.731; } }
+@media screen and (min-width: 80em) {
+.kitchen-hero-info p {
+font-size: 1.175em; } }
+@media screen and (min-width: 90.063em) {
+.kitchen-hero-info p {
+font-size: 1.375em; } }
+.kitchen-row {
+padding: 1em; }
+@media screen and (min-width: 90.063em) {
+.kitchen-row {
+padding: 3em 5em; } }
+.kitchen-row.grey_bg {
+background: #d7dbdf;
+/* For browsers that do not support gradients */
+background: -webkit-linear-gradient(left, #d7dbdf, #f5f6f7);
+/* For Safari 5.1 to 6.0 */
+/* For Opera 11.1 to 12.0 */
+/* For Firefox 3.6 to 15 */
+background: -webkit-gradient(linear, left top, right top, from(#d7dbdf), to(#f5f6f7));
+background: linear-gradient(to right, #d7dbdf, #f5f6f7);
+/* Standard syntax */ }
+.kitchen-row.darkgrey_bg {
+background-color: #445865; }
+.kitchen-row.blue_bg {
+background: #0080cd;
+/* For browsers that do not support gradients */
+background: -webkit-linear-gradient(left, #0080cd, #00b3e3);
+/* For Safari 5.1 to 6.0 */
+/* For Opera 11.1 to 12.0 */
+/* For Firefox 3.6 to 15 */
+background: -webkit-gradient(linear, left top, right top, from(#0080cd), to(#00b3e3));
+background: linear-gradient(to right, #0080cd, #00b3e3);
+/* Standard syntax */ }
+.kitchen-button, .kitchen-button-more {
+display: block;
+position: relative;
+background-color: #292929;
+color: #fff;
+text-transform: uppercase;
+text-align: center;
+text-decoration: none;
+padding: .65em .5em .5em;
+font-size: 1.5em;
+-webkit-transition: all .5s ease-in;
+transition: all .5s ease-in;
+border-radius: 50px;
+width: 100%;
+margin: 1em auto;
+line-height: 1;
+font-weight: bold; }
+@media screen and (min-width: 40em) {
+.kitchen-button, .kitchen-button-more {
+width: 50%; } }
+@media screen and (min-width: 80em) {
+.kitchen-button, .kitchen-button-more {
+font-size: 1.875em; } }
+@media screen and (min-width: 90.063em) {
+.kitchen-button, .kitchen-button-more {
+padding: .75em 3em .5em;
+font-size: 2.25em;
+width: 100%; } }
+.kitchen-button:hover, .kitchen-button-more:hover {
+background-color: #0275c8; }
+.kitchen-button-more {
+background-color: transparent;
+font-size: 18px;
+color: #000; }
+.kitchen-button-more:before {
+content: '\2039';
+position: absolute;
+bottom: -35px;
+left: 50%;
+margin-left: -10px;
+font-weight: 100;
+font-size: 60px;
+-ms-transform: rotate(-90deg);
+/* IE 9 */
+-webkit-transform: rotate(-90deg);
+/* Safari */
+transform: rotate(-90deg); }
+.kitchen-button-more:hover {
+background-color: transparent;
+color: #0275c8; }
+.kitchen-bundle-row {
+padding: 0; }
+.kitchen-bundle-row .column, .kitchen-bundle-row .columns {
+padding: 0; }
+@media screen and (min-width: 90.063em) {
+.kitchen-bundle-row {
+padding: 0 3em; } }
+.kitchen-bundle-list {
+position: relative;
+display: block; }
+.kitchen-bundle-title {
+background-color: #0077c8;
+text-transform: uppercase;
+margin: 0;
+padding: .65em .5em .4em;
+color: #fff;
+font-size: 1.75em; }
+@media screen and (min-width: 50em) {
+.kitchen-bundle-title {
+font-size: 1.25em; } }
+@media screen and (min-width: 63.9925em) {
+.kitchen-bundle-title {
+font-size: 1.75em; } }
+.kitchen-bundle-content {
+position: relative;
+display: block;
+padding: 1em 1em 0; }
+.kitchen-bundle-content-info, .kitchen-bundle-content-price, .kitchen-bundle-content-colors {
+position: relative;
+display: block; }
+.kitchen-bundle-content-info {
+font-size: 1em;
+padding: 0; }
+@media screen and (min-width: 40em) {
+.kitchen-bundle-content-info {
+overflow: hidden; } }
+.kitchen-bundle-content-info .version {
+margin-top: .5em;
+font-size: .8125em;
+color: #555; }
+.kitchen-bundle-content-price {
+font-size: 1.5em;
+font-weight: bold;
+color: #0077c9; }
+.kitchen-bundle-content-save {
+font-size: 0.7em;
+color: #adcf9c; 
+display:none;
+}
+.kitchen-bundle-content-colors {
+padding: .5em;
+line-height: 26px; }
+.kitchen-bundle-content-colors span {
+display: inline-block;
+position: relative;
+vertical-align: top;
+margin: 0 .25em;
+width: 26px;
+height: 26px;
+border: 1px solid #999;
+cursor: pointer;
+background-color: transparent; }
+.kitchen-bundle-content-colors span.black {
+background-color: #000;
+border-color: #000; }
+.kitchen-bundle-content-colors span.grey {
+background-color: #bbb; }
+.kitchen-bundle-content-colors span.white {
+background-color: #fff; }
+.kitchen-bundle-content-colors span.blue {
+background-color: #0077c8;
+border-color: #0077c8; }
+.kitchen-bundle-content-colors span.darkred {
+background-color: #c00;
+border-color: #c00; }
+.kitchen-bundle-content-colors span.selected {
+border-color: #fff;
+outline: 1px solid #1428a0;
+-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); }
+.kitchen-bundle-item-desktop {
+position: relative;
+display: block;
+padding: 0.5em 0;
+}
+.kitchen-bundle-button {
+display: block;
+position: relative;
+line-height: 1;
+background-color: none;
+border: 1px solid #fff;
+color: #fff;
+text-transform: uppercase;
+text-align: center;
+text-decoration: none;
+padding: .65em 1em .65em;
+font-size: 1em;
+width: 100%;
+margin: 1em auto .75em;
+font-weight: bold; }
+.kitchen-quickview, .kitchen-quickview-mb {
+display: block;
+position: relative;
+line-height: 1;
+background-color: #545559;
+border: 1px solid #545559;
+color: #fff;
+text-transform: uppercase;
+text-align: center;
+text-decoration: none;
+padding: .65em 1em .65em;
+font-size: 1em;
+width: 100%;
+margin: 0 auto;
+font-weight: bold;
+cursor: pointer; }
+.kitchen-quickview.kitchen-quickview-current, .kitchen-quickview-mb.kitchen-quickview-current {
+background-color: #0077c9;
+border: 1px solid #0077c9;
+}
+.quickview-arrow {
+width: 0; 
+height: 0; 
+border-left: 20px solid transparent;
+border-right: 20px solid transparent;
+border-top: 20px solid #0077c9;
+margin: 0 auto;
+}
+.kitchen-bundle-button:hover {
+background-color: #fff;
+color: #1f1f1f; }
+.kitchen-quickview:hover {
+}
+@media screen and (min-width: 63.9925em) {
+.kitchen-bundle-button, .kitchen-bundle-button-info {
+padding: .65em 2em .5em; } }
+@media screen and (min-width: 80em) {
+.kitchen-bundle-button, .kitchen-bundle-button-info {
+padding: .65em 3em .5em; } }
+.kitchen-bundle-button-info {
+background-color: #fff;
+margin-bottom: 0;
+font-size: 1em;
+color: #1f1f1f !important; }
+.kitchen-bundle-button-info:hover {
+color: #1f1f1f; }
+.kitchen-keys {
+padding: 1em 0; }
+.kitchen-keys img {
+margin-top: 1.5em; }
+@media screen and (min-width: 40em) {
+.kitchen-keys {
+width: 50%; } }
+@media screen and (min-width: 50em) {
+.kitchen-keys {
+width: 25%; } }
+@media screen and (min-width: 90.063em) {
+.kitchen-keys-row {
+padding: 1em 5em; } }
+.kitchen-keys-title {
+color: #fff;
+text-align: center;
+margin-bottom: 0;
+font-size: 1.5em !important; }
+@media screen and (min-width: 50em) {
+.kitchen-keys-title {
+font-size: 2.125em !important; } }
+@media screen and (min-width: 80em) {
+.kitchen-keys-title {
+font-size: 2.75em !important; } }
+.kitchen-keys-info {
+display: block;
+position: relative;
+margin: 1em auto;
+color: #fff;
+font-size: 1em; }
+@media screen and (min-width: 63.9925em) {
+.kitchen-keys-info {
+font-size: 1.25em; } }
+.kitchen-viewing-row {
+padding: 0; }
+.kitchen-viewing-info {
+color: #fff;
+padding: 2em 1em; }
+.kitchen-viewing-info h2 {
+text-transform: uppercase; }
+.kitchen-viewing-info p {
+margin-bottom: 2em; }
+@media screen and (min-width: 63.9925em) {
+.kitchen-viewing-info {
+padding: 0 1em; }
+.kitchen-viewing-info h2, .kitchen-viewing-info p {
+margin: .25em 0; }
+.kitchen-viewing-info h1 {
+font-size: 1.75em;
+margin-top: 1em; }
+.kitchen-viewing-info h2 {
+font-size: 1.25em; }
+.kitchen-viewing-info p {
+font-size: .75em; } }
+@media screen and (min-width: 80em) {
+.kitchen-viewing-info h2, .kitchen-viewing-info p {
+margin: .5em 0; }
+.kitchen-viewing-info h1 {
+font-size: 2.875em;
+margin-top: .75em; }
+.kitchen-viewing-info h2 {
+font-size: 1.65em; }
+.kitchen-viewing-info p {
+font-size: .85em; } }
+@media screen and (min-width: 90.063em) {
+.kitchen-viewing-info {
+padding: 3em 9em 1em 6em; }
+.kitchen-viewing-info p {
+margin-bottom: 2em;
+font-size: 1em; } }
+.kitchen-viewing-hero {
+padding: 0; }
+.kitchen-stylish {
+padding: 0; }
+.kitchen-stylish-title {
+margin: 1.5em auto 0;
+font-weight: 500 !important; }
+.kitchen-stylish-price {
+margin: 0 auto; }
+.kitchen-stylish .kitchen-button {
+margin: 1.5em auto; }
+@media screen and (min-width: 63.9925em) {
+.kitchen-stylish .kitchen-button {
+width: 30%; } }
+.kitchen-payment {
+display: block;
+position: relative;
+margin: 1em auto;
+padding: 1em;
+text-align: center;
+font-size: 0.875em;
+line-height: 1.231; }
+.kitchen-payment img {
+margin: .5em;
+position: relative; }
+/*Bespoke END Chef  */

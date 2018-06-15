@@ -1,0 +1,156 @@
+/* Gear 360 Camera landing page */
+.s360gear {
+	small{color:#999;}
+	&-button {
+		position:relative;
+		font-weight: 500;
+		padding: .75em 1em;
+		background-color: #1e1e1e;
+		color:#fff;
+		text-decoration:none;
+		font-size:$base-font-size + .25;
+		text-transform:uppercase;
+		transition:all .3s ease-in;
+		&:hover{background-color: #00b3e3;}
+		&.rounded{
+			border-radius:30px;
+			padding: .5em 2em;
+			@include media-query($mq-large - .063) { padding: .5em 3em; }
+		}
+		&.blue {
+			background-color: #00b3e3;
+			&:hover { background-color: #4fd1ff; }
+		}
+		@include media-query($mq-large - .063) { padding: .75em 3em;font-size:$base-font-size + .5;}
+	}
+	&-video{
+		height:160px;
+		width:100%;
+		@include media-query($mq-small + 10) {height:250px;}
+		@include media-query($mq-medium) {height:340px;}
+		@include media-query($mq-medium + 10) {height:430px;}
+		@include media-query($mq-large - 4.063) {height:520px;}
+		@include media-query($mq-large - .063) { height:274px; }
+		@include media-query($mq-contrained-max) {height:334px;width:95%;}
+		@include media-query($mq-contrained-max + 10) {height:377px;}
+		@include media-query($mq-max - 2) {height:420px;}
+		@include media-query($mq-max) {height:500px;}
+	}
+	&-hero {
+		background-color: #54a4e9;
+		background-image: url("/assets/samsung/img/landing/360camera/s360gear-s7-static.png");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size:100% auto;
+		color: #fff;
+		padding: 1em;
+		min-height: 420px;
+		h1 { font-size: 100px; margin: 30px; }
+		h1, h3 { color: #fff; }
+		&-info{ 
+			text-align:center;
+			&-logo, &-text{ position:relative; display:block;margin:0;}
+			&-text{margin-left:.35em;}
+			.s360gear-button{
+				top:9em;
+				@include media-query($mq-small + 10) { top:11em; }
+				@include media-query($mq-medium - 5) { top:13.5em; }
+				@include media-query($mq-medium) { top:15em; }
+				@include media-query($mq-medium + 8) { top:17.5em; }
+				@include media-query($mq-large - .063) { top:auto; }
+			}
+			@include media-query($mq-large - .063) { 
+				text-align:left; 
+				width:50%;
+				&-text{margin-left:.7em;}
+			}
+			@include media-query($mq-xlarge - .063) { &-text{margin-left:1.2em;}}
+		}
+		@include media-query($mq-small + 10) { background-position: center 65%; min-height: 520px;}
+		@include media-query($mq-medium - 5) { min-height: 600px; }
+		@include media-query($mq-medium ) { background-position: center 70%; min-height: 660px; }
+		@include media-query($mq-medium + 8) { background-position: center 80%;	min-height: 760px; }
+		@include media-query($mq-large - .063) {
+			background-image: url("/assets/samsung/img/landing/360camera/s360gear-s7-static.png"), url("/assets/samsung/img/landing/360camera/s360gear-banner-bg.jpg");
+			background-repeat: no-repeat, no-repeat;
+			background-size:50% auto, auto auto;
+			background-position: right center, center 60%;
+			min-height: 560px;
+			padding: 160px 8em 3em 4em;
+		}
+		@include media-query($mq-xlarge - 10.063) {	min-height: 820px;padding-top: 200px;}
+	}
+	&-keys{
+		text-align:center;
+		padding-top:1.5em;
+		padding-bottom:1.5em;
+		margin-bottom:1em;
+		@include media-query($mq-medium - 10) { width:50%; }
+		@include media-query($mq-large - .063) { width:25%; }
+		&-row { background-color:#f9f9f9;}
+		&-info{display:block;position:relative;}
+	}
+	&-viewing{
+		&.greyBG{
+			background-color:#edeef2;
+			margin:2em 0;
+			@include media-query($mq-large - .063) {margin:0 }
+		}
+		&-image, &-info, &-video{
+			@include media-query($mq-large - .063) {width:50%}
+		}
+		&-image{
+			min-height:280px;
+			background-position:50% 50%;
+			background-repeat:no-repeat;
+			background-size:cover;
+			@include media-query($mq-small + 10) {min-height:330px;}
+			@include media-query($mq-medium - 5) {min-height:380px;}
+			@include media-query($mq-medium) {min-height:440px;}
+			@include media-query($mq-medium + 8) {min-height:560px;}
+			@include media-query($mq-xlarge - .063) {min-height:760px;}
+		}
+		&-video{
+			text-align:center;
+			@include media-query($mq-large - .063) {padding-top:11%;}
+			@include media-query($mq-contrained-max + 10){padding-top:10%;}
+		}
+		&-info{
+			padding:10% 5%;
+			text-align:center;
+			h2{	font-size:$base-font-size + .75;
+				margin:0;
+				@include media-query($mq-medium) { font-size:$base-font-size + 1.5; }
+				@include media-query($mq-xlarge - .063) { font-size:$base-font-size + 2.5; }
+			}
+			h3{	font-size:$base-font-size + .5;
+				margin:0;
+				@include media-query($mq-medium) { font-size:$base-font-size + .875; }
+				@include media-query($mq-xlarge - .063) { font-size:$base-font-size + 1.25; }
+			}
+			p{line-height:$base-line-height + .5;}
+			@include media-query($mq-large - .063) {text-align:left;}
+			@include media-query($mq-xlarge - .063) { padding:10% 6%;}
+		}
+	}
+	&-stylish{
+		text-align:center;
+		margin:0 0 3em;
+		h3{	font-size:$base-font-size + 1.25;margin-bottom:0;
+			@include media-query($mq-medium + 8) { font-size:$base-font-size + 2; }
+			@include media-query($mq-large - .063) { font-size:$base-font-size + 3; }
+		}
+		p{line-height:$base-line-height + .5;}
+		img{position:relative;}
+		small{
+			color:#666;
+			padding:2em 0;
+			display:block;
+			position:relative;
+			margin-top:2em;
+			@include media-query($mq-medium) { padding:2em 10%; }
+			@include media-query($mq-large - .063) { padding:2em 15%; }
+		}
+		@include media-query($mq-large - .063) { margin:0 0 5em; }
+	}
+} 

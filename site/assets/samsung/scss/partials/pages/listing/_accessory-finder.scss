@@ -1,0 +1,140 @@
+// accessory finder styles
+.accfinder{
+	&-intro{
+		text-align:center;
+		padding:1em 9.5% 2em;
+		p{ 	color:#5e5e5e; font-size:16px; 	
+			@include media-query($mq-medium) {font-size:20px;}	
+		}
+		h1, h2, h3, h4, h5, h6{
+			text-transform:uppercase;
+			font-weight:400;
+			font-size:30px;
+		}
+	}
+	&-categories{
+		margin:0 9.5% 1%; 
+		&_item{
+			float:left;
+			position:relative;
+			border-right:2px solid #fff;
+			text-decoration:none;
+			text-align:center;
+			width:100%;
+			@include media-query($mq-large - 4.0625) {
+				width:50%;
+				&:nth-child(2n+2){border:none;}
+			}
+			@include media-query($mq-xlarge) {
+				width:25%;
+				&:nth-child(2n+2){border-right:2px solid #fff;}
+				&:nth-child(4n+4){border:none;}
+			}
+			&-title{
+				background-color:#dee3e6;
+				color:#5e5e5e;
+				text-transform:uppercase;
+				font-size:18px;
+				font-weight:400;
+				padding:.5em 0;
+				margin:0;
+			}
+			img{ max-width:250px; margin:2.5em 0; }
+			&:hover{
+				.accfinder-categories_item-title{
+					background-color:#1428a0;
+					color:#fff;
+				}
+				img{opacity:0.8;}
+			}
+			&-big{
+				width:100%;				
+				float:left;
+				position:relative;
+				text-decoration:none;
+				border:1px solid #dee3e6;
+				margin-bottom:.5em;
+				//@media screen and (-webkit-min-device-pixel-ratio:0) { 	min-height: 111px; } /* saf3+, chrome1+ */
+				img{display:block;position:relative;}
+				&-title{
+					color:#75787b;
+					text-transform:uppercase;
+					font-size:14px;
+					font-weight:400;
+					position:absolute;
+					margin:0;
+					left:.5em;
+					top:26.5%;
+					z-index:1;
+					@include media-query($mq-small + 10) {font-size:16px;left:1em;top:32%;}
+					@include media-query($mq-medium) {font-size:20px;}
+					@include media-query($mq-medium + 10) {font-size:24px;top:34%;}
+					@include media-query($mq-large - .0625) {font-size:20px;top:30.5%;}
+					@include media-query($mq-contrained-max - .063) { font-size:23px;}
+					@include media-query($mq-contrained-max + .063) { font-size:25px; top:35%; left:1.5em}
+				}
+				@include media-query($mq-large - 4.0625) { width:49.6667%; &:nth-child(2n+2){float:right;} }
+				&:hover{
+					border-color:#1428a0;
+					.accfinder-categories_item-big-title{color:#1428a0;}
+				}
+			}
+		}
+	}
+	&-search{
+		h1.listing__title{display:none;}
+	}
+	&-finder{
+		margin:0 0 2.5em;
+		@include media-query($mq-large) {margin-bottom:4em;}
+		&-col, &-col-left, &-col-right { padding:0 .46875em;; width:100%;}
+		@include media-query($mq-large - 4.0625) {
+			&-col, &-col-left, &-col-right { padding:0 .5em; width:33.3333%}
+			&-col-left {padding:0 1em 0 .46875em;}
+			&-col-right {padding:0 .46875em 0 1em;}
+		}
+		@include media-query($mq-xlarge) {
+			&-col, &-col-left, &-col-right { padding:0 2em; }
+			&-col-left {padding:0 4em 0 .46875em;}
+			&-col-right {padding:0 .46875em 0 4em;}
+		}
+		&-title{
+			background-color:#dee3e6;
+			color:#5e5e5e;
+			text-transform:uppercase;
+			font-size:18px;
+			font-weight:400;
+			padding:.5em 0;
+			margin:2em 0 0;
+			text-align:center;
+			@include media-query($mq-large) {text-align:left;padding-left:2em;}
+		}
+		&_label{
+			text-align:center;
+			font-size:20px;
+			display:block;
+			position:relative;
+			padding:.5em 0;
+			text-transform:uppercase;
+			font-weight:700;
+			color:#3a3a3a;
+			@include media-query($mq-medium) {font-size:24px;}
+			@include media-query($mq-large) {font-size:36px;padding:1em 0;}
+		}
+		&_selector select{
+			-webkit-appearance: none;  		/*Removes default chrome and safari style*/
+			-moz-appearance: none;  		/*Removes default style Firefox*/
+			text-indent: 0.01px;          	/* Removes default arrow from firefox*/
+			text-overflow: "";             	/*Removes default arrow from firefox*/
+			border:2px solid #c1c1c1;
+			padding:.3em;
+			background: url("/assets/samsung/img/listing/acc-finder/selectarrow.png") 95% 55% no-repeat; 
+			&:focus{
+				border-color:#1428a0;
+				background: url("/assets/samsung/img/listing/acc-finder/selectarrow-hov.png") 95% 55% no-repeat; 
+			}
+			@include media-query($mq-medium) {padding:.5em;}
+			@include media-query($mq-large) {padding:.7em;}
+		}
+	}
+}

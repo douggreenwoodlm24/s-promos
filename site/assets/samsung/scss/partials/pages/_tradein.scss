@@ -1,0 +1,357 @@
+// ==|== pages > trade in
+
+.tradein {
+	margin-bottom:20px;
+	@include media-query($mq-medium) {
+		margin-top:20px;
+	}	
+	&__title-main {
+		padding-bottom:6px;
+		border-bottom:1px solid #ccc;
+		text-transform: uppercase;
+		font-weight:normal;
+		text-align: center;
+		margin:.5em 0;
+		font-size:1.25em;
+		font-weight:bold;
+		@include media-query($mq-medium) {
+			font-size:2em;
+			font-weight:normal;
+		}
+	}	
+	&__title-sub {
+		margin:1em 0;
+		text-align: center;
+		font-size:1em;
+		@include media-query($mq-medium) {
+		font-size:1.25em;
+		}
+	}
+	&__header {
+		margin-bottom:10px;
+	}
+	&__intro {
+		margin-bottom:10px;
+		padding:.25em .75em;
+		font-size:.8125em;
+		background:#f6f6f6;
+		border:1px solid #ccc;
+		@include media-query($mq-medium) {
+			font-size:.875em;
+		}
+		p {
+			margin:.25em 0;
+			
+		}
+	}
+
+	&__qs { //quick select
+		text-align: center;
+		margin-bottom:12px;
+		&-title {
+			font-weight:bold;
+			padding-bottom:6px;
+			border-bottom:1px solid #ccc;
+			text-align:center;
+			margin:1em 0 .5em;
+			font-size:.875em;
+			@include media-query($mq-medium) {
+				font-size:1em;
+			}			
+		}
+		&-item {
+			display:inline-block;
+			vertical-align: top;
+			width:48%;
+			margin:0 .65% 6px;
+			border:1px solid #eee;
+			padding:10px 6px 6px;
+			transition: border-color .25s ease-in-out;
+			@include media-query($mq-medium) {
+				width:23.25%;
+				margin-bottom:0;
+			}
+			&:hover {
+				border-color:#ccc;
+			}
+		}
+		&-img {
+			width:75px;
+			height:75px;
+			background:#eee;
+			margin:0 auto 6px;
+			@include media-query($mq-medium) {
+				width:100px;
+				height:100px;
+			}
+		}
+		&-label {
+			font-size:.875em;
+			@include media-query($mq-large) {
+				font-size:1em;
+			}
+		}
+	}
+	input,select {
+		cursor: pointer;
+		color:#000;
+	}
+	a {
+			color:$primary;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+	.form-label {
+		font-size:.8125em;
+		margin-bottom:4px;
+		@include media-query($mq-small + 10) {
+			font-size:.875em;
+		}
+		@include media-query($mq-large) {
+			margin-bottom:0;
+		}
+	}
+} 
+
+
+.tradein__condition-list {
+	transition:opacity .25s ease-out;
+	&.suppressed {
+		opacity:.33;
+		pointer-events:none;
+	}
+}
+
+.tradein__condition-item {
+	position:relative;
+	margin:0 0 .5em;
+	padding-left:20px;
+	&:hover {
+		color:$primary;
+		span {
+			color:$primary;	
+		}
+		.tradein__condition-list.suppressed & {
+			&:hover {
+			color:#000;
+			span {
+				color:#000;	
+			}
+			}
+		}
+	}
+	label {
+		cursor: pointer;
+	}
+	input {
+		position:absolute;
+		left:0;
+		top:4px;
+	}
+	span {
+		display:block;
+		font-size:.75em;
+		color:#666;
+		@include media-query($mq-medium) {
+			font-size:.875em;	
+		}
+	}
+}
+
+.tradein__condition-note {
+	display:block;
+	font-size:.75em;
+	color:#666;
+	@include media-query($mq-medium) {
+		font-size:.875em;	
+	}
+	strong {
+		color:#000;
+	}
+}
+
+.tradein__value {
+	font-size:1.5em;
+	font-weight:bold;
+	color:$primary;
+	transition:opacity .25s ease-out;
+	&.suppressed {
+		opacity:.33;
+		pointer-events:none;
+	}
+	@include media-query($mq-medium) {
+		font-size:2em;	
+	}
+	transition:opacity .25s ease-out;
+	&.suppressed {
+		opacity:.33;
+		pointer-events:none;
+	}
+}
+
+.tradein__submit-button {
+	transition:opacity .25s ease-out;
+	&.suppressed {
+		opacity:.33;
+		pointer-events:none;
+	}
+	&:after {
+		display:inline-block;
+		vertical-align: -.125em;
+		line-height: 1;
+		margin:0 .1em 0 .2em;
+		font-size:2em;
+		content:"\203A"; //single right-pointing angle quotation mark
+		transition:margin .125s ease-in-out;
+		font-weight: normal;
+	}
+}
+
+//stage 2
+
+.tradein__select {
+	text-align:center;
+	margin:0 auto 20px;
+	max-width:1920px;
+
+	&-product {
+		position:relative;
+		display:inline-block;
+		vertical-align: top;
+		width:185px;
+		margin:0 1%;
+		padding:10px 0;
+		border:1px solid #fff;
+		font-size:.75em;
+		transition:border-color .25s ease-out;
+		
+		@include media-query($mq-small + 10) {
+			width:30%;
+		}
+		&:hover {
+			border-color:$accent;
+		}
+		&.active {
+			border-color:$primary;
+			box-shadow:4px 4px 0 rgba(0,0,0,.1);
+		}
+		&--s6 {
+			&.active {
+				&:before {
+					position:absolute;
+					top:50%;
+					left:50%;		
+					padding:.3em .4em;
+					margin:0 10%;
+					content:"✓";
+					line-height:1;
+					font-weight: bold;
+					color:$primary;
+					font-weight: bold;
+					white-space: nowrap;
+					background:#fff;
+					background:rgba(255,255,255,.9);
+					border-radius:100px;
+					box-shadow:0 0 8px rgba(0,0,0,.2);
+					font-size:3em;
+					margin:-80px 0 0 -28px;
+					@include media-query($mq-small + 10) { 
+						margin:-80px 0 0 -33px;
+					}
+					@include media-query($mq-large) { 
+						font-size:3.75em;
+						margin:-115px 0 0 -47px;
+						border-radius:50%;
+					}
+				}
+			}
+		}
+		@include media-query($mq-small + 10) {
+			font-size:.875em;	
+		}
+		@include media-query($mq-large) {
+			font-size:1em;	
+		}
+		label {
+			cursor: pointer;
+		}
+		&-price { /* layer price over image -- used on Gear S2*/
+			position:absolute; 
+			top:15%;
+			right:0;
+			color:#fff;
+			background:$primary;
+			font-weight:bold;
+			padding:.25em .5em;
+		}
+		&-below-price { /*drop price below image -- used on S6  */
+			color:#fff;
+			background:$primary;
+			font-weight:bold;
+			padding:.25em .5em;
+			margin-bottom:.5em;
+		}
+		&-title {
+
+		}  
+		&-version {
+			display:block;
+			margin-top:.125em;
+			font-weight: bold;
+			color:$primary;
+		}
+	}
+	&--full-width {
+		.tradein__select-product {
+			@include media-query($mq-small + 10) {
+				//width:30%;
+			}
+			@include media-query($mq-medium + 10) {
+				width:21.75%;
+			}
+			@include media-query($mq-large) {
+				width:17%;
+			}
+			@include media-query($mq-xlarge) {
+				width:14%;
+			}
+		}
+	}
+	input {
+		
+
+	}
+	&-img-label {
+		display:block;
+		padding:100% 0 0;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: 50% 0;
+		margin-bottom:10px;
+		&--no-bmargin {
+			margin-bottom:0;
+		}
+	}
+}
+
+
+.tradein_s2_intro {
+	border-bottom:1px dotted #ddd;
+	p {
+		font-size:.8125em;
+		@include media-query($mq-medium) {
+			font-size:.875em;
+		}
+	}
+}
+
+
+.tradein__qs-item {
+	cursor:pointer;
+	&:hover {
+		color: $primary;
+		text-decoration: underline;
+	}
+}

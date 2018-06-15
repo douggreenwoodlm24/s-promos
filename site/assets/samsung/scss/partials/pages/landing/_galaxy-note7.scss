@@ -1,0 +1,713 @@
+$-galaxy-note7-screen-x-large: 1600px;
+$-galaxy-note7-screen-large: 1440px;
+$-galaxy-note7-screen-medium-large: 1280px;  // where Samsung FRONT-END left-hand filters become full-screen
+$-galaxy-note7-screen-medium: 1024px; // where Samsung -6 columns go onto one line
+$-galaxy-note7-screen-800: 800px;
+$-galaxy-note7-screen-small: 640px;
+$-galaxy-note7-screen-x-small: 480px;
+$-galaxy-note7-lightGrey: #939393;
+$-galaxy-note7-mediumGrey2: #676362;
+$-galaxy-note7-mediumGrey: #3a3a3a;
+$-galaxy-note7-mediumGreyHover: #838383;
+$-galaxy-note7-darkGrey: #242424;
+$-galaxy-note7-lightBlue: #00c9ff;
+$-galaxy-note7-lightBlueHover: #00b3e3;
+$-galaxy-note7-darkBlue: #4c8eca; //#0077c8;
+$-galaxy-note7-darkBlueHover: #005b97;
+$-galaxy-note7-spacing-lg: 32px;
+$-galaxy-note7-spacing-md: 16px;
+$-galaxy-note7-spacing-sm: 8px;
+
+.galaxy-note7 {	
+	.galaxy-note7-small-text {
+	  font-size: 0.8em;
+	}
+	
+	&-clear-both {
+	  clear: both;
+	}
+	
+	.galaxy-note7-margin-md {
+	  margin: $-galaxy-note7-spacing-md;
+	}
+	
+	.galaxy-note7-link-default {
+	  color: $-galaxy-note7-darkBlue;
+	  text-decoration: none;
+	  &:hover {
+	    color: $-galaxy-note7-darkBlueHover;
+	  }
+	}
+	
+	.galaxy-note7-link-white {
+    color: #fff;
+    text-decoration: none;
+  }
+	
+	&-logo {
+	 display: block;
+	 margin: $-galaxy-note7-spacing-lg auto;
+	}
+	
+	.padding-v-lg {
+	  padding: ($-galaxy-note7-spacing-lg)*2;
+	  @media screen and (max-width:$-galaxy-note7-screen-medium) {
+       padding: $-galaxy-note7-spacing-lg;
+       }
+	}
+	
+	// cta hover 
+	.galaxys7-button {
+	  &:hover {
+	    background-color: $-galaxy-note7-mediumGreyHover;
+	  }
+	  &.blue {
+	    background-color: $-galaxy-note7-darkBlue;
+	    &:hover {
+      background-color: $-galaxy-note7-darkBlueHover;
+    }
+	  }
+	}
+	
+	// hero 
+	.constrain-medium {
+	  max-width: $-galaxy-note7-screen-x-large;
+	  margin: 0 auto;
+	}
+	.galaxys7__header {
+	   @media screen and (max-width:$-galaxy-note7-screen-x-small) {
+          height: auto;
+         }
+	  
+	  .galaxys7__header-panel {
+       @media screen and (max-width:($-galaxy-note7-screen-800)+50) {
+         width: 30%;
+         left: 35%;
+         }
+       @media screen and (max-width:$-galaxy-note7-screen-800) {
+          left: 20%;
+          top: 20%;
+          width: 40%;
+         }
+         @media screen and (max-width:$-galaxy-note7-screen-x-small) {
+          position: static;
+          margin: 0 auto;
+         }
+       .galaxys7__header-title {
+          text-transform: none;
+        }
+        @media screen and (max-width:$-galaxy-note7-screen-800) {
+         left: 10%;
+         }
+    }
+	  
+  	  .galaxys7__header-hero-1 {
+      top: -2%;
+      max-height: 100%;
+      @media screen and (max-width:$-galaxy-note7-screen-large) {
+         left: 2%;
+         }
+         @media screen and (max-width:$-galaxy-note7-screen-800) {
+         display: none;
+         }
+    }
+    
+    .galaxys7__header-hero-2 {
+      max-height: 100%;
+      top: 12%;
+      @media screen and (max-width:$-galaxy-note7-screen-large) {
+         top: 8%;
+         right: 2%;
+         }
+         
+         @media screen and (max-width:$-galaxy-note7-screen-x-small) {
+         display: block;
+         position: static;
+         margin: $-galaxy-note7-spacing-lg auto;
+         width: 50%;
+         }
+    }
+    
+    
+    
+   
+	}
+	
+	
+	.galaxy-note7-info {
+	  h2 {
+	    color: #000 !important;
+	    text-transform: none;
+	    font-size: 2.2em;
+	    letter-spacing: 3px;
+	    margin-top: $-galaxy-note7-spacing-sm;
+	    margin-bottom: $-galaxy-note7-spacing-sm;
+	  }
+	  h3 {
+	    margin-top: $-galaxy-note7-spacing-sm;
+      margin-bottom: ($-galaxy-note7-spacing-lg)*3;
+      color: $-galaxy-note7-mediumGrey2;
+      font-size: 1.8em;
+      letter-spacing: 3px;
+       @media screen and (max-width:$-galaxy-note7-screen-medium) {
+          margin-bottom: $-galaxy-note7-spacing-lg;
+         }
+	  }
+	  h4 {
+      margin-bottom: 0;
+      font-size: 2em;
+    }
+	}
+	
+	// thumbnail gallery
+	.galaxy-note7-gallery {
+	  // display defaults
+	  .galaxy-note7-gallery-toggle {
+	    display: none;
+      &.galaxy-note7-gallery-show {
+        display: block;
+      }
+	  }
+	  
+	  
+	  
+	  
+	  &-thumb {
+	  float: left;
+	  width: 25%;
+	  margin-left: 3%;
+	  li {
+	    list-style-type: none;
+	    margin-bottom: $-galaxy-note7-spacing-md;
+	    img {
+	    border: 2px solid $-galaxy-note7-lightGrey;
+	    cursor: pointer;
+	    &.galaxy-note7-gallery-current {
+        border: 2px solid $-galaxy-note7-darkBlue;
+      }
+	   }
+	    
+	  }
+	  }
+	  &-main {
+	    float: left;
+	    width: 67%;
+	  }
+	  &-colorpicker {
+	    clear: both;
+	    margin-left: 45%;
+	    margin-top: $-galaxy-note7-spacing-md;
+	    @media screen and (max-width:$-galaxy-note7-screen-medium) {
+         margin-left: 25%;
+      }
+      @media screen and (max-width:$-galaxy-note7-screen-x-small) {
+         margin-left: 0%;
+      }
+	    ul {
+	      li {
+        list-style-type: none;
+        display: inline-block;
+        width: 34px;
+        height: 34px;
+        cursor: pointer;
+        margin: 0 auto;
+        &#blue {
+          background-color: #3766ac;
+        }
+        &#black {
+          background-color: #040404;
+        }
+      }
+	    }
+	  }
+	}
+	
+	
+	// backgrounds for sections
+	&-bg-dark {
+	  padding: 6em 0;
+	  background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+	  h2 {
+	    color: #FFF;
+	    @media screen and (max-width:$-galaxy-note7-screen-medium) {
+          text-shadow: 1px 1px #000;
+         }
+	  }
+	  p {
+	    color: #FFF;
+	    @media screen and (max-width:$-galaxy-note7-screen-medium) {
+          text-shadow: 1px 1px #000;
+         }
+	  }
+	  
+	}
+	
+	&-part-of-you {
+	  background-image: url('../img/landing/galaxy-note7/galaxy-note7-bg1.jpg');
+	  @media screen and (max-width:$-galaxy-note7-screen-x-small) {
+         background-position: 85% 50%;
+      }
+	}
+	&-touch-tap-draw {
+    background-image: url('../img/landing/galaxy-note7/galaxy-note7-bg2.jpg');
+    @media screen and (max-width:$-galaxy-note7-screen-x-small) {
+         background-position: 84% 50%;
+         background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/landing/galaxy-note7/galaxy-note7-bg2.jpg');
+      }
+  }
+  
+  .grey-bg {
+      background: $-galaxy-note7-mediumGrey url('../img/landing/galaxy-note7/galaxy-note7-sup-phones.png') no-repeat left bottom;
+      background-position-x: 5%; 
+      background-position-y: 100%;
+      background-size: auto; 
+
+      @media screen and (max-width:$-galaxy-note7-screen-medium) {
+         background: $-galaxy-note7-mediumGrey url('../img/landing/galaxy-note7/galaxy-note7-sup-phones-no-text.png') no-repeat left bottom -80px;
+         background-image: url('../img/landing/galaxy-note7/galaxy-note7-sup-phones-no-text.png');
+         h2, p {
+           text-shadow: 1px 1px #000;
+         }
+       }
+         
+      padding-top: 0;
+      padding-bottom: 0;
+      .galaxys7__viewing-image {
+        bottom: 0;
+        img {
+          bottom: 0;
+          display: block;
+          vertical-align: bottom;
+        }
+      }
+      .galaxy-note7-rightCol {
+        padding-top: 6%;
+      }
+    }
+	
+	.galaxys7__viewing {
+	  
+	
+	
+	.galaxys7__viewing-info {
+	  background-color: transparent;
+	  p { 
+	    color: #FFF;
+	    }
+	   h2 {
+        color: #FFF;
+      }
+   }
+    &.white-bg {
+      p {
+        color: $-galaxy-note7-darkGrey;
+      }
+      h2 {
+        color: $-galaxy-note7-darkBlue;
+      }
+    }
+    
+	}
+	
+	.galaxy-note7-bg-light-grey {
+       background-color: #e9e9e9;
+       color: #000;
+       padding-bottom: $-galaxy-note7-spacing-lg;
+       h2 {
+         color: $-galaxy-note7-darkBlue !important;
+       }
+       p {
+         color: #000 !important;
+       }
+    }
+    
+	
+	.galaxy-note7-bg-light-grey-list {
+    //padding-left: 0;
+    li {
+      //width: 19%;
+      //display: inline-block;
+      list-style-type: none;
+      padding: $-galaxy-note7-spacing-sm $-galaxy-note7-spacing-sm $-galaxy-note7-spacing-sm $-galaxy-note7-spacing-md;
+      vertical-align: top; 
+      background: url("../img/landing/galaxy-note7/galaxy-note7-bullet.png") no-repeat left 15px;
+      @media screen and (max-width:$-galaxy-note7-screen-medium) {
+          //width: 48%;
+          &:last-child {
+            //width: 98%;
+          }
+      }
+      
+      @media screen and (max-width:$-galaxy-note7-screen-small) {
+          //width: 98%;
+      }
+
+      p {
+        //text-align: center;
+        font-size: 1em;
+      }
+    }
+  }
+  
+  .galaxy-note7-intro {
+      text-align: center;
+      font-size: 1.25em;
+      padding: 0 $-galaxy-note7-spacing-lg $-galaxy-note7-spacing-lg;
+    }
+    
+    .galaxy-note7-bg-black {
+       background-color: #222;
+       color: #FFF;
+    }
+	
+	//// PLUS/SPINNER ACCORDION DEFAULTS /start ////
+	.galaxy-note7-spinner-accordion {
+	  padding-bottom: $-galaxy-note7-spacing-lg;
+	  h2 {
+	    text-align: center;
+	    text-transform: uppercase;
+	    font-size: 2em;
+	  }
+
+	.btn_more_view {
+    position: relative;
+}
+
+// generic
+.btn_more_view a::before {
+    //background: #fff none repeat scroll 0 0;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 50%;
+    margin-top: -24px;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    transition: all 0.2s ease 0s;
+    width: 2px;
+}
+
+.btn_more_view.minus a::before {
+    height: 0;
+}
+
+.btn_more_view a::after {
+    //background: #fff none repeat scroll 0 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    margin-left: -24px;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    transition: all 0.2s ease 0s;
+    width: 48px;
+}
+.btn_more_view a {
+    //background: rgba(0, 0, 0, 0) url('../img/landing/galaxy-note7/galaxy-note7_btn_plus_b.png') no-repeat scroll 0 0;
+    display: block;
+    font-size: 0;
+    height: 90px;
+    line-height: 0;
+    margin: 0 auto;
+    position: relative;
+    text-indent: -9999px;
+    width: 90px;
+}
+.btn_more_view a span {
+    //background: #fff none repeat scroll 0 0;
+    display: block;
+    height: 2px;
+    left: 0;
+    margin-left: 32px;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: rotate(45deg);
+    transform-origin: 100% 0 0;
+    transition: all 0.1s ease-in 0s;
+    width: 24px;
+}
+.btn_more_view a span + span {
+    left: -2px;
+    margin-top: -1px;
+    transform: rotate(-45deg);
+}
+
+.btn_more_view a:hover::before {
+    opacity: 0;
+    transform: rotate(135deg);
+    transition-duration: 0.2s;
+    width: 2px;
+}
+
+.btn_more_view a:hover::after {
+    height: 2px;
+    opacity: 0;
+    transform: rotate(135deg);
+    transition-duration: 0.2s;
+}
+
+.btn_more_view a:hover span {
+    margin-left: 32px;
+    opacity: 1;
+    transition-delay: 0.3s;
+    transition-duration: 0.1s;
+}
+
+// colour-specific parts - add your class to galaxy-note7-spinner-accordion
+&.galaxy-note7-spinner-accordion-white {
+    .btn_more_view a::before {
+      background: #fff none repeat scroll 0 0;
+  }
+  
+  .btn_more_view a::after {
+      background: #fff none repeat scroll 0 0;
+  }
+  .btn_more_view a {
+      background: rgba(0, 0, 0, 0) url('../img/landing/galaxy-note7/galaxy-note7_btn_plus_b.png') no-repeat scroll 0 0;
+  }
+  .btn_more_view a span {
+      background: #fff none repeat scroll 0 0;
+  }
+}
+
+&.galaxy-note7-spinner-accordion-red {
+    .btn_more_view a::before {
+      background: #ff0000 none repeat scroll 0 0;
+  }
+  
+  .btn_more_view a::after {
+      background: #ff0000 none repeat scroll 0 0;
+  }
+  .btn_more_view a {
+      background: rgba(0, 0, 0, 0) url('../img/landing/galaxy-note7/galaxy-note7_btn_plus_b_red.png') no-repeat scroll 0 0;
+  }
+  .btn_more_view a span {
+      background: #ff0000 none repeat scroll 0 0;
+  }
+}
+
+&.galaxy-note7-spinner-accordion-black {
+    .btn_more_view a::before {
+      background: #000 none repeat scroll 0 0;
+  }
+  
+  .btn_more_view a::after {
+      background: #000 none repeat scroll 0 0;
+  }
+  .btn_more_view a {
+      background: rgba(0, 0, 0, 0) url('../img/landing/galaxy-note7/galaxy-note7_btn_plus_b_blk.png') no-repeat scroll 0 0;
+  }
+  .btn_more_view a span {
+      background: #000 none repeat scroll 0 0;
+  }
+}
+
+
+// accordion
+
+
+
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.f-accordion.active, .f-accordion:hover {
+    //background-color: #ddd;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.f-panel {
+    padding: 0 18px;
+    //background-color: white;
+    display: none;
+}
+
+/* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
+div.f-panel.show {
+    display: block !important;
+}
+
+
+
+.galaxy-note7-spinner-accordion-list {
+    padding-left: 0;
+    li {
+      width: 24%;
+      display: inline-block;
+      list-style-type: none;
+      padding: $-galaxy-note7-spacing-lg;
+      vertical-align: top;
+      @media screen and (max-width:$-galaxy-note7-screen-medium) {
+          width: 48%;
+      }
+      
+      @media screen and (max-width:$-galaxy-note7-screen-small) {
+          width: 98%;
+      }
+      
+      h3 {
+        color: #1ca1ff;
+         text-transform: uppercase;
+         text-align: center;
+         font-size: 1.4em;
+         margin-top: 0;
+      }
+      p {
+        text-align: center;
+        font-size: 1em;
+      }
+    }
+  }
+
+
+}
+	
+	//// PLUS/SPINNER ACCORDION DEFAULTS /end ////
+	
+	// cta
+	
+	
+	.galaxys7-button {
+  	&.galaxy-note7-button-transparent {
+      background-color: transparent;
+      margin: 1em auto;
+      
+      font-size: 1em;
+      &.border-white {
+        border: 1px solid #FFF;
+        color: #FFF;
+      }
+      &.border-black {
+        border: 1px solid #000;
+        color: #000 !important;
+      }
+      
+      
+    }
+    &.galaxy-note7-button-blue {
+      background-color: transparent;
+    }
+    &.block {
+        display: block;
+        width: 40%;
+        @media screen and (max-width:$-galaxy-note7-screen-medium) {
+            width: 70%;
+        }
+        
+        @media screen and (max-width:$-galaxy-note7-screen-small) {
+            width: 95%;
+        }
+      }
+      &.inline {
+      @media screen and(max-width:$-galaxy-note7-screen-small) {
+      float: none;
+      display: block;
+      margin: 1em auto;
+      width: 95%;
+    }
+      }
+  }
+  
+.galaxy-note7-float-right {
+  float: right;
+  @media screen and(max-width:$-galaxy-note7-screen-small) {
+      float: none;
+      display: block;
+      margin: 1em auto;
+      width: 95%;
+    }
+}
+	
+	// specifictation quick view
+	.galaxys7__specs-info{
+	  padding:1em
+	  }
+	  @media screen and (min-width: 64em){
+	    .galaxys7__specs-info{
+	      padding:1em 4%
+	      }
+	  }
+	  @media screen and (min-width: 102em){
+	    .galaxys7__specs-info{
+	      padding:1em 6%
+	      }
+	    }
+	    .galaxys7__specs-info h2{
+	      text-transform:uppercase;font-size:1.5em
+	     }
+	     @media screen and (min-width: 40em){
+	       .galaxys7__specs-info h2{
+    font-size:2em
+    }
+    
+    }
+    .galaxys7__specs-info p{
+    line-height:1.731;font-size:.875em
+    }
+    @media screen and (min-width: 40em){
+    .galaxys7__specs-info p{
+    font-size:1em
+    }
+    
+    }
+    @media screen and (min-width: 80em){
+    .galaxys7__specs-info p{
+    font-size:1.175em
+    }
+    
+    }
+    .galaxys7__specs-info p.small_print{
+    text-transform:none !important;font-size:.75em;line-height:1.231
+    }
+    .galaxys7__specs-list{
+    display:block;position:relative
+    }
+    @media screen and (min-width: 40em){
+    .galaxys7__specs-list{
+    top:2em
+    }
+    
+    }
+    .galaxys7__specs-list li{
+    display:block;position:relative;padding-left:5em;min-height:60px;font-size:1em;margin-bottom:2em
+    }
+    .galaxys7__specs-list li a{
+    text-decoration:none;color:#0689d8
+    }
+    .galaxys7__specs-list li a:hover{
+    color:#1428a0
+    }
+    .galaxys7__specs-list li:before{
+    position:absolute;left:0;top:0;content:'';width:51px;height:51px;background-size:100%;background-position:0 0;background-repeat:no-repeat;background-size:100% 100%
+    }
+    @media screen and (min-width: 40em){
+    .galaxys7__specs-list li:before{
+    top:-10px
+    }
+    
+    }
+    @media screen and (min-width: 64em){
+    .galaxys7__specs-list li:before{
+    top:-16px
+    }
+    
+    }
+    .galaxys7__specs-list li.camera::before{
+    background-image:url("../img/landing/galaxy-note7/galaxy-note7_cam_icon.png")
+    }
+    .galaxys7__specs-list li.storage::before{
+    background-image:url("../img/landing/galaxy-note7/galaxy-note7_processor_icon.png")
+    }
+    .galaxys7__specs-list li.resistant::before{
+    background-image:url("../img/landing/galaxy-note7/galaxy-note7_resist_icon.png")
+    }
+    .galaxys7__specs-list li.battery::before{
+    background-image:url("../img/landing/galaxy-note7/galaxy-note7_power-icon.png")
+    }
+
+
+}

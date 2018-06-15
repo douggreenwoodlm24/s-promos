@@ -1,0 +1,554 @@
+$p-screen-x-large: 1600px;
+$p-screen-large: 1440px;
+$p-screen-medium: 1024px;
+$p-screen-980: 980px;
+$p-screen-800: 800px;
+$p-screen-small: 640px;
+$p-screen-x-small: 480px;
+$sosorange: #ffb34c;
+$f-spacing-sm: 8px;
+$f-spacing-md: 16px;
+$f-spacing-lg: 32px;
+
+.display-x-large, .display-large, .display-800, .display-medium, .display-small, .display-x-small {
+    display: none;
+}
+
+.hide-x-large, .hide-large, .hide-800, .hide-medium, .hide-small, .hide-x-small {
+
+}
+
+@media screen and (max-width:$p-screen-x-large) {
+  .display-x-large {
+    display: block;
+  }
+  .hide-x-large {
+    display: none;
+  }
+}
+
+@media screen and (max-width:$p-screen-large) {
+  .display-large {
+    display: block;
+  }
+  .hide-large {
+    display: none;
+  }
+}
+
+@media screen and (max-width:$p-screen-800) {
+  .display-800 {
+    display: block;
+  }
+  .hide-800 {
+    display: none;
+  }
+}
+
+@media screen and (max-width:$p-screen-medium) {
+  .display-medium {
+    display: block;
+  }
+  .hide-medium {
+    display: none;
+  }
+}
+
+@media screen and (max-width:$p-screen-small) {
+  .display-small {
+    display: block;
+  }
+  .hide-small {
+    display: none;
+  }
+}
+
+@media screen and (max-width:$p-screen-x-small) {
+  .display-x-small {
+    display: block;
+  }
+  .hide-x-small {
+    display: none;
+  }
+}
+
+
+// paralympic styles
+.sos-po {
+	text-align:center;
+	line-height:1.5;
+	color: #FFF;
+	background-color: #0e0e0d;
+	@include media-query($mq-large) {
+		background-size:contain;
+	}
+} 
+
+
+.sos-po__logo-sm {
+  @media screen and (max-width:$p-screen-medium) {
+    left: 33%;
+  }
+  @media screen and (max-width:$p-screen-small) {
+    left: 25%;
+    height: 70%;
+    top: 15%;
+  }
+}
+
+.sos-po__banner-sm {
+   @media screen and (max-width:$p-screen-medium) {
+      
+  }
+  @media screen and (max-width:$p-screen-small) {
+
+  }
+}
+
+.clear-both {
+  clear: both;
+}
+
+.padding-top {
+  //padding-top: 3em;
+}
+
+.sos__button {
+    &.narrow-left {
+    min-width: 250px;
+    float: left;
+    &.display-small {
+      margin-top: 30px;
+    }
+    @media screen and (max-width:$p-screen-small) {
+      float: none;
+      max-width: 250px;
+    }
+  }
+  
+  &.sos__button.half {
+    width: 45%;
+    display: inline;
+    float: left;
+    margin-right: 12px;
+  }
+}
+
+.sos__promo-col {
+  &.height-auto {
+    height: auto;
+     padding-top: 3em;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+// Layout 2
+.sos-po__col-right {
+  width: 50%;
+  float: right;
+}
+.sos-po__listing-item-row {
+     display: inline-block;
+     width: 100%;
+     .sos-po__listing-item-left-col {
+       float: left;
+       width: 33%;
+       padding: 12px;
+     }
+     .sos-po__listing-item-right-col {
+       width: 67%;
+       float: right;
+        padding: 12px;
+        &.sos__button-small-fullwidth {
+          @media screen and (max-width:$p-screen-800) {
+              clear: both;
+              width:100%;
+              .sos__button.sos__button.half {
+                width: 47%;
+              }
+          }
+          @media screen and (max-width:$p-screen-small) {
+              .sos__button.sos__button.half {
+                width: 98%;
+              }
+          }
+        }
+     }
+}
+
+.hero-deal {
+  float: right;
+  @media screen and (max-width:$p-screen-large) {
+      width: 60%;
+  }
+  @media screen and (max-width:$p-screen-medium) {
+      width: 70%;
+  }
+  @media screen and (max-width:$p-screen-medium) {
+      width: auto;
+  }
+}
+
+.sos-po__promo-title {
+      color: $sosorange;
+      margin: 0;
+      font-size: 3.6em;
+      line-height: 1.25em;
+      span {
+        color: #FFF;
+        font-weight: normal;
+      }
+      @media screen and (max-width:$p-screen-x-large) {
+
+      }
+      
+      @media screen and (max-width:$p-screen-large) {
+        font-size: 3em;
+      }
+      
+      @media screen and (max-width:$p-screen-medium) {
+        font-size: 2.6em;
+       
+      }
+      
+      @media screen and (max-width:$p-screen-small) {
+       text-align: center;
+      }
+      
+      @media screen and (max-width:$p-screen-x-small) {
+      
+      }
+    }
+    
+ .sos-po__promo-subtitle {
+     color: #FFF;
+     
+     font-size: 2.5em;
+     margin: 0;
+     span {
+      font-weight: normal;
+       
+     }
+   }
+
+ .sos-po__promo-container {
+   //width: 45%;
+   top: 10%;
+   position: relative;
+   text-align: left;
+   margin-bottom: 30px;
+   @media screen and (max-width:$p-screen-small) {
+        width: 100%;
+      }
+      
+      &.left {
+        @media screen and (max-width:$p-screen-large) {
+          width: 52%;
+        }
+        @media screen and (max-width:$p-screen-medium) {
+          margin-left: 4%;
+          width: 46%;
+        }
+        @media screen and (max-width:$p-screen-small) {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+      &.right {
+        @media screen and (max-width:$p-screen-large) {
+          width: 48%;
+        }
+        @media screen and (max-width:$p-screen-medium) {
+          margin-right: 4%;
+          width: 46%;
+        }
+         @media screen and (max-width:$p-screen-small) {
+          margin-right: 0;
+          width: 100%;
+        }
+      }
+   &.wide-right {
+     width: 50%;
+        @media screen and (max-width:$p-screen-large) {
+          width: 60%;
+        }
+        @media screen and (max-width:$p-screen-medium) {
+          margin-right: 0;
+          width: 100%;
+        }
+        @media screen and (max-width:$p-screen-small) {
+          
+        }
+        @media screen and (max-width:$p-screen-x-small) {
+
+        }
+   }
+   &.narrow-left {
+     width: 40%;
+     @media screen and (max-width:$p-screen-large) {
+          width: 30%;
+        }
+        @media screen and (max-width:$p-screen-medium) {
+          margin-left: 0;
+          width: 100%;
+           margin-top: 30px;
+          .sos-po__roundel-container {
+            margin: 0 auto;
+            width: 60%;
+           
+          }
+        }
+     @media screen and (max-width:$p-screen-small) {
+          
+        }
+        @media screen and (max-width:$p-screen-x-small) {
+
+        }
+   }
+    
+    .sos__listing-title {
+      height: auto;
+    }
+   
+   
+   
+   .sos-po__promo-info {
+     color: #FFF;
+     font-size: 3.6em;
+      line-height: 1em;
+      //max-width: 70%;
+      @media screen and (max-width:$p-screen-large) {
+         margin-top: 0.5em;
+         margin-bottom: 0.5em;
+         font-size: 2.6em;
+      }
+      @media screen and (max-width:$p-screen-medium) {
+        font-size: 2em;
+      }
+      @media screen and (max-width:$p-screen-small) {
+        font-size: 2em;
+        text-align: center;
+      }
+     span {
+         font-weight: bold;
+       }
+   }
+ }
+ 
+
+        
+.sos-po__roundel-container {
+  position: relative;
+  .sos-po__roundel {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background: $sosorange;
+    border: 1px solid $sosorange;
+    position: absolute;
+    @media screen and (max-width:$p-screen-large) {
+      width: 150px;
+      height: 150px;
+    }
+    @media screen and (max-width:$p-screen-large) {
+      width: 120px;
+      height: 120px;
+    }
+    .sos-po__roundel-text {
+      display: block;
+      color: #0e0e0d;
+      position: absolute;
+      top: 28%;
+      text-align: center;
+      font-size: 2.5em;
+      float: none;
+      margin: 0 auto;
+      padding-left: 0.75em;
+      padding-right: 0.75em;
+      line-height: 1.2em;
+      @media screen and (max-width:$p-screen-large) {
+        font-size: 1.4em;
+      }
+      @media screen and (max-width:$p-screen-medium) {
+        //font-size: 1em;
+      }
+    }
+  }
+  &.top-right {
+    margin: 50px 50px 0 0;
+    .sos-po__roundel {
+        top: -50px;
+        right: -50px;
+      }
+    }
+  &.top-left {
+    margin: 50px 0 0 50px;
+    .sos-po__roundel {
+        top: -50px;
+        left: -50px;
+      }
+    }
+}
+
+
+.sos-po__mesh {
+  background: transparent url(../img/promotions/sos_paralympics/mesh_tex2.jpg) repeat-x left top;
+  height: 40px;
+  margin-bottom: ($f-spacing-lg)*3;
+  margin-top: $f-spacing-md;
+  h3{
+    @extend .sos-po__promo-title;
+    // color: $sosorange;
+      // margin: 0;
+      padding-top: ($f-spacing-lg)*2;
+      // text-align: center;
+      // font-size: 3.6em;
+      // line-height: 1.25em;
+       text-transform: uppercase;
+  }
+}
+
+
+.sos-po__upcoming {
+	margin-bottom:20px;
+	
+	img {
+	  border:1px solid $sosorange;
+	}
+	&-item {
+		position:relative;
+		float:left;
+		width:49%;
+		margin:0 .5% 10px;
+		//height:150px;
+		//border:1px solid $sosorange;
+		//border:1px solid rgba($sosorange,.2);
+		//background:#fff url(/assets/samsung/img/promotions/christmas/sf-small-bg.png) no-repeat 50% 5px;
+		//opacity:.66;
+		//background-color:#fff;
+		//background-color:rgba(255,255,255,.75);
+		.sos-po__day-number {
+		  position: absolute;
+		  bottom: 0;
+		  right: $f-spacing-sm;
+		  font-size: 2em;
+		  font-weight: bold;
+		  color: #0e0e0d;
+		  
+		}
+		@include media-query($mq-medium) { 
+			width:32.33%;
+			//height:200px;
+		}
+		
+		@media screen and (max-width:$p-screen-980) {
+      .sos-po__day-number {
+        right: ($f-spacing-lg)*1.5;
+      }
+    }
+
+    @media screen and (max-width:$p-screen-800) {
+      .sos-po__day-number {
+        right: $f-spacing-md;
+      }
+    }
+
+		@include media-query($mq-large) { 
+			width:15%;
+		}
+		&--past,&--current {		
+			//background:$sosorange;
+			opacity:1;
+			.sos-po__upcoming-date {
+				opacity:.8;
+				box-shadow:none;
+				text-shadow:0 0 8px rgba($sosorange,1);
+			}
+			
+			.sos-po__day-number {
+     
+      color: $sosorange;
+      
+    }
+
+		}
+		&--current {
+			//opacity:1;
+			//border:1px solid rgba($sosorange,.6);
+			/*.sos-po__upcoming-date {
+				opacity:1;
+				text-shadow:0 0 8px rgba(0,0,0,.66);
+			}*/
+		} 
+		.sos-po__upcoming-link & {
+			&:hover {
+				.sos-po__upcoming-date {
+					opacity:1;
+					text-shadow:0 0 8px rgba(0,0,0,.66);
+				}
+				.sos-po__upcoming-cta {
+					opacity:1;
+				}	
+			}
+		}
+
+	}
+	&-date {
+		//position:absolute;
+		display:inline-block;
+		top:0;
+		left:50%;
+		width:100px;
+		height:100px;
+		line-height: 104px;
+		//margin-left:-150px;
+		border-radius:50%;
+		//background-color:$sosorange;
+		background:$sosorange url(/assets/samsung/img/promotions/christmas/sf-small-w-fade-bg.png) no-repeat 50% 50% / contain;
+		font-weight:bold;
+		font-size:2em;
+		color:#fff;
+		box-shadow:2px 2px 4px rgba(0,0,0,.1);
+		margin:20px;
+		@include media-query($mq-medium) {
+			top:10px;
+			width:150px;
+			height:150px;
+			line-height: 154px;
+			font-size:3em;
+		}
+	}
+	&-cta {
+		position:absolute;
+		left:0;
+		bottom:0;
+		width:100%;
+		color:#fff;
+		font-weight:bold;
+		background:$sosorange;
+		opacity:.8;
+		padding:.5em;
+		border-top:1px solid #fff;
+		transition: opacity .25s ease-in-out;
+		font-size:.75em;
+		@include media-query($mq-small + 10) {
+			font-size:.875em;
+		}
+		@include media-query($mq-medium) {
+			font-size:1em;
+		}
+		.arrow {
+			display:inline-block;
+			vertical-align: middle;
+			font-style: normal;
+			font-size:2em;
+			line-height: 0;
+			font-weight: normal;
+		}
+	}
+}
+
+

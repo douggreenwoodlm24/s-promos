@@ -1,0 +1,124 @@
+// ==|== modules > buttons
+
+.button {
+	display:inline-block;
+	background-color:$primary;
+	padding:1.25em 3em 1.33em;
+	margin:.5em 0;
+	font-weight:300;
+	font-size:.875rem;
+	color:#fff !important;
+
+	cursor:pointer;
+	border:none;
+	text-decoration:none;
+	text-align:center;
+	font-weight:bold;
+	//@extend %title-font;
+	text-transform:uppercase;
+	//@include media-query($mq-large) {padding:15px 20px}
+	&:hover { background-color:#444 }
+	
+	&--has-chevron {
+		&::after {
+			display:inline-block;
+			vertical-align: -.1125em;
+			line-height: 1;
+			margin:0 .1em 0 .2em;
+			font-size:2em;
+			content:"\203A"; //single right-pointing angle quotation mark
+			transition:margin .125s ease-in-out;
+			font-weight:normal;
+		}
+		&:hover {
+			background-color:#444;
+			&::after {
+				margin:0 0 0 .3em;
+			}
+		}
+	}
+}
+ 
+a.button {
+	text-decoration:none !important;
+}
+
+.button--green {
+	background-color:#16a453;
+}
+
+.button--skyblue {
+	background-color:#0f70bc;
+}
+
+//modify size 
+.button--medium {
+	padding:8px 15px;
+	font-size:1em;
+	font-weight: 700;
+}
+
+.button--small {
+	padding:.5rem .75rem;
+	font-size:.875em;
+	font-weight: 700;
+}
+
+.button--tiny {
+	padding:4px 12px;
+	font-size:.875em;
+	font-weight: 700;
+}
+
+.button--large {
+	font-size: 1.5em;
+	padding:.75rem 2rem;
+	@include media-query($mq-large) {
+		font-size: 1.75em;
+	}
+}
+
+.button--thin {
+	font-size:.75em;
+	padding:1em 2em;
+}
+
+.button--fullwidth {
+	display:block;
+}
+
+.button--bold {
+	font-weight:bold;
+}
+
+//modify margin
+.button--vmargin {
+	margin:20px 0;
+}
+
+.button--top-vmargin {
+	margin-top:20px;
+}
+
+.button--no-margin {
+	margin:0;
+}
+
+
+//modify colour
+.button--alert {
+	background-color:#c00;
+	box-shadow:3px 3px 0 darken(#c00,10%);
+	&:hover {
+		background-color:lighten(#c00,5%);
+	}
+}
+
+//specfic
+.button--a2b {
+	transition:.15s;
+	opacity:1;
+	&.changing {
+		opacity:0;
+	}
+}

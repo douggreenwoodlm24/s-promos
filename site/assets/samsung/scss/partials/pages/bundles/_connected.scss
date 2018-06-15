@@ -1,0 +1,140 @@
+
+.cbundles {
+	padding-top:.5em;
+	@extend %sharp-sans;  //use new font
+	@include media-query($mq-large) { 
+		padding-top:2em;
+	}
+}
+
+.cbundles__title {
+	font-size:1.125em;
+	font-weight:bold;
+	text-align:center;
+	margin:.5em 1em;
+	@include media-query($mq-medium) { 
+		font-size:1.75em;
+	}
+	@include media-query($mq-large) { 
+		font-size:2.5em;
+	}
+}
+
+.cbundles__subtitle {
+	font-size:.75em;
+	font-weight:normal;
+	text-align:center;
+	margin:.5em 1em 1em;
+	@include media-query($mq-medium) { 
+		font-size:1.125em;
+	}
+	@include media-query($mq-large) { 
+		font-size:1.5em;
+	}
+}
+
+.cbundles__blocktitle {
+	padding:.5em .5em .33em;
+	font-size:.875em;
+	font-weight:bold;
+	color:#fff;
+	background:$primary;
+	text-align:center;
+	@include media-query($mq-medium) { 
+		font-size:1.125em;
+	}
+	@include media-query($mq-large) { 
+		font-size:1.3125em;
+	}
+}
+
+.cbundles__hero-img {
+	text-align:center;
+}
+
+.cbundles-button {
+	margin:1em;
+	display:inline-block;
+	padding:1em 2em .83em;
+	font-size:.875em;
+	font-weight:bold;
+	color:#fff;
+	background:$primary;
+	text-align:center;
+	text-decoration:none;
+	text-transform:uppercase;
+	border:none;
+	&:hover {
+		background:lighten($primary,5%);
+	}
+	@include media-query($mq-medium) { 
+		font-size:1.125em;
+	}
+	@include media-query($mq-xlarge) { 
+		font-size:1.3125em;
+	}
+}
+
+.cbundles__hero-price {
+	font-size:1.875em;
+	font-weight:bold;
+	margin:0 0 0 .25em;
+	text-align:center; 
+	.save {
+		font-size:.5em;
+		//font-weight:normal;
+		color:$primary;
+	}
+}
+
+.cbundles__keyfeatures {
+	font-size:.875em;
+	padding:0 0 0 1em;
+	line-height:1.5;
+	border-bottom:1px dotted $primary;
+	margin-bottom:1.75em;
+	li {
+		margin:.75em 0;
+	}
+}
+
+
+//override S6 styles
+.cbundles {
+
+	.bd-s6-bundles__section-title {
+		background-color:$primary;
+	}
+
+	.bd-s6-bundle {
+		&:hover {
+			border-color:$primary;
+		}
+		&.selected {
+			border-color:$primary;
+			&::after {
+				background:$primary;
+			}
+		}
+	}
+ 
+ 	.bd-s6-bundles {
+ 		padding:1em 0;
+ 		margin: 3em 0 1em;
+ 		background-color:#eee;
+
+ 		@include media-query($mq-large) { 
+ 			padding:2em 0;
+		}
+ 	}
+	
+
+ 	.bd-s6-submit-msg.active {
+ 		border-color:$primary;
+ 	}
+
+ 	.bd-s6-totals_breakdown-save strong {
+ 	 	color:$primary;
+ 	}
+
+}

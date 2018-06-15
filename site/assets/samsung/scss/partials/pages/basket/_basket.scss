@@ -1,0 +1,636 @@
+// pages -- basket
+
+
+.basket__continue {
+	margin:30px 0 20px;
+	text-align:center;
+	@include media-query($mq-medium) {
+		text-align:left;
+		margin:20px 0;
+	}
+}
+
+.basket__contents {
+	@include vmedia-query($vmq-large) {
+		margin:10px 0;
+	}
+	table {
+		width:100%;
+		@include vmedia-query($vmq-large) {
+			margin:4px 0 0;
+		}
+	}
+	th,td {
+		padding:4px;	
+		border-bottom:1px solid #eff2f5;
+		@include media-query($mq-medium + 10) {
+		padding:4px 8px;
+		}
+	}
+	th {
+		font-size:.75rem;
+		text-align:left;
+		@include media-query($mq-small + 10) {
+			font-size:.875rem;
+		}
+		@include media-query($mq-medium + 10) {
+			font-size:1rem;
+		}
+	}
+	td {
+		vertical-align:middle;
+		
+	}
+	p {
+		margin:0;
+	}
+	//alignment and general cell styles
+	.th_qty,.td_qty,.td_update {
+		text-align: center;
+		//background:#f9f9f9;
+	}
+	.th_total,.td_total {
+		text-align:right;
+		padding-left:10px;
+	}
+	
+	//item
+	.td_img {
+		//background:#f00;
+		padding:8px 0;
+		vertical-align: top;
+		width:25px;
+		@include media-query($mq-small + 5) {padding:8px 4px;width:32px;}
+		@include media-query($mq-small + 10) {width:50px;}
+		@include media-query($mq-medium) {width:32px;}
+		@include media-query($mq-medium + 10) {width:48px;}
+		@include media-query($mq-large) {width:100px}	
+		img {
+			width:25px;
+			@include media-query($mq-small + 5) {width:32px;}
+			@include media-query($mq-small + 10) {width:50px;}
+			@include media-query($mq-medium) {width:32px;}
+			@include media-query($mq-medium + 10) {width:48px;}
+			@include media-query($mq-large) {
+				width:70px;
+				@include vmedia-query($vmq-large) {
+					width:100px
+				}
+			}
+		}
+	} //end .td_img
+	
+	//quantity
+	.td_qty select {
+		width:50px;
+	    border: 1px solid #ccc;
+	    line-height: 1.5;
+	    padding: 2px;
+	    //text-align: center;
+	    font-size:.75rem; 
+	    @include media-query($mq-small + 10) {
+	    	width:56px;
+	    	padding: 4px 6px;
+			font-size:.875rem; 
+	    }
+	    @include media-query($mq-large) {
+	    	width:60px;
+			font-size:1rem;
+	    }
+	}
+
+}
+
+.basket-button-update {
+	border: none !important;
+    padding: 4px !important;
+    background:$primary;
+    font-weight:bold;
+    font-size:12px;
+    color:#fff;
+    box-shadow:1px 1px 0 rgba(0,0,0,.2);
+    &:hover {
+    	opacity:.9;
+    }
+}
+
+.basket__prod-title {
+	font-size:.875rem;
+	font-weight:bold;
+	margin:4px 0;
+	@include media-query($mq-medium) {font-size:1rem;}
+	@include media-query($mq-medium + 10) {font-size:1.125rem;}
+	
+	a {
+		text-decoration: none;
+		color:#222;
+		&:hover {
+			color:$primary;
+		}
+	}
+}
+
+.basket__prod-stock {
+	font-size:.875em;
+	color:#666;
+}
+.basket__prod-remove {
+	margin-top:6px;
+	font-size:.75em;
+	a {
+		color:$primary;
+	}
+}
+
+//price
+.basket__prod-cost {
+	font-size:.6875em;
+	color:#999;
+	white-space: nowrap;
+}
+.basket__prod-total {
+	margin-top:4px;
+	font-size:.75rem;
+	font-weight:bold;
+	white-space: nowrap;
+	@include media-query($mq-small + 10) {font-size:.875rem}
+	@include media-query($mq-medium) {font-size:.8125rem}
+	@include media-query($mq-medium + 10) {font-size:.875rem}
+	@include media-query($mq-large) {font-size:1rem} 
+}
+
+
+
+
+/* basket delivery and totals */
+
+.basket__delivery {
+	margin:.5em 0 0;
+	font-size:.875em;
+	@include media-query($mq-large) {
+		margin:20px 0 0;
+	}
+	p {
+		margin:.25em 0;
+		@include media-query($mq-large) {
+			margin:1em 0;
+		}
+	}
+	&-countdown {
+		color:#006ec5;
+		font-size: 1.75em
+	}
+}
+
+
+
+.basket__delivery-service {
+	width:100%;
+	margin:10px 0;
+	
+	color:#666;
+	td {
+		padding:8px 0;
+		vertical-align: top;
+	}
+	.basket__delivery-radio {
+		padding:4px 6px;
+		line-height: 2;
+	}
+	.basket__delivery-label,.basket__delivery-price {
+		padding-right:9px;
+	}
+	.basket__delivery-price {
+		color:$primary;
+		text-align: right;
+		white-space: nowrap;
+	}
+	.active {
+		font-weight:bold;
+		color:#333;
+		td {
+			
+			background:#fcfcfc;
+			border-top:1px solid $primary;
+			border-bottom:1px solid $primary;
+			
+		}
+	}
+	.za_shipping {
+		padding:10px 0;
+	}
+	label {
+		display: block;
+		cursor: pointer;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	small {
+		color:#999;
+		white-space: nowrap;
+	}
+}
+
+.basket__voucher,.basket__tax,.basket__total {
+	margin:15px 0 0;
+	padding:0 9px 15px 0;
+	border-bottom:1px solid #eee;
+}
+
+.basket__tax {
+	.basket-section__line-total {
+		font-weight: normal;
+	}	
+}
+
+.basket__total {
+	font-size:.875rem;
+	font-weight:bold;
+	@include media-query($mq-medium) {font-size:1rem}
+	@include media-query($mq-medium + 10) {font-size:1.125rem}
+	@include media-query($mq-large) {font-size:1.25rem}
+	&-note {
+		display:block;
+		color:#999;
+		font-size:.75em;
+		font-weight: normal;
+		font-style:italic;
+		margin-top:.25em;
+	}
+}
+
+.basket__voucher {
+	font-size:.875em;
+ 	.textfield {
+		width:200px;
+		margin-right:4px;
+		border: 1px solid #ccc;
+		line-height: 1.5;
+		padding: 4px;
+		color:#333;
+	}
+	.submit {
+		text-transform: lowercase;
+	}
+	label {
+		display:block;
+		font-weight:bold;
+		margin:0 0 4px;
+		@include media-query($mq-small + 10) {display:inline-block}
+		@include media-query($mq-medium) {display:block}
+		@include media-query($mq-large) {display:inline-block}
+	}
+	h4 {
+		margin:.5em 0;
+	}
+	&-summary {
+		//font-size:.875em;
+		margin-top:5px;
+		text-align: right;
+		color:#666;
+		strong {
+			display:block;
+			color:#000;
+		}
+	}
+}
+
+.basket__total,.basket__vat {
+	text-align: right;
+}
+
+
+//basket vat
+
+
+.basket__vat {
+	font-size:.8125em;
+}
+
+.basket__vat-total {
+	float:right;
+	width:33%;
+
+}
+
+.basket__vatreg {
+	float:left;
+	width:66%;
+	text-align: left;
+}
+
+
+.basket__vat { 
+ 	.textfield {
+		margin-top:4px;
+		padding:4px;
+		width:100%;
+		line-height: 1.5;
+		max-width:240px;
+		border:1px solid #ccc;
+		display:block;
+		margin:0 0 0 auto;
+	}
+	.vat_registered {
+		
+		label {		
+			display:inline-block;
+			font-weight: bold;
+			cursor:pointer;
+			margin:4px 0;
+			&:hover {
+				color:$primary;
+				text-decoration: underline;
+			}
+		}
+		input {
+			cursor:pointer;
+		}
+	}
+}
+
+/* basket delivery and totals */
+
+.basket__payment-note {
+	padding: 8px;
+	background: #f9f9f9;
+    color: $primary;
+    border:3px solid $primary;
+    font-size: .75em;
+    font-weight: bold;
+}
+
+.basket__payment-title {
+	margin:0 0 20px 0;
+	//@extend %font-bold;
+	font-size:2rem;
+	padding-bottom:3px;
+	border-bottom:1px solid $primary;
+}
+
+.basket_aside .payment .standard_co  {
+	text-align:center;
+	margin:6px 0;
+	@include media-query($mq-medium) {
+	margin:20px 0;
+	}
+}
+
+.basket__methods {
+	li {
+		margin:10px 0;
+	}
+	.cards {
+		margin-left:8px;
+	}
+	label {
+		cursor: pointer;
+	}
+
+}
+
+
+/*.basket_aside .payment .method,.basket_aside .payment h3 {
+	display:none; 
+}*/
+
+
+//vouchers 
+.basket__voucher {
+	.basket-section__line-total {
+		font-size:1.125em;
+		text-align: right;
+		font-weight:bold;
+		span {
+			display:inline-block;
+		}
+		.basket__voucher-remove {
+			margin-right:20px;
+		}
+	}
+}
+
+.basket__voucher-list {
+	margin:6px 0 3px;
+	@include media-query($mq-large) {
+		margin:0;
+	}
+}
+
+.basket__voucher-input {
+	width:63%;
+	display:inline-block;
+	vertical-align:middle;
+	@include media-query($mq-large) {
+	width:65%;
+	}
+}
+
+.basket__voucher-submit {
+	width:35%;
+	display:inline-block;
+	text-align: center;
+	vertical-align:middle;
+	@include media-query($mq-large) {
+	width:30%;
+	}
+}
+
+.basket__voucher-label,.basket__voucher-input {
+	@include media-query($mq-large) {
+		margin-right:8px; 
+	}
+}
+
+.basket__voucher-field {
+	border:1px solid #ccc;
+	padding:6px 8px;
+	width:100%;
+	font-size:.875rem;
+	font-weight:300;
+	vertical-align: top;
+	@include media-query($mq-large) {
+		font-size:1rem;
+	}
+} 
+
+.basket__voucher-applied {
+	font-size:.875em;
+	text-align: right;
+}
+
+.basket__voucher-active {
+	font-size:.875em;
+	color:#999;
+}
+
+.basket__voucher-value {
+	margin-top:4px;
+	color:$primary;
+	font-weight:700;
+
+}
+
+
+
+
+//payment
+.basket__payment_types {
+	margin:10px 0;
+	font-size:.875rem;
+	@include media-query($mq-large) {
+		font-size:1rem;
+	}
+}
+
+.basket__payment-type {
+	margin:10px;
+	label {
+		cursor: pointer;
+	}
+	input {
+		margin-right:4px;
+	}
+}
+
+.basket__goto-checkout {
+	margin:20px 0;
+	text-align: center;
+} 
+
+//card images
+.basket__payment-cards {
+	margin: 10px 0;
+	padding:0 0 4px 16px;
+	border-bottom:1px solid #eee;
+}
+
+.basket__payment-card-item {
+	position: relative;
+	display:inline-block;
+	margin:0 0 3px 6px;
+	width:47px;
+	height:30px;
+	background:#ddd;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	box-shadow: 0 2px 3px rgba(0,0,0,.05);
+	border:1px solid #fff;
+	outline:1px solid #ccc;
+	background-image:url(../img/basket/cards@2x_01.png);
+	background-repeat:no-repeat;
+	background-size:45px 112px;
+	&--visa {background-position: 0 0}
+	&--mc {background-position: 0 -28px}
+	&--maestro {background-position: 0 -56px}
+	&--amex {background-position: 0 -84px}
+}
+
+//live edit styles
+
+.basket__row,.basket-section__line-total {
+	transition:opacity .3s;
+	&.updating {
+		opacity:.25;
+	}
+}
+
+.basket__preorder-note {
+	margin:10px 0;
+	padding:.5em .75em;
+	border:2px solid $primary;
+	font-size:.75rem;
+	background-color:#f9f9f9;
+
+	@include media-query($mq-large) {
+		font-size:.875rem;
+	}
+}
+
+
+.basket__more-info-icon {
+	display:inline-block;
+	vertical-align:middle;
+	background:#999;
+	width:21px;
+	height:21px;
+	line-height:21px;
+	text-align:center;
+	margin-left:6px;
+	text-decoration:none;
+	color:#fff;
+	font-size:1em;
+	font-weight:bold;
+	border-radius:50%;
+	&:hover {
+		background-color:$primary;
+	}
+}
+
+
+
+.basket__tv-install-note {
+	padding:.75em 9px;
+	border-top:1px solid #eee;
+	border-bottom:1px solid #eee;
+	font-size:.8125em;
+	color:#666;
+	text-align:center;
+	margin:0;
+	@include media-query($mq-medium) {
+		text-align:right;
+	}
+}
+
+
+.basket__delivery-info-link {
+	display:block;
+	color:$skyblue;
+	margin-top:3px;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.basket-info-popup {
+	position: relative;
+	background: #FFF;
+	width: auto;
+	min-width:320px;
+	max-width: 900px;
+	margin: 20px auto;
+	font-size:.875em;
+	h3 {
+		font-size:1.25em;
+	}
+	p {
+		line-height: 1.5;
+	}
+	@include media-query($mq-medium) {
+		 font-size:1em;
+	}
+	&--ha {
+		background:url(/assets/samsung/img/basket/help/ha-install.jpg) 50% 50% / cover;
+		.basket-info-popup__inner {
+			padding:4px 20px;
+
+			background:#fff;
+			background:rgba(255,255,255,.9);
+			@include media-query($mq-medium) {
+				margin-left:50%;
+				width:50%;
+			}
+		}
+	}
+}
+
+.basket-prod__promo-msg {
+	display:inline-block;
+	margin-top:.25em;
+	padding:.15em .66em .25em;
+	font-size:.875em; 
+	background:$skyblue;
+	color:#fff;
+} 

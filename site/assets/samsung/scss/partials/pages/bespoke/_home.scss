@@ -1,0 +1,209 @@
+.bespoke {
+	padding:1em 0;
+	background:#000;
+	color:#fff;
+	line-height:1.66;
+	@extend %sharp-sans;  //use new font
+	margin:-10px -10px 0;
+	@include media-query($mq-large) { margin:0; }
+	a {
+		color:$skyblue;
+		text-decoration: underline;
+		white-space: nowrap;
+		&:hover { color:$accent; text-decoration: none; }
+	}
+	&__logo {
+		text-indent:100%;
+		overflow: hidden;
+		white-space:nowrap;
+		padding-top:18.25%;
+		line-height:0;
+		margin:2% 7.5%;
+		background:url("/assets/samsung/img/bespoke/bespoke-logo@2x.png") no-repeat 50% 0 / contain;
+		@include media-query($mq-medium) {
+			height:101px;
+			padding:0;
+			background-size:552px 101px;
+		}
+	}
+	&__intro {
+		border-top:1px dashed #444;
+		border-bottom:1px dashed #444;
+		padding:.75em 1em;
+		font-weight:400;
+		font-size:.75em;
+		letter-spacing:.03em;
+		margin:2% 1em;
+		text-align:justify;
+		@include media-query($mq-small + 10) { font-size:.875em; padding:.75em 1.5em; }
+		@include media-query($mq-medium) { font-size:1em; }
+		@include media-query($mq-xlarge) { font-size:1.25em; }
+		&-wrap {
+			@include media-query($mq-medium + 10) { max-width:85%; margin:0 auto; }
+			@include media-query($mq-large) { max-width:66%; margin:0 auto; }
+			@include media-query($mq-xlarge) { max-width:55%;	}
+		}
+	}
+	&__glow-title{
+		text-transform:uppercase;
+		font-size:.875em;
+		padding:0;
+		margin:.75em 0;
+		font-weight:normal;
+		text-align:center;
+		&.comingsoon{
+			background:url("/assets/samsung/img/bespoke/bespoke_2tone_divider.png") no-repeat center bottom;
+		}
+		@include media-query($mq-small + 2) { font-size:1em; }
+		@include media-query($mq-small + 10) { font-size:1.25em; }
+		@include media-query($mq-medium) { font-size:1.625em;}
+		@include media-query($mq-medium + 10) { font-size:2.125em; }
+		@include media-query($mq-large) { font-size:2.625em; }
+		@include media-query($mq-xlarge) { font-size:3.125em; }
+	}
+	&__slide {
+		position:relative;
+		max-width:1280px;
+		margin:.5em auto 1.5em;
+		background-color:#ccc;
+		background-size:cover;
+		background-repeat:no-repeat;;
+		font-size:.6875em;
+		font-weight:500;
+		@include media-query($mq-small + 10) { font-size:.75em; }
+		@include media-query($mq-medium + 10) { font-size:.875em; }
+		@include media-query($mq-large) { font-size:1.125em; margin:.5em auto 3em;}
+		@include media-query($mq-large + 10) { font-size:1.125em; }
+		p { margin:1em 0; }
+		.bg {
+			padding-top:96%;
+			background-repeat:no-repeat;
+			@include media-query($mq-medium + 5) { padding-top:50%; }
+			@include media-query($mq-large + 10) { padding-top:640px; }
+		}
+		.copy {
+			padding:1em;
+			background:#e2e1e6;
+			color::#000;
+			text-align:justify;
+			@include media-query($mq-medium + 5) { position:absolute; top:1em; background:none; }
+		}
+		.cta {
+			display:block;
+			position:relative;
+			background:$skyblue;
+			color:#fff;
+			padding:1em 0 .875em;
+			margin:2em auto 1em;
+			line-height: 1;
+			font-size:1em;
+			font-weight:400;
+			text-decoration: none;
+			text-align:center;
+			text-transform:uppercase;
+			transition:all .35s ease-in;
+			width:60%;
+			@include media-query($mq-medium + 5) { width:auto }
+			&:hover { background:$primary;color:#fff; }
+			&--inactive {
+				background:#999;	
+				background:rgba(150,150,150,.8);	
+				&:hover { 
+					text-decoration: none; 
+					background:#999;	
+					background:rgba(150,150,150,.8);
+				}
+			}	
+		}
+		&--serif { 
+			.bg {
+				padding-top:98.875%;
+				background-position:50% 0;
+				background-image:url("/assets/samsung/img/bespoke/slides/serif-tv_m.jpg");
+				background-size:contain;
+				@include media-query($mq-medium + 5) { 
+					background-position:50% 50%;
+					background-size:cover;
+					background-image:url("/assets/samsung/img/bespoke/slides/serif-tv.jpg");
+				}
+				@include media-query($mq-medium + 5) { padding-top:50%; }
+				@include media-query($mq-large + 10) { padding-top:640px; }
+			}
+			.copy {
+				@include media-query($mq-medium + 5) { border-top:none; width:37.5%; left:1em; }
+			}
+		}
+		&--gear-s2 {
+			.bg {
+				padding-top:80.125%;
+				background-position:50% 0;
+				background-image:url("/assets/samsung/img/bespoke/slides/gear-s2-classic-premium_m.jpg");
+				background-size:contain;
+				@include media-query($mq-medium + 5) { 
+					background-position:50% 50%;
+					background-size:cover;
+					background-image:url("/assets/samsung/img/bespoke/slides/gear-s2-classic-premium.jpg");
+				}
+				@include media-query($mq-medium + 5) { padding-top:50%; }
+				@include media-query($mq-large + 10) { padding-top:640px; }
+			}
+			.copy {
+				@include media-query($mq-medium + 5) { width:38%; margin-left:auto; right:.5em; }
+			}
+		}
+		&--fridge {
+			.bg {
+				padding-top:78.875%;
+				background-position:50% 0;
+				background-image:url("/assets/samsung/img/bespoke/slides/bespoke_fridge_banner_mobile.jpg");
+				background-size:contain;
+				@include media-query($mq-medium + 5) { 
+					background-position:50% 50%;
+					background-size:cover;
+					background-image:url("/assets/samsung/img/bespoke/slides/bespoke_fridge_banner_full.jpg");
+				}
+				@include media-query($mq-medium + 5) { padding-top:50%; }
+				@include media-query($mq-large + 10) { padding-top:640px; }
+			}
+			.copy {
+				@include media-query($mq-medium + 5) { width:37.5%; right:1em; }
+			}
+		}
+		&--chef{
+			.bg {
+				padding-top:78.875%;
+				background-position:50% 0;
+				background-image:url("/assets/samsung/img/bespoke/slides/chef_col_mobile.jpg");
+				background-size:contain;
+				@include media-query($mq-medium + 5) { 
+					background-position:50% 50%;
+					background-size:cover;
+					background-image:url("/assets/samsung/img/bespoke/slides/chef_col_1280x640.jpg");
+				}
+				@include media-query($mq-medium + 5) { padding-top:50%; }
+				@include media-query($mq-large + 10) { padding-top:640px; }
+			}
+			.copy {
+				
+				@include media-query($mq-medium + 5) { width:37.5%; left:1em; }
+			}
+		}
+	}
+	&__coming-soon-footer {
+		max-width:80em; 
+		margin:0 auto;
+		font-size:.75em;
+		font-weight:500;
+		text-align:center;
+		padding:2em .75em;
+		@include media-query($mq-small + 10) { font-size:1em; }
+		@include media-query($mq-large) { font-size:1.125em; }
+		@include media-query($mq-xlarge) { font-size:1.25em; }
+		&-outer {
+			margin:2em 0 1em;
+			letter-spacing:.03em;
+			background-color:#222;
+			@include media-query($mq-large) { margin:3em 0 2em; }
+		}
+	}
+} 

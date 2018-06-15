@@ -1,0 +1,191 @@
+// pages -- vmall deals
+
+.auth {
+	&__login {
+		border: 2px solid #eee; 
+	    padding: 10px;
+	    @include media-query($mq-medium) {
+			//padding: 20px;
+	    }
+	}
+	&__button {
+		margin-top:.25em;
+		margin:0 auto;
+		@include media-query($mq-medium) {
+		margin-top:.5em;
+		}
+	}
+	&__guest-checkout {
+		display:block;
+		margin: 1em 0 0;
+		background:#f9f9f9;
+		padding:.33em;
+		color:#444;
+		text-decoration: none;
+		text-align: center;
+		@include media-query($mq-medium) {
+			padding:.25em;	
+		}
+		&-title {
+			margin:.25em;
+			font-size:1.25em;
+			@include media-query($mq-medium) {
+				font-size:1.5rem;
+			}
+		}
+		&-copy {
+			//text-decoration: underline;
+			a {
+				text-decoration: underline;
+				color:$primary;
+				&:hover {
+					text-decoration: none;				
+				}
+			}
+		}
+	}
+
+}
+
+.auth--v2 {
+
+	.auth__login {
+		max-width:960px;
+		margin:1em auto;
+		padding:10px;
+		@include media-query($mq-medium) {
+			padding:25px;
+			margin:2em auto;
+		}
+		
+	}
+
+	.auth__main-title {
+		text-align: center;
+		font-size:1.5em;
+		@include media-query($mq-medium) {
+			text-align: left;
+			font-size:2em;
+		}
+		margin:0 0 .5em;
+	}
+
+	.auth__sub-title {
+		margin:0 0 .5em;
+		font-size:1em;
+		text-align: center;
+		@include media-query($mq-small + 2) {
+			font-size:1.125em;
+		}
+		@include media-query($mq-medium) {
+			font-size:1.25em;
+			text-align: left;
+		}
+		@include media-query($mq-large) {
+			font-size:1.5em;
+		}
+	}
+
+	.form-textfield {
+		@include media-query($mq-medium) {
+			max-width:400px;
+		}
+	}
+	.form-label {
+		
+		@include media-query($mq-medium) {
+			font-size:1.125em;
+			font-weight:normal;
+		}
+	}
+
+	.auth__guest-wrap {
+		margin-top:.75em;
+		padding-top:.75em;
+		border-top:1px solid #eee;
+		text-align: center;
+		@include media-query($mq-medium) {
+			display:inline-block;
+			margin:0 0 0 12.5%;
+			text-align: left;
+			border-top:none;
+		}
+	}
+
+	.auth-gco-lb {
+		@include media-query($mq-medium) {
+			display:block;
+		}
+	}
+
+	.auth__remember-email,.auth__find-login {
+		margin-top:.5em;
+		font-size:.8125em;		
+		@include media-query($mq-medium) {
+			font-size:.875em;
+		}
+	}
+
+	.auth__remember-email {
+		label {
+			cursor:pointer;
+		}
+		input {
+			margin-right:3px;
+		}
+	}
+
+	.auth__find-login {
+		a {
+		color:$skyblue;
+		text-decoration: none;
+			&:hover {
+				text-decoration: hover;
+			}
+			.icon-link-play {
+				display:inline-block;
+				vertical-align: middle;
+				width:14px;
+				height:14px;
+				margin:0 0 2px 4px;
+				background:url(../img/core/rev-arrow.png) no-repeat 0 0 / 14px 14px;
+			}
+		}
+	}
+
+	.auth__new-members {
+		text-align: center;
+		margin:.75em 0 0;
+		padding:1em 0 .33em;
+		border-top:1px solid #eee;
+		@include media-query($mq-medium) {
+			text-align: right;
+			border-top:none;
+			padding:0;
+			margin:106px 0 0;
+		}
+	}
+
+	.auth__new-member-button {
+		border:none;
+		background:transparent;
+		color:$skyblue;
+		padding:0;
+		margin:0 0 0 4px;
+		.icon-link-play {
+				display:inline-block;
+				vertical-align: middle;
+				width:14px;
+				height:14px;
+				margin:0 0 2px 4px;
+				background:url(../img/core/rev-arrow.png) no-repeat 0 0 / 14px 14px;
+			}
+		&:hover {
+			.button-text {
+				text-decoration: underline;
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,849 @@
+
+
+.bconfig {
+	margin:1em auto;
+	max-width:1500px;
+	@extend %sharp-sans;  //use new font
+	@include media-query($mq-large) {
+		padding:0 .5em;
+	}
+}
+
+
+.bconfig__title {
+	padding:0 .25em .25em;
+	border-bottom:1px solid #e7e7e7;
+	font-size:1.25em;
+	strong {
+		font-weight: bold;
+		color:$skyblue;
+	}
+	@include media-query($mq-large) {
+		font-size: 2.5em;
+	}
+}
+
+///////////////////////////////////////////////////
+
+.bconfig__device {
+		
+		border-right:1px solid #e7e7e7;
+		font-size:1em;
+		font-weight:bold;
+	@include media-query($mq-medium) {
+		display:block;
+		text-align:center;
+		padding:1em 1em 0 0;
+		@include media-query($mq-large) {
+			font-size:1.25em;
+		}
+		&:after {
+			top: 50%;
+			right: -11px;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-left-color: #e7e7e7;
+			border-width: 10px;
+			margin-top: -10px;
+		}
+	}
+	@include media-query($mq-medium) {
+		min-height:700px;
+	}
+	@include media-query($mq-large) {
+		min-height:500px;
+	}
+	&-title {
+		color:$skyblue;
+	}
+	&-img {
+		display:none;
+		@include media-query($mq-medium) {
+			display:block;
+			margin: .5em 0;
+		}
+
+	}
+	&-price {
+		color:$skyblue;
+		@include media-query($mq-medium) {
+			margin: .5em 0;
+		}
+	}
+	&-stock {
+		&--small {
+			font-size:.75em;
+			@include media-query($mq-medium) {
+				padding:0 1em;
+			}
+		}
+	}
+	&-promo {
+		color:$skyblue;
+		font-size:.75em;
+		@include media-query($mq-medium) {
+			border-top:1px dotted #ccc;
+			margin-top:.75em;
+			padding:1em 0;
+
+		}
+		.promo-note {
+			font-weight:500;
+			margin-top:.75em;
+			border-top:1px dotted #ccc;
+			border-bottom:1px dotted #ccc;
+			text-align: left;
+			font-size:.75em;
+			line-height: 1.5;
+			color:#555;
+			strong {
+				color:#222;
+			}
+			@include media-query($mq-medium) {
+				border-bottom:none;
+			}
+		}
+	}
+}
+
+
+
+
+/////////////////////////////////////////////
+
+/*
+.bconfig__progress {
+	position:relative;
+	margin:50px 30px 30px;
+	//border:1px solid #f00;
+	.count {
+		position:absolute;
+		top:0;
+		left:0;
+		width:56px;
+		height:56px;
+		margin:-18px 0 0 -22px;;
+		border-radius:50%;
+		background-color:#e7e7e7;
+		color:#888;
+		line-height: 48px;
+		font-weight:bold;
+		font-size:1.5em;
+		border:6px solid #fff;
+		z-index:2;
+		text-align: center;
+		transition: background-color .25s ease-in-out,color .25s ease-in-out;
+		&--selected {
+			background-color:$skyblue;
+			color:#fff;
+		}
+	}
+	.pos-0 {left:0}
+	.pos-33 {left:33.333%}
+	.pos-50 {left:50%}
+	.pos-66 {left:66.6%}
+	.pos-100 {left:100%}
+	&-list {
+		
+		width:100%;
+
+		//border:1px solid #f00;
+	}
+	&-item {
+		position:relative;
+		float:left;
+		width:33.33%;
+		height:20px;
+		background: #eee;
+		text-align: center;
+		transition: background .25s ease-in-out;
+		.label {
+			display:none;
+			//border:1px solid #f00;
+			@include media-query($mq-small + 10) {
+				display:block;
+				position:absolute;
+				left:0;
+				bottom:30px;
+				width:100%;
+				padding: 0 10px;
+				font-weight: bold;
+				font-size:.75em;
+				color:#999;
+				letter-spacing: .1em;
+				
+			}
+			@include media-query($mq-medium) {
+				font-size:.875em;
+			}
+			@include media-query($mq-large) {
+				font-size:1em;
+			}
+		}
+		&--current {
+			background: #eee linear-gradient(to right, rgba($skyblue,1) 0%,rgba($skyblue,0) 100%);
+			.label {
+				color:$skyblue;
+			}
+		}
+		&--complete {
+			background:$skyblue  linear-gradient(to right, rgba($skyblue,1) 0%,rgba($skyblue,0) 100%);
+			.label {
+				color:$skyblue;
+			}
+		}
+	}
+}
+*/
+
+
+
+
+
+
+/////////////////////////////////////////////
+
+.bconfig__stage-title {
+	position:relative;
+	transition:.25s ease-in-out;
+	overflow:hidden;
+	padding:.66em .5em .5em;
+	margin:1em 0;
+	font-size:1em;
+	border-left:5px solid $skyblue;
+	background:linear-gradient(to right, rgba(#f6f6f6,1) 0%,rgba(#e7e7e7,0) 100%);
+	strong {
+		font-weight: bold;
+		color:$skyblue;
+	}
+	/*&:before {
+		position:absolute;
+		left:-3em;
+		width:1em;
+		text-align: center;
+		//left:0;
+		//top:0;
+		//margin-left:-75px;
+		content:"✓";
+		//border:1px solid #f00;
+		transition:left .35s ease-in-out;
+	}*/
+	@include media-query($mq-medium) {
+		font-size:1.25em;
+	}
+	@include media-query($mq-large) {
+		font-size:1.5em;
+	}
+	&-note {
+		display:block;
+		color:#999;
+		font-size:.75em;
+		padding:.25em 0 0;
+		font-weight: normal;
+		@include media-query($mq-medium) {
+			float:right;
+		}
+	}
+}
+
+.bconfig__stage {
+	width:100%;
+	padding:0 10px;
+	border:1px solid transparent;
+	//border-bottom:1px solid #ccc;
+	@include media-query($mq-medium) {
+		padding:0 10px;
+	}
+	&--todo {
+		//border:1px solid #f00;
+		display:none;
+		.bconfig__stage-content {
+ 			display:none;
+		}
+		.bconfig__stage-title {
+			color:#aaa;
+		}
+	}
+	&--current {
+		//border:1px solid #fc0;
+		.bconfig__stage-content {
+			display:block;
+		}
+		.bconfig__stage-title {
+			color:#000;
+		}
+	}
+	&--complete {
+		//border:1px solid #3c3;
+			display:none;
+		.bconfig__stage-content {
+			//display:none;
+		}
+		/*.bconfig__stage-title {
+			color:$accent;
+			padding-left:32px; 
+			&:before {
+				
+				left:0;
+			}
+		}*/
+	}
+	&--soldout {
+		opacity:.3;
+		pointer-events:none;
+	}
+}
+
+.bconfig__stage1-proceed {
+	padding:.5em 0 0;
+	@include media-query($mq-large) {
+		padding:2em 1em 1em;
+	}
+}
+
+.bconfig__button {
+	@extend .button;
+	transition:.25s ease-in-out;
+	background-color:$skyblue;
+	padding: 1.25em 2.75em 1.0625em;
+	font-size:.875em;
+	@include media-query($mq-small + 10) {
+		font-size:1em;	
+	}
+	&--inactive {
+		opacity:.3;
+		cursor: default;
+		pointer-events:none;
+	}
+}
+
+.bconfig__stage-button {
+	margin:.5% 0 0;
+	text-align:center;
+}
+
+
+.bconfig__stage-sup-confirm {
+	display:none;
+	margin:.5em 1em 1em;
+	font-size:.75em;
+	line-height:1.5;
+	@include media-query($mq-large) {
+		font-size:.875em;	
+	} 
+	@include media-query($mq-xlarge) {
+		font-size:1em;	
+	} 
+	&--show {
+		display:block;
+	}
+	a {
+		color:$skyblue;
+		white-space: nowrap;
+		&:hover {
+			color:#000;
+			text-decoration: none;
+		}
+	}
+	label {
+		cursor: pointer;
+	}
+}
+
+.bconfig__stage-button-continue {
+	@include media-query($mq-large) {
+		text-align: right;
+	}
+}
+
+.bconfig__stage-button-reset {
+	.bconfig__button {
+		background-color:#aaa;
+		&:hover {
+			background-color:#c33;	
+		}
+	}
+	@include media-query($mq-large) {
+		text-align: left;
+	}
+
+}
+
+
+
+//product / stage content styles
+
+.bconfig__list {
+	display:inline-block;
+	text-align:center;
+	&-item {	
+		position:relative;
+		padding-top:.5em;
+		text-align: center;
+		border:1px solid #ccc;
+		margin:0 0 10px;
+		border-radius:0 3em 0 0;
+		@include media-query($mq-small + 10) {
+			display:inline-block;
+			width:48%;
+			margin:0 .5% 2%;
+			vertical-align: top;
+		}
+		@include media-query($mq-large) {
+			//width:24.25%;
+			width:48.875%;
+			margin:0 .125% 2%;
+		}
+		&:hover,&.selected {
+			border-color:$skyblue;
+			cursor:pointer;
+		}
+		&.selected {
+			box-shadow:0 0 6px rgba($skyblue,.5);
+		}
+
+		&--accessory {
+			margin-bottom:1%;
+			border-radius:0 2em 0 0;
+			position:relative;
+			
+			@include media-query($mq-large) {
+				width:31.5%;
+			}
+			text-align: left;
+			//border-radius:0 1em 0 0;
+			.bconfig__type-img {
+				//float:left;
+				position:absolute;
+				top:10px;
+				left:10px;
+				width:81px;
+				margin:0;
+				@include media-query($mq-large) {
+					width:100px;	
+				}
+			}
+			.bconfig__type-label,.bconfig__type-price,.bconfig__type-more-info {
+				font-size:.875em;
+				margin:.25em;
+				padding-left:92px;
+				@include media-query($mq-large) {
+					padding-left:120px;
+				}
+			}
+			.bconfig__type-label {
+				margin-right:1em;
+				@include media-query($mq-small + 10) {
+					height: 6em; //2 lines of title, 1 line of version
+					overflow: hidden;
+					font-size:.75em;
+				}
+				@include media-query($mq-medium + 10) {
+					height:4.4em;
+						font-size:.875em; 
+				}
+				@include media-query($mq-large) {
+					height: 6em;
+					font-size:.75em; 
+				}
+				@include media-query($mq-large + 10) {
+					height:4.4em;
+						font-size:.875em; 
+				}
+			}
+			.bconfig__type-more-info {
+				margin-top:.5em;
+			}
+			.bconfig__type-select {
+				text-align: center;
+			}
+
+		}
+		&--locked {
+			opacity: .33;
+			filter: grayscale(100%);
+			cursor: default;
+			pointer-events:none;
+			 user-select: none;   
+			&:hover {
+				border-color:#ccc;
+				cursor: default;
+			}
+		}
+	}
+}
+
+.bconfig__list-col {
+
+	@include media-query($mq-large) {
+	float:left;                 
+	width:50%;
+	}
+}
+
+
+.bconfig__type {
+	&-img {
+		margin:10px 2em 20px;
+		.bconfig__list-item--contract &,.bconfig__list-item--delivery &,.bconfig__list-item--payment & {
+			//height:100px;
+			img {
+				max-height:100px;
+				//margin:6px 0;
+			}
+		}
+	}
+	&-label,&-price,&-more-info {
+		margin:.5em;
+	}
+	&-label {
+		font-weight: bold;
+		font-size:.875em;
+		color:#666;
+		letter-spacing: .03em;
+		padding:0 .25em;
+		span {
+			@include media-query($mq-medium + 6) {
+				display:block;
+			}
+			@include media-query($mq-large) {
+				display:inline;
+			}
+			@include media-query($mq-xlarge) {
+				display:block;
+			}
+		}
+		.version {
+			margin-top:.5em;
+			display:block;
+			color:#888;
+			font-weight: 300;
+		}
+		.bconfig__list-item--payment & {
+			line-height: 1.5;
+			
+			@include media-query($mq-small + 10) {
+				min-height: 3.2em; //2 lines of title, 1 line of version
+			}
+			@include media-query($mq-large) {
+				font-size:.75em;
+			}
+			@include media-query($mq-large + 10) {
+				font-size:.875em;
+			}
+			@include media-query($mq-xlarge) {
+				font-size:1em;
+			}
+		}
+	}
+	&-price {
+		font-weight: bold;
+		color:$skyblue;
+		font-size:1.125em;
+		@include media-query($mq-small + 10) {
+			font-size:1em;
+		}
+		@include media-query($mq-medium + 10) {
+			font-size:1.125em;
+		}
+		@include media-query($mq-large) {
+			font-size:.875em;
+		}
+		@include media-query($mq-large + 10) {
+			font-size:1em;
+		}
+		@include media-query($mq-xlarge) {
+			font-size:1.25em;
+		}
+
+
+		&-note,&-apr {
+			font-size:.75em;
+			color:#666;
+			margin:.25em 0;
+			@include media-query($mq-large) {
+				font-size:.6875em;
+			}
+			@include media-query($mq-large + 10) {
+				font-size:.8125em;
+			}
+			@include media-query($mq-large + 10) {
+				font-size:.875em;
+			}
+		}
+	}
+	
+	&-more-info {
+		a {
+			font-weight: bold;
+			color:$skyblue;
+			text-decoration: none;
+			font-size:1.125em;
+			@include media-query($mq-small + 10) {
+				font-size:1em;
+			}
+			@include media-query($mq-medium + 10) {
+				font-size:1.125em;
+			}
+			@include media-query($mq-large) {
+				font-size:.875em;
+			}
+			@include media-query($mq-large + 10) {
+				font-size:1em;
+			}
+			@include media-query($mq-xlarge) {
+				font-size:1.25em;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&-select {
+		margin: 1em 0 0 0;
+		padding:.75em .5em .5em;
+		//background:#eee;
+		font-size:.75em;
+		@include media-query($mq-large + 10) {
+			font-size:.875em;
+		}
+		box-shadow:inset 0 2px 2px -2px rgba(0,0,0,.4);
+		input {
+			margin-right:4px;
+		}
+		.bconfig__list-item.selected & {
+			background:$skyblue;
+			color:#fff;
+		}
+	}
+	&-finance-example {
+		//font-size:.75em;
+		text-align: left;
+		padding: 10px;
+		box-shadow:inset 0 2px 2px -2px rgba(0,0,0,.4);
+		h5 {
+			margin:.25em 0;
+			color:$skyblue;
+			font-size:1.125em;
+			@include media-query($mq-small + 10) {
+				font-size:1em;
+			}
+			@include media-query($mq-medium + 10) {
+				font-size:1.125em;
+			}
+			@include media-query($mq-large) {
+				font-size:.875em;
+			}
+			@include media-query($mq-large + 10) {
+				font-size:1em;
+			}
+			@include media-query($mq-xlarge) {
+				font-size:1.25em;
+			}
+		}
+		ul,p {
+			color:#666;
+			font-size:.75em;
+		}
+		ul {
+			list-style: disc;
+			padding:0 0 0 1em;
+			margin:0;
+			li {
+				margin:0 0 .33em;
+			}
+		}
+		p {
+			line-height: 1.5;
+		}
+	}
+}
+
+
+//confirmation stage styling
+.bconfig__confirm {
+	text-align:center;
+	&-item {
+		margin-bottom:20px;
+		//width:48%;
+		@include media-query($mq-large) {
+			//width:48%;
+			margin:0 .5% 20px;
+			display:inline-block;
+			vertical-align: top;
+			&--payment {
+				width:32%;
+			}
+			&--accessories {
+				width:65%;
+			}
+		}
+	}
+	&-header {
+		position:relative;
+		padding:.66em .5em .5em;
+		background:$skyblue;
+		color:#fff;
+		text-align: center;
+		font-size:1em;
+		margin:0 0 1em;
+			@include media-query($mq-large + 10) {
+					font-size:1.25em;
+			}
+		&:after {
+			top: 100%;
+			left: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-top-color: $skyblue;
+			border-width: 10px;
+			margin-left: -10px;
+		}
+	}
+	&-icon {
+		img {
+			//max-width:150px;
+			margin-bottom:20px;
+		}
+	}
+	&-label {
+		font-weight: bold;
+		color:#666;
+		.note {
+			display:block;
+			font-size:.875em;
+			font-weight: normal; 
+		}
+	}
+	&-product {
+		padding:.5em 1%;
+		font-size:.75em;
+		//border-bottom: 1px solid #eee;
+		//@extend .clearfix;
+		//&:last-child {
+		//	border-bottom:none;
+		//}
+		@include media-query($mq-small + 10) {
+			text-align: center;
+			display:inline-block;
+			vertical-align: top;
+			width:47.5%;
+			font-size:.875em;
+		}
+		@include media-query($mq-large) {
+			font-size:.8125em;
+			width:47.5%;
+		}
+		@include media-query($mq-large + 10) {
+			
+			width:32%;
+		}
+		&-img {
+			//float:left;
+			//width:4.5em;
+			//margin-right:.5em;
+			margin:0 0 .5em;
+			img {
+				max-width: 125px;
+			}
+		}
+		&-title {
+			@include media-query($mq-small + 10) {
+			font-weight: bold;
+			height:4.2em;
+			overflow: hidden;
+			}
+			.version {	
+				display:block;
+				margin:.25em 0;
+				font-weight: normal;
+			}
+		}
+		&-price {
+			font-weight: bold;
+			margin:.25em 0;
+			color:$skyblue;
+		}
+	}
+	&-recap-note {
+		margin:0;
+		padding:2em 0;
+		color:#999;
+		font-style: italic;
+	}
+	&-total {
+		margin:.25em 0 1em;
+		padding:.5em;
+		border-top:1px solid #eee;
+		border-bottom:1px solid #eee;
+		font-size: 1.5em;
+		text-align: right;
+		font-weight:bold;
+		strong {
+			font-weight: bold;
+			color:$skyblue;
+		}
+	}
+
+}
+
+
+.bconfig__stage-terms {
+	border:1px solid #ccc;
+	padding:.5em 1em;
+	font-size:.75em;
+	margin-top:1.5em;
+	@include media-query($mq-large) {
+		font-size:.8125em;
+	}
+	h5 {
+		font-size:1.125em;
+		margin:.5em 0;
+	}
+	li {
+		position:relative;
+		display:inline-block;
+		margin: .25em .75em .25em 0;
+		@include media-query($mq-medium) {
+			display:inline-block;
+		}
+		&:before {
+			display:inline-block;
+			vertical-align: middle;
+			content:"";;
+			margin:0 .5em 2px 0;
+			width: 0; 
+			height: 0; 
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+			border-left: 5px solid  $skyblue;
+		}
+	}
+	p {
+		margin:0;
+	}
+}
+
+
+
+.product--lightbox .product__gallery {
+	display:none !important; //hide lightbox gallery is JS image switching not working atm
+}
+
+//display all stages at once (dev only)
+
+.bconfig__stage--todo {
+	//display:block;
+	.bconfig__stage-content {
+		//display:block; 
+	}
+}
+

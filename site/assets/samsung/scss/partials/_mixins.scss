@@ -1,0 +1,636 @@
+// mixins
+//http://seesparkbox.com/foundry/structuring_and_serving_styles_for_older_browsers
+$no-mq-support: false !default;
+$serve-to-nomq-max-width: $IEfixed;
+
+//media query loader
+@mixin media-query($query) {
+  @if $no-mq-support{
+    @if $query <= $serve-to-nomq-max-width {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: + $query) {
+      @content; 
+    }
+  } 
+}
+
+//vertical media query loader
+@mixin vmedia-query($query) {
+  @if $no-mq-support{
+      @content;
+  } @else {
+    @media screen and (min-height: + $query) {
+      @content; 
+    }
+  } 
+}
+
+/// Returns the opposite direction of each direction in a list
+/// @author Hugo Giraudel
+/// @param {List} $directions - List of initial directions
+/// @return {List} - List of opposite directions
+@function opposite-direction($directions) {
+  $opposite-directions: ();
+  $direction-map: (
+    'top':    'bottom',
+    'right':  'left',
+    'bottom': 'top',
+    'left':   'right',
+    'center': 'center',
+    'ltr':    'rtl',
+    'rtl':    'ltr'
+  );
+ 
+  @each $direction in $directions {
+    $direction: to-lower-case($direction);
+    
+    @if map-has-key($direction-map, $direction) { 
+      $opposite-directions: append($opposite-directions, unquote(map-get($direction-map, $direction)));
+    } @else {
+      @warn "No opposite direction can be found for `#{$direction}`. Direction omitted.";
+    }
+  }
+ 
+  @return $opposite-directions;
+}
+
+ 
+// https://css-tricks.com/snippets/sass/css-triangle-mixin/
+/// Triangle helper mixin
+/// @param {Direction} $direction - Triangle direction, either `top`, `right`, `bottom` or `left`
+/// @param {Color} $color [currentcolor] - Triangle color 
+/// @param {Length} $size [1em] - Triangle size
+@mixin triangle($direction, $color: currentcolor, $size: 1em) {
+  @if not index(top right bottom left, $direction) {
+    @error "Direction must be either `top`, `right`, `bottom` or `left`.";
+  }
+
+  width: 0;
+  height: 0;
+  content: '';
+  z-index: 2;
+  border-#{opposite-position($direction)}: ($size * 1.5) solid $color;
+  
+  $perpendicular-borders: $size solid transparent;
+  
+  @if $direction == top or $direction == bottom {
+    border-left:   $perpendicular-borders;
+    border-right:  $perpendicular-borders;
+  } @else if $direction == right or $direction == left {
+    border-bottom: $perpendicular-borders;
+    border-top:    $perpendicular-borders;
+  }
+}
+
+
+
+
+
+
+
+// flags -- generated with grunt-spritesmith 
+
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+*/
+$ae-x: 0px;
+$ae-y: 48px;
+$ae-offset-x: 0px;
+$ae-offset-y: -48px;
+$ae-width: 48px;
+$ae-height: 48px;
+$ae-total-width: 48px;
+$ae-total-height: 2400px;
+$ae-image: 'flag-sprite.png';
+$ae: 0px 48px 0px -48px 48px 48px 48px 2400px 'flag-sprite.png';
+$at-x: 0px;
+$at-y: 1200px;
+$at-offset-x: 0px;
+$at-offset-y: -1200px;
+$at-width: 48px;
+$at-height: 48px;
+$at-total-width: 48px;
+$at-total-height: 2400px;
+$at-image: 'flag-sprite.png';
+$at: 0px 1200px 0px -1200px 48px 48px 48px 2400px 'flag-sprite.png';
+$au-x: 0px;
+$au-y: 96px;
+$au-offset-x: 0px;
+$au-offset-y: -96px;
+$au-width: 48px;
+$au-height: 48px;
+$au-total-width: 48px;
+$au-total-height: 2400px;
+$au-image: 'flag-sprite.png';
+$au: 0px 96px 0px -96px 48px 48px 48px 2400px 'flag-sprite.png';
+$be-x: 0px;
+$be-y: 144px;
+$be-offset-x: 0px;
+$be-offset-y: -144px;
+$be-width: 48px;
+$be-height: 48px;
+$be-total-width: 48px;
+$be-total-height: 2400px;
+$be-image: 'flag-sprite.png';
+$be: 0px 144px 0px -144px 48px 48px 48px 2400px 'flag-sprite.png';
+$bg-x: 0px;
+$bg-y: 192px;
+$bg-offset-x: 0px;
+$bg-offset-y: -192px;
+$bg-width: 48px;
+$bg-height: 48px;
+$bg-total-width: 48px;
+$bg-total-height: 2400px;
+$bg-image: 'flag-sprite.png';
+$bg: 0px 192px 0px -192px 48px 48px 48px 2400px 'flag-sprite.png';
+$br-x: 0px;
+$br-y: 240px;
+$br-offset-x: 0px;
+$br-offset-y: -240px;
+$br-width: 48px;
+$br-height: 48px;
+$br-total-width: 48px;
+$br-total-height: 2400px;
+$br-image: 'flag-sprite.png';
+$br: 0px 240px 0px -240px 48px 48px 48px 2400px 'flag-sprite.png';
+$ca-x: 0px;
+$ca-y: 288px;
+$ca-offset-x: 0px;
+$ca-offset-y: -288px;
+$ca-width: 48px;
+$ca-height: 48px;
+$ca-total-width: 48px;
+$ca-total-height: 2400px;
+$ca-image: 'flag-sprite.png';
+$ca: 0px 288px 0px -288px 48px 48px 48px 2400px 'flag-sprite.png';
+$ch-x: 0px;
+$ch-y: 336px;
+$ch-offset-x: 0px;
+$ch-offset-y: -336px;
+$ch-width: 48px;
+$ch-height: 48px;
+$ch-total-width: 48px;
+$ch-total-height: 2400px;
+$ch-image: 'flag-sprite.png';
+$ch: 0px 336px 0px -336px 48px 48px 48px 2400px 'flag-sprite.png';
+$cn-x: 0px;
+$cn-y: 384px;
+$cn-offset-x: 0px;
+$cn-offset-y: -384px;
+$cn-width: 48px;
+$cn-height: 48px;
+$cn-total-width: 48px;
+$cn-total-height: 2400px;
+$cn-image: 'flag-sprite.png';
+$cn: 0px 384px 0px -384px 48px 48px 48px 2400px 'flag-sprite.png';
+$cy-x: 0px;
+$cy-y: 432px;
+$cy-offset-x: 0px;
+$cy-offset-y: -432px;
+$cy-width: 48px;
+$cy-height: 48px;
+$cy-total-width: 48px;
+$cy-total-height: 2400px;
+$cy-image: 'flag-sprite.png';
+$cy: 0px 432px 0px -432px 48px 48px 48px 2400px 'flag-sprite.png';
+$cz-x: 0px;
+$cz-y: 480px;
+$cz-offset-x: 0px;
+$cz-offset-y: -480px;
+$cz-width: 48px;
+$cz-height: 48px;
+$cz-total-width: 48px;
+$cz-total-height: 2400px;
+$cz-image: 'flag-sprite.png';
+$cz: 0px 480px 0px -480px 48px 48px 48px 2400px 'flag-sprite.png';
+$de-x: 0px;
+$de-y: 528px;
+$de-offset-x: 0px;
+$de-offset-y: -528px;
+$de-width: 48px;
+$de-height: 48px;
+$de-total-width: 48px;
+$de-total-height: 2400px;
+$de-image: 'flag-sprite.png';
+$de: 0px 528px 0px -528px 48px 48px 48px 2400px 'flag-sprite.png';
+$dk-x: 0px;
+$dk-y: 576px;
+$dk-offset-x: 0px;
+$dk-offset-y: -576px;
+$dk-width: 48px;
+$dk-height: 48px;
+$dk-total-width: 48px;
+$dk-total-height: 2400px;
+$dk-image: 'flag-sprite.png';
+$dk: 0px 576px 0px -576px 48px 48px 48px 2400px 'flag-sprite.png';
+$ee-x: 0px;
+$ee-y: 624px;
+$ee-offset-x: 0px;
+$ee-offset-y: -624px;
+$ee-width: 48px;
+$ee-height: 48px;
+$ee-total-width: 48px;
+$ee-total-height: 2400px;
+$ee-image: 'flag-sprite.png';
+$ee: 0px 624px 0px -624px 48px 48px 48px 2400px 'flag-sprite.png';
+$eg-x: 0px;
+$eg-y: 672px;
+$eg-offset-x: 0px;
+$eg-offset-y: -672px;
+$eg-width: 48px;
+$eg-height: 48px;
+$eg-total-width: 48px;
+$eg-total-height: 2400px;
+$eg-image: 'flag-sprite.png';
+$eg: 0px 672px 0px -672px 48px 48px 48px 2400px 'flag-sprite.png';
+$es-x: 0px;
+$es-y: 720px;
+$es-offset-x: 0px;
+$es-offset-y: -720px;
+$es-width: 48px;
+$es-height: 48px;
+$es-total-width: 48px;
+$es-total-height: 2400px;
+$es-image: 'flag-sprite.png';
+$es: 0px 720px 0px -720px 48px 48px 48px 2400px 'flag-sprite.png';
+$fi-x: 0px;
+$fi-y: 768px;
+$fi-offset-x: 0px;
+$fi-offset-y: -768px;
+$fi-width: 48px;
+$fi-height: 48px;
+$fi-total-width: 48px;
+$fi-total-height: 2400px;
+$fi-image: 'flag-sprite.png';
+$fi: 0px 768px 0px -768px 48px 48px 48px 2400px 'flag-sprite.png';
+$fr-x: 0px;
+$fr-y: 816px;
+$fr-offset-x: 0px;
+$fr-offset-y: -816px;
+$fr-width: 48px;
+$fr-height: 48px;
+$fr-total-width: 48px;
+$fr-total-height: 2400px;
+$fr-image: 'flag-sprite.png';
+$fr: 0px 816px 0px -816px 48px 48px 48px 2400px 'flag-sprite.png';
+$gr-x: 0px;
+$gr-y: 864px;
+$gr-offset-x: 0px;
+$gr-offset-y: -864px;
+$gr-width: 48px;
+$gr-height: 48px;
+$gr-total-width: 48px;
+$gr-total-height: 2400px;
+$gr-image: 'flag-sprite.png';
+$gr: 0px 864px 0px -864px 48px 48px 48px 2400px 'flag-sprite.png';
+$hk-x: 0px;
+$hk-y: 912px;
+$hk-offset-x: 0px;
+$hk-offset-y: -912px;
+$hk-width: 48px;
+$hk-height: 48px;
+$hk-total-width: 48px;
+$hk-total-height: 2400px;
+$hk-image: 'flag-sprite.png';
+$hk: 0px 912px 0px -912px 48px 48px 48px 2400px 'flag-sprite.png';
+$hu-x: 0px;
+$hu-y: 960px;
+$hu-offset-x: 0px;
+$hu-offset-y: -960px;
+$hu-width: 48px;
+$hu-height: 48px;
+$hu-total-width: 48px;
+$hu-total-height: 2400px;
+$hu-image: 'flag-sprite.png';
+$hu: 0px 960px 0px -960px 48px 48px 48px 2400px 'flag-sprite.png';
+$ie-x: 0px;
+$ie-y: 1008px;
+$ie-offset-x: 0px;
+$ie-offset-y: -1008px;
+$ie-width: 48px;
+$ie-height: 48px;
+$ie-total-width: 48px;
+$ie-total-height: 2400px;
+$ie-image: 'flag-sprite.png';
+$ie: 0px 1008px 0px -1008px 48px 48px 48px 2400px 'flag-sprite.png';
+$in-x: 0px;
+$in-y: 1056px;
+$in-offset-x: 0px;
+$in-offset-y: -1056px;
+$in-width: 48px;
+$in-height: 48px;
+$in-total-width: 48px;
+$in-total-height: 2400px;
+$in-image: 'flag-sprite.png';
+$in: 0px 1056px 0px -1056px 48px 48px 48px 2400px 'flag-sprite.png';
+$it-x: 0px;
+$it-y: 1104px;
+$it-offset-x: 0px;
+$it-offset-y: -1104px;
+$it-width: 48px;
+$it-height: 48px;
+$it-total-width: 48px;
+$it-total-height: 2400px;
+$it-image: 'flag-sprite.png';
+$it: 0px 1104px 0px -1104px 48px 48px 48px 2400px 'flag-sprite.png';
+$jp-x: 0px;
+$jp-y: 1152px;
+$jp-offset-x: 0px;
+$jp-offset-y: -1152px;
+$jp-width: 48px;
+$jp-height: 48px;
+$jp-total-width: 48px;
+$jp-total-height: 2400px;
+$jp-image: 'flag-sprite.png';
+$jp: 0px 1152px 0px -1152px 48px 48px 48px 2400px 'flag-sprite.png';
+$kr-x: 0px;
+$kr-y: 0px;
+$kr-offset-x: 0px;
+$kr-offset-y: 0px;
+$kr-width: 48px;
+$kr-height: 48px;
+$kr-total-width: 48px;
+$kr-total-height: 2400px;
+$kr-image: 'flag-sprite.png';
+$kr: 0px 0px 0px 0px 48px 48px 48px 2400px 'flag-sprite.png';
+$lu-x: 0px;
+$lu-y: 1248px;
+$lu-offset-x: 0px;
+$lu-offset-y: -1248px;
+$lu-width: 48px;
+$lu-height: 48px;
+$lu-total-width: 48px;
+$lu-total-height: 2400px;
+$lu-image: 'flag-sprite.png';
+$lu: 0px 1248px 0px -1248px 48px 48px 48px 2400px 'flag-sprite.png';
+$lv-x: 0px;
+$lv-y: 1296px;
+$lv-offset-x: 0px;
+$lv-offset-y: -1296px;
+$lv-width: 48px;
+$lv-height: 48px;
+$lv-total-width: 48px;
+$lv-total-height: 2400px;
+$lv-image: 'flag-sprite.png';
+$lv: 0px 1296px 0px -1296px 48px 48px 48px 2400px 'flag-sprite.png';
+$mt-x: 0px;
+$mt-y: 1344px;
+$mt-offset-x: 0px;
+$mt-offset-y: -1344px;
+$mt-width: 48px;
+$mt-height: 48px;
+$mt-total-width: 48px;
+$mt-total-height: 2400px;
+$mt-image: 'flag-sprite.png';
+$mt: 0px 1344px 0px -1344px 48px 48px 48px 2400px 'flag-sprite.png';
+$mx-x: 0px;
+$mx-y: 1392px;
+$mx-offset-x: 0px;
+$mx-offset-y: -1392px;
+$mx-width: 48px;
+$mx-height: 48px;
+$mx-total-width: 48px;
+$mx-total-height: 2400px;
+$mx-image: 'flag-sprite.png';
+$mx: 0px 1392px 0px -1392px 48px 48px 48px 2400px 'flag-sprite.png';
+$my-x: 0px;
+$my-y: 1440px;
+$my-offset-x: 0px;
+$my-offset-y: -1440px;
+$my-width: 48px;
+$my-height: 48px;
+$my-total-width: 48px;
+$my-total-height: 2400px;
+$my-image: 'flag-sprite.png';
+$my: 0px 1440px 0px -1440px 48px 48px 48px 2400px 'flag-sprite.png';
+$nl-x: 0px;
+$nl-y: 1488px;
+$nl-offset-x: 0px;
+$nl-offset-y: -1488px;
+$nl-width: 48px;
+$nl-height: 48px;
+$nl-total-width: 48px;
+$nl-total-height: 2400px;
+$nl-image: 'flag-sprite.png';
+$nl: 0px 1488px 0px -1488px 48px 48px 48px 2400px 'flag-sprite.png';
+$no-x: 0px;
+$no-y: 1536px;
+$no-offset-x: 0px;
+$no-offset-y: -1536px;
+$no-width: 48px;
+$no-height: 48px;
+$no-total-width: 48px;
+$no-total-height: 2400px;
+$no-image: 'flag-sprite.png';
+$no: 0px 1536px 0px -1536px 48px 48px 48px 2400px 'flag-sprite.png';
+$nz-x: 0px;
+$nz-y: 1584px;
+$nz-offset-x: 0px;
+$nz-offset-y: -1584px;
+$nz-width: 48px;
+$nz-height: 48px;
+$nz-total-width: 48px;
+$nz-total-height: 2400px;
+$nz-image: 'flag-sprite.png';
+$nz: 0px 1584px 0px -1584px 48px 48px 48px 2400px 'flag-sprite.png';
+$ph-x: 0px;
+$ph-y: 1632px;
+$ph-offset-x: 0px;
+$ph-offset-y: -1632px;
+$ph-width: 48px;
+$ph-height: 48px;
+$ph-total-width: 48px;
+$ph-total-height: 2400px;
+$ph-image: 'flag-sprite.png';
+$ph: 0px 1632px 0px -1632px 48px 48px 48px 2400px 'flag-sprite.png';
+$pl-x: 0px;
+$pl-y: 1680px;
+$pl-offset-x: 0px;
+$pl-offset-y: -1680px;
+$pl-width: 48px;
+$pl-height: 48px;
+$pl-total-width: 48px;
+$pl-total-height: 2400px;
+$pl-image: 'flag-sprite.png';
+$pl: 0px 1680px 0px -1680px 48px 48px 48px 2400px 'flag-sprite.png';
+$pt-x: 0px;
+$pt-y: 1728px;
+$pt-offset-x: 0px;
+$pt-offset-y: -1728px;
+$pt-width: 48px;
+$pt-height: 48px;
+$pt-total-width: 48px;
+$pt-total-height: 2400px;
+$pt-image: 'flag-sprite.png';
+$pt: 0px 1728px 0px -1728px 48px 48px 48px 2400px 'flag-sprite.png';
+$qa-x: 0px;
+$qa-y: 1776px;
+$qa-offset-x: 0px;
+$qa-offset-y: -1776px;
+$qa-width: 48px;
+$qa-height: 48px;
+$qa-total-width: 48px;
+$qa-total-height: 2400px;
+$qa-image: 'flag-sprite.png';
+$qa: 0px 1776px 0px -1776px 48px 48px 48px 2400px 'flag-sprite.png';
+$ro-x: 0px;
+$ro-y: 1824px;
+$ro-offset-x: 0px;
+$ro-offset-y: -1824px;
+$ro-width: 48px;
+$ro-height: 48px;
+$ro-total-width: 48px;
+$ro-total-height: 2400px;
+$ro-image: 'flag-sprite.png';
+$ro: 0px 1824px 0px -1824px 48px 48px 48px 2400px 'flag-sprite.png';
+$sa-x: 0px;
+$sa-y: 1872px;
+$sa-offset-x: 0px;
+$sa-offset-y: -1872px;
+$sa-width: 48px;
+$sa-height: 48px;
+$sa-total-width: 48px;
+$sa-total-height: 2400px;
+$sa-image: 'flag-sprite.png';
+$sa: 0px 1872px 0px -1872px 48px 48px 48px 2400px 'flag-sprite.png';
+$se-x: 0px;
+$se-y: 1920px;
+$se-offset-x: 0px;
+$se-offset-y: -1920px;
+$se-width: 48px;
+$se-height: 48px;
+$se-total-width: 48px;
+$se-total-height: 2400px;
+$se-image: 'flag-sprite.png';
+$se: 0px 1920px 0px -1920px 48px 48px 48px 2400px 'flag-sprite.png';
+$sg-x: 0px;
+$sg-y: 1968px;
+$sg-offset-x: 0px;
+$sg-offset-y: -1968px;
+$sg-width: 48px;
+$sg-height: 48px;
+$sg-total-width: 48px;
+$sg-total-height: 2400px;
+$sg-image: 'flag-sprite.png';
+$sg: 0px 1968px 0px -1968px 48px 48px 48px 2400px 'flag-sprite.png';
+$si-x: 0px;
+$si-y: 2016px;
+$si-offset-x: 0px;
+$si-offset-y: -2016px;
+$si-width: 48px;
+$si-height: 48px;
+$si-total-width: 48px;
+$si-total-height: 2400px;
+$si-image: 'flag-sprite.png';
+$si: 0px 2016px 0px -2016px 48px 48px 48px 2400px 'flag-sprite.png';
+$sk-x: 0px;
+$sk-y: 2064px;
+$sk-offset-x: 0px;
+$sk-offset-y: -2064px;
+$sk-width: 48px;
+$sk-height: 48px;
+$sk-total-width: 48px;
+$sk-total-height: 2400px;
+$sk-image: 'flag-sprite.png';
+$sk: 0px 2064px 0px -2064px 48px 48px 48px 2400px 'flag-sprite.png';
+$th-x: 0px;
+$th-y: 2112px;
+$th-offset-x: 0px;
+$th-offset-y: -2112px;
+$th-width: 48px;
+$th-height: 48px;
+$th-total-width: 48px;
+$th-total-height: 2400px;
+$th-image: 'flag-sprite.png';
+$th: 0px 2112px 0px -2112px 48px 48px 48px 2400px 'flag-sprite.png';
+$tr-x: 0px;
+$tr-y: 2160px;
+$tr-offset-x: 0px;
+$tr-offset-y: -2160px;
+$tr-width: 48px;
+$tr-height: 48px;
+$tr-total-width: 48px;
+$tr-total-height: 2400px;
+$tr-image: 'flag-sprite.png';
+$tr: 0px 2160px 0px -2160px 48px 48px 48px 2400px 'flag-sprite.png';
+$tw-x: 0px;
+$tw-y: 2208px;
+$tw-offset-x: 0px;
+$tw-offset-y: -2208px;
+$tw-width: 48px;
+$tw-height: 48px;
+$tw-total-width: 48px;
+$tw-total-height: 2400px;
+$tw-image: 'flag-sprite.png';
+$tw: 0px 2208px 0px -2208px 48px 48px 48px 2400px 'flag-sprite.png';
+$uk-x: 0px;
+$uk-y: 2256px;
+$uk-offset-x: 0px;
+$uk-offset-y: -2256px;
+$uk-width: 48px;
+$uk-height: 48px;
+$uk-total-width: 48px;
+$uk-total-height: 2400px;
+$uk-image: 'flag-sprite.png';
+$uk: 0px 2256px 0px -2256px 48px 48px 48px 2400px 'flag-sprite.png';
+$us-x: 0px;
+$us-y: 2304px;
+$us-offset-x: 0px;
+$us-offset-y: -2304px;
+$us-width: 48px;
+$us-height: 48px;
+$us-total-width: 48px;
+$us-total-height: 2400px;
+$us-image: 'flag-sprite.png';
+$us: 0px 2304px 0px -2304px 48px 48px 48px 2400px 'flag-sprite.png';
+$za-x: 0px;
+$za-y: 2352px;
+$za-offset-x: 0px;
+$za-offset-y: -2352px;
+$za-width: 48px;
+$za-height: 48px;
+$za-total-width: 48px;
+$za-total-height: 2400px;
+$za-image: 'flag-sprite.png';
+$za: 0px 2352px 0px -2352px 48px 48px 48px 2400px 'flag-sprite.png';
+
+
+@mixin flag-sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin flag-sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin flag-sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin flag-sprite($sprite) {
+  //@include sprite-image($sprite);
+  @include flag-sprite-position($sprite);
+}
+ 
+//for @2x flags (half BG size and adjust BG position)
+@mixin flag-sprite2x($sprite) {
+  //@include sprite-image($sprite);
+  @include flag-sprite-position2x($sprite); 
+}
+
+@mixin flag-sprite-position2x($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y / 2;
+}

@@ -1,0 +1,112 @@
+// fix up any issues cause my missing features (i.e no flex box)
+
+
+.no-flexbox {
+	
+
+	//product page
+	.product__specs {
+		&-list {
+			@extend .clearfix;
+		}
+		&-item {
+			@include media-query($mq-small + 10) {
+				float:left;
+				width:50%;
+				min-height: 100px;
+			}
+			@include media-query($mq-medium) {
+				width:33.33%; 
+				min-height: 120px;
+			}
+			@include media-query($mq-large) {
+				width:25%;		
+				font-size:1em;
+			}
+		}
+	}
+
+
+
+	//add to basket
+	.a2b__added {
+		@include media-query($mq-large) {
+			display:table;
+			width:100%;
+		}
+		&-image,&-list{
+			@include media-query($mq-large) {
+				display:table-cell;
+				vertical-align: middle;
+			}
+		}
+		&-image {
+			@include media-query($mq-large) {
+				width:150px;
+				img {
+					width:150px;
+				}
+			}
+		}
+		&-goto-checkout {
+			
+			@include media-query($mq-large) {
+				display:block;
+			text-align: center;
+				display:table-cell;
+				vertical-align: middle;
+				text-align: right;
+			}
+		}
+	}
+
+
+	//checkout progress
+
+	.header .co-progress {
+		border:1px solid #fff; //this fixes some issues... not sure why
+	}
+
+	.co-progress {
+		&__items {
+			display: table;
+			width:100%;
+			&--n3 {
+				.co-progress__item {
+					width:33%;
+				}
+			}
+			&--n4 {
+				.co-progress__item {
+					width:25%;
+				}
+			}
+		}
+		&__item {
+			display:table-cell;
+		}
+	}
+
+
+	//outlet store
+
+	.refurb__splainbox {
+
+		@include media-query($mq-large) {
+			display:table;
+		}
+
+		&-item {
+			@include media-query($mq-large) {
+				display:table-cell;
+				vertical-align: middle;
+			}
+		}
+	}
+
+
+	.sup__hex-inner {
+		display:block;
+	}
+
+}

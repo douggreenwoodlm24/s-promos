@@ -1,0 +1,52 @@
+//warranty box (used on basket/checkout)
+
+.warranty-box {
+	border:1px solid #ddd;
+	background:#fbfbfb;
+	margin:1em 0;
+	&__card_img {
+		padding:.75em 1em;
+		background:#fff;
+		border-bottom:1px solid #ddd;
+		text-align: center;
+		img {
+			height:30px;
+			margin:5px 2%;
+		}
+		@include media-query($mq-medium) {
+			display:inline-block;	
+			vertical-align: middle;
+			border-right:1px solid #ddd;
+			border-bottom:none;
+			width:53%;
+			img {
+				height:35px;
+				margin:5px 1%;
+			}
+		}
+		@include media-query($mq-large) {
+			img {
+				height:auto;
+			}
+		}
+	}
+	&__links {
+		padding:1em;
+		text-align: center;
+		color:#999;
+		@include media-query($mq-medium) {
+			display:inline-block;
+			vertical-align: middle;
+			width:46%;
+		}
+		a {
+			text-decoration: none;
+			color:#000;
+			&:hover {
+				text-decoration: underline;
+				color:$accent;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,48 @@
+// base
+//%font {font-family: "museo-sans",arial,sans-serif;}
+//$base-font-family: unquote("Helvetica W01", arial, verdana, sans-serif);
+//$base-font-family: unquote("arial,verdana,sans-serif");
+//$museo-sans: unquote("museo-sans,arial,sans-serif");
+$base-font-size: 1em;
+$base-line-height: 1.231;
+$font-color: #222;
+//fonts
+%core-font {font-family:'SamsungIFRg',Arial,sans-serif}
+%sharp-sans {font-family:'SharpSans',Arial,sans-serif}
+// Links
+//site brand colours
+$primary: #1428a0;
+$secondary: #28b5e4;
+$accent: #28b5e4;
+$skyblue: #0689d8;
+$green: #5bb900;
+$medblue: #006ec5;
+//base colors
+$grey: #e9e9e9;
+$white:#fff;
+$black:#000;
+//special/promo colours
+//xmas15
+$xmasgreen: #1cb57e;
+$wsteal: #65b8be; //winter sale blue
+$wsred: #ff2803; //winter sale blue
+$wsgrey: #3c3942; //winter sale dark grey
+//new years resolution
+$nyr-lighter-green: #d4dcb9;
+$nyr-lgreen: #b2c094;
+//main media query breakpoints
+//width
+$mq-small: 20em; 
+$mq-medium: 40em; 
+$mq-fullheader: 56em; //when to show the full fat header (~900px)
+$mq-large: 64.0625em;
+$mq-xlarge: 90.063em;
+$mq-max: 102em;
+$mq-maxplus: 102em; //temp
+$mq-contrained-max: 80em; //1280px
+//height
+$vmq-small: 481px;
+$vmq-medium: 700px;
+$vmq-large: 900px;
+//fixed width setting for IE8 and lower
+$IEfixed: 80em; //80em = 1280

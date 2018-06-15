@@ -1,0 +1,473 @@
+// New year's resolutions
+
+.nyr {
+	@extend %sharp-sans;  //use new font
+	background-color:#f3f3f3;
+	padding: 0 0 30px;
+	&__content {
+		background-color:#fff;
+		max-width:90.625em;
+		margin:10px auto 0;
+		padding-bottom:30px;
+		@include media-query($mq-medium) { 
+			margin-top:20px; 
+		}
+		@include media-query($mq-large) { 
+			margin-top:30px; 
+		}
+	}
+}
+
+.nyr__header {
+	position: relative;
+	display:table;
+	width:100%;
+	background:#eee;
+	color:#fff;
+	background:url(/assets/samsung/img/promotions/nyr/header.jpg) no-repeat 25% 50% / cover;
+	&-copy {
+		display:table-cell;
+		vertical-align: middle;
+		height:160px;
+		padding:0 5%;
+		font-size:1.625em;
+		font-weight: 500;
+		text-shadow:1px 1px 3px rgba(0,0,0,.2);
+		font-weight:700;
+		text-align:center;
+		@include media-query($mq-small + 10) { 
+			padding:0 7.5%;
+			font-size:2.25em;
+			font-weight: 500;
+			text-align: left;
+			height:240px;
+		}
+		@include media-query($mq-medium) { 
+			padding:0 15%;
+			font-size:2.75em;
+			height:320px;
+		}
+		@include media-query($mq-large + 5) { 
+			padding:0 20%;
+			font-size:3em;
+		}
+		@include media-query($mq-xlarge) { 
+			padding:0 25%;
+			font-size:3.25em;
+		}
+		@include media-query($mq-xlarge + 5) {
+			font-size:3.5em;
+		}
+	}
+}
+
+
+
+.nyr__nav {
+	ul {
+		text-align: center;
+	}
+	&-title {
+		position:relative;
+	
+		background-color:$nyr-lighter-green;
+
+		@include media-query($mq-large) { 
+			float:left;
+			width:25%;
+			padding:16.6% 0 0 0;
+			margin-right:.5%;
+		}
+		&-inner {	
+			color:#fff;		
+			line-height: 1.125;
+			text-align: center;
+			font-size:1.125em;
+			padding:.75em .5em;
+			@include media-query($mq-medium) { 
+				font-size:1.5em;	
+			}
+			@include media-query($mq-large) { 
+				position:absolute;
+				display:flex;
+				align-items:center;
+				left:1em;
+				right:1em;
+				top:0;
+				bottom:0;
+				font-size:1.5em;
+				text-align: right;  
+				.no-flexbox & {
+					display:block;
+				}
+			}	
+			@include media-query($mq-large + 10) { 
+				font-size:1.75em;
+			}
+			@include media-query($mq-xlarge) { 
+				font-size:2em; 
+			} 
+			span {
+				font-weight: 500;
+				@include media-query($mq-large) { 
+					display:block;
+				}
+			} 
+			.new-year {
+				display:block;
+				font-size:1.3125em;	
+				margin-bottom: .25em;
+				@include media-query($mq-large) { 
+					margin:0;
+				}
+				 
+			}
+			.with {
+				margin-top:.5em;
+				font-size:.875em;
+			}
+			.samsung {
+
+			}
+		}
+	}
+	&-item {
+		display:inline-block;
+		position:relative;
+		width:49%;
+		margin:3px 0 -5px;
+		padding-top:40%;	
+		background-repeat:no-repeat;
+		background-size:cover;
+		background-position:50% 50%;
+
+		@include media-query($mq-small + 10) { 
+			float:left;
+			width:19.6%;
+			margin:0 .5% 0 0;
+			padding-top:33%;
+		}
+		@include media-query($mq-medium) { 
+			padding-top:25%;
+		}
+		@include media-query($mq-large) { 
+			width:14.5%;
+			padding-top:16.6%;
+		}
+
+		&--healthy {background-image:url(/assets/samsung/img/promotions/nyr/nav/healthy.jpg)}
+		&--home-office {background-image:url(/assets/samsung/img/promotions/nyr/nav/home-office.jpg)}
+		&--travel-more {background-image:url(/assets/samsung/img/promotions/nyr/nav/travel-more.jpg)}
+		&--cleaner-home {background-image:url(/assets/samsung/img/promotions/nyr/nav/cleaner-home.jpg)}
+		&--smart-home {background-image:url(/assets/samsung/img/promotions/nyr/nav/smart-home.jpg)}
+
+		&:last-child {
+			margin-right:0;
+		}
+		//border:1px solid #f00;	
+		.label {
+			position:absolute;
+			left:0;
+			right:0;
+			bottom:0;
+			font-weight:500;
+			padding:.33em .125em .25em;
+			text-align: center;
+			color:#000;
+			font-size:.75em;
+			@include media-query($mq-medium) { 
+				font-size:.875em;
+				padding:.5em .25em .33em;
+			}
+			@include media-query($mq-large) { 
+				font-size:1em;
+			}
+			background-color:$nyr-lighter-green;
+		}
+	}
+	&-link {
+		position:absolute;
+		left:0;
+		right:0;
+		top:0;
+		bottom:0;
+		//background:#ccc;
+		//border:1px solid #f00;
+		transition:background-color .25s ease-out;
+		&:hover {
+			background-color:rgba(255,255,255,.3)
+		}
+	}
+}
+
+
+
+.nyr__title {
+	text-align:center;
+	margin:10px 0; 
+	@include media-query($mq-medium) { 
+		margin:20px 0; 
+	}
+	@include media-query($mq-large) { 
+		margin:30px 0; 
+	}
+	h2 {
+		font-size:2em;
+		margin:.5em;
+	}
+	p {
+		font-size:1.125em;
+		margin:.5em;
+	}
+}
+
+
+.nyr__panel {
+	position:relative;
+	//padding-top:40%;
+	padding-top:60%;
+	margin:10px 0 10px;
+	background:$nyr-lighter-green;
+	background-size:contain;
+	background-repeat:no-repeat;
+	@include media-query($mq-medium) { 
+		margin:20px 0; 
+		background-size:contain;
+	}
+	@include media-query($mq-large) { 
+		padding-top:440px;
+		margin:30px 0; 
+		
+	}
+	@include media-query($mq-large + 10) { 
+		padding-top:550px;
+	}
+	@include media-query($mq-xlarge) { 
+		padding-top:575px;
+	}
+	&-copy {
+			
+		padding:1em 1.5em;
+		background:$nyr-lighter-green;
+		font-size:.75em;
+		font-weight:500;
+		@include media-query($mq-large) { 
+			position: absolute;	
+			top:0;
+			width:50%;
+			bottom:0;
+			font-size:.75em;
+		}
+		@include media-query($mq-large) { 
+			width:45%;
+			font-size:1em;
+		}
+		@include media-query($mq-large + 10) { 
+		
+			width:38%;
+		}
+		@include media-query($mq-xlarge) { 
+			font-size:1.125em;
+			width:33.3%;
+		}
+		h3 {
+			font-size:1.625em;
+			color:#404040;
+			margin:.5em 0;
+			@include media-query($mq-large) { 
+				font-size:1.875em;
+			}
+		}
+		p,ul {
+			color:#626262;
+			line-height: 1.5;
+			@include media-query($mq-large) { 
+				line-height: 1.66;
+			}
+		}
+		ul {
+			padding-left:2em;
+		}
+		li {
+			margin:.5em 0;
+		}
+	}
+	&-cta {
+		a {
+			display:inline-block;
+			background:#666;
+			padding:.75em 1em .53em;
+			color:#fff;
+			text-decoration: none;
+			background:$nyr-lgreen;
+			&:hover {
+				text-decoration: underline;
+				background: darken($nyr-lgreen,5%);
+			}
+		}
+	}
+	&--left {
+		background-position:50% 0;
+		@include media-query($mq-large) { 
+			background-position:100% 50%;
+		}
+		.nyr__panel-copy {
+			left:0;
+			
+		}
+	}
+	&--right {
+		background-position:50% 0;
+		@include media-query($mq-large) { 
+			background-position:0 50%;
+		}
+		.nyr__panel-copy {
+			right:0;	
+		}
+	}
+	&--healthy {background-image:url(/assets/samsung/img/promotions/nyr/healthy.jpg)}
+	&--home-office {background-image:url(/assets/samsung/img/promotions/nyr/home-office.jpg)}
+	&--travel-more {background-image:url(/assets/samsung/img/promotions/nyr/travel-more.jpg)}
+	&--cleaner-home {background-image:url(/assets/samsung/img/promotions/nyr/cleaner-home.jpg)}
+	&--smart-home {background-image:url(/assets/samsung/img/promotions/nyr/smart-home.jpg)}
+}
+
+.nyr__products {
+	text-align:center;
+}
+
+.nyr__product {
+	&-item {
+		position:relative;
+		display:inline-block;
+		vertical-align: top;
+		width:100%;
+		border-bottom:1px dotted #ccc;
+		@include media-query($mq-medium) { 
+			width:49%;
+			border:none;
+		}
+		@include media-query($mq-large) { 
+			width:24%;
+			//margin:0 1%;
+		}
+		li {
+			margin:.75em 0;
+		}
+	}
+	&-img {
+		text-align: center;
+		img {
+			max-width:200px;
+			@include media-query($mq-medium) { 
+				max-width:250px;	
+			}
+			@include media-query($mq-large + 10) { 
+				max-width: 275px;
+			}
+		}
+	}
+	&-title {
+		font-weight:bold;
+		height:2.6em;
+		padding:0 .25em;
+		overflow: hidden;
+	}
+	&-swatches {
+		//height:1.2em;
+	}
+	&-buy {
+		display:none;
+		&--visible {
+			display:block;
+		}
+		a {
+			display:inline-block;
+			padding:.75em 2em;
+			background:$nyr-lgreen;
+			color:#fff;
+			font-weight: bold;
+			text-decoration: none;
+			&:hover {
+				background:$nyr-lighter-green;
+			}
+		}
+	}
+	&-save {
+		position:absolute;
+		top:8px;
+		left:50%;
+		width:82px;
+		height:82px;
+		padding:21px 5px;
+		border-radius:50px;
+		margin-left:-142px !important; 
+		//background:#0b4796 url(/assets/samsung/img/promotions/black-friday/save-bg.png) no-repeat 0 0 / cover;
+		background:$nyr-lgreen;
+		background:rgba($nyr-lgreen,.95);
+		text-transform: uppercase;
+		line-height: 1;
+		box-shadow:0 0 4px rgba(0,0,0,.1);
+		color:#fff;
+		@include media-query($mq-medium) { 
+			width:96px;
+			height:96px;
+			padding:28px 10px;
+			margin-left:-162px !important; 
+		}
+		@include media-query($mq-large + 10) { 
+			margin-left:-172px !important; 
+		}
+		strong {
+			font-size:1.75em;
+			display:block;
+		}
+
+	}
+}
+
+
+.nyr-colour-swatch {
+	li {
+		margin:0 2px;
+	}
+	&__item {
+		position:relative;
+	    display: inline-block;
+	  	height: 25px;
+	    width: 25px;
+	    border:1px solid rgba(127, 127, 127, 0.5);
+		cursor: pointer;
+		@include media-query($mq-medium) { 
+			height: 27px;
+	    	width: 27px;
+		}
+	    &:hover {
+	    	border: 1px solid rgba(127, 127, 127, .8);
+	    }
+	}
+} 
+
+//active tick
+.nyr-colour-swatch__item.selected {
+	border-color:#fff;
+	border: 1px solid #666; 
+	box-shadow:0 0 4px rgba(0,0,0,.2);
+	&::after {
+		position:absolute;
+		content:"✓";
+		top:-3px;
+		left:50%;
+		margin-left:-8px; 
+		font-size:1.25em;
+		font-weight:bold;
+		color:#000;
+		@include media-query($mq-medium) { 
+			top:-2px;	
+		}
+	}
+}
+.nyr-colour-swatch__item--dark.selected::after {
+	color:#fff;
+}
+

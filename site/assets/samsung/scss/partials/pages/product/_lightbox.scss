@@ -1,0 +1,26 @@
+// style mods for product lightbox viewer
+
+.product--lightbox {
+	@extend %sharp-sans;  //use new font
+
+	.product__title {
+		display:block;
+		background:none;
+		padding:0 0 .25em;
+		margin:0 0 .5em;
+		border-bottom:1px solid #eee;
+		.title-version {
+			font-weight: 300;
+		}
+	}
+
+
+	.product__gallery {
+		left:0;
+	}
+
+	.product__desc--lb {
+		font-size:.875em;
+		line-height: 1.66;
+	}
+}

@@ -1,0 +1,414 @@
+
+
+
+.bd-s6-nyr-header {
+	position:relative;
+	padding-top:120px;
+	@extend %sharp-sans;  //use new font
+	line-height:1.5;
+	background:url(/assets/samsung/img/bundle-deals/s6/nyr-header_m.jpg) no-repeat 100% 0 / cover;
+	@include media-query($mq-small + 10) { 
+		padding-top:140px;
+		//background-position: 25% 0;
+	}
+	@include media-query($mq-medium) { 
+		padding-top:200px;
+		
+	}
+	@include media-query($mq-large) { 
+		padding-top:200px;
+		background:url(/assets/samsung/img/bundle-deals/s6/nyr-header.jpg) no-repeat 50% 0 / cover;
+	}
+
+
+	&-copy {
+		
+		
+		position:absolute;
+		top:.125em;
+		left:.25em;
+		padding:.75em;
+		color:#000;
+		//background:rgba(255,253,233,.75);
+		max-width: 60%;
+		@include media-query($mq-medium + 10) { 
+			max-width: 40%
+		}
+		@include media-query($mq-large) { 
+			max-width:30%;
+			top:1em;
+			left:1em;
+			padding:1em;
+		}
+		@include media-query($mq-xlarge) { 
+			max-width:27.5%;
+		}
+	}
+	h2,p {
+		margin:0;
+	}
+	h2 {
+		color:#b96853;
+		font-size:1.25em;
+		@include media-query($mq-small + 10) { 
+			font-size:1.5em;
+		}
+		@include media-query($mq-medium) { 
+			font-size:1.875em;
+		}
+		@include media-query($mq-large) { 
+			font-size:2.25em;
+		}
+		@include media-query($mq-xlarge) { 
+			font-size:2.5em;
+		}
+	}
+	p {
+		color:#341b1f;
+		font-size:.75em;
+		font-weight:bold;
+		@include media-query($mq-small + 10) { 
+			font-size:.875em;
+		}
+		@include media-query($mq-medium) { 
+			font-size:1em;
+		}
+		@include media-query($mq-medium + 10) { 
+			font-size:1.125em;
+		}
+		@include media-query($mq-large) { 
+			font-size:1.125em;
+		}
+		@include media-query($mq-xlarge) { 
+			font-size:1.25em;
+		}
+	}
+}
+
+
+/*.bundle-deals__s6--nyr {
+	background:url(/assets/samsung/img/bundle-deals/s6/nyr-s6-bundle-bg.png) no-repeat 0 0;
+}*/
+
+
+//Bundle creator
+.bd-s6-bundles {
+	@extend %sharp-sans;  //use new font
+	padding-bottom:30px;
+	&__main-title {
+		font-size:1.25em;
+		font-weight:bold;
+		padding:12px 0;
+		margin-top:0;
+		@include media-query($mq-medium) { 
+			font-size:2.25em;
+		}
+		@include media-query($mq-large) { 
+			padding:32px 0 24px;
+			font-size:3em;
+		}
+	}
+	&__section-title { 
+		background:$nyr-lgreen;
+		padding:.5em .5em .33em;
+		text-align:center;
+		margin-top:0;
+		font-size:1em;
+		color:#fff;
+		@include media-query($mq-medium) { 
+			font-size:1.25em;
+		}
+		.bd-s6-bundles__accessories & {
+			margin-top:1.5em;
+		}
+		&.bd-s6-bundles__section-title--s3 {
+			margin-top:1.5em;
+			@include media-query($mq-medium) { 
+				margin-top:0;
+			}
+		}
+	}
+
+	.bd-s6-bundles__accessories {
+		text-align: center;
+	}
+
+	.bd-s6-bundles__accessories,.bd-s6-totals {
+		transition:opacity .25s ease-out;
+	}
+
+	.inactive {
+		opacity:.7;
+		filter: blur(3px) grayscale(50%);
+	    pointer-events: none;
+	}
+}
+
+.bd-s6-bundle {
+	display:inline-block;
+	text-align:center;
+	vertical-align:top;
+	&--device,&--accessory { //joint styles (off/selected stuff)
+		position:relative;
+		padding:10px 5px 5px;
+		cursor: pointer;
+		border:2px solid transparent;
+		border-radius:6px;
+		@include media-query($mq-medium) { 
+			padding:15px 10px 10px;
+		}
+		&:hover {
+			border-color:$nyr-lgreen;
+		}
+		&.selected {
+			box-shadow:0 0 12px rgba(0,0,0,.2);
+			border-color:$nyr-lgreen;
+			filter: grayscale(0);
+			opacity: 1;
+
+			&::after {
+				position:absolute;
+				right:-.2em;
+				bottom:-.4em;
+				margin-left:-75px;
+				content:"✓";
+				width:1.5em;
+				height:1.5em;
+				line-height: 1.75;
+				background:$nyr-lgreen;
+				border-radius:50%;
+				text-align: center;
+				color:#fff;
+				font-weight: 900;
+				font-size:1.5em;
+				box-shadow:0 2px 3px rgba(0,0,0,.2);
+				@include media-query($mq-medium) { 
+					right:-.5em;
+					bottom:-.5em;
+				}
+			}
+		}
+	}
+	&--device {
+		width:100%;	
+		margin-bottom: 10px;
+		@include media-query($mq-medium) { 
+			width:32.8%;
+			margin: 0;	
+		}
+		&-w-charger {
+			background:url(/assets/samsung/img/promotions/christmas/products/bundle-wireless-charger.png) no-repeat 70% 50% / 25%;
+			@include media-query($mq-medium) { 
+				background-position: 98% 50%;
+				background-size:45%;
+			}
+		}
+		&-w-gs2 {
+			background:url(/assets/samsung/img/bundle-deals/products/accessories/bundle-gs2-white.png) no-repeat 70% 50% / 20%;
+			@include media-query($mq-medium) { 
+				background-position: 100% 50%;
+				background-size:40%;
+			}
+			@include media-query($mq-medium + 10) { 
+				background-position: 95% 50%;
+				background-size:auto;		
+			}
+		}
+		&-w-gs2classic {
+			background:url(/assets/samsung/img/bundle-deals/products/accessories/bundle-gs2-classic.png) no-repeat 70% 50% / 20%;
+			@include media-query($mq-medium) { 
+				background-position: 100% 50%;
+				background-size:40%;
+			}
+			@include media-query($mq-medium + 10) { 
+				background-position: 95% 50%;
+				background-size:auto;		
+			}
+		}
+		.bd-s6-bundle__title {		
+			font-size:1em;
+			margin:0 0 .5em; 
+			@include media-query($mq-medium) { 
+				font-size:.875em;
+			}
+			@include media-query($mq-large) { 
+				font-size:1.125em;
+			}
+		}
+		.bd-s6-bundle__img {
+			max-width:40%;
+			margin:0 auto;
+			@include media-query($mq-medium) { 
+				max-width:none;
+			}
+		}
+		
+	}
+	&--accessory {
+		width:100%;
+		margin-bottom: 10px;
+		@include media-query($mq-medium) { 
+			width:19.5%;	
+			margin: 0;
+		}
+		.bd-s6-bundle__img {
+			max-width:30%;
+			margin:0 auto;
+			@include media-query($mq-medium) { 
+				max-width:none;
+			}
+		}
+		&.hide {
+			display:none;
+		}
+	}
+ 	&__title {		
+		text-transform:uppercase;
+		margin:0 0 .25em;
+		font-size:1.125em;
+		.bd-s6-bundle--accessory & {
+			line-height: 1.3;
+			
+			font-size:.875em;
+			@include media-query($mq-medium) { 
+				height: 2.6em;
+			}
+		}
+
+	}
+	&__colour {
+	
+	}
+}
+
+.bd-colour-swatch {
+	padding-top:4px;
+	&__item {
+		position:relative;
+	    display: inline-block;
+	  	height: 25px;
+	   	margin: 8px 6px 4px;
+	    width: 25px;
+	    border:1px solid rgba(127, 127, 127, 0.5);
+		cursor: pointer;
+		@include media-query($mq-medium) { 
+			height: 27px;
+	   		margin: 8px 4px 4px;
+	    	width: 27px;
+		}
+	    &:hover {
+	    	border: 1px solid rgba(127, 127, 127, .8);
+	    }
+	}
+} 
+
+//active tick
+.bd-s6-bundle--device.selected  {
+	.bd-colour-swatch__item.selected {
+		border-color:#fff;
+		border: 1px solid #666; 
+		box-shadow:0 0 4px rgba(0,0,0,.2);
+		&::after {
+			position:absolute;
+			content:"✓";
+			top:-3px;
+			left:50%;
+			margin-left:-8px; 
+			font-size:1.25em;
+			font-weight:bold;
+			color:#000;
+			@include media-query($mq-medium) { 
+				top:-2px;	
+			}
+		}
+	}
+	.bd-colour-swatch__item--dark.selected::after {
+		color:#fff;
+	}
+}
+	
+.bd-s6-totals {
+	padding-left:1em;
+	text-align:left;	
+}
+
+.bd-s6-totals__this-order {
+	position:relative;
+	margin:.5em 0;
+	padding:.5em;
+	border-top:1px solid #333;
+	border-bottom:1px solid #333;
+	font-weight:bold;
+	li {
+		margin:.5em 0;
+	}
+}
+
+.bd-s6-totals_breakdown {
+	font-size:.875em;
+	li {
+		margin:.5em 0;
+	}
+	strong {
+		float:right;
+		margin-right:10px;
+	}
+	&-save {
+		strong {
+			color:$nyr-lgreen;
+		}
+	}
+}
+
+.bd-s6-submit {
+	background:$nyr-lgreen;
+	border:none;
+	margin:20px 0 10px;
+	padding:1em 2em .75em;
+	color:#fff;
+	transition: background .25s ease-out;
+	font-weight:bold;
+	&:hover {
+		background:$nyr-lgreen;
+ 
+	}
+}
+
+.bd-s6-submit-msg.active {
+	margin-top:20px;
+	padding:.5em .5em .33em;
+	font-size:1.125em;
+	border:5px solid $nyr-lgreen;
+	font-weight:bold;
+}
+
+.bd-back-to-deals {
+	a {
+		display:block; 
+		margin:.5em 0;
+		padding:.5em .75em .35em;
+		background:#ddd;
+		color:#fff;
+		font-size:.875em;
+		font-weight: bold;
+		text-decoration:none;
+		transition:background-color .25s ease-in-out;
+		color:#333;
+		@include media-query($mq-medium) {
+			font-size:1em;
+		}
+		&:hover {
+			background-color:$nyr-lgreen;
+			color:#fff;
+		}
+		span {
+			line-height: .5;
+			font-size:1.4em;
+			margin-right:3px;
+		}
+	} 
+}
+
+_:-ms-fullscreen, :root .bd-s6-bundle.selected::after {
+	line-height:1.45;
+}

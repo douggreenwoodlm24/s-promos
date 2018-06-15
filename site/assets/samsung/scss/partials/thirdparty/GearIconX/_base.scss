@@ -1,0 +1,14 @@
+
+@import "_reset"; 
+@import "_fonts"; 
+@import "_style"; 
+@import "_style_m"; 
+
+.lp-iconx {
+    max-width: 1920px;
+    overflow-x: hidden; // fixes issues with horizontal scroll
+}
+
+.header__row--storenav.sticky {
+	z-index:200; // fixes issue with + icons
+}

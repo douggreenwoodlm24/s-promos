@@ -1,0 +1,69 @@
+// ==|== pages > region
+
+@font-face { 
+  font-family: 'SamsungIFRg'; 
+  src: url("../fonts/SamsungIF_Rg.eot"); 
+  src: url("../fonts/SamsungIF_Rg.woff") format("woff"),
+  url("../fonts/SamsungIF_Rg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+	min-width:320px;
+}
+
+img {
+	max-width:100%;
+	height:auto;
+	-ms-interpolation-mode:bicubic;
+	display: inline-block;
+    vertical-align: middle;
+}
+
+.holding {
+	max-width:960px;
+	padding:0 5%;
+	margin:0 auto;
+	font-family:'SamsungIFRg',Arial,sans-serif;
+	line-height:1.5;
+	&__header {
+		margin:10% 0;
+		text-align: center;
+		@include media-query($mq-large) {
+			margin:6.66% 0;
+		}
+		img {
+			width:200px;
+			padding-top:10px;
+			@include media-query($mq-small + 10) {
+				width:50%;
+			}
+		}
+	}
+	&__content {
+		color:#666;
+		@include media-query($mq-large) {
+			font-size:1.125em;
+		}
+		p:first-child {
+			margin-top:0;
+		}
+	}
+}
+
+.footer {
+	margin-top:2em;
+	padding-top:2em;
+	text-align: center;
+	color:#666;
+	border-top:1px solid #eee;
+
+	font-size:.75em;
+	@include media-query($mq-small + 10) {
+		font-size:.875em;
+	}
+	p {
+		margin:0;
+	}
+}  

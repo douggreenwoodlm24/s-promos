@@ -1,0 +1,22 @@
+//colour swatches
+.colour-swatch {
+	&__item {
+	    display: inline-block;
+	    height: 19px;
+	    margin: 2px 2px;
+	    width: 19px;
+	    border:1px solid rgba(0, 0, 0, 0.2);
+		cursor: pointer;
+	    &:hover { border: 1px solid rgba(0, 0, 0, 0.35); }
+	    &.active {
+	    	border-color:#fff;
+	    	outline:2px solid $primary;
+	    	box-shadow:0 0 5px rgba(0,0,0,.3);
+	    }
+	}
+	&--listing {
+		text-align:center;
+		margin:.5em;
+		@include media-query($mq-large) { max-width: 200px; }
+	}
+} 

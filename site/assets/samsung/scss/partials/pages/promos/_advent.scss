@@ -1,0 +1,769 @@
+// Advent styles
+.p-advent {
+	text-align:center;
+	@extend %sharp-sans;  //use new font
+	line-height:1.5;
+	background:url(/assets/samsung/img/promotions/christmas/page-bg.png) repeat-y 50% -350px / contain;
+	@include media-query($mq-large) {
+		background-size:contain;
+	}
+} 
+ 
+ .p-advent__header {
+	padding:2.5% 0 0;
+	&-main {
+		font-size:2em;
+		margin:.25em 0;
+		line-height:1.1;
+		color:#111;
+		@include media-query($mq-medium) {
+			font-size:3em;
+		}
+		@include media-query($mq-large) {
+			font-size:4em;
+		}
+	}
+	&-sub {
+		margin:0 0 1em;
+		font-size:.875em;
+		font-weight:normal;
+		color:#111;
+		@include media-query($mq-medium) {
+			font-size:1em;
+		}
+		@include media-query($mq-large) {
+			font-size:1.25em;
+		}
+		.br {
+			@include media-query($mq-small + 10) {
+				display:block;
+			}
+		}
+	}
+
+ }
+
+ .p-advent__counters {
+ 	&-xmas-count,&-del-count {
+ 		position:relative;
+ 		
+ 		padding:0 1em;
+ 		font-size:.875em;
+ 		font-weight: bold;
+ 		//border:1px solid #f00;
+ 		@include media-query($mq-small + 10) {
+			display:inline-block;
+ 			width:48%;
+ 		}
+		@include media-query($mq-medium) {
+			font-size:1.25em;
+		}
+		@include media-query($mq-large) {
+			font-size:1.5em;
+		}
+ 	}
+ 	&-xmas-count {
+ 		text-align: left;
+ 		@include media-query($mq-small + 10) {
+ 			text-align: right;
+ 		}
+ 		&:after {
+			position:absolute;
+			content: "";
+			right:-5px;
+			top:0;
+			bottom:0;
+			width:1px;
+			background:$xmasgreen;
+ 		}
+ 	}
+ 	&-del-count {
+ 		text-align: right;
+ 		border-top:1px dotted $xmasgreen;
+ 		margin-top:10px;
+ 		padding-top:10px;
+ 		@include media-query($mq-small + 10) {
+ 			text-align: left;
+ 			border:none;
+ 			margin-top:0;
+ 			padding-top:0;
+ 		}
+ 	}
+ 	&-roundel {
+ 		display:inline-block;
+ 		vertical-align: middle;
+		width:2em;
+		height:2em;
+		line-height: 2.2;
+		border-radius:50%;
+		background-color:$xmasgreen;
+		//font-weight:bold;
+		margin:0 .1625em;
+		color:#fff;
+		font-size:1.5em;
+		text-align: center;
+
+	}
+
+ }
+
+
+.p-advent__offer {
+	&-title {
+		font-size:.875em;
+		margin:1em 0;
+		@include media-query($mq-small + 10) {
+			font-size:1.25em;
+		}
+		@include media-query($mq-large) {
+			font-size:1.75em;
+		}
+		strong {
+			display:block;
+			font-size:1.3125em;
+			color:$xmasgreen;
+		}
+	}
+	&-sub-title {
+		//font-size:1.125em;
+		font-size:.875em;
+		@include media-query($mq-medium) {
+			font-size:1em;
+		}
+		margin:0;
+		.price {
+			display:block;
+			margin-top:.25em;
+			font-size:1.25em;
+			@include media-query($mq-large) {
+				font-size:1.5em;
+			}
+		}
+	}
+	.t-highlight {
+		color:$xmasgreen;
+	}
+	&-image {
+		position:relative;
+		margin:2em 10px;
+		a:hover {
+			.p-advent__offer-button {
+				background-color:darken($xmasgreen,5%);
+				&-inner {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	&-hero-img {
+		&--tall {
+			max-height:300px;
+			@include media-query($mq-small + 5) {
+				max-height:400px;
+			}
+			@include media-query($mq-small + 15) {
+				max-height:500px;
+			}
+			@include media-query($mq-large) {
+				max-height:none;
+			}
+		}
+	}
+	&-roundel {
+		position:absolute;
+		top:-20px;
+		left:-10px;
+		width:100px;
+		height:100px;
+		//margin-left:-150px;
+		border-radius:50%;
+		//background-color:$xmasgreen;
+		font-weight:bold;
+		color:#fff;
+		display:table;
+		box-shadow:2px 2px 4px rgba(0,0,0,.1);
+		background:$xmasgreen url(/assets/samsung/img/promotions/christmas/sf-small-w-fade-bg.png) no-repeat 50% 50% / contain;
+		strong {
+			display:block;
+			font-size:1.75em;
+		}
+		@include media-query($mq-medium) {
+			top:10px;
+			width:125px;
+			height:125px;
+			left:50%;
+			margin-left:-320px;
+		}
+		&--hero {
+			top:0;
+			left:20px;
+			@include media-query($mq-medium) {
+				top:10px;
+				left:50%;
+				margin-left:-250px;
+			}
+		}
+		&-inner {
+			display:table-cell;
+			padding:.5em .25em 0;
+			line-height: 1.2;
+			vertical-align: middle;
+			font-size:1.125em;
+			@include media-query($mq-medium) {
+				font-size:1.5em;
+			}
+		}
+	}
+
+	&-button {
+		margin:20px 0 10px;
+		//padding:1em 2em;
+		
+		color:#fff;
+		line-height: 0;
+		font-weight: bold;
+		transition: background-color .25s ease-in-out;
+		@include media-query($mq-large) {
+			position:absolute;
+			top:40%;
+			right:10%;
+			margin: 0;
+			font-size:1.25em;
+		}
+		&--higher {
+			@include media-query($mq-large) {
+				top:27.5%;
+			}
+		}
+		&--nudgedown {
+			@include media-query($mq-large) {
+				margin-top:35px;
+			}
+		}
+		&-inner {
+			display:inline-block;
+			padding-top:.33em;
+			padding:1.5em 2em;
+			background-color:$xmasgreen;
+			.arrow {
+				display:inline-block;
+				vertical-align: middle;
+				font-style: normal;
+				font-size:2em;
+				font-weight: normal;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		a {
+			display:block;
+			color:#fff;
+			
+			
+			&:hover {
+				background-color:darken($xmasgreen,5%);
+				
+			}
+		}
+	}
+
+	&-view-terms {
+		background: $xmasgreen;
+		font-weight: bold;
+		color:#fff;
+		font-size:.875em;
+		padding:.5em;
+		margin:1em 0;
+		cursor: pointer;
+		transition: background-color .25s ease-in-out;
+		@include media-query($mq-large) {
+			font-size:1em;
+		}
+		&:hover {
+			background-color:darken($xmasgreen,5%);
+			text-decoration: underline;
+		}
+	}
+
+	&-terms {
+		margin:0 auto;
+		border-top:2px solid $xmasgreen;
+		//border-bottom:2px solid $xmasgreen;
+		padding:1em 2em;
+		font-size:.625em;
+		font-weight:500;
+		color:#666;
+		&--collapse {
+			display:none;
+		}
+		@include media-query($mq-medium) {
+			//width:80%;
+			padding:1em 4em;
+			font-size:.8125em;
+		}
+		a {
+			color:$xmasgreen;
+			font-weight:bold;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		strong {
+			//font-weight:500;
+			color:#000;
+		}
+		li {
+			margin:.5em 0;
+		}
+	}
+	 
+}
+
+//multiple products
+.p-advent__product {
+	position:relative;
+	display:table;
+	width:100%;
+	padding-bottom:5px;
+	margin-bottom:5px;
+	border-bottom:1px dotted #999;
+
+	&-td {
+		display:table-cell;
+		vertical-align: top;
+		padding:.5em;
+		font-size:.75em;
+		@include media-query($mq-small + 10) {
+			font-size:.875em;
+		}
+		&:first-child {
+			width: 60px;
+			padding:0; 
+			@include media-query($mq-medium) {
+				width: 150px;
+			}
+		}
+		&:last-child {
+			width:120px;
+			@include media-query($mq-small + 10) {
+				width: 150px;
+			}
+			padding-bottom:0;
+		}
+	}
+	&-img {
+		img {
+			max-width:60px;
+			@include media-query($mq-medium) {
+				max-width: 125px;
+			}
+		}
+	}
+	&-title,&-rrp,&-inline-save {
+		text-align: left;
+		font-weight: bold;
+	}
+	&-title {
+			
+	}
+	&-rrp {
+		margin-top:.5em;
+		color:#999;
+	}
+	&-inline-save {
+		margin-top:.25em;
+		color:$xmasgreen;
+	}
+	&-price,&-save,&-buy {
+		padding:.5em;
+		//font-size:.875em;
+		margin-bottom:.5em;
+		color:#fff;
+		font-weight: bold;
+	}
+	&-price {
+		background:#999;
+	}
+	&-save {
+		background:$xmasgreen;
+	}
+	&-buy {
+		padding:0;
+		background:$primary;
+		a {
+			display:block;
+			padding:.5em;
+			color:#fff;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		.arrow {
+			display:inline-block;
+			vertical-align: middle;
+			font-style: normal;
+			font-size:2em;
+			line-height: 0;
+			font-weight: normal;
+		}
+	}
+	&--outofstock {
+
+		opacity:.5;
+		.p-advent__product-buy {
+			display:none;
+		}
+		&:before {
+			position:absolute;
+			top:0;
+			left:50%;
+			width:200px;
+			padding:.5em .5em .4em;
+			margin:0 10%;
+			content:"SOLD OUT";
+			line-height:1;
+			margin:20px 0 0 -100px;
+			text-align: center;
+			color:#444;
+			border:.15em solid #444;
+			border-radius:6px;
+			transform:rotate(-12deg);
+			font-size:1.5em;
+			font-weight: bold;
+			//margin-top:-110px;
+			white-space: nowrap;
+			background:#fff;
+			opacity:.85;
+			@include media-query($mq-large) { 
+				font-size:24px;
+				margin:28px 0 0 -100px;
+				border-radius:12px;
+			}
+		} 
+	}
+}
+
+
+
+//CS icons
+.p-advent__cs {
+	margin-bottom:2em;
+}
+.promo-xmas-why {
+	margin:0 auto;
+	border-top:2px solid $xmasgreen;
+	border-bottom:2px solid $xmasgreen;
+	padding:1em 0;
+	font-size:.75em;
+	
+	@include media-query($mq-medium) { 
+		margin:0;
+		//padding:.75em 0;
+		//max-width:80%;
+		margin:0 auto;
+		font-size:.875em;
+	}
+	a {
+		color:$xmasgreen;
+		font-weight:bold;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	li {
+		display: table;
+		@include media-query($mq-small + 10) { 
+			float:left;
+		
+			width:50%;
+		}
+		@include media-query($mq-large) { 
+			padding-right:1%;
+			width:25%;
+		}
+	}
+	.td {
+		display:table-cell;
+		height:60px;
+		text-align: left;
+		vertical-align: middle;
+		padding:0 .5em;
+		@include media-query($mq-medium) { 
+			display:block;					
+			text-align: center;	
+			padding:.75em 0;
+			height:auto;
+			&:first-child {
+				padding-bottom:0;
+			}
+		}
+		@include media-query($mq-medium) { 
+			display:table-cell;
+			height:60px;
+			padding:0 .5em;
+			text-align: left;
+		}
+	}
+	.icon {
+		display:block;
+		width:32px;
+		height:32px;
+		background:#333;
+		//opacity:.8;
+		margin:0 auto;
+		@include media-query($mq-medium) { 
+			width:40px;
+			height:40px;
+
+		}
+		@include media-query($mq-medium + 10) { 
+			width:50px;
+			height:50px;
+		}
+		&--register {
+			background:url(/assets/samsung/img/promotions/christmas/register-icon.png) no-repeat 50% 50% / cover;
+		}
+		&--freedel {
+			background:url(/assets/samsung/img/promotions/christmas/del-icon.png) no-repeat 50% 50% / cover;
+		}
+		&--support {
+			background:url(/assets/samsung/img/promotions/christmas/support-icon.png) no-repeat 50% 50% / cover; 
+		}
+		&--gifts {
+			background:url(/assets/samsung/img/promotions/christmas/present-icon.png) no-repeat 50% 50% / cover; 
+		}
+	}
+
+}
+
+
+.p-advent__upcoming {
+	margin-bottom:20px;
+	&-item {
+		position:relative;
+		float:left;
+		width:49%;
+		margin:0 .5% 10px;
+		//height:150px;
+		border:1px solid $xmasgreen;
+		border:1px solid rgba($xmasgreen,.2);
+		//background:#fff url(/assets/samsung/img/promotions/christmas/sf-small-bg.png) no-repeat 50% 5px;
+		//opacity:.66;
+		background-color:#fff;
+		background-color:rgba(255,255,255,.75);
+		@include media-query($mq-medium) { 
+			width:32.33%;
+			//height:200px;
+		}
+
+		@include media-query($mq-large) { 
+			width:24%;
+		}
+		&--past,&--current {		
+			background:$xmasgreen;
+			opacity:1;
+			.p-advent__upcoming-date {
+				opacity:.8;
+				box-shadow:none;
+				text-shadow:0 0 8px rgba($xmasgreen,1);
+			}
+			&---1 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/1.jpg) no-repeat 50% 50% / 90%;
+				}
+			}
+			&---2 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/2.jpg) no-repeat 50% 50% / 80%;
+				}
+			}
+			&---3 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/3.jpg) no-repeat 50% 50% / 100%;
+				}
+			}
+			&---4 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/4.jpg) no-repeat 50% 50% / 90%;
+				}
+			}
+			&---5 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/5.jpg) no-repeat 50% 50% / 90%;
+				}
+			}
+			&---6 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/6.jpg) no-repeat 50% 50% / 90%;
+				}
+			}
+			&---7 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/7.jpg) no-repeat 50% 50% / 100%;
+				}
+			}
+			&---8 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/8.jpg) no-repeat 50% 50% / 100%;
+				}
+			}
+			&---9 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/9.jpg) no-repeat 50% 50% / 100%;
+				}
+			}
+			&---10 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/10.jpg) no-repeat 50% 50% / 102%;
+				}
+			}
+			&---11 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/11.jpg) no-repeat 50% 50% / 100%;
+				}
+			}
+			&---12 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/12.jpg) no-repeat 50% 50% / 100%;
+				}
+			}
+			&---13 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/13.jpg) no-repeat 50% 50% / 100%;
+				}
+			}
+			&---14 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/14.jpg) no-repeat 50% 50% / 100%;
+				}
+			}
+			&---15 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/15.jpg) no-repeat 50% 50% / 100%;
+				}
+			}
+			&---16 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/16.jpg) no-repeat 50% 50% / 90%;
+				}
+			}
+			&---17 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/17.jpg) no-repeat 50% 50% / 100%;
+				}
+			}
+			&---18 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/18.jpg) no-repeat 50% 50% / 120%;
+				}
+			}
+			&---19 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/19.jpg) no-repeat 50% 50% / 100%;
+				}
+			}
+			&---20 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/20.jpg) no-repeat 50% 50% / 102%;
+				}
+			}
+			&---21 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/21.jpg) no-repeat 50% 50% / 100%;
+				}
+			}
+			&---22 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/22.jpg) no-repeat 50% 50% / 100%;
+				}
+			}
+			&---23 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/23.jpg) no-repeat 50% 50% / 103%;
+				}
+			}
+			&---24 {
+				.p-advent__upcoming-date {
+					background:#fff url(/assets/samsung/img/promotions/christmas/products/thb/23.jpg) no-repeat 50% 50% / 103%;
+				}
+			}
+		}
+		&--current {
+			//opacity:1;
+			//border:1px solid rgba($xmasgreen,.6);
+			/*.p-advent__upcoming-date {
+				opacity:1;
+				text-shadow:0 0 8px rgba(0,0,0,.66);
+			}*/
+		} 
+		.p-advent__upcoming-link & {
+			&:hover {
+				.p-advent__upcoming-date {
+					opacity:1;
+					text-shadow:0 0 8px rgba(0,0,0,.66);
+				}
+				.p-advent__upcoming-cta {
+					opacity:1;
+				}	
+			}
+		}
+
+	}
+	&-date {
+		//position:absolute;
+		display:inline-block;
+		top:0;
+		left:50%;
+		width:100px;
+		height:100px;
+		line-height: 104px;
+		//margin-left:-150px;
+		border-radius:50%;
+		//background-color:$xmasgreen;
+		background:$xmasgreen url(/assets/samsung/img/promotions/christmas/sf-small-w-fade-bg.png) no-repeat 50% 50% / contain;
+		font-weight:bold;
+		font-size:2em;
+		color:#fff;
+		box-shadow:2px 2px 4px rgba(0,0,0,.1);
+		margin:20px;
+		@include media-query($mq-medium) {
+			top:10px;
+			width:150px;
+			height:150px;
+			line-height: 154px;
+			font-size:3em;
+		}
+	}
+	&-cta {
+		position:absolute;
+		left:0;
+		bottom:0;
+		width:100%;
+		color:#fff;
+		font-weight:bold;
+		background:$xmasgreen;
+		opacity:.8;
+		padding:.5em;
+		border-top:1px solid #fff;
+		transition: opacity .25s ease-in-out;
+		font-size:.75em;
+		@include media-query($mq-small + 10) {
+			font-size:.875em;
+		}
+		@include media-query($mq-medium) {
+			font-size:1em;
+		}
+		.arrow {
+			display:inline-block;
+			vertical-align: middle;
+			font-style: normal;
+			font-size:2em;
+			line-height: 0;
+			font-weight: normal;
+		}
+	}
+}
+
+

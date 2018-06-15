@@ -1,0 +1,166 @@
+.sup2-container.samsung-note7-insurance-container {
+  .sup2 {
+    
+    h3 {
+      font-size: 2.75em; //45px
+    }
+    p {
+      color: #7f7c7c;
+      font-size: 1.5em; // 24px
+    }
+    .sup2-light-gray-title {
+      color: #00b3e3;
+    }
+    
+    .sup2-intro {
+      padding: 1em 2em;
+    }
+    
+    .insurance-bullet-arrow {
+      li {
+        @extend p;
+        background: transparent url('../img/landing/insurance/insurance-bullet-arrow.png') no-repeat;
+        background-position:0px 2px;
+        list-style-type: none;
+        padding: 0 0 1em 1.5em;
+        @include media-query($mq-fullheader) {
+           
+       }
+      }
+    }
+    
+    .list-white-disc2 li {
+      color: #fff !important;
+      font-size: 1.5em; // 24px
+      background: transparent url('../img/landing/insurance/insurance_disc.png') no-repeat;
+        background-position:0px 16px;
+        list-style-type: none;
+        padding: 1em 0 1em 60px;
+        border-bottom: 0px solid #fff;
+    }
+    
+    
+    
+    &-hero{
+      background-color: #000;
+      background-size: 400px;
+      background-repeat: no-repeat;
+      height: 400px;
+      background-position: right 50% top -200px;
+      background-position-x: 30px;
+      background-position-y: -170px;
+      background-image: url("../img/landing/insurance/insurance-hero-mobile.png");
+        @include media-query($mq-fullheader) {
+           background-size: 800px;
+            background-position: right 10% top 0;
+            background-position-x: 80%;
+      background-position-y: 0%;
+       }
+       @include media-query($mq-fullheader) {
+           //background-size: 800px;
+            background-position: right 10% top -150px;
+       }
+      .sup2-hero-info {
+        margin-top: 14em;
+        text-align: center;
+        @include media-query($mq-fullheader) {
+            margin-top: 7em;
+           text-align: left;
+       }
+        img {
+          margin: 0 auto;
+          @include media-query($mq-fullheader) {
+
+       }
+      }
+      }
+    }
+    
+    .sup2-bg-blue {
+      //min-height: 700px;
+      p {
+        color: #fff;
+      }
+      .sup2-cta {
+        margin: 100px auto;
+      }
+    }
+    
+    
+    
+    .sup2-light-gray, .sup2-bg-dk-blue {
+      padding-top: 1em;
+    }
+    
+    img.float-right {
+      float: right;
+    }
+    
+    .general-info {
+      padding: 1em 2em;
+      h3 {
+        color: #7f7c7c;
+      }
+    }
+    
+  }
+  
+/* ACCORDIONS /start */
+ /* Style the buttons that are used to open and close the accordion panel */
+.f-accordion {
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    padding-left: 52px;
+    
+}
+
+.f-accordion-plus-minus {
+  background: transparent url('../img/landing/insurance/insurance_btn_plus.png') no-repeat left top 10px;
+  p {
+      color: #FFF;
+      margin: 0 0 6px 6px;
+    }
+}
+
+.f-accordion-plus-minus.active {
+  background: transparent url('../img/landing/insurance/insurance_btn_minus.png') no-repeat left top 10px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.f-accordion.active, .f-accordion:hover {
+    //background-color: #ddd;
+    
+}
+
+/* Style the accordion panel. Note: hidden by default */
+div.f-panel {
+    padding: 0 18px;
+    //background-color: white;
+    display: none;
+}
+
+/* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
+div.f-panel.show {
+    display: block !important;
+}
+
+.f-accordion:before {
+    //background: transparent url('../img/landing/insurance/insurance_btn_plus.png') no-repeat;
+    font-size: 13px;
+    color: #333;
+    float: right;
+    margin-left: 5px;
+}
+
+.f-accordion.active:before {
+    //background: transparent url('../img/landing/insurance/insurance_btn_minus.png') no-repeat;
+}
+
+/* ACCORDIONS /end */
+  
+  
+}

@@ -1,0 +1,42 @@
+
+
+.listing__product-energy-rating {
+	font-size:.875em;
+	@include media-query($mq-medium) {
+		font-size:1em;
+	}
+	&-badge {
+		display: block;
+		position:relative;
+		width:5em;
+		margin:10px auto 0;
+		padding:.5em 1.25em .5em .75em;
+		color:#fff;
+		font-weight:bold;
+		line-height:1;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+		&::after {
+			position:absolute;
+			content:"";
+			top:0;
+			right:0;
+			border-top: 1em solid #fff;
+			border-bottom: 1em solid #fff;
+			border-left: 1em solid transparent;
+		}
+	}
+	&-link {
+		display:block;
+		font-size:.875em;
+		margin-top:.25em;
+		color:#333;
+		text-decoration: none;
+		&:hover {
+			color:$skyblue;
+			text-decoration: underline;
+		}
+	}
+}

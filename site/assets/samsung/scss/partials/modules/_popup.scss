@@ -1,0 +1,535 @@
+// ==|== modules > popup
+
+
+.lightbox-skrim {
+    background: #000 none repeat scroll 0 0;
+    height: 100%;
+    left: 0;
+    opacity: 0.66;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1021;
+}
+
+
+
+#sign_wrap img {
+    vertical-align: middle;
+}
+#sign_wrap legend, hr {
+    display: none;
+}
+#sign_wrap legend {
+    display: block;
+    font-size: 0;
+    height: 0;
+    left: 0;
+    line-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: 0;
+}
+#sign_wrap input, select, textarea {
+    color: #707070;
+    font-size: 100%;
+}
+#sign_wrap button {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+     width:21px;
+    height:21px;
+    background: url(../img/core/layer-ir.png) no-repeat 0 0;
+}
+#sign_wrap caption {
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+    text-indent: -1000px;
+    width: 0;
+}
+#sign_wrap .layer_popup a, .layer_popup a:link, .layer_popup a:visited {
+    text-decoration: none;
+}
+#sign_wrap a:hover, a:active {
+    text-decoration: none;
+}
+#sign_wrap a:focus {
+    text-decoration: none;
+}
+#sign_wrap * {
+    font-weight: normal;
+}
+#sign_wrap input[readonly="readonly"] {
+    color: #999;
+    cursor: default;
+}
+#sign_wrap .layer_popup {
+    color: #747474;
+    font-size: 0.75em;
+}
+#sign_wrap .mgt5 {
+    margin-top: 5px !important;
+}
+#sign_wrap .mgt10 {
+    margin-top: 10px !important;
+}
+#sign_wrap .mgt15 {
+    margin-top: 15px !important;
+}
+#sign_wrap .ac {
+    text-align: center !important;
+}
+#sign_wrap .al {
+    text-align: left !important;
+}
+html.ltr .ss_samsung .sign-inner-wrap input[type="checkbox"] {
+    left: -9999em;
+    position: absolute;
+}
+html.ltr .ss_samsung .sign-inner-wrap input[type="checkbox"] + label {
+    float: left;
+}
+.ss_samsung .sign-inner-wrap input[type="checkbox"] + label {
+    clear: none;
+    cursor: pointer;
+    line-height: 20px !important;
+}
+html.ltr .ss_samsung .sign-inner-wrap input[type="checkbox"] + label::before, html.ltr .ss_samsung .sign-inner-wrap .input .placeholder[type="checkbox"] + label::before {
+    float: left;
+}
+html.ltr .ss_samsung .sign-inner-wrap input[type="checkbox"] + label::before {
+    margin-right: 10px;
+}
+.ss_samsung .sign-inner-wrap input[type="checkbox"] + label::before {
+    background: #a6a8aa none repeat scroll 0 0;
+    content: "";
+    height: 20px !important;
+    width: 20px !important;
+}
+.ss_samsung .sign-inner-wrap input[type="checkbox"]:checked + label::before {
+    background: #0071bf none repeat scroll 0 0;
+    color: #fff;
+    content: "";
+    display: inline-block;
+    font-family: "samsungIcon";
+    font-size: 1rem;
+    line-height: 26px;
+    text-align: center;
+    vertical-align: middle;
+}
+.ss_samsung form:not(#foo) > fieldset input[type="checkbox"]:checked + label::before {
+    font-size: 0.8em;
+}
+.layer_popup {
+    //display: none;
+    z-index: 9990;
+}
+.layer_popup + .lightbox-skrim {
+    display: none;
+    z-index: 8999;
+}
+.ss_samsung #sign_wrap .input {
+    padding: 0;
+}
+.layer_popup #popup_signin_all .sign-inner-wrap .popup_cont .sign_content .signin .member_wrap .email .remember_email_check .jqTransformCheckboxWrapper .jqTransformCheckbox, .layer_popup #popup_sign .popup_cont .member_wrap .email .remember_email_check .jqTransformCheckboxWrapper .jqTransformCheckbox {
+    background: rgba(0, 0, 0, 0) url("http://store.samsung.com/_ui/desktop/common/images/form/bg_checkbox.gif") no-repeat scroll 0 0;
+    display: inline-block;
+    height: 16px;
+    text-indent: -2000px;
+    width: 16px;
+}
+.layer_popup #popup_signin_all .popup_cont .order_num .input .input_wrap input {
+    height: 18px;
+    margin-top: 3px;
+    padding: 3px 0 0 10px;
+    width: 420px;
+}
+#popup_sign {
+    display: block;
+    position: absolute;
+    z-index: 9999;
+}
+.ss_samsung button.btnType01 {
+    background: #f1f2f4 none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 15px 10px;
+    padding: 10px;
+}
+.ss_samsung .error, .ss_samsung p.error {
+    font-size: 1.12em;
+    margin-bottom: 0;
+}
+.ss_samsung #sign_wrap .input input, .ss_samsung #sign_wrap .input .placeholder {
+    font-size: 16px;
+}
+#sign_wrap .jqTransformHidden {
+    display: none;
+}
+#sign_wrap .jqTransformInputWrapper {
+    background: #f1f1f1 none repeat scroll 0 0 !important;
+    height: 20px;
+}
+.layer_popup sup {
+    color: #c13b00;
+    padding-left: 3px;
+    vertical-align: top;
+}
+.ss_samsung.sign #content {
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+@media (max-width: 768px) {
+.ss_samsung.sign #content {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+}
+.layer_popup .sign-inner-wrap {
+    padding: 30px 20px 0;
+    position: relative;
+}
+.layer_popup .sign-inner-wrap .popup_title {
+    color: #333;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 20px;
+}
+.layer_popup .sign-inner-wrap .close {
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.layer_popup .sign-inner-wrap .close-button {
+    color: #292929;
+    font-size: 28px;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+
+}
+@media (min-width: 48em) {
+.layer_popup .sign-inner-wrap .close-button {
+    font-size: 28px;
+    right: 30px;
+    top: 30px;
+}
+}
+.layer_popup #sign_wrap {
+    color: #292929;
+    position: absolute;
+    width: 95%;
+    z-index: 9000;
+}
+@media (min-width: 48em) {
+.layer_popup #sign_wrap {
+    position: absolute;
+    width: 500px;
+}
+}
+#sign_wrap {
+    font-family: "SamsungIFRg";
+    overflow: hidden;
+}
+@media (min-width: 768px) and (max-width: 960px) {
+#sign_wrap {
+    border: 1px solid #e2e2e2;
+    margin: 0 50px;
+}
+}
+@media (min-width: 961px) {
+#sign_wrap {
+    border: 1px solid #e2e2e2;
+    font-family: "SamsungIFRg";
+    margin: 0 auto;
+    width: 960px;
+}
+}
+#sign_wrap .sign-inner-wrap {
+    background: #fff none repeat scroll 0 0;
+    padding: 30px;
+    position: relative;
+}
+@media (min-width: 48em) {
+#sign_wrap .sign-inner-wrap {
+    padding: 30px;
+}
+}
+#sign_wrap .sign-inner-wrap .title {
+    background: #fff none repeat scroll 0 0;
+    color: #000;
+    font-size: 22px;
+}
+@media (min-width: 48em) {
+#sign_wrap .sign-inner-wrap .title {
+    font-family: "SamsungIFRg";
+    font-size: 32px;
+    font-weight: bold;
+}
+}
+#sign_wrap .popup_cont .sub-tit {
+    font-family: "SamsungIFRg";
+    font-size: 16px;
+    margin: 25px 0 15px;
+    font-weight: bold;
+}
+@media (min-width: 48em) {
+#sign_wrap .popup_cont .sub-tit {
+    font-size: 22px;
+    margin: 35px 0 25px;
+}
+}
+#sign_wrap .input-wrap {
+    clear: both;
+}
+#sign_wrap .input-wrap label {
+    color: #000;
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+#sign_wrap .input-wrap label sup {
+    color: #d64100;
+}
+@media (min-width: 48em) {
+#sign_wrap .input-wrap label {
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+}
+#sign_wrap .input-wrap .input {
+    margin-bottom: 5px;
+}
+#sign_wrap .input-wrap .input input {
+    margin: 0;
+    padding: 3px 5px 4px !important;
+    width: 98%;
+}
+#sign_wrap .chk {
+    overflow: hidden;
+    position: relative;
+}
+#sign_wrap .chk label {
+    font-family: "SamsungIFRg";
+    font-size: 12px;
+}
+@media (min-width: 48em) {
+#sign_wrap .chk label {
+    font-size: 14px;
+}
+}
+#sign_wrap .sign-link a {
+    color: #0071bf !important;
+    font-family: "SamsungIFRg";
+    font-size: 12px !important;
+}
+@media (min-width: 48em) {
+#sign_wrap .sign-link a {
+    font-size: 15px !important;
+}
+}
+#sign_wrap .btn-wrap {
+    margin-top: 25px;
+}
+@media (min-width: 48em) {
+#sign_wrap .btn-wrap {
+    margin-top: 40px;
+}
+}
+#sign_wrap .btn-wrap .button {
+    font-size: 14px;
+    padding: 12px 40px;
+}
+@media (min-width: 48em) {
+#sign_wrap .btn-wrap .button {
+    font-size: 16px;
+    padding: 14px 60px;
+}
+}
+#sign_wrap .btn-wrap p {
+    font-size: 15px !important;
+    margin-top: 10px;
+}
+#sign_wrap .btn-wrap p a {
+    color: #0071bf !important;
+    font-family: "SamsungIFRg";
+}
+@media (min-width: 48em) {
+#sign_wrap .btn-wrap p, #sign_wrap .btn-wrap p a {
+    font-size: 15px;
+}
+}
+#sign_wrap .connect_wrap {
+    border-top: 1px solid #d2d2d2;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+@media (min-width: 48em) {
+#sign_wrap .connect_wrap {
+    margin-top: 20px;
+    padding-top: 15px;
+}
+}
+#sign_wrap .connect_wrap .connet-tit {
+    font-family: "SamsungIFRg";
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+@media (min-width: 48em) {
+#sign_wrap .connect_wrap .connet-tit {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+}
+@media (max-width: 48em) {
+#sign_wrap .sns-wrap {
+    text-align: center;
+}
+#sign_wrap .sns-wrap a img {
+    height: 48px;
+}
+}
+@media (max-width: 22.5em) {
+#sign_wrap .sns-wrap a img {
+    height: 40px;
+}
+}
+@media (max-width: 320px) {
+#sign_wrap .sns-wrap a img {
+    height: 34px;
+}
+}
+#sign_wrap .sns-wrap a + a {
+    margin-left: 4px;
+}
+#sign_wrap .sns-wrap .ico-desctop {
+    display: none;
+}
+@media (min-width: 48em) {
+#sign_wrap .sns-wrap .ico-mobile {
+    display: none;
+}
+#sign_wrap .sns-wrap .ico-desctop {
+    display: block;
+}
+}
+#sign_wrap .sign-inner-wrap .error {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+@media (min-width: 1920px) {
+.layer_popup #sign_wrap {
+    left: 50% !important;
+    margin: 0 0 0 -250px;
+    position: absolute;
+    width: 500px;
+}
+}
+#sign_wrap .sign-inner-wrap .sign-cont {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+#sign_wrap .sign-inner-wrap .sign-cont::after {
+    clear: both;
+    content: " ";
+    display: block;
+}
+#sign_wrap .sign-inner-wrap .sign-cont .left-group {
+    width: 100%;
+}
+#sign_wrap .sign-inner-wrap .sign-cont .right-group {
+    width: 100%;
+}
+@media (min-width: 640px) {
+#sign_wrap .sign-inner-wrap .sign-cont .left-group {
+    float: left;
+    width: 50%;
+}
+#sign_wrap .sign-inner-wrap .sign-cont .right-group {
+    float: right;
+    width: 50%;
+}
+}
+#sign_wrap .sign-inner-wrap .sign-cont .sub-tit {
+    color: #000;
+    font-family: "SamsungIFRg";
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+@media (min-width: 960px) {
+#sign_wrap .sign-inner-wrap .sign-cont .sub-tit {
+    font-size: 22px;
+}
+}
+#sign_wrap .sign-inner-wrap .sign-cont .btn-guest {
+    background: #e2e2e2 none repeat scroll 0 0;
+    color: #292929;
+    font-size: 14px;
+    min-width: 220px;
+}
+@media (min-width: 960px) {
+#sign_wrap .sign-inner-wrap .sign-cont .btn-guest {
+    font-size: 18px;
+    min-width: 280px;
+}
+}
+@media (max-width: 640px) {
+#sign_wrap .sign-inner-wrap .sign-cont .right-group .guset-section {
+    margin-top: 20px;
+}
+}
+#sign_wrap .sign-inner-wrap .sign-cont .right-group .guset-section .title {
+    font-family: Arial;
+    font-size: 18px;
+}
+#sign_wrap .sign-inner-wrap .sign-cont .right-group .guset-section .sign-link {
+    margin-top: 20px;
+}
+@media (min-width: 640px) and (max-width: 768px) {
+#sign_wrap .sign-inner-wrap .sign-cont .left-group .input-wrap .input {
+    width: 270px;
+}
+#sign_wrap .sign-inner-wrap .sign-cont .right-group .guset-section {
+    padding: 0 0 0 45px;
+}
+}
+@media (min-width: 768px) {
+#sign_wrap .sign-inner-wrap .sign-cont .left-group .input-wrap .input {
+    width: 280px;
+}
+#sign_wrap .sign-inner-wrap .sign-cont .right-group .guset-section {
+    padding: 0 0 0 45px;
+}
+#sign_wrap .sign-inner-wrap .sign-cont .right-group .guset-section .sign-link {
+    margin-top: 160px;
+    text-align: right;
+}
+}
+@media (min-width: 960px) {
+#sign_wrap .sign-inner-wrap .sign-cont .left-group .input-wrap .input {
+    width: 370px;
+}
+#sign_wrap .sign-inner-wrap .sign-cont .right-group .guset-section {
+    padding: 0 0 0 85px;
+}
+}
+
+
+
+
+#sign_wrap {
+    top:50px !important;
+    left:2.5% !important;
+    min-width: 300px;
+    @include media-query($mq-medium) {
+        top:80px !important;
+        width:500px !important;
+        left:50% !important;
+        margin-left:-250px !important;
+    }
+}

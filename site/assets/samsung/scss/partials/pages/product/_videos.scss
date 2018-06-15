@@ -1,0 +1,82 @@
+//videos
+
+
+
+.product__videos {
+
+	@include media-query($mq-medium) {
+		text-align:center;
+	}
+}
+
+.product__video-item {
+	clear:left;
+	margin-bottom:5px;
+	height:50px;
+	border-bottom:1px dotted #ddd;
+	@include media-query($mq-medium) {
+		display:inline-block;
+		width: 48%;
+		margin: 0 1% 20px;
+		vertical-align:top;
+		height:auto;
+		border-bottom:none;
+		text-align: center;
+	}
+	
+	@include media-query($mq-large) {
+		width: 31.333%;
+	}
+	
+	
+}
+
+.product__video-link {
+	text-decoration:none;
+	color:#222;
+	&:hover {
+		text-decoration: underline;
+		.product__video-title {
+			color:$primary;
+		}
+		.product__video-image {
+			border-color:$primary;
+		}
+	}
+}
+
+.product__video-image {
+	float:left;
+	width:80px;
+	margin-right:6px;
+	@include media-query($mq-medium) {
+		float:none;
+		width: 100%;
+		padding:2px;
+		border:1px solid #ccc;
+		border-radius:3px;
+		box-shadow:0 0 6px rgba(0,0,0,.1);
+	}
+	
+	
+}
+
+
+.product__video-title {
+	vertical-align:middle;
+	margin-top:2px;
+	line-height:1.2;
+	color:#222;
+	font-size:.875rem;
+	font-weight:bold;
+	max-height: 2.4em;
+	overflow:hidden;
+	@include media-query($mq-medium) {
+		height: 2.4em;
+	}
+	@include media-query($mq-large) {
+		height:auto;
+		max-height: 3.6em;
+	}
+
+}

@@ -1,0 +1,199 @@
+//confirmation stage styling
+.bconfig__confirm {
+	text-align:center;
+	&-item {
+		margin-bottom:20px;
+		//width:48%;
+		@include media-query($mq-large) {
+			//width:48%;
+			margin:0 .5% 20px;
+			display:inline-block;
+			vertical-align: top;
+			&--payment {
+				width:32%;
+			}
+			&--sim {
+				width:32%;
+				//text-align: left;
+			}
+			&--accessories {
+				width:32%;
+			}
+		}
+	}
+	&-header {
+		position:relative;
+		padding:.66em .5em .5em;
+		background:$skyblue;
+		color:#fff;
+		text-align: center;
+		font-size:1em;
+		margin:0 0 1em;
+			@include media-query($mq-large + 10) {
+					font-size:1.25em;
+			}
+		&:after {
+			top: 100%;
+			left: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-top-color: $skyblue;
+			border-width: 10px;
+			margin-left: -10px;
+		}
+	}
+	&-icon {
+		img {
+			//max-width:150px;
+			margin-bottom:20px;
+		}
+	}
+	&-label {
+		font-weight: bold;
+		font-size:.875em;
+		.note {
+			display:block;
+			
+			font-weight: normal; 
+		}
+	}
+	&-product {
+		padding:.5em 1%;
+		font-size:.75em;
+		//border-bottom: 1px solid #eee;
+		//@extend .clearfix;
+		//&:last-child {
+		//	border-bottom:none;
+		//}
+		@include media-query($mq-small + 10) {
+			text-align: center;
+			display:inline-block;
+			vertical-align: top;
+			width:47.5%;
+			font-size:.875em;
+		}
+		@include media-query($mq-large + 10) {
+			
+			//width:32%;
+		}
+		&-img {
+			//float:left;
+			//width:4.5em;
+			//margin-right:.5em;
+			margin:0 0 .5em;
+			img {
+				max-width: 125px;
+			}
+		}
+		&-title {
+			@include media-query($mq-small + 10) {
+			font-weight: bold;
+			height:4.2em;
+			overflow: hidden;
+			}
+			.version {	
+				display:block;
+				margin:.25em 0;
+				font-weight: normal;
+			}
+		}
+		&-price {
+			font-weight: bold;
+			margin:.25em 0;
+			color:$skyblue;
+		}
+	}
+	&-recap-note {
+		margin:0;
+		padding:2em 0;
+		color:#999;
+		font-size:.875em;
+		font-style: italic;
+	}
+}
+
+//totals
+.bconfig__confirm-total,.bconfig__confirm-contract-total {
+	margin:.25em 0 1em;
+	padding:.5em;
+	border-top:1px solid #eee;
+	border-bottom:1px solid #eee;
+	font-size: 1.5em;
+	text-align: right;
+	font-weight:bold;
+	strong {
+		display:inline-block;
+		min-width:100px;
+		font-weight: bold;
+		color:$skyblue;
+	}
+}
+
+.bconfig__confirm-contract-total {
+	font-size:1.25em;
+	div {
+		margin:.25em 0;
+	}
+}
+
+.bconfig__confirm-contract {
+	li {
+		margin-top:.25em;
+		font-size:.875em;
+	}
+	strong {
+		color:#000;
+	}
+	&-logo {
+		margin-bottom: 1em;
+		img {
+			height:100px;
+
+		}
+	}
+	&-term {
+		font-weight: bold; 
+	}
+	&-price {
+		font-weight: bold;
+		margin:.25em 0;
+		color:$skyblue;
+	}
+}
+
+.bconfig__confirm-simfree-logo {
+	margin-bottom: 1em;
+	img {
+		height:100px;
+
+	}
+}
+
+.bconfig__confirm-simfree-label {
+	margin-bottom: 1em;
+	font-size:.875em;
+}
+
+
+.bconfig__stage-button-continue {
+	@include media-query($mq-large) {
+		text-align: right;
+	}
+}
+
+.bconfig__stage-button-reset {
+	.bconfig__button {
+		background-color:#aaa;
+		&:hover {
+			background-color:#c33;	
+		}
+	}
+	@include media-query($mq-large) {
+		text-align: left;
+	}
+
+}

@@ -1,0 +1,635 @@
+.listing__header {
+	position:relative;
+	display:block;
+	height:120px;
+	background-color:#fff;
+	background-position:100% 0;
+	background-size:cover;
+	background-repeat:no-repeat;
+	border-bottom:1px solid #eee;
+	color:#000;
+	@include media-query($mq-medium) {
+		height:200px;
+	}
+	&--link {
+		&:hover {color:$skyblue;}
+	}
+	&--light {
+		background-position:100% 0;
+		.listing__header-wrap {	background:rgba(255,255,255,.66);}
+	}
+	&--light-alt {
+		background-position:100% 0;
+		.listing__header-wrap {
+			background:rgba(255,255,255,.66);
+			@include media-query($mq-large) { background:transparent; }
+		}
+	}
+	&--light-alt2 {
+		background-position:85% 0;
+		.listing__header-wrap {
+			max-width:96%;
+			background:rgba(255,255,255,.80);
+			@include media-query($mq-small + 10) { 
+				max-width: 60%;
+			}
+			@include media-query($mq-medium) { 
+				max-width:50%;
+				font-size:.75em;
+			}
+			@include media-query($mq-large) { 
+				font-size:.875em;
+				background:transparent; 
+			}
+			@include media-query($mq-large) { 
+				font-size:1em;
+			}
+		}
+	}
+	&--light2 {background-position:100% 0;}
+	&--accfinder, &--tpsbundle{
+		background-position:100% 0;
+		color:#1428a0;
+		.listing__header-wrap { top:25%; left:5%}
+		&-nohover{
+			background-position:100% 0;
+			color:#1428a0;
+			.listing__header-wrap { top:25%; left:5%}
+			&:hover{color:#1428a0;}
+		}
+	}
+	&--dark {
+		//background:rgba(0,0,0,.5);
+		color:#fff;
+		text-shadow:2px 2px 2px rgba(0,0,0,.75),0 0 4px rgba(0,0,0,.75);
+		background-position:50% 50%;
+		.listing__header-tandc {color:#fff;	}
+	}
+	&--dark2 {
+		//background:rgba(0,0,0,.5);
+		color:#fff;
+		text-shadow:2px 2px 2px rgba(0,0,0,.75),0 0 4px rgba(0,0,0,.75);
+		background-position:100% 0;
+		&:hover {color:#b8d8ee;}
+	}
+	&--dark3 {
+		color:#fff;
+		text-shadow:2px 2px 2px rgba(0,0,0,.75),0 0 4px rgba(0,0,0,.75);
+		background-position:100% 0;
+		.listing__header-wrap {background:rgba(0,0,0,.8);}
+		&:hover {color:#b8d8ee;}
+	}
+	&--dark3a {
+		color:#fff;
+		text-shadow:2px 2px 2px rgba(0,0,0,.75),0 0 4px rgba(0,0,0,.75);
+		background-position:75% 0;
+		.listing__header-wrap {
+			background:rgba(0,0,0,.6);
+			@include media-query($mq-medium) {
+				top:10px;
+				left:10px;
+			}
+			@include media-query($mq-medium + 10) {
+				background:none;
+			}
+		}
+		&:hover {
+			color:#b8d8ee;
+		}
+	}
+	&--dark3b {
+		color:#fff;
+		text-shadow:2px 2px 2px rgba(0,0,0,.7),0 0 4px rgba(0,0,0,.75);
+		background-position:85% 0;
+		.listing__header-wrap {
+			background:rgba(0,0,0,.3);
+			max-width: 75%;
+			@include media-query($mq-small + 10) {
+				max-width: 60%;
+				background:none;
+			}
+			@include media-query($mq-medium) {
+				top:10px;
+				left:10px;
+			}
+			@include media-query($mq-medium + 10) {
+				background:none;
+			}
+		}
+		&:hover {
+			//color:#b8d8ee;
+		}
+	}
+	&--dark4 {
+		//background:rgba(0,0,0,.5);
+		color:#fff;
+		text-shadow: 0 0 2px rgba(64,47,34,1),0 0 3px rgba(64,47,34,.5), 0 0 8px rgba(64,47,34,.66), 0 0 14px rgba(64,47,34,.66);
+		background-position:66% 0;
+		&:hover { color:#fff;}
+	}
+	&--imgonly {
+		height:auto;
+		padding-top:15%;
+		//border:1px solid #f00;
+		background-size:150%;
+		background-position:50% 50%;
+		@include media-query($mq-medium) {
+			background-size:100%;
+			padding-top:10.5%;
+			max-height:200px;
+		}
+		@include media-query($mq-xlarge) {
+			padding-top:200px;
+			background-size:cover;
+		}
+	}
+	&--ws15 {
+		text-align:center;
+		@extend %sharp-sans;  //use new font
+		&:hover {
+			color:darken($wsteal,15%);
+		}
+		.listing__header-wrap {
+			background:#fff;
+			background:rgba(255,255,255,.9);
+			border-radius:1em;
+			padding:.875em 1.5em .625em;
+			border:2px solid #000;
+			font-size:.8125em;
+			top:auto;
+			bottom:20px;
+			@include media-query($mq-large) {
+				font-size:.875em;
+			}
+		}
+		.listing__header-title {
+			font-size:1.5em;
+			font-weight: bold;
+			@include media-query($mq-small + 10) {
+				font-size:2em;
+			}
+			@include media-query($mq-medium) {
+					font-size:2.75em;	
+			}
+			@include media-query($mq-medium + 10) {
+					//font-size:2.75em;	
+			}
+			@include media-query($mq-large) {
+				font-size:3.625em;
+			}
+		}
+		.listing__header-subhead {
+			font-size:.75em;
+			font-weight: bold;
+			@include media-query($mq-small + 10) {
+				font-size:.875em;
+			}
+			@include media-query($mq-medium + 10) {
+				font-size:.875em;
+			}
+			@include media-query($mq-large) {
+					font-size:1.125em;
+			}
+		}
+	}
+	&--ws15-ha {
+		text-align:center;
+		@extend %sharp-sans;  //use new font
+		&:hover {
+			color:darken($wsteal,15%);
+		}
+		.listing__header-wrap {
+			background:#fff;
+			background:rgba(255,255,255,.9);
+			border-radius:1em;
+			padding:.875em 1em .625em;
+			border:2px solid #000;
+			font-size:.8125em;
+			top:auto;
+			bottom:10px;
+			@include media-query($mq-medium) {
+				bottom:20px;
+				padding:.875em 1.5em .625em;
+			}
+			@include media-query($mq-large) {
+				font-size:.875em;
+			}
+		}
+		.listing__header-title {
+			font-size:1.125em;
+			font-weight: bold;
+			@include media-query($mq-small + 10) {
+				font-size:1.5em;
+			}
+			@include media-query($mq-medium) {
+					font-size:2.75em;	
+			}
+			@include media-query($mq-medium + 10) {
+					//font-size:2.75em;	
+			}
+			@include media-query($mq-large) {
+				font-size:3.625em;
+			}
+		}
+		.listing__header-subhead {
+			font-size:.75em;
+			font-weight: bold;
+			margin-top:.25em;
+			@include media-query($mq-small + 10) {
+				font-size:.875em;
+			}
+			@include media-query($mq-medium) {
+				font-size:1em;
+			}
+			@include media-query($mq-large) {
+				font-size:1.125em;
+			}
+		}
+		.listing__header-cta,.listing__header-note {
+			margin-top:.25em;
+			font-size:.75em;
+			@include media-query($mq-small + 10) {
+				font-size:.875em;
+			}
+			@include media-query($mq-medium + 10) {
+				font-size:.875em;
+			}
+			@include media-query($mq-large) {
+				font-size:1.125em;
+			}
+		}
+	}
+	&--t-4371 {
+		@extend %sharp-sans;  //use new font
+		color:#fff;
+		text-shadow:0 0 4px rgba(0,0,0,.25),0 0 8px rgba(0,0,0,.5);
+		background-position:100% 0;
+		.listing__header-wrap {
+			background:rgba(0,0,0,.33);
+			max-width: 85%;
+			@include media-query($mq-medium) {
+				top:10px;
+				left:10px;
+			}
+			@include media-query($mq-medium + 10) {
+				background:none;
+			}
+		}
+		&:hover {
+			color:#e5e5e5;
+		}	
+
+ 		.listing__header-title {
+ 			font-weight:bold;
+ 			font-size:.8125em;
+ 			@include media-query($mq-small + 10) {
+				font-size:1.125em;
+			}
+			@include media-query($mq-medium) {
+					font-size:1.75em;	
+			}
+			@include media-query($mq-medium + 10) {
+					font-size:2.25em;	
+			}
+			@include media-query($mq-large) {
+				font-size:2.5em;
+			}
+ 		}
+		.listing__header-subhead {
+			 font-size:.625em;
+			 @include media-query($mq-small + 10) {   
+                font-size:.75em;
+             }
+             @include media-query($mq-medium) {   
+                font-size:1em;
+             }
+             @include media-query($mq-large) {   
+                font-size:1.25em;
+             }
+             @include media-query($mq-xlarge) {   
+                font-size:1.3125em;
+             }
+		}
+
+ 		.listing__header-cta {
+	          display:inline-block;
+		        font-size:.6875em;
+		        margin:1.5% 0 1%;
+		        background:#fe7f3f;
+		        color:#fff;
+		        font-weight:300;
+		        padding:.25em 1em .15em;
+		        border-radius:5px;
+		        text-decoration: uppercase;
+		        transition: background .25s ease-in-out;
+		        &:hover {background-color:darken(#fe7f3f,10%);}
+		        @include media-query($mq-medium) { font-size:.875em;}
+		        @include media-query($mq-large) {font-size:1em;}
+		        //@include media-query($mq-xlarge) {font-size:1em;} 
+	    }
+
+		.listing__header-tandc {
+			color:#fff;
+		}
+	}
+	/*&--xmas15 {
+		text-align:center;
+		@extend %sharp-sans;  //use new font
+		.listing__header-wrap {
+			max-width: 100%;
+			background-color:$xmasgreen;
+			color:#fff;
+			padding:.5em 1em;
+			left:auto;
+			top:20px;
+			right:2%;
+			left:2%;
+			@include media-query($mq-medium) {
+				max-width: 80%;
+				right:20px;
+				left:auto;
+				top:32px;
+				padding:1.25em 2em;
+			}
+		}
+		.listing__header-title {
+			font-size:1.25em;
+			font-weight: bold;
+			@include media-query($mq-small + 10) {
+				font-size:2em;
+			}
+			@include media-query($mq-medium) {
+					font-size:2.125em;	
+			}
+			@include media-query($mq-medium + 10) {
+					font-size:2.75em;	
+			}
+			@include media-query($mq-large) {
+				font-size:3.625em;
+			}
+		}
+		.listing__header-subhead {
+			font-size:.75em;
+			font-weight: bold;
+			@include media-query($mq-small + 10) {
+				font-size:.875em;
+			}
+			@include media-query($mq-medium + 10) {
+				font-size:.875em;
+			}
+			@include media-query($mq-large) {
+					font-size:1.125em;
+			}
+		}
+	}
+	&--xmas15_small {
+		text-align:center;
+		@extend %sharp-sans;  //use new font
+		.listing__header-wrap {
+			max-width: 100%;
+			background-color:$xmasgreen;
+			color:#fff;
+			padding:.75em 1em;
+			left:auto;
+			top:20px;
+			left:2%;
+			left:2%;
+			@include media-query($mq-medium) {
+				max-width: 80%;
+				left:20px;
+				top:42px;
+				padding:1.25em 2em;
+			}
+		}
+		.listing__header-title {
+			font-size:.875em;
+			font-weight: bold;
+			@include media-query($mq-small + 2) {
+				font-size:1em;
+			}
+			@include media-query($mq-small + 10) {
+				font-size:1.5em;
+			}
+			@include media-query($mq-medium) {
+					//font-size:1.625em;	
+			}
+			@include media-query($mq-medium + 10) {
+					font-size:2em;	
+			}
+			@include media-query($mq-large) {
+				font-size:2.625em;
+			}
+		}
+		.listing__header-subhead {
+			font-size:.6875em;
+			font-weight: bold;
+			@include media-query($mq-small + 10) {
+				font-size:.875em;
+			}
+			@include media-query($mq-medium + 10) {
+				font-size:.875em;
+			}
+			@include media-query($mq-large) {
+					font-size:1em;
+			}
+			.arrow {
+				display: inline-block;
+				vertical-align: middle;
+				font-size:2em;
+				line-height: 0;
+				font-weight:500;
+			}
+		}
+	}*/
+	
+	&-wrap {
+		position:absolute;
+		top:5px;
+		left:5px;
+		padding:5px 10px;
+		max-width:60%;
+		text-decoration: none;
+		@include media-query($mq-medium) {
+			top:30px;
+			left:30px;
+			//top:16%;
+			//left:2em;
+			padding:10px;
+		}
+	}
+	&-title {
+		font-size:1em;
+		font-weight:bold;
+		text-transform: uppercase;
+		@include media-query($mq-medium) {
+			font-size:1.875em;
+			font-weight:normal;
+		}
+		@include media-query($mq-large) {
+			font-size:2.25em;
+		}
+	}
+	&-subhead {
+		font-size:.75em;
+		@include media-query($mq-medium) {
+			font-size:1.25em;
+		}
+		@include media-query($mq-large) {
+			font-size:1.5em;
+		}
+	}
+	&-cta {
+		font-size:.875em;
+		@include media-query($mq-medium) {
+			font-size:1.125em;
+		}
+		&::after {
+            display:inline-block;
+            vertical-align: -.1125em;
+            line-height: 1;
+            margin:0 .1em;
+            font-size:1.75em;
+            content:"\203A"; //single right-pointing angle quotation mark
+            transition:margin .125s ease-in-out;
+            font-weight:normal;
+            text-decoration: none;
+        }
+	}
+	&-note {
+		font-size:.875em;
+		@include media-query($mq-medium) {
+			margin-top:.25em;
+			font-size:1.125em;
+		} 
+	}
+	&-tandc {
+		font-size:.625em;
+		color:#888; 
+		.listing__header--dark4 & {
+			color:#fff;
+		}
+		@include media-query($mq-medium) {
+			margin-top:.5em;
+			font-size:.875em;
+		} 
+		.link {
+		    text-decoration:underline;
+            &:hover {
+                text-decoration:none;
+            }
+		}
+	}
+	&-copyright {
+		 position:absolute;
+        bottom:5px;
+        right:10px;
+        color:#fff;
+        font-size:.625em;
+        font-weight:500;
+        text-shadow:1px 1px 0 rgba(0,0,0,.5);
+	}
+} 
+///////////////// special 
+.easter__catheader {
+    position:relative;
+    padding-top:200px;  
+    @include media-query($mq-medium) {
+        padding-top: 200px;
+    }
+    background:#fff url(/assets/samsung/img/home/carousel/easter_m_24032016.jpg) no-repeat 50% 100% / cover;
+    @include media-query($mq-medium) {
+        background:#fff url(/assets/samsung/img/home/carousel/easter_24032016.jpg) no-repeat 75% 100% / cover;
+    }
+     &-panel {
+        position:absolute;
+        top:5%;
+        left:.75em;
+        //width:50%;
+        margin-right:1em;
+        font-size:.75em;
+        line-height: 1.4;
+        color: #fff;
+        width: 80%;
+        //text-transform: uppercase;
+        //text-align: center;
+        padding:.5em 1em;
+        //@extend %sharp-sans;  //use new font
+        //border:1px solid #f00;
+        background:rgba(151,214,83,.9);
+        //text-shadow: 0 0 3px rgba(64,47,34,.5), 0 0 8px rgba(64,47,34,.66), 0 0 14px rgba(64,47,34,.66);
+        border-top:5px solid #fff;
+        border-bottom:5px solid #fff;
+        border-image:url("/assets/samsung/img/promotions/easter/hr-bg.png") 30 0 repeat;
+        @include media-query($mq-small + 5) {
+           // top:8%;
+            max-width: 80%;
+             font-size:.875em; 
+        }
+        @include media-query($mq-medium) {
+            max-width: 60%;
+            font-size:.8125em; 
+        }
+        @include media-query($mq-medium + 10) {
+           //max-width: 40%;
+           font-size:.875em;
+        }
+        @include media-query($mq-large) {    
+            left:1em;
+            top:1em;
+            max-width: 50%;
+            //background:none;
+            font-size:.875em;
+        }
+        @include media-query($mq-xlarge) {    
+            max-width: 40%;
+            font-size:.9375em;
+        }
+        @include media-query($mq-xlarge + 10) {    
+           max-width: 30%;
+        }
+        &-title {
+            margin:0; 
+            font-size:1.625em;
+            text-transform:uppercase;
+            font-weight: normal;
+             @include media-query($mq-large) {   
+                font-size:2.625em;
+             }
+        }
+        &-sub {
+             font-size:1.125em;
+             font-weight: normal;
+             margin:0;
+             color:#000;
+             @include media-query($mq-large) {   
+                font-size:1.25em;
+             }
+             @include media-query($mq-xlarge) {   
+                font-size:1.3125em;
+             }
+        }
+        &-terms {
+            margin-top:.2em;
+            font-size:.875em;
+            color:#000;
+            clear:left;
+            .link {
+                text-decoration:underline;
+                &:hover {
+                    text-decoration:none;
+                }
+            }
+        }
+        &-ppc-logo {
+           float:left;
+           margin:0 8px 4px 0;
+           img {
+                width:80px;
+                @include media-query($mq-xlarge) {   
+                    width:100px; 
+                    margin-top:-5px;
+                }
+           }
+        }
+    }
+} 

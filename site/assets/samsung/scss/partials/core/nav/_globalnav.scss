@@ -1,0 +1,160 @@
+//primary samsung nav
+
+.header__globalnav {
+	display:none;
+	@include media-query($mq-large) {
+		display:block;
+	}
+	//position:absolute;
+	//left:221px;
+	//top:0;
+	a {
+		text-decoration: none;
+	}
+	&-item {
+		position:relative;
+		float:left;
+		vertical-align: top;
+		//margin-right:5px;
+		//font-size:.9325rem;
+		font-size:1em;
+        color:#fff;
+        margin:0 1px 0 0;
+        &:hover {
+				background:#b8d8ee;
+				color:#343434;
+				.header__globalnav-link{
+					color:#343434;
+				}
+				&::after {
+					border-color:#343434;
+				}
+			}
+		&--hasmenu {
+			margin:0;
+			padding-right:20px;
+			&::after {
+				position: absolute;	
+				right: 22px;
+			    top: 20px;		
+			    content: "";
+			    height: 8px;
+			    width: 8px;	    	    
+			    transform: rotate(45deg);
+			    transform-origin: 100% 100% 0;
+			    border-bottom: 1px solid #f1f2f9;
+			    border-right: 1px solid #f1f2f9;		    
+			} 
+			
+		}
+		&--active {
+			background:#b8d8ee;
+			color:#343434;
+			.header__globalnav-link{
+				color:#343434;
+			}
+			&::after {
+				border-color:#343434;
+			}
+		}
+		
+	} 
+
+	&-link {
+		display:inline-block;
+		color:#fff;
+		text-decoration: none;
+		padding:15px 15px 16px 14px;
+		outline: none !important;
+	}
+
+	&-menu {
+		display:none;
+		position:absolute;
+		top:49px;
+		background:#fff;
+		z-index:2;
+		width:255px;
+		z-index:5;
+		&--show {
+			display:block;
+		}
+		&-item {
+			background:#f5f5f5;
+		    border-left: 1px solid #e1e1e1;
+		    border-right: 1px solid #e1e1e1;
+		    border-bottom: 1px solid #e1e1e1;
+		    color: #000;
+		    
+		   // position: relative;
+		    z-index: 2;
+		    font-size:.875em;
+		    > a {
+		    	position:relative;
+		    	display:block;
+		    	padding: 11px 51px 11px 14px;
+		    }
+		    &--hassub {
+		    	> a {
+			    	&::after {
+						position:absolute;
+						top:13px;
+						right: 16px;
+						height: 7px;
+						width: 7px;
+						content:"";
+					    border-bottom: 1px solid #444;
+					    border-right: 1px solid #444;
+					    transform: rotate(-45deg);
+					    transform-origin: 100% 100% 0;
+						}
+						&:hover {
+
+						}
+					}
+					&:hover {
+						//background-color:#fff;
+						border-right-color:#fff;
+						> a {
+							&::after {
+								border-color:#fff;
+							}
+						}
+					}
+		    }
+
+		}
+
+		&-sub {
+			display:none;
+			position:absolute;
+			top:0;
+			left:255px;
+			width:255px;
+			min-height: 100%;
+			background:#fff;
+			padding-top:10px;
+			border-bottom: 1px solid #e1e1e1;
+			border-right: 1px solid #e1e1e1;
+			a {
+				display: block;
+			    margin: 0 0 1px 2px;
+			    padding: 7px 20px 8px;
+			    position: relative;
+			    z-index: 2;
+			    &:hover {
+			    	//color:$primary;
+			    	text-decoration: underline;
+			    }
+			}
+			&--show {
+				display:block;
+			}
+		}
+
+	}
+
+	
+}
+
+

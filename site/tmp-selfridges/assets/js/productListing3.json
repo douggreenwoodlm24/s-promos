@@ -1,0 +1,29 @@
+{
+  "glossary": {
+    "title": "example glossary",
+    "GlossDiv": {
+      "title": "S",
+      "GlossList": {
+        "GlossEntry": {
+          "ID": "SGML",
+          "SortAs": "SGML",
+          "GlossTerm": "Standard Generalized Markup Language",
+          "Acronym": "SGML",
+          "Abbrev": "ISO 8879:1986",
+          "GlossDef": {
+            "para": "A meta-markup language, used to create markup languages such as DocBook.",
+            "ID": "44",
+            "str": "SGML",
+            "GlossSeeAlso": [
+              "GML",
+              "XML"
+            ]
+          },
+          "GlossSee": "markup"
+        }
+      }
+    }
+  }
+}
+
+{"items" : [{"operating_system" : "android","manufacturer" : "Sony","name" : "Sony Xperia","color" : "White","memory": "16GB","image":"sony_xperia","price":"899","description":"Featuring Sony's best smartphone camera to date, the waterproof Sony Xperia Z5 is packed with premium features including a 5.2-inch full-HD TRILUMINOS display, hi-res audio, 4K video recording and a 2-day battery."},{"operating_system" : "other","manufacturer" : "samsung","name" : "Samsung Galaxy","color" : "Black","memory": "32GB","image":"samsung_galaxy","price":"999","description":"The Samsung Galaxy S7 boasts a 5.1-inch Super AMOLED display ideal for gaming. It also comes with expandable storage plus an ergonomically engineered metal body and compact curved rear design."}]}

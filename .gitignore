@@ -1,0 +1,12 @@
+thumbs.db
+Thumbs.db
+node_modules
+/site/assets/**/css/
+/site/assets/**/js/scripts.min.js
+/site/addwash-dg.html
+/site/assets/samsung/js/app/core/modal.min.js
+/site/assets/samsung/scss/tp/gear-icon-x.css
+/site/assets/samsung/scss/tp/gear-icon-x.css.map
+/site/assets/samsung/scss/partials/pages/landing/_dg-template.scss
+/site/assets/samsung/scss/partials/pages/promos/_base.scss
+/site/dg-template.html

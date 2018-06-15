@@ -1,0 +1,140 @@
+// ==|== modules > flags
+
+.flag {
+	background-image: url(../img/core/flag-sprite.png);
+	background-repeat: no-repeat;
+	@media (-webkit-min-device-pixel-ratio: 1.25),	(min-resolution: 120dpi){ 
+		background-image:url(../img/core/flag-sprite@2x.png);
+	}
+}
+
+.flag--medium { // always 2x flag image on medium sized flags
+	background-image:url(../img/core/flag-sprite@2x.png);
+}
+
+//Asia
+/*.flag--au {@include flag-sprite($au)}
+.flag--kr {@include flag-sprite($kr)}
+.flag--jp {@include flag-sprite($jp)}
+.flag--cn {@include flag-sprite($cn)}
+.flag--hk {@include flag-sprite($hk)}
+.flag--in {@include flag-sprite($in)}
+.flag--my {@include flag-sprite($my)}
+.flag--nz {@include flag-sprite($nz)}
+.flag--ph {@include flag-sprite($ph)}
+.flag--sg {@include flag-sprite($sg)}
+.flag--tw {@include flag-sprite($tw)}
+.flag--th {@include flag-sprite($th)}*/
+
+//Europe
+//.flag--at {@include flag-sprite($at)}
+.flag--be {@include flag-sprite($be)}
+//.flag--bg {@include flag-sprite($bg)}
+//.flag--cy {@include flag-sprite($cy)}
+//.flag--cz {@include flag-sprite($cz)}
+//.flag--dk {@include flag-sprite($dk)}
+//.flag--es {@include flag-sprite($es)}
+//.flag--ee {@include flag-sprite($ee)}
+//.flag--fi {@include flag-sprite($fi)}
+.flag--fr {@include flag-sprite($fr)}
+.flag--de {@include flag-sprite($de)}
+//.flag--gr {@include flag-sprite($gr)}
+//.flag--hu {@include flag-sprite($hu)}
+//.flag--ie {@include flag-sprite($ie)} 
+.flag--it {@include flag-sprite($it)}
+//.flag--lv {@include flag-sprite($lv)}
+//.flag--lu {@include flag-sprite($lu)}
+//.flag--mt {@include flag-sprite($mt)}
+.flag--nl {@include flag-sprite($nl)} 
+//.flag--no {@include flag-sprite($no)}
+//.flag--pl {@include flag-sprite($pl)}
+.flag--pt {@include flag-sprite($pt)}
+//.flag--re {@include flag-sprite($fr)}
+//.flag--ro {@include flag-sprite($ro)}
+//.flag--sk {@include flag-sprite($sk)}
+//.flag--si {@include flag-sprite($si)}
+.flag--es {@include flag-sprite($es)}
+//.flag--se {@include flag-sprite($se)}
+.flag--ch {@include flag-sprite($ch)}
+//.flag--tr {@include flag-sprite($tr)}
+.flag--uk {@include flag-sprite($uk)}
+
+//Americas
+/*.flag--us,.flag--mp {@include flag-sprite($us)} //add fallback for mp/Mobile Planet
+.flag--br {@include flag-sprite($br)}
+.flag--ca {@include flag-sprite($ca)}
+.flag--mx {@include flag-sprite($mx)}
+
+//Middle east
+.flag--eg {@include flag-sprite($eg)}
+.flag--qa {@include flag-sprite($qa)}
+.flag--sa {@include flag-sprite($sa)}
+.flag--ae {@include flag-sprite($ae)}
+
+//Afica
+.flag--za {@include flag-sprite($za)}
+*/
+//@2x/small flags
+.flag--2x {background-size: 24px 1200px;}
+//Asia
+/*.flag--2x.flag--au {@include flag-sprite2x($au)}
+.flag--2x.flag--kr {@include flag-sprite2x($kr)}
+.flag--2x.flag--jp {@include flag-sprite2x($jp)}
+.flag--2x.flag--cn {@include flag-sprite2x($cn)}
+.flag--2x.flag--hk {@include flag-sprite2x($hk)}
+.flag--2x.flag--in {@include flag-sprite2x($in)}
+.flag--2x.flag--my {@include flag-sprite2x($my)}
+.flag--2x.flag--nz {@include flag-sprite2x($nz)}
+.flag--2x.flag--ph {@include flag-sprite2x($ph)}
+.flag--2x.flag--sg {@include flag-sprite2x($sg)}
+.flag--2x.flag--tw {@include flag-sprite2x($tw)}
+.flag--2x.flag--th {@include flag-sprite2x($th)}
+*/
+//Europe
+//.flag--2x.flag--at {@include flag-sprite2x($at)}
+.flag--2x.flag--be {@include flag-sprite2x($be)}
+//.flag--2x.flag--bg {@include flag-sprite2x($bg)}
+//.flag--2x.flag--cy {@include flag-sprite2x($cy)}
+//.flag--2x.flag--cz {@include flag-sprite2x($cz)}
+//.flag--2x.flag--dk {@include flag-sprite2x($dk)}
+//.flag--2x.flag--ee {@include flag-sprite2x($ee)}
+//.flag--2x.flag--es {@include flag-sprite2x($es)}
+//.flag--2x.flag--fi {@include flag-sprite2x($fi)}
+.flag--2x.flag--fr {@include flag-sprite2x($fr)}
+.flag--2x.flag--de {@include flag-sprite2x($de)}
+//.flag--2x.flag--gr {@include flag-sprite2x($gr)}
+//.flag--2x.flag--hu {@include flag-sprite2x($hu)}
+//.flag--2x.flag--ie {@include flag-sprite2x($ie)} 
+.flag--2x.flag--it {@include flag-sprite2x($it)}
+//.flag--2x.flag--lv {@include flag-sprite2x($lv)}
+//.flag--2x.flag--lu {@include flag-sprite2x($lu)}
+//.flag--2x.flag--mt {@include flag-sprite2x($mt)}
+.flag--2x.flag--nl {@include flag-sprite2x($nl)} 
+//.flag--2x.flag--no {@include flag-sprite2x($no)}
+//.flag--2x.flag--pl {@include flag-sprite2x($pl)}
+.flag--2x.flag--pt {@include flag-sprite2x($pt)}
+//.flag--2x.flag--re {@include flag-sprite2x($fr)}
+//.flag--2x.flag--ro {@include flag-sprite2x($ro)}
+//.flag--2x.flag--sk {@include flag-sprite2x($sk)}
+//.flag--2x.flag--si {@include flag-sprite2x($si)}
+.flag--2x.flag--es {@include flag-sprite2x($es)}
+//.flag--2x.flag--se {@include flag-sprite2x($se)}
+.flag--2x.flag--ch {@include flag-sprite2x($ch)}
+//.flag--2x.flag--tr {@include flag-sprite2x($tr)}
+.flag--2x.flag--uk {@include flag-sprite2x($uk)}
+
+//Americas
+/*.flag--2x.flag--us,.flag--2x.flag--mp {@include flag-sprite2x($us)}
+.flag--2x.flag--br {@include flag-sprite2x($br)}
+.flag--2x.flag--ca {@include flag-sprite2x($ca)}
+.flag--2x.flag--mx {@include flag-sprite2x($mx)}
+
+//Middle east
+.flag--2x.flag--eg {@include flag-sprite2x($eg)}
+.flag--2x.flag--qa {@include flag-sprite2x($qa)}
+.flag--2x.flag--sa {@include flag-sprite2x($sa)}
+.flag--2x.flag--ae {@include flag-sprite2x($ae)}
+
+//Afica
+.flag--2x.flag--za {@include flag-sprite2x($za)}
+*/

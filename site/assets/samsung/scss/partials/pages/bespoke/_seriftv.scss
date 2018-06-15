@@ -1,0 +1,378 @@
+/* 
+ *	SerifTV Landing Page 
+ */
+.bespoke__seriftvLP {
+	display:block;
+	position:relative;
+	max-width:1280px;
+	margin:.5em auto;
+	font-size:.6875em;
+	font-weight:500;
+	@include media-query($mq-small + 10) { font-size:.75em; }
+	@include media-query($mq-medium + 10) { font-size:.875em; }
+	@include media-query($mq-large - .7) { font-size:1.125em; }
+	@include media-query($mq-large + 10) { font-size:1.125em; }
+	&-title{
+		font-size:.875em;
+		@include media-query($mq-small + 2) { font-size:1em; }
+		@include media-query($mq-small + 10) { font-size:1.25em; }
+		@include media-query($mq-medium) { font-size:1.625em; }
+		@include media-query($mq-medium + 10) { font-size:3em; }
+		@include media-query($mq-large) { font-size:3.5em; }
+	}
+	&-options, &-gallery{
+		margin-top:2em;
+		position:relative;
+		@include media-query($mq-large - .7) { 
+			margin-top:2em;
+			margin-bottom:2em;
+		}
+	}
+	&-options{
+		background-color:#191919;
+		padding:1em 0;
+		position:relative;
+		@include media-query($mq-large - .7) { padding:1.8em 0; }
+		&-row{
+			@include media-query($mq-large - .7) { 
+				.large-4{width:33.3333%;}
+				.large-8{width:66.6667%;}
+			}
+		}
+		&-title{
+			text-align:center;
+			margin:1em 0;
+			text-transform:uppercase;
+			@include media-query($mq-large - .7) { text-align:left;margin:0; }
+		}
+		&-info{
+			color:#606060;
+			position:relative;
+			display:block;
+			text-align:center;
+			font-size:.825em;
+			margin-top:1em;
+			padding:.5em;
+			overflow:hidden;
+			height:50px;
+			@include media-query($mq-large - .7) { height:64px; }
+			&-avl, &-legs{position:relative;}
+			&-avl{display:block;}
+			&-legs{display:none; &.show{display:block;}}
+		}
+		&-container{
+			width:100%;
+			position:relative;
+			display:inline-block;
+			vertical-align:top;
+			padding:0 .5em;
+			@include media-query($mq-large - .7) { 
+				width:49%;
+				padding:0 1.5em;
+				border-right:1px solid #999;
+				&:nth-child(2n+2){ border:none; }
+			}
+		}
+		&-list{
+			text-align:center;
+			width:100%;
+			display:block;
+			position:relative;
+			@include media-query($mq-large - .7) { text-align:left; }
+			li{
+				display:inline-block;
+				max-width:100%;
+				position:relative;
+				margin:.5em .5em .5em 0;
+				padding:3px;
+				&:nth-child(3n+3){ margin-right:0; }
+				@include media-query($mq-medium) { margin-right:1em; }
+				@include media-query($mq-large - .7) { margin:.66em 0; }
+			}
+			.checked{
+				border:1px solid #58c0ff;
+				-moz-box-shadow: 0 0 8px #58c0ff;
+				-webkit-box-shadow: 0 0 8px #58c0ff;
+				box-shadow: 0px 0px 8px #58c0ff;
+				&-icon{
+					background:transparent url("/assets/samsung/img/bespoke/seriftv/checked.png") 0 0 no-repeat;
+					background-size:24px 25px;
+					width:24px; height:25px;
+					position:absolute;
+					bottom:-8px; right:-8px;
+					z-index:1;
+					@include media-query($mq-medium) { 
+						background-size:32px 33px;
+						width:32px; height:33px;
+						bottom:-16px; right:-16px;
+					}
+					@include media-query($mq-large) { 
+						background-size:48px 49px;
+						width:48px; height:49px;
+					}
+				}
+			}
+		}
+		&-sizeitem, &-sizeitem-oos {
+			img{ width:80px;
+				max-width:100%;
+				position:relative;
+				@include media-query($mq-medium) {width:auto; }
+			}
+		}
+		&-sizeitem-oos{
+			img { opacity:.33; filter: grayscale(100%);	}
+			&-sold-out {
+				position:absolute;
+				bottom:-.125em;
+				left:0;
+				width:100%;
+				padding:.25em .125em 0;
+				text-align: center;
+				font-size:.75em;
+				background-color:#555;
+			}
+		}
+		&-sizeitem, &-coloritem{cursor:pointer;}
+		&-coloritem{
+			width:auto;
+			border:1px solid #fff;
+			margin-right:1.5em!important;
+			@include media-query($mq-large) { max-width:100%;margin-right:0!important; }
+			span{
+				display:block;
+				position:relative;
+				width:40px;
+				height:40px;
+				@include media-query($mq-medium) {width:64px;height:64px;}
+				@include media-query($mq-contrained-max) {width:72px;height:72px;}
+			}
+			&-white{background-color:#fff;}
+			&-darkblue{background-color:#131052;}
+			&-darkred{background-color:#3d0000;}
+			&-oos{ background-color:#343434;}
+			&.serif_oos{ 
+				cursor:auto;
+				&.checked{
+					border-color:initial;
+					-moz-box-shadow: none;
+					-webkit-box-shadow: none;
+					box-shadow: none;
+					.bespoke__seriftvLP-options-coloritem-oos-soldout{background:$skyblue;}
+				}
+				.checked-icon{display:none;}
+			}
+		}
+	}
+	&-info{
+		text-align:center;
+		padding:2em 0;
+	}
+	&-video{
+		width:98%;
+		height:200px;
+		margin:1%;
+		@include media-query($mq-medium - 10) { height:300px; }
+		@include media-query($mq-medium) { height:320px; }
+		@include media-query($mq-medium + 10) { height:410px; }
+		@include media-query($mq-large - .7) { height:520px; }
+	}
+	&-config{
+		border:1px solid #0689d8;
+		display:block;
+		position:relative;
+		&-row{
+			margin-top:2.5em;
+			margin-bottom:2.5em;
+			@include media-query($mq-large - .7) {
+				margin-top:0;
+				margin-bottom:5em;
+			}
+		}
+		div{ 
+			display:block;
+			position:relative;
+			vertical-align:top;
+			text-align:center;
+			padding:.75em;
+			line-height:$base-line-height;
+			font-size:$base-font-size + .25;
+			@include media-query($mq-large - .7) {
+				display:inline-block;
+				text-align:left;
+				padding:.925em .75em .75em;
+				font-size:$base-font-size;
+			}
+		}
+		&-yourtv{
+			background-color:#0689d8;
+			@include media-query($mq-large - .7) { width:25%; text-align:center; }
+		}
+		&-tvdetails{
+			@include media-query($mq-large - .7) { 	width:25%; padding-left:2.5em!important; }
+		}
+		&-delivery{
+			font-weight:100;
+			@include media-query($mq-large - .7) {width:28%;}
+		}
+		&-total{
+			@include media-query($mq-large - .7) {width:20%;text-align:right!important;}
+		}
+		&-button{
+			width:100%;
+			display:block;
+			position:relative;
+			padding:.925em 3em .75em .75em;
+			line-height:$base-line-height;
+			text-align:right;
+			color:#fff!important;
+			text-decoration:none!important;
+			transition: background-color .25s ease-in;
+			cursor:pointer;
+			font-size:$base-font-size + .25;
+			background:#0689d8 url("/assets/samsung/img/bespoke/seriftv/btn_arr.png") 95% 50% no-repeat;
+			&:hover{
+				background-color:#009fff;
+				text-decoration: underline; 
+			}
+			@include media-query($mq-medium) { padding-right:3.5em; }
+			@include media-query($mq-large - .7) {
+				width:20%;
+				position:absolute;
+				right: .3em;
+				bottom: - 2.825em;
+				padding-right:2.25em;
+			}
+		}
+	}
+	&-gallery{
+		img{max-height:478px;width:auto;position:relative;}
+		position:relative;
+		border:1px solid #7d7d7d;
+		background: #010101; 												/* For browsers that do not support gradients */
+		background: -webkit-linear-gradient(#010101, #212121, #010101); 	/* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(#010101, #212121, #010101); 			/* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(#010101, #212121, #010101); 		/* For Firefox 3.6 to 15 */
+		background: linear-gradient(#010101, #212121, #010101); 			/* Standard syntax */
+		padding:1em 2em;
+		.reel{ 
+			margin:0 auto; 
+			position:relative;
+			cursor:ew-resize;
+		}
+		@include media-query($mq-medium) { padding:1em;}
+	}
+	&-spinner {
+		margin: 0 auto;
+		position: absolute;
+		top:40%;
+		left:50%;
+		margin-left:-50px;
+		text-align: center;
+		z-index:0;
+		width: 100px;
+		& > div {
+				width: 18px;
+				height: 18px;
+				background-color: #999;
+				border-radius: 100%;
+				margin:0 .25em;
+				display: inline-block;
+				-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+				animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+		}
+		.bounce1 { -webkit-animation-delay: -0.32s; animation-delay: -0.32s; }
+		.bounce2 { -webkit-animation-delay: -0.16s; animation-delay: -0.16s; }
+		@-webkit-keyframes sk-bouncedelay { 0%, 80%, 100% { -webkit-transform: scale(0) } 40% { -webkit-transform: scale(1.0) } }
+		@keyframes sk-bouncedelay { 0%, 80%, 100% { -webkit-transform: scale(0); transform: scale(0); } 40% { -webkit-transform: scale(1.0); transform: scale(1.0); }}
+	}
+	&-content{
+		background-color:#191919;
+		margin:.25em 0; 
+		@include media-query($mq-contrained-max) { margin:3em 0; }
+		@include media-query($mq-contrained-max + .05) { margin:6em 0; }
+		&-info{
+			h1{font-weight:300;margin-bottom:1em;}
+			p{ line-height:$base-line-height + .75; font-size:$base-font-size + .25;}
+			text-align:center;
+			padding:2em 1em;
+			@include media-query($mq-contrained-max) { padding:3.5em 2em; }
+			@include media-query($mq-max) { 
+				padding:6.5% 5em 3em 10%;
+				&.on_right{padding:6.5% 10% 3em 5em;}
+			}
+		}
+		&-img{
+			background-color:#000;
+			img{
+				width:49.3333%;
+				&nth-child(2n+2){float:right}
+				&.full_size{ 
+					width:100%; 
+					&nth-child(2n+2){float:none;}
+				}
+				@include media-query($mq-medium) { width:49.6667%;}
+			}
+			@include media-query($mq-contrained-max + .05) { 
+				padding-right:6%;
+				&.on_right{
+					text-align:right;
+					padding-left:6%;
+					padding-right:0;
+				} 
+			}
+		}
+		&-line{
+			color: #fff;
+			background-color: #fff;
+			height:3px;
+			width:70%;
+			display:inline-block;
+			position:relative;
+			margin:3em auto 1em;
+		}
+	}
+	&-glowtitle{
+		span{ padding:.5em 1em; background-color:#000;}
+		text-transform:uppercase;
+		font-size:.875em;
+		margin:.5em 0;
+		font-weight:normal;
+		text-align:center;
+		background:url("/assets/samsung/img/bespoke/seriftv/glow_title_bg.png") no-repeat 50% 0 / contain;
+		@include media-query($mq-small + 10) { font-size:1.125em; }
+		@include media-query($mq-medium) { font-size:1.35em; margin:1.5em 0;}
+		@include media-query($mq-large - .7) { font-size:1.75em; }
+	}
+}
+/* END SerifTV  */
+/* Serif page badges -- can probably remove after May 8 2016 */
+&__gdll{
+	&-badge {
+		width:131px;
+		height:120px;
+		display:inline-block;
+		margin-bottom:10px;
+		@include media-query($mq-medium) {
+			width:262px;
+			height:240px;
+		}
+		@include media-query($mq-contrained-max) {
+			margin-bottom:-50px;
+		}
+		background:url("/assets/samsung/img/bespoke/grand_designs_badge.png") no-repeat 50% 0 / contain;
+		@include media-query($mq-xlarge + 8) {
+			display:none; 
+		}
+	}
+	&-sash {
+		display:none;
+		@include media-query($mq-xlarge + 8) {
+			display:block;
+			position:absolute;
+			width:262px;
+			height:314px;
+			background:url("/assets/samsung/img/bespoke/grand_designs_sash.png") no-repeat 50% 0 / contain;
+		}
+	}
+}

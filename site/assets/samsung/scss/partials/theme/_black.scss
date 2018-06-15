@@ -1,0 +1,137 @@
+/////////////////////////////////////////
+// Black Theme
+////////////////////////////////////////
+
+.theme--black {
+	.header__row {
+		&--topnav {
+			@include media-query($mq-large) {
+				background:#000;
+				
+				.header__utility-item {
+					color:#fff;
+					&--cart {
+						background:#222;
+				 		background:rgba(255,255,255,.13);
+					}
+				}
+				.header__utility-signin {
+					.ico-login {
+					    background-image:url("../svg/ico-login-white.svg");
+					}
+				}
+			}
+		}
+		&--globalnav {
+			background:#000;
+			.header__globalnav-item {
+				transition:background .25s ease-in-out;
+				&:hover {
+				 	background:rgba(255,255,255,.13);
+				}
+				&--active {
+					background:#222;	
+				}
+				.header__globalnav-link{
+					color:#fff;
+				}
+				&::after {
+					border-color:#fff;
+				}
+			}
+
+			.header__globalnav-menu-item {
+				background:#222;
+				border-color:#2a2a2a;
+				border-left:none;
+				border-right:none;
+				a {
+					color:#fff;
+					&:hover {
+						background:#2a2a2a;
+					}
+				}
+			}
+			.header__globalnav-menu-sub {
+				background:#2a2a2a;
+				border:none;
+			}
+			.header__search-field {
+				background:#222;
+				 background:rgba(255,255,255,.13);
+			}
+			.header__search-submit {
+				.icon-search {
+					background-image:url(../svg/ico-search-white.svg);
+				}
+			}
+		}
+		&--storenav {
+			.nav .nav__list {
+				background:#222;
+				border-color:#444;
+				@include media-query($mq-large) {
+					background:transparent;
+				}
+			}
+			.nav .nav__item {
+				border-color:#444;
+				&--hasmenu--active {
+				    background-color: #2a2a2a;
+				    .subnav_wrap {
+				    	background-color: #2a2a2a;	
+				    }
+				}
+			}
+			.nav .nav__link {
+				color:#fff;
+			}
+
+
+			@include media-query($mq-large) {
+				background:#000 url(/assets/samsung/img/theme/black/store-nav-bg.png) no-repeat 50% 100%;
+				border-bottom:1px solid #262626;
+				.nav .nav__link {
+				 	transition:background .25s ease-in-out;
+			 	}
+			 	.nav .nav__item {
+
+				 	&:hover {
+						.nav__link {
+							@include media-query($mq-large) {
+								color:#fff;
+								background:#222;
+						 		background:rgba(255,255,255,.13);
+								text-decoration: underline;
+							}
+						}
+					}
+			 	}
+			}
+		}
+	}
+	
+	.nav__item .subnav_wrap {
+		background:rgba(34,34,34,.98);
+		border-bottom-color:#000;
+		.sub {
+			border-color:#333;
+		}
+		.titlelink {
+			a {
+				color:#fff;
+			}
+		}
+		.n_sub a {
+			color:#ccc;
+		}
+	}
+	//mobile store nav
+	.nav__small {
+		background:#222;
+		color:#fff;
+		&-label {
+			color:#999;
+		}
+	}
+}

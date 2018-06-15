@@ -1,0 +1,380 @@
+.bconfig__list-col {
+
+	@include media-query($mq-large) {
+	float:left;                 
+	width:50%;
+	}
+}
+
+.product--lightbox .product__gallery {
+	display:none !important; //hide lightbox gallery is JS image switching not working atm
+}
+
+
+//product / stage content styles
+
+.bconfig__list {
+	display:inline-block;
+	text-align:center;
+	&-item {	
+		position:relative;
+		padding-top:.5em;
+		text-align: center;
+		border:1px solid #ccc;
+		margin:0 0 10px;
+		border-radius:0 3em 0 0;
+		@include media-query($mq-small + 10) {
+			display:inline-block;
+			width:48%;
+			margin:0 .5% 2%;
+			vertical-align: top;
+		}
+		@include media-query($mq-large) {
+			//width:24.25%;
+			width:48.875%;
+			margin:0 .125% 2%;
+		}
+		&:hover,&.selected {
+			border-color:$skyblue;
+			cursor:pointer;
+		}
+		&.selected {
+			box-shadow:0 0 6px rgba($skyblue,.5);
+		}
+
+		&--accessory {
+			margin-bottom:1%;
+			border-radius:0 2em 0 0;
+			position:relative;
+			
+			@include media-query($mq-large) {
+				width:31.5%;
+			}
+			text-align: left;
+			//border-radius:0 1em 0 0;
+			.bconfig__type-img {
+				//float:left;
+				position:absolute;
+				top:10px;
+				left:10px;
+				width:81px;
+				margin:0;
+				@include media-query($mq-large) {
+					width:100px;	
+				}
+			}
+			.bconfig__type-label,.bconfig__type-price,.bconfig__type-more-info {
+				font-size:.875em;
+				margin:.25em;
+				padding-left:92px;
+				@include media-query($mq-large) {
+					padding-left:120px;
+				}
+			}
+			.bconfig__type-label {
+				margin-right:1em;
+				@include media-query($mq-small + 10) {
+					height: 6em; //2 lines of title, 1 line of version
+					overflow: hidden;
+					font-size:.75em;
+				}
+				@include media-query($mq-medium + 10) {
+					height:4.4em;
+						font-size:.875em; 
+				}
+				@include media-query($mq-large) {
+					height: 6em;
+					font-size:.75em; 
+				}
+				@include media-query($mq-large + 10) {
+					height:4.4em;
+						font-size:.875em; 
+				}
+			}
+			.bconfig__type-more-info {
+				margin-top:.5em;
+			}
+			.bconfig__type-select {
+				text-align: center;
+			}
+
+		}
+		&--locked {
+			opacity: .33;
+			filter: grayscale(100%);
+			cursor: default;
+			pointer-events:none;
+			 user-select: none;   
+			&:hover {
+				border-color:#ccc;
+				cursor: default;
+			}
+		}
+	}
+}
+
+
+//stage 1 column hacks
+.bconfig__list-col--33 {
+	//border:1px solid #f00;
+	@include media-query($mq-large) {
+		float:left;                 
+		width:33.3%;
+	}
+	.bconfig__list-item {
+		@include media-query($mq-small + 10) {
+			display:inline-block;
+			width:100%;
+			margin:0 0 2%;
+			vertical-align: top;
+		}
+		@include media-query($mq-large) {
+			//width:24.25%;
+			width:98%;
+			margin:0 1% 2%;
+		}
+	}
+}
+
+.bconfig__list-col--66 {
+	//border:1px solid #f0f;
+	@include media-query($mq-large) {
+		float:left;                 
+		width:66.6%;
+	}	
+	.bconfig__list-item {
+		@include media-query($mq-small + 10) {
+			display:inline-block;
+			width:100%;
+			margin:0 0 2%;
+			vertical-align: top;
+		}
+		@include media-query($mq-large) {
+			//width:24.25%;
+			width:48.85%;
+			margin:0 .25% 2%;
+		}
+	}
+}
+
+
+.bconfig__type {
+	&-img {
+		margin:10px 2em 20px;
+		.bconfig__list-item--payment & {
+			//height:100px;
+			img {
+				max-height:100px;
+				//margin:6px 0;
+			}
+		}
+	}
+	&-label,&-price,&-more-info {
+		margin:.5em;
+	}
+	&-label {
+		font-weight: bold;
+		font-size:.875em;
+		color:#666;
+		letter-spacing: .03em;
+		padding:0 .25em;
+		span {
+			@include media-query($mq-medium + 6) {
+				display:block;
+			}
+			@include media-query($mq-large) {
+				display:inline;
+			}
+			@include media-query($mq-xlarge) {
+				display:block;
+			}
+		}
+		.version {
+			margin-top:.5em;
+			display:block;
+			color:#888;
+			font-weight: 300;
+		}
+		.bconfig__list-item--payment & {
+			line-height: 1.5;
+			
+			@include media-query($mq-small + 10) {
+				//min-height: 3.2em; //2 lines of title, 1 line of version
+			}
+			@include media-query($mq-large) {
+				min-height: 3.2em; //2 lines of title, 1 line of version
+				font-size:.75em;
+			}
+			@include media-query($mq-large + 10) {
+				font-size:.875em;
+			}
+			@include media-query($mq-xlarge) {
+				font-size:1em;
+			}
+		}
+	}
+	&-price {
+		font-weight: bold;
+		color:$skyblue;
+		font-size:1.125em;
+		@include media-query($mq-small + 10) {
+			font-size:1em;
+		}
+		@include media-query($mq-medium + 10) {
+			font-size:1.125em;
+		}
+		@include media-query($mq-large) {
+			font-size:.875em;
+		}
+		@include media-query($mq-large + 10) {
+			font-size:1em;
+		}
+		@include media-query($mq-xlarge) {
+			font-size:1.25em;
+		}
+
+
+		&-note,&-apr {
+			font-size:.75em;
+			color:#666;
+			margin:.25em 0;
+			@include media-query($mq-large) {
+				font-size:.6875em;
+			}
+			@include media-query($mq-large + 10) {
+				font-size:.8125em;
+			}
+			@include media-query($mq-large + 10) {
+				font-size:.875em;
+			}
+		}
+	}
+	
+	&-more-info {
+		a {
+			font-weight: bold;
+			color:$skyblue;
+			text-decoration: none;
+			font-size:.875em;
+			@include media-query($mq-xlarge) {
+				font-size:1em;
+			}
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&-select {
+		margin: 1em 0 0 0;
+		padding:.75em .5em .5em;
+		//background:#eee;
+		font-size:.75em;
+		@include media-query($mq-large + 10) {
+			font-size:.875em;
+		}
+		box-shadow:inset 0 2px 2px -2px rgba(0,0,0,.4);
+		input {
+			margin-right:4px;
+		}
+		.bconfig__list-item.selected & {
+			background:$skyblue;
+			color:#fff;
+		}
+	}
+	&-finance-example {
+		font-size:.75em;
+		text-align: left;
+		padding: 10px;
+		box-shadow:inset 0 2px 2px -2px rgba(0,0,0,.4);
+		@include media-query($mq-large) {
+			font-size:.75em;
+		}
+		h5 {
+			font-size:1.25em;
+			margin:.25em 0;
+		}
+		ul,p {
+			color:#666;
+		}
+		ul {
+			list-style: disc;
+			padding:0 0 0 1em;
+			margin:0;
+			li {
+				margin:0 0 .33em;
+			}
+		}
+		p {
+			line-height: 1.5;
+		}
+	}
+}
+
+
+
+
+.bconfig__stage-terms {
+	border:1px solid #ccc;
+	padding:.5em 1em;
+	font-size:.75em;
+	margin-top:1.5em;
+	@include media-query($mq-large) {
+		font-size:.8125em;
+	}
+	h5 {
+		font-size:1.125em;
+		margin:.5em 0;
+	}
+	li {
+		position:relative;
+		display:inline-block;
+		margin: .25em .75em .25em 0;
+		@include media-query($mq-medium) {
+			display:inline-block;
+		}
+		&:before {
+			display:inline-block;
+			vertical-align: middle;
+			content:"";;
+			margin:0 .5em 2px 0;
+			width: 0; 
+			height: 0; 
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+			border-left: 5px solid  $skyblue;
+		}
+	}
+	p {
+		margin:0;
+	}
+}
+
+
+
+//not sure where this should go?
+.bconfig__stage-sup-confirm {
+	display:none;
+	margin:.5em 1em 1em;
+	font-size:.75em;
+	line-height:1.5;
+	@include media-query($mq-large) {
+		font-size:.875em;	
+	} 
+	@include media-query($mq-xlarge) {
+		font-size:1em;	
+	} 
+	&--show {
+		display:block;
+	}
+	a {
+		color:$skyblue;
+		white-space: nowrap;
+		&:hover {
+			color:#000;
+			text-decoration: none;
+		}
+	}
+	label {
+		cursor: pointer;
+	}
+}

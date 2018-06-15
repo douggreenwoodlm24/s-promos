@@ -1,0 +1,314 @@
+/* 
+ * tvj - Landing Page Style 
+ */
+
+  ///////////////////////
+  // Modal Window /START/
+  ///////////////////////
+.modal-container {  // NB: This class has to go in <body> tag, in order to style the modal window (which is dynamically generated outside the tvj class)
+  //.mfp-close-btn-in {}
+  .modal-styles-for-content {
+    color: #FFF;
+    margin:0 auto;
+    width: 60%;
+    .mfp-close {
+      color: #FFF !important;
+    }
+  }
+}    
+  ///////////////////////
+  // Modal Window /END  /
+  ///////////////////////
+
+.tvj {
+  // default styles /START
+  @extend %sharp-sans;
+  position:relative;
+  font-weight: 500;
+  color:$black;
+  a {  
+    color:$black;
+    transition:all .5s ease-in;
+    &:hover{color:$skyblue}
+  }
+  p {  
+    font-size:$base-font-size - .125;
+    position:relative; 
+    @include media-query($mq-large - .0625) {
+      font-size:$base-font-size;
+    } 
+    @include media-query($mq-xlarge - .063) {
+      font-size:$base-font-size + .25;
+    }
+    &.tvj-p-small {
+      text-transform:none!important;
+      font-size:$base-font-size - .25;
+      line-height:$base-line-height;
+    }
+  }
+  h1, h2, h3, h4, h5, h6 { 
+    font-weight:bold; 
+  }
+  h1, h2 {
+    font-size:1.75em; 
+    @include media-query($mq-large - .0625) {
+      font-size:2.25em;
+    }
+    @include media-query($mq-contrained-max) { 
+      font-size:2.875em;
+    } 
+    @include media-query($mq-xlarge - .063) {
+      font-size:3.75em;
+    }
+  }
+  h3 {
+    font-size:1.25em; 
+    @include media-query($mq-large - .0625) {
+      font-size:1.65em;
+    }
+    @include media-query($mq-xlarge - .063) {
+      font-size:2em;
+    }
+  }
+  .no-padding {
+    padding:0;
+    &-top { 
+      padding-top:0;
+    }
+    &-bottom {
+      padding-bottom:0;
+    }
+  }
+  &_left, &_center, &_right {
+    text-align:center;
+  }
+  // default styles /END
+  
+:root {
+  //--base: #ffc600;
+  --spacing: 10px;
+  //--blur: 10px;
+}
+
+.tvj-animation {
+  text-align: center;
+}
+
+img {
+  //padding: var(--spacing);
+  height: var(--spacing);
+  width: var(--spacing);
+  //background: var(--base);
+  //-webkit-filter: blur(var(--blur));
+  //filter: blur(var(--blur));
+}
+
+.h4 {
+  color: var(--base);
+}
+
+/* misc styles, nothing to do with CSS variables */
+
+
+a {
+  color: var(--base);
+  text-decoration: none;
+}
+
+input {
+  width:100px;
+}
+
+/////////////////////////
+// slider (2nd type, from fridge page)
+/* RANGE SLIDER (nb: OTHER CSS IN...)  */
+
+.tvj-slider {
+  margin: $f-spacing-lg;
+  .tvj-slider-container {
+    margin-left: $f-spacing-md;
+    margin-right: $f-spacing-md;
+  }
+  p {
+    margin-top: $f-spacing-lg;
+  }
+  .noUi-handle {
+    background: $f-lightBlue none repeat scroll 0 0;
+    border: 1px solid #d9d9d9;
+    border-radius: 0;
+    box-shadow: none;
+    cursor: default;
+  }
+  .noUi-handle::after, .noUi-handle::before {
+    background: $f-lightBlue none repeat scroll 0 0;
+    content: "";
+    display: block;
+    height: 14px;
+    left: 14px;
+    position: absolute;
+    top: 6px;
+    width: 1px;
+}
+.noUi-horizontal .noUi-handle {
+    height: 40px;
+    left: -10px;
+    top: -10px;
+    width: 20px;
+}
+  .noUi-background {
+      background: $f-medGrey none repeat scroll 0 0;
+      box-shadow: 0 1px 1px #f0f0f0 inset;
+  }
+  .noUi-target {
+    border: 0px solid #d3d3d3;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px #f0f0f0 inset, 0 3px 6px -5px #bbb;
+}
+} 
+
+.tvj-slider-scale-4 li {
+  width:16.6%;
+}
+
+.tvj-slider-scale-2 li {
+  width:100%;
+}
+
+
+/* Functional styling;
+ * These styles are required for noUiSlider to function.
+ * You don't need to change these rules to apply your design.
+ */
+.no-ui-slider {
+  width: 100%;
+  
+}
+
+.no-ui-slider .slider-labels {
+  list-style: none;
+  padding:0;
+   margin-top: 5px;
+  margin-left: -16px;
+  width: 100%;
+  text-align: left;
+  
+}
+
+.no-ui-slider .slider-labels li {
+  //color: #d3d3d3;
+  display: inline;
+  float:left;
+  cursor: pointer;
+  margin-top: 42px;
+  margin-bottom: 42px;
+  font-size: 16px;
+}
+
+.no-ui-slider .slider-labels li:nth-last-child(1) {
+  position: absolute;
+  margin-left: -3px;
+  width:25px;
+}
+
+.no-ui-slider .slider-labels li:hover {
+   color: #333333;
+}
+
+.no-ui-slider .slider-labels li.active {
+   color: #333333;
+}
+ 
+ ////////////////////////
+ // Empty media queries for copy/paste
+    @include media-query($mq-medium) {
+
+    }
+    @include media-query($mq-fullheader) {
+
+    }
+    @include media-query($mq-large) {
+
+    }
+    @include media-query($mq-contrained-max) {
+
+    }
+    @include media-query($mq-xlarge) {
+
+    }
+    @include media-query($mq-max) {
+
+    }
+
+  
+  ///////////////////////////////////////
+  // DEVELOPMENT STYLES TO SHOW WHERE MEDIA QUERY BREAKPOINTS ARE. DO NOT INCLUDE IN FINAL .SCSS /START
+  &-init-media-query {
+    //  NB: use min-width rather than max-width. i.e. styles declared outside "@include media-query" are for mobiles (so in theory @include media-query($mq-small) not required)
+    //  Media Query 1/7: $mq-small (20em)
+    //  Media Query 2/7: $mq-medium (40em) NB: tablet
+    //  Media Query 3/7: $mq-fullheader (56em) 
+    //  Media Query 4/7: $mq-large (64.0625em) NB: desktop (1024)
+    //  Media Query 5/7: $mq-contrained-max (80em) NB: contrained not constrained
+    //  Media Query 6/7: $mq-xlarge (90.063em) NB: larger desktop
+    //  Media Query 7/7: $mq-max (102em)
+    display: none;
+    @include media-query($mq-small) {
+      &.tvj-mq-small {
+        display: block;
+      }
+      &.tvj-mq-medium, &.tvj-mq-fullheader, &.tvj-mq-large, &.tvj-mq-xlarge, &.tvj-mq-max, &.tvj-mq-contrained-max {
+        display: none;
+      }
+    }
+    @include media-query($mq-medium) {
+      &.tvj-mq-medium {
+        display: block;
+      }
+      &.tvj-mq-small, &.tvj-mq-fullheader, &.tvj-mq-large, &.tvj-mq-xlarge, &.tvj-mq-max, &.tvj-mq-contrained-max {
+        display: none;
+      }
+    }
+    @include media-query($mq-fullheader) {
+      &.tvj-mq-fullheader {
+        display: block;
+      }
+      &.tvj-mq-small, &.tvj-mq-medium, &.tvj-mq-large, &.tvj-mq-xlarge, &.tvj-mq-max, &.tvj-mq-contrained-max {
+        display: none;
+      }
+    }
+    @include media-query($mq-large) {
+      &.tvj-mq-large {
+        display: block;
+      }
+      &.tvj-mq-small, &.tvj-mq-medium, &.tvj-mq-fullheader, &.tvj-mq-xlarge, &.tvj-mq-max, &.tvj-mq-contrained-max {
+        display: none;
+      }
+    }
+    @include media-query($mq-contrained-max) {
+      &.tvj-mq-contrained-max {
+        display: block;
+      }
+      &.tvj-mq-small, &.tvj-mq-medium, &.tvj-mq-fullheader, &.tvj-mq-large, &.tvj-mq-xlarge, &.tvj-mq-max {
+        display: none;
+      }
+    }
+    @include media-query($mq-xlarge) {
+      &.tvj-mq-xlarge {
+        display: block;
+      }
+      &.tvj-mq-small, &.tvj-mq-medium, &.tvj-mq-fullheader, &.tvj-mq-large, &.tvj-mq-max, &.tvj-mq-contrained-max {
+        display: none;
+      }
+    }
+    @include media-query($mq-max) {
+      &.tvj-mq-max {
+        display: block;
+      }
+      &.tvj-mq-small, &.tvj-mq-medium, &.tvj-mq-fullheader, &.tvj-mq-large, &.tvj-mq-xlarge, &.tvj-mq-contrained-max {
+        display: none;
+      }
+    }
+  }
+  // DEVELOPMENT STYLES TO SHOW WHERE MEDIA QUERY BREAKPOINTS ARE. DO NOT INCLUDE IN FINAL .SCSS /END
+  ////////////////////////////////////////
+}

@@ -1,0 +1,30 @@
+
+// example landing page .scss 
+
+.new-page-test {
+	margin:2em 5%;
+	padding:1em;
+	border:10px solid #f00;
+	text-align:center;
+	@include media-query($mq-medium) {
+		border-color:#0f0;
+	}
+	@include media-query($mq-large) {
+		border-color:#00f;
+	}
+	@include media-query($mq-xlarge) {
+		border-color:#0ff;
+	}
+	&__title {
+		font-size:1.5em;
+		@include media-query($mq-medium) {
+			font-size:2em;
+		}
+		@include media-query($mq-large) {
+			font-size:3em;
+		}
+		@include media-query($mq-xlarge) {
+			font-size:4em;
+		}
+	}
+}

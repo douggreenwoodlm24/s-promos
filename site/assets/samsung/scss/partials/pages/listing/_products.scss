@@ -1,0 +1,426 @@
+
+///////////////////////////// product
+
+.listing__title {
+	position:relative;
+	background:#eee;
+	padding:.875em 1em;
+	margin:10px 0 0;
+	font-size:1.125em;
+	line-height:.4625;
+	border:1px solid #ddd;
+	border-bottom:none;
+	@include media-query($mq-medium) {
+		font-size:1.25em;
+	}
+	@include media-query($mq-large) {
+		margin:0;
+		font-size:1.5em;
+	}
+	&-count {
+		font-weight:normal;
+		color:#999;
+	}
+}
+
+.listing__products {
+	border-top:1px solid #ddd;
+	border-left:1px solid #ddd;
+	margin-bottom:20px;
+}
+
+.listing__product {
+	position:relative;
+	//padding:.75em;
+	border-bottom:1px solid #ddd;
+	border-right:1px solid #ddd;
+
+	text-decoration:none;
+	color:#000;
+	text-align: center;
+	transition:opacity .25s ease-in-out;
+	width:100%;
+	overflow:hidden;
+	@include media-query($mq-small + 10) {
+		height:320px;
+	} 
+	&-inner {
+		position:relative;
+		padding:0 10px 10px;
+		@include media-query($mq-small + 10) {
+			padding:0 10px 0 230px;
+			height:260px;
+		}
+		@include media-query($mq-medium) {
+			padding-left:180px;
+		}
+		@include media-query($mq-medium + 10) {
+			padding-left:230px;
+		}
+	}
+	@include media-query($mq-small + 10) {
+		//height:300px;
+		text-align: left;
+	}
+	@include media-query($mq-medium + 5) {
+		float:left;
+		width:50%;
+	}
+	@include media-query($mq-large) {
+		padding:0;
+	}
+	@include media-query($mq-xlarge) {
+		width:33.3333%;
+	}
+	.listing__products--promo & {
+		@include media-query($mq-large + 12) {
+			width:33.3333%;
+		}
+		@include media-query($mq-xlarge + 10) {
+			width:25%;
+		}
+	}
+	&-img {
+		position:relative;
+		text-align:center;
+		img {
+			width:200px;
+		}
+		@include media-query($mq-small + 10) {
+			position:absolute;
+			top:15px;
+			left:8px;
+			img {
+				width:200px;
+			}
+		}
+		@include media-query($mq-medium) {
+			img {
+				width:150px;
+			}
+		}
+		@include media-query($mq-medium + 10) {
+			img {
+				width:200px;
+			}
+		}
+	}
+	&-promo {
+		position:absolute;
+		top:20px;
+		left:50%;
+		margin:0 0 0 -125px;
+		pointer-events:none;
+		@include media-query($mq-small + 10) {
+		top:6px;
+		left:10px;
+		margin:0;
+		}
+		&-item {
+			display:table;
+			margin-bottom:4px;
+			span {
+				display:table-cell;
+				vertical-align: middle;
+				width:68px;
+				height:68px;
+				background:$primary;
+				color:#fff;
+				padding:2px;
+				text-align:center;
+				border-radius:50%;
+				margin-bottom: 3px;
+				font-size:.75em;
+				line-height: 1.1;
+				//font-weight:bold;
+				opacity:.925;
+				box-shadow:1px 1px 2px rgba(0,0,0,.15);
+				border:2px solid #fff;
+				background-image: radial-gradient(ellipse at center, rgba(0,255,255,.15) 0%,rgba(0,255,255,0) 99%,rgba(255,255,255,1) 100%);
+			}
+			strong {
+				font-size:1.3125em;
+			}
+		}
+	}
+	&-list {
+	}
+	&-title,&-version {
+		position:relative;
+		color:#000;
+		line-height: 1.2;
+		@include media-query($mq-small + 10) {
+			//float:right;
+			//clear:right;
+			//padding:8px 14px;
+			//background:rgba(255,255,255,.8);
+			z-index: 1;
+			//margin-left:50px;
+			//transition:background .125s ease-out,color .25s ease-out;
+		}
+		a {
+			text-decoration: none;
+			color:#000;
+		}
+	}
+	&-title-wrap {
+		//background:#fbfbfb;
+		//border-bottom:1px dotted #eee;
+				position:relative;
+		padding:.5em 0 0;
+		min-height:3.6em;
+		margin-left:-10px;
+		@include media-query($mq-small + 10) {
+			padding:1em 0 0;
+		}
+		//background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%,rgba(0,0,0,0) 100%);
+		a {
+			display: block;
+			text-decoration: none;
+			&:hover {
+				@include media-query($mq-small + 10) {
+				.listing__product-title,.listing__product-version {
+					background:$primary;
+					color:#fff;
+					//text-decoration: underline;
+				}
+				}
+			}
+		}
+	}
+	&-title {
+		
+		font-weight:bold;
+		font-size:1.125em;
+		//max-height:2.5em;
+		//overflow: hidden;
+		margin:0;	
+		padding:6px 10px;
+
+		@include media-query($mq-small + 10) {
+			float:left;
+			background:#eee;
+		}
+		@include media-query($mq-medium) {font-size:1em}
+		@include media-query($mq-medium + 10) {font-size:1.125em}
+		@include media-query($mq-large) {font-size:1em}
+		@include media-query($mq-large + 10) {font-size:1em}
+
+	}
+	&-version {
+		padding-top:.15em;
+		font-size:.875em;
+		margin:0;
+		font-weight: normal;
+		//max-height:2em;
+		//overflow: hidden;
+		padding:0 10px 6px;
+		@include media-query($mq-small + 10) {
+			float:left;
+			clear:left;
+			background:#eee;
+		}
+		@include media-query($mq-medium) {font-size:.75em;}
+		@include media-query($mq-medium + 10) {font-size:.875em;}
+		@include media-query($mq-xlarge + 10) {
+			font-size:1em;
+		}
+	}
+	&-price {
+		padding-top:.5em;
+		margin:0 0 .175em;
+		font-weight:bold;
+		font-size:1.25em;
+		clear:both;
+	}
+	&-save {
+		display:inline-block;
+		margin:.25em 0;
+		color:$primary;
+		font-size:.875em;
+		&--hide {
+			display:none;
+		}
+		&-was {
+			strong {
+				position:relative;
+				&::after {
+					background-color: $primary;
+				    content: "";
+				    height: 2px;
+				    left: -1px;
+				    position: absolute;
+				    right: -4px;
+				    top: 10px;
+				    transform: rotate(-15deg);
+					opacity:.8;
+				}
+			}
+		}
+	}
+	&-offer-text {
+		position:relative;
+		display:inline-block;
+		margin:.25em 0;
+		font-size:.875em;
+		max-height:3em;
+		background-color:$accent;
+		color:#fff;
+		//font-weight:bold;
+		padding:.25em .75em .33em;
+		text-align: center;
+	}
+	&-kf {
+		text-align: left;
+		margin:.33em 0;
+		&-item {
+			position:relative;
+			font-size:.875em;
+			margin:3px 0;
+			padding-left: 22px;
+			@include media-query($mq-small + 10) {
+				padding-left: 0;
+			}
+			@include media-query($mq-medium) {
+				font-size:.75em;
+			}
+			@include media-query($mq-medium + 10) {
+				font-size:.875em;
+			}
+			&::before {
+				position: absolute;
+				left: 2px;
+				color: $primary;
+			    content: "✓";
+			    font-weight: 700;	
+			    @include media-query($mq-small + 10) {
+					left: -18px;
+			    }   
+			}
+		}
+	}
+	&-stock {
+		position:absolute;
+		top:-125px;
+		left:-107px;
+		background:#aaa;
+		background:rgba(165,165,165,.8);
+		transform: rotate(-38deg);
+		text-align:left;
+		box-shadow:0 1px 4px rgba(0,0,0,.15);
+		z-index:1;
+		&--instock {
+			display:none;
+		}
+		&-inner {
+			position:relative;
+			//left:-2em;
+			padding:136px 128px 0 122px;
+			display:block;
+			width:300px;
+			height:186px;
+			transform: rotate(38deg);
+			color:#fff;
+			font-weight:bold;
+			overflow: hidden;
+		}
+	}
+	&-a2b-button {
+		
+		margin:.25em 10px 20px 0;
+		width:40%;
+		max-width:180px;
+		display:inline-block;
+		padding:.425em .66em .55em;
+		color:#fff;
+		text-align:center;
+		
+		//background:none;
+		border:none;
+		color:#fff;
+		background-color:$primary;
+		font-size:.875em;
+		//line-height: 1;
+		@include media-query($mq-small + 10) {
+			position:absolute;
+			bottom:15px;
+			left:230px;
+			margin-bottom:0;
+		}
+		@include media-query($mq-medium) {
+			left:180px;
+		}
+		@include media-query($mq-medium + 10) {
+			left:230px;
+		}
+		@include media-query($mq-large) {
+			
+		}
+		
+		&--instock {
+			background-color:#000;
+		}
+		&--outofstock {
+			background-color:#aaa;
+		}
+		&:after {
+			display:inline-block;
+			vertical-align: -.125em;
+			line-height: 1;
+			margin:0 .1em 0 .2em;
+			font-size:2em;
+			content:"\203A"; //single right-pointing angle quotation mark
+			transition:margin .125s ease-in-out;
+		}
+		&:hover {
+			background-color:#444;
+			&::after {
+				margin:0 0 0 .3em;
+			}
+		}
+		&--disabled {
+			display:none;
+			background-color:#ccc;
+			color:#fff;
+			cursor: default;
+			pointer-events:none; //may need to patch this for IE10 and below
+			&::after {
+				content:"";
+			}
+			&:hover {
+			background-color:#ccc;
+			}
+		}
+	}
+	&--loading {
+		opacity:.3;
+		&::before,&::after {
+			content:"";
+			position:absolute;
+			top:50%;
+			left:50%;
+			margin:-50px 0 0 -50px;
+			width:100px;
+			height:100px;
+			border-radius:50%;
+			background:$primary;
+			z-index: 1;
+			opacity:.5;
+	        animation: sk-doubleBounce 2s infinite ease-in-out;
+	     }
+
+	&::after {
+  		-webkit-animation-delay: -1s;
+          animation-delay: -1s;
+    }
+
+	@keyframes sk-doubleBounce {
+	  0%, 100% {
+	    transform: scale(0);  
+	  }
+	  50% {
+	   	transform: scale(1); 
+	  } 
+	}
+	}
+}

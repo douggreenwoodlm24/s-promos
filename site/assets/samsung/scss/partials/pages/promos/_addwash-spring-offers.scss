@@ -1,0 +1,286 @@
+/*
+ * AddWash Spring Offers
+ */
+/*** SASS Vars *******/
+ $so_green:#98d754;
+ $so_darkgrey:#2c2c2c;
+ /********************/
+.spring-offers{
+	img.add-wash-bg-small { display: none; }
+	.tpsbundle-intro { padding: 0; }
+	.spring-offers-intro-text { padding: 0 2em; }
+	h2.spring-offers-title { margin:1em 0.5em 0.5em; color:$so_darkgrey;}
+	 .align-center {margin: 0 auto;}
+	 h2 span { font-weight: normal;	}
+	 a.tpsbundle-button,  
+	 a.tpsbundle-button:hover {
+		background-color: $so_green;
+		margin: 0.5em auto;
+		font-size: 1em;
+	}
+	.spring-offer-single-row{
+		.tpsbundle{
+			&-bundle{
+				&-item {
+					border: 0px solid white;
+					margin-bottom: 1.5em;
+				}
+				&-content{
+					&-colors {
+						margin-top: 20px;
+						padding: 1em 1em 1em 20px;
+						span { 	float: left; }
+					}
+					&-info {
+						clear: both;
+						padding: 1em 1em 1em 20px;
+						text-align: left;
+					}
+					&-price {
+						padding: 0 1em 0 20px;
+						text-align: left;
+					}
+					&-save {
+						text-align: left;
+						padding: 0 1em 0 20px;
+					}
+				}
+				&-bottom  {background: none;padding: 0 1em 0 20px;}
+			}	
+		}
+	}
+	 .tpsbundle-bundle-button{
+		background-color: $so_darkgrey;
+		padding-top:1.25em;
+		padding-bottom:1.125em;
+		&:hover  {background-color:$so_green;color:#fff;}
+	 }   
+	 a.tpsbundle-button.tpsbundle-button-gray  {
+		background: $so_darkgrey;
+		width: 70%;
+		padding: 1.25em 3em 1em;
+		&:hover{background-color:$so_green;}
+	}
+	 .blue_bg {	background: #07a1d7; }
+	 .add-wash-bg {
+		background: #e0e0e0 url('/assets/samsung/img/promotions/spring-offers/so-addwash-main.jpg') no-repeat left bottom;
+		padding-bottom: 0;
+	}
+	.three-icons{
+		p { font-size: 1em; text-align: center; }
+		img { display: block; margin: 0 auto; }
+		div { float: left; img { text-align: center; } }
+	} 
+	.spring-offers{
+		&-blue { color: #0176c6; }
+		&-orange { color: #ff8458; }
+		&-green { color: #7fbd2e; }
+		&-darkgrey-bg { background-color: #2a2a2a; }
+		&-tab-products{
+			.tpsbundle-bundle{
+				&-item { border: 1px solid #2a2a2a; }
+				&-content{
+					&-info {
+						text-align: left;
+						font-weight: normal;
+						.version { font-weight: 700; }
+					}
+					&-price {
+						text-align: left;
+						padding: 0em 1em 0em 20px;
+						font-size: 1em;
+						font-weight: normal;
+						.spring-offers-bundle-content-save {
+							color: $so_green;
+							font-weight: bold;
+						}
+					}
+				}
+				&-bottom {
+					padding: 0;
+					background-color: $so_green;
+					border-top: 1px solid #2a2a2a;
+					a {
+						margin: 0;
+						background-color: $so_green;
+						text-transform: none;
+					}
+				}
+			}
+			.spring-offers-bundle{
+				&-content-info {
+					text-align: left;
+					text-transform: uppercase;
+					font-weight: normal;
+				}
+				&-stock-link{ 
+					p { margin: 0; }
+					text-align: left;
+					padding: 1em 1em 1em 20px;
+				}
+				&-button-info { font-size: 0.75em; }
+			}
+		}
+	}
+	 .blue_turquoise_gradient {
+	  background: #07a1d7; /* For browsers that do not support gradients */
+	  background: -webkit-linear-gradient(left, #07a1d7 , #10d2ed); /* For Safari 5.1 to 6.0 */
+	  background: -o-linear-gradient(right, #07a1d7, #10d2ed); /* For Opera 11.1 to 12.0 */
+	  background: -moz-linear-gradient(right, #07a1d7, #10d2ed); /* For Firefox 3.6 to 15 */
+	  background: linear-gradient(to right, #07a1d7 , #10d2ed); /* Standard syntax */
+	  .tpsbundle-viewing-info {
+			padding: 3em;
+			h2 { font-size: 1em; 
+				margin-top:1.5em;
+				@include media-query($mq-max) {	font-size: 1.25em; }
+			}
+			p { 
+				font-size: 0.875em; 
+				@include media-query($mq-xlarge - .063) {	
+					font-size: $base-font-size;
+					line-height: $base-line-height + .15;
+				} 
+				@include media-query($mq-max) {	
+					font-size: $base-font-size + .175;
+				}
+			}
+		}
+	} 
+	 .tpsbundle-button.spring-offers-button {
+		@include media-query($mq-large - .07) {	width: 20%; } 
+		&:hover{ background-color:$so_darkgrey; }
+	}
+	 .ticks { 
+		display:block;
+		position:relative;
+		&-item{
+			display:block;
+			position:relative;
+			vertical-align:middle;
+			text-transform:uppercase; 
+			text-align:center;
+			img{margin:0 10px;position:relative;}
+			@include media-query($mq-medium + 10) {	display:inline-block; } 
+		}
+	}
+	/* tabs */
+	 .easter {
+		padding-bottom: 0;
+		background:#fff;
+		.promotion__products { 
+			background: none; 
+			&-img, &-title-block{ border-color:#e0e0e0;	}
+			&-a2b{ border-color:$so_green; }
+		}
+		.promotions-easter-deal-filter {
+			border-bottom: 3px solid $so_green;
+			&__link{
+				 border: none; 
+				 border-radius: 0px; 
+				 box-shadow: none; 
+				 font-weight: normal; 
+				 padding: 0.5em 1em 0.3em;
+				 background: $so_green; 
+				&.selected { background: #659037; }
+			}
+		}
+		a {color: #FFF !important;}
+	}
+.spring-tcs{
+	position:relative;
+	max-width:80em;
+	margin:0 auto;
+	padding:0 1em 1em;
+	@include media-query($mq-medium + 10) {	padding:0 2em 2em; } 
+	ol{
+		margin:0 0 0 1em; 
+		padding:0; 
+		position:relative;
+		li{
+			font-size:$base-font-size - .25;
+			position:relative;
+			line-height:$base-line-height + .5;
+		}
+	}
+	a {
+		color:$so_green;
+		font-weight: bold;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+	/* Large screens  */
+	@media (min-width: 1024px) {
+		 .spring-offers-intro-text p {	width: 50%;	margin: 0 auto 1em;	}
+	}
+	/* Specific media queries  */
+	@media (min-width: 1510px) and (max-width: 1677px) { 
+		 .add-wash-bg { background-size: 1680px 700px; } 
+		 img.add-wash-bg-small { display: none;}
+		 .add-wash-bg h2 {font-size: 48px;}
+		 .three-icons img {
+				height: auto; 
+				width: auto; 
+				max-width: 80px; 
+				max-height: 80px;
+			} 
+		 .three-icons .large-4 {width: 33%;}	
+	}
+	@media (min-width: 1404px) and (max-width: 1509px) { 
+		 .add-wash-bg { background-size: 1560px 650px; } 
+		 img.add-wash-bg-small { display: none;}
+		 .add-wash-bg h2 {font-size: 48px;}
+		 .three-icons img {
+				height: auto; 
+				width: auto; 
+				max-width: 80px; 
+				max-height: 80px;
+			} 
+		 .three-icons .large-4 {width: 33%;}	
+	}
+	@media (min-width: 1282px) and (max-width: 1403px) { 
+		 .add-wash-bg { background-size: 1440px 600px; } 
+		 img.add-wash-bg-small { display: none;}
+		 .three-icons img {
+				height: auto; 
+				width: auto; 
+				max-width: 80px; 
+				max-height: 80px;
+			} 
+		 .three-icons .large-4 {width: 33%;}	
+	}
+	@media (min-width: 1024px) and (max-width: 1281px) { 
+		 .add-wash-bg { background-size: 1200px 500px; background-position: -50px bottom; } 
+		 img.add-wash-bg-small { display: none;}
+		 .three-icons img {
+				height: auto; 
+				width: auto; 
+				max-width: 80px; 
+				max-height: 80px;
+			} 
+		 .three-icons .large-4 {width: 33%;}	
+		 .blue_turquoise_gradient .tpsbundle-viewing-info h3 {
+			margin-top: 0;
+		}
+	}
+	@media (max-width: 1023px) { 
+		 .add-wash-bg { background-image: none; } 
+		 img.add-wash-bg-small { display: block; }
+		 .three-icons img {
+				height: auto; 
+				width: auto; 
+				max-width: auto; 
+				max-height: auto;
+			}
+		 .three-icons .large-4 {width: 33%;}
+		 .promotions-easter-deal-filter li {width: 48%;}
+	}
+	@media (max-width: 799px) { 
+		 .ticks {text-align: left;}
+		 .tpsbundle-button.spring-offers-button {width: 75%;}	
+		 a.tpsbundle-button.tpsbundle-button-gray {width: 95%;}
+		 .promotions-easter-deal-filter li {width: 95%;}
+		 .easter .promotions-easter-deal-filter__link {	padding: 0.5em 0.5em 0.4em;	font-size: 1.5em;}
+	}
+}

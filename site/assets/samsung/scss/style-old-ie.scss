@@ -1,0 +1,15 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+ 
+//http://seesparkbox.com/foundry/structuring_and_serving_styles_for_older_browsers
+$no-mq-support: true; //turn off media queries 
+
+//get main css
+@import "style";
+
+//include grid for IE8 and below
+@import "foundation/components/grid-old-ie"; 
+
+//IE8 fixes
+@import "partials/fix/_ie8";
+@import "partials/fix/_ie7";

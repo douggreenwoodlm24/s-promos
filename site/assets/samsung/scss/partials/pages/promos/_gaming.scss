@@ -1,0 +1,538 @@
+/* 
+ * gam - Landing Page Style 
+ */
+
+  ///////////////////////
+  // Modal Window /START/
+  ///////////////////////
+.modal-container {  // NB: This class has to go in <body> tag, in order to style the modal window (which is dynamically generated outside the gam class)
+  //.mfp-close-btn-in {}
+  .modal-styles-for-content {
+    color: #FFF;
+    margin:0 auto;
+    width: 60%;
+    .mfp-close {
+      color: #FFF !important;
+    }
+  }
+}    
+  ///////////////////////
+  // Modal Window /END  /
+  ///////////////////////
+
+.gam {
+  // default styles /START
+  @extend %sharp-sans;
+  position:relative;
+  font-weight: 500;
+  color:$black;
+  a {  
+    color:$black;
+    transition:all .5s ease-in;
+    &:hover{color:$skyblue}
+  }
+  p {  
+    font-size:$base-font-size - .125;
+    position:relative; 
+    @include media-query($mq-large - .0625) {
+      font-size:$base-font-size;
+    } 
+    @include media-query($mq-xlarge - .063) {
+      font-size:$base-font-size + .25;
+    }
+    &.gam-p-small {
+      text-transform:none!important;
+      font-size:$base-font-size - .25;
+      line-height:$base-line-height;
+    }
+  }
+  h1, h2, h3, h4, h5, h6 { 
+    font-weight:bold; 
+  }
+  h1, h2 {
+    font-size:1.75em; 
+    @include media-query($mq-large - .0625) {
+      font-size:2.25em;
+    }
+    @include media-query($mq-contrained-max) { 
+      font-size:2.875em;
+    } 
+    @include media-query($mq-xlarge - .063) {
+      font-size:3.75em;
+    }
+  }
+  h3 {
+    font-size:1.25em; 
+    @include media-query($mq-large - .0625) {
+      font-size:1.65em;
+    }
+    @include media-query($mq-xlarge - .063) {
+      font-size:2em;
+    }
+  }
+  .no-padding {
+    padding:0;
+    &-top { 
+      padding-top:0;
+    }
+    &-bottom {
+      padding-bottom:0;
+    }
+  }
+  &_left, &_center, &_right {
+    text-align:center;
+  }
+  // default styles /END
+  
+  // CTA buttons
+  
+  
+  // Column for CTAs
+  .gam-cta-container {
+    text-align: center;
+    margin: 2em;
+    .gam-cta-container-item {
+      display: inline-block;
+      .gam-cta {
+        width: 250px;
+        color: #FFF;
+        padding: 1em 8em;
+        margin-left: 1em;
+        margin-right: 1em;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.75em;
+        &:hover {
+          text-decoration: underline;
+        }
+        &.primary {
+          background-color: #01b3e3;
+        }
+        &.secondary {
+          background-color: #74787b;
+        }
+      }
+    }
+  }
+  
+  // Product info column
+  .product-info-section {
+    margin: 2.5em 0;
+    img {
+      margin: 0 auto;
+      display: block;
+    }
+    h2 {
+      font-size: 2.75em;
+      text-align: center;
+      margin: 0.5em 0 0;
+      span.price-old {
+        color: #999;
+        font-size: 0.5em;
+      }
+    }
+    h3 {
+      font-size: 1.5em;
+      text-align: center;
+      margin: 0.5em 0;
+    }
+    h4 {
+      text-align: center;
+      margin: 0;
+      margin-bottom: 2em;
+    }
+    .gam-cta-container-item {
+      width: 100%;
+      margin-bottom: 1em;
+      .gam-cta {
+        padding: 1em 2em;
+        width: 98%;
+        display: block;
+        
+      }
+      @include media-query($mq-medium) {
+         width: 49%;
+         margin-bottom: 0;
+      }
+      @include media-query($mq-large) {
+         width: 100%;
+         margin-bottom: 0.75em;
+      }
+      @include media-query($mq-contrained-max) {
+         width: 49%;
+         margin-bottom: 0;
+      }
+    }
+    .gam-colors-container {
+    text-align: center;
+    margin: 1.5em 0;
+    height: 20px;
+    .gam-color {
+      width: 16px;
+      height: 16px;
+      border: 2px solid #ccc;
+      margin: 2px;
+      display: inline-block;
+      float: none;
+      &.current {
+        border: 2px solid #170da2;
+      }
+      &.black {
+        background-color: #000;
+      }
+      &.lightred {
+        background-color: #ff9999;
+      }
+      &.white {
+        background-color: #fff;
+      }
+      &.gold {
+        background-color: #e5d2a7;
+      }
+      &.silver {
+        background-color: #ccc;
+      }
+    }    
+  }
+  
+  
+    .product-info-title {
+      @include media-query($mq-large) {
+        height: 100px;
+      }
+      @include media-query($mq-xlarge) {
+        height: auto;
+      }
+    }
+  }
+  
+  
+
+  // Main hero image (full width)
+
+  
+  .gam-hero {
+    background: transparent url('../img/promotions/gaming/main-gaming-header.jpg') no-repeat center top;
+    width:100%;
+    background-size: contain;
+    padding-left: 0;
+    padding-right: 0;
+    &-text-area {
+      margin-top: 50%;
+      margin-bottom: 2em;
+      height: auto;
+      h2 {
+        text-align: center;
+        margin: 0.25em auto;
+      }
+      p {
+        text-align: center;
+        margin: 0.5em auto;
+      }
+    }
+      &-icons {
+        text-align: center;
+        float: none;
+        margin: 0 auto;
+        .icon {
+        display: inline;
+        float: left;
+        width: 49%;
+        margin-bottom: 2em;
+        h6 {
+          text-align: center;
+          margin: 0.5em 0;
+        }
+      }
+    }
+    @include media-query($mq-medium) {
+    &-text-area {
+      margin-top: 35%;
+      h2 {
+        margin-bottom: 10%;
+      }
+    }
+      &-icons {
+        .icon {
+          width: 24%;
+      }
+    }
+    }
+    @include media-query($mq-fullheader) {
+      &-text-area {
+      margin-top: 30%;
+      h2 {
+        margin-bottom: 2%;
+      }
+      p {
+        width: 60%;
+        margin-bottom: 6em;
+      }
+    }
+    }
+    @include media-query($mq-large) {
+      &-text-area {
+      margin-top: 30%;
+      h2 {
+        margin-bottom: 2%;
+      }
+      p {
+        width: 60%;
+        margin-bottom: 6em;
+      }
+    }
+      &-icons {
+        margin-top: 6%;
+    }
+    }
+    @include media-query($mq-max) {
+      background-size: cover; 
+      &-text-area {
+      margin-top: 28%;
+      h2 {
+        margin-bottom: 1%;
+      }
+      p {
+        width: 55%;
+        margin-bottom: 0;
+      }
+    }
+      &-icons {
+        margin-top: 0;
+        width: 60%;
+        .icon {
+          img {
+            width: 30%;
+          }
+          margin-bottom: 1em;
+      }
+    }
+    }
+  }
+  
+  // Section title (blue background)
+  .gam-section-title {
+    background-color: #01b3e3;
+    h2 {
+      text-align: center;
+      color: #fff;
+      margin: 0.25em 0;
+    }
+  }
+  
+  // Full-width hero in each section
+    .gam-section-hero {
+    &.mobile {
+      background: #f8f8f8 url('../img/promotions/gaming/mobile-gaming-main2.jpg') no-repeat center bottom;
+        height: 562px; //1162px;
+        background-size: contain;
+        width:100%;
+        background-size: contain;
+        .gam-section-hero-text-area {
+        margin-right: 5%;
+        margin-left: 5%;  
+      }
+        @include media-query($mq-medium) {
+          height: 562px;
+        }
+        @include media-query($mq-fullheader) {
+          height: 622px;
+        }
+        @include media-query($mq-large) {
+          height: 890px;
+          background-size: cover;
+        }
+        @include media-query($mq-contrained-max) {
+          height: 840px;
+          
+        }
+        @include media-query($mq-xlarge) {
+          
+          height: 920px;
+        }
+        @include media-query($mq-max) {
+          height: 1020px;
+          
+        }
+    }
+    &.tv {
+      background: #f2f3f5 url('../img/promotions/gaming/tv-gaming-main.jpg') no-repeat center bottom;
+      height: 460px;
+      background-size: contain;
+        width:100%;
+        
+        .gam-section-hero-text-area {
+        margin-right: 5%;
+        margin-left: 5%;  
+      }
+        @include media-query($mq-medium) {
+          //height: 460px;
+        }
+        @include media-query($mq-fullheader) {
+          height: 562px;
+        }
+        @include media-query($mq-large) {
+          height: 662px;
+          background-size: cover;
+        }
+        @include media-query($mq-contrained-max) {
+          height: 862px;
+        }
+        @include media-query($mq-xlarge) {
+          height: 860px;
+          
+        }
+        @include media-query($mq-max) {
+          height: 960px;
+        }
+    }
+    &.pc {
+      background: transparent url('../img/promotions/gaming/pc-gaming-main.jpg') no-repeat center bottom;
+      height: 460px;
+      background-size: contain;
+        //width:100%;
+        .gam-section-hero-text-area {
+        margin-right: 5%;
+        margin-left: 5%;  
+      }
+        @include media-query($mq-medium) {
+          //height: 460px;
+        }
+        @include media-query($mq-fullheader) {
+          height: 562px;
+        }
+        @include media-query($mq-large) {
+          height: 452px;
+          background-size: cover;
+        }
+        @include media-query($mq-contrained-max) {
+          height: 502px;
+        }
+        @include media-query($mq-xlarge) {
+          //height: 962px;
+        }
+        @include media-query($mq-max) {
+          //height: 1080px;
+        }
+      .gam-section-hero-text-area {
+
+        p {
+          text-align: left;
+          
+        }
+        
+       }
+    }
+    background-size: contain;
+    &-text-area {
+      padding-top: 2em;
+      height: auto;
+      h2 {
+        text-align: center;
+        margin: 0.25em auto;
+      }
+      p {
+        text-align: center;
+        margin: 0.5em auto;
+      }
+      
+    }
+    
+   
+    .gam-cta-container {
+              margin: 2em;
+              .gam-cta-container-item {
+                display: block;
+                width: 100%;
+                margin-bottom: 1em;
+                .gam-cta {
+                  width: 100%;
+                  display: block;
+                  padding: 1em 4em;
+                  margin-left: 0;
+                }
+              }
+            }
+    
+    @include media-query($mq-medium) {
+        .gam-cta-container {
+             margin: 2em;
+              .gam-cta-container-item {
+                display: inline-block;
+                width: auto;
+                .gam-cta {
+                  width: auto;
+                  display: inline-block;
+                  padding: 1em 4em;
+                  margin-left: 0;
+                }
+              }
+            }
+        }
+    @include media-query($mq-large) {
+        .gam-cta-container {
+              .gam-cta-container-item {
+                .gam-cta {
+                  padding: 1em 8em;
+                }
+              }
+            }
+        }
+
+    
+    
+  }
+  
+  
+ 
+  
+  /* ACCORDIONS /start */
+  .gam-accordion-container {
+    width: 100%;
+    border-bottom: 1px solid #666;
+  }
+  
+  .gam-accordion-link {
+      cursor: pointer; 
+      border-top: 1px solid #666;
+      padding-top: 0.75em;
+      padding-bottom: 0.75em;
+      &.first {
+        border-top: 0px solid #666;
+      }
+  }
+  
+  
+  /* Add a background color to the button if it is clicked on i.e. (adsd the .active class with JS) */
+  .gam-accordion-link.active {
+      
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .gam-accordion-panel {
+      display: none;
+       //background-color: #666;
+       color: #999;
+       font-size: 0.75em;
+       padding: 1em;
+  }
+  
+  /* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
+  .gam-accordion-panel.show {
+      display: block !important;
+  }
+  
+  .gam-accordion-link:after {
+      content: '\02795'; /* Unicode character for "plus" sign (+) */
+      font-size: 13px;
+      float: right;
+      margin-left: 5px;
+  }
+  
+  .gam-accordion-link.active:after {
+      content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+  
+  /* ACCORDIONS /end */
+
+}

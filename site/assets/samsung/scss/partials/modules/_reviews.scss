@@ -1,0 +1,49 @@
+//review stars
+
+
+.review-avg,.product__review-avg {
+	//margin:.5em 0 .75rem -3px;
+	&-stars,&-stars::before {
+		height:22px;
+		background:url(/assets/samsung/img/product/review-stars.png) no-repeat 0 100%;
+	}
+	&-stars {
+		position:relative;
+		display:inline-block;
+		vertical-align: middle;
+		margin-right:5px;
+		width:110px;
+		&::before {
+			position:absolute;
+			content:"";
+			top:0;
+			left:0;
+			background-position: 0 0;
+		}	
+		&--pc10 {&::before {width:10%}}
+		&--pc20 {&::before {width:20%}}
+		&--pc30 {&::before {width:30%}}
+		&--pc40 {&::before {width:40%}}
+		&--pc50 {&::before {width:50%}}
+		&--pc60 {&::before {width:60%}}
+		&--pc70 {&::before {width:70%}}
+		&--pc80 {&::before {width:80%}}
+		&--pc90 {&::before {width:90%}}
+		&--pc100 {&::before {width:100%}}
+	}
+	&-note {
+		display: inline-block;
+		vertical-align: bottom;
+		color:#999; 
+		font-size:1em;
+		padding-bottom:1px;
+		a {
+			color:inherit;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+				color:$primary;
+			}
+		}
+	}
+}
